@@ -15,12 +15,12 @@ export default function HeroScrollDemo() {
           </>
         }
       >
-        <picture className="h-full w-full flex items-center justify-center p-4 md:p-8">
+        <picture className="h-full w-full flex items-center justify-center p-2 md:p-4">
           <source media="(max-width: 768px)" srcSet="/huicholTabletMovil.png" />
           <img
             src="/imagen_tableta.png"
             alt="Tablet Huichol"
-            className="mx-auto rounded-xl object-cover max-h-[85%] max-w-[85%]"
+            className="mx-auto rounded-xl object-cover max-h-[95%] max-w-[95%]"
           />
         </picture>
       </ContainerScroll>
