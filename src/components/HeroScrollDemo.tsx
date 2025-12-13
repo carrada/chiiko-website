@@ -2,13 +2,13 @@ import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 
 export default function HeroScrollDemo() {
   return (
-    <div className="w-full flex justify-center items-center">
+    <div className="w-full flex justify-center items-center pb-80">
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-4xl font-semibold text-black">
+            <h1 className="text-xl md:text-4xl font-semibold text-black">
               Convertimos sitios web en <br />
-              <span className="text-5xl md:text-[6rem] font-bold mt-1 leading-none">
+              <span className="block text-6xl md:text-[10rem] font-bold mt-2 leading-none text-black">
                 Artesanias Digitales
               </span>
             </h1>
