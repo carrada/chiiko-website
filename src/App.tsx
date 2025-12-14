@@ -1,6 +1,7 @@
 import HeroScrollDemo from "@/components/HeroScrollDemo";
 import ValuePropositions from "@/components/ValuePropositions";
 import LoaderTwoDemo from "@/components/LoaderTwoDemo";
+import LayoutGridDemo from "@/components/LayoutGridDemo";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -58,6 +59,14 @@ function App() {
       </div>
       <HeroScrollDemo />
       <ValuePropositions />
+      
+      <div className="w-full flex justify-center items-center px-4" style={{marginTop: '250px', marginBottom: '200px'}}>
+        <h2 className="text-6xl md:text-[10rem] font-inter font-bold text-black text-center">
+          ¿Cómo Trabajamos?
+        </h2>
+      </div>
+      
+      <LayoutGridDemo />
       
       {/* Agregar nuevos componentes aquí */}
       
