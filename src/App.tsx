@@ -1,7 +1,8 @@
 import HeroScrollDemo from "@/components/HeroScrollDemo";
 import ValuePropositions from "@/components/ValuePropositions";
 import LoaderTwoDemo from "@/components/LoaderTwoDemo";
-import LayoutGridDemo from "@/components/LayoutGridDemo";
+import WorkProcess from "@/components/WorkProcess";
+import CometCardDemo from "@/components/CometCardDemo";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -66,7 +67,15 @@ function App() {
         </h2>
       </div>
       
-      <LayoutGridDemo />
+      <WorkProcess />
+      
+      <div className="w-full flex justify-center items-center px-4" style={{marginTop: '250px', marginBottom: '200px'}}>
+        <h2 className="text-6xl md:text-[10rem] font-inter font-bold text-black text-center">
+          Nuestros Proyectos
+        </h2>
+      </div>
+      
+      <CometCardDemo />
       
       {/* Agregar nuevos componentes aquí */}
       
