@@ -3,19 +3,22 @@ import { CometCard } from "@/components/ui/comet-card";
 export default function CometCardDemo() {
   const projects = [
     {
-      title: "Proyecto 1",
-      description: "Descripción del proyecto",
-      image: "/1chiiko.png"
+      title: "Estudio Arquitectura MX (EAMX)",
+      description: "Sitio moderno y elegante que refleja la precisión y calidad de EAMX, con visuales sofisticados, estructura clara y navegación intuitiva.",
+      image: "/portada-eamx-proyectos.png",
+      link: "https://eamx-website.vercel.app/"
     },
     {
       title: "Proyecto 2", 
       description: "Descripción del proyecto",
-      image: "/2chiiko.png"
+      image: "/2chiiko.png",
+      link: null
     },
     {
       title: "Proyecto 3",
       description: "Descripción del proyecto", 
-      image: "/3chiiko.png"
+      image: "/3chiiko.png",
+      link: null
     }
   ];
 
@@ -25,20 +28,15 @@ export default function CometCardDemo() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 place-items-center">
           {projects.map((project, index) => (
             <CometCard key={index} className="w-full max-w-xs mx-auto">
-              <div className="relative overflow-hidden rounded-2xl bg-white">
+              <div 
+                className="relative overflow-hidden rounded-2xl bg-white cursor-pointer"
+                onClick={() => project.link && window.open(project.link, '_blank')}
+              >
                 <img 
                   src={project.image} 
                   alt={project.title}
                   className="w-full h-80 object-cover"
                 />
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-black mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {project.description}
-                  </p>
-                </div>
               </div>
             </CometCard>
           ))}
