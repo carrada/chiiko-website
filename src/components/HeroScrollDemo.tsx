@@ -6,9 +6,9 @@ export default function HeroScrollDemo() {
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-xl md:text-4xl font-semibold text-black">
+            <h1 className="text-2xl md:text-4xl font-semibold text-black">
               Convertimos sitios web en <br />
-              <span className="block text-6xl md:text-[10rem] font-bold mt-2 leading-none text-black">
+              <span className="block text-7xl md:text-[10rem] font-bold mt-2 leading-none text-black">
                 Artesanias Digitales
               </span>
             </h1>

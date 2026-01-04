@@ -77,6 +77,12 @@ function App() {
       
       <CometCardDemo />
       
+      <div className="w-full flex justify-center items-center px-4" style={{marginTop: '250px', marginBottom: '200px'}}>
+        <h2 className="text-6xl md:text-[10rem] font-inter font-bold text-black text-center">
+          Nuestros <br /> Servicios
+        </h2>
+      </div>
+      
       {/* Agregar nuevos componentes aquí */}
       
       <div className="h-96"></div>
