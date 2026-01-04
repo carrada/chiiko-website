@@ -3,6 +3,7 @@ import ValuePropositions from "@/components/ValuePropositions";
 import LoaderTwoDemo from "@/components/LoaderTwoDemo";
 import WorkProcess from "@/components/WorkProcess";
 import CometCardDemo from "@/components/CometCardDemo";
+import ServicesCards from "@/components/ServicesCards";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -45,7 +46,7 @@ function App() {
         transition={{ duration: 0.5 }}
         className="w-full"
       >
-      <div className="w-full flex justify-center items-center py-20">
+      <div className="sticky top-0 z-40 w-full flex justify-center items-center py-4 md:py-6 backdrop-blur-sm bg-white/70">
         <button 
           onClick={scrollToTop}
           className="cursor-pointer transition-transform hover:scale-110 focus:outline-none"
@@ -54,10 +55,11 @@ function App() {
           <img 
             src="chiikoLogoNegro.png" 
             alt="Chiiko Logo" 
-            className="w-20 md:w-24"
+            className="w-16 md:w-20"
           />
         </button>
       </div>
+      <div className="py-12 md:py-16"></div>
       <HeroScrollDemo />
       <ValuePropositions />
       
@@ -82,6 +84,8 @@ function App() {
           Nuestros <br /> Servicios
         </h2>
       </div>
+      
+      <ServicesCards />
       
       {/* Agregar nuevos componentes aquí */}
       
