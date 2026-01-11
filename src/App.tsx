@@ -4,6 +4,7 @@ import LoaderTwoDemo from "@/components/LoaderTwoDemo";
 import WorkProcess from "@/components/WorkProcess";
 import CometCardDemo from "@/components/CometCardDemo";
 import ServicesCards from "@/components/ServicesCards";
+import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -20,10 +21,6 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
     <>
@@ -46,19 +43,7 @@ function App() {
         transition={{ duration: 0.5 }}
         className="w-full"
       >
-      <div className="sticky top-0 z-40 w-full flex justify-center items-center py-4 md:py-6 backdrop-blur-sm bg-white/70">
-        <button 
-          onClick={scrollToTop}
-          className="cursor-pointer transition-transform hover:scale-110 focus:outline-none"
-          aria-label="Ir al inicio"
-        >
-          <img 
-            src="chiikoLogoNegro.png" 
-            alt="Chiiko Logo" 
-            className="w-16 md:w-20"
-          />
-        </button>
-      </div>
+      <ResizableNavbarDemo />
       <div className="py-12 md:py-16"></div>
       <HeroScrollDemo />
       <ValuePropositions />
