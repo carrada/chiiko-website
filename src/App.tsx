@@ -48,16 +48,16 @@ function App() {
       <HeroScrollDemo />
       <ValuePropositions />
       
-      <div className="w-full flex justify-center items-center px-4" style={{marginTop: '250px', marginBottom: '200px'}}>
-        <h2 className="text-6xl md:text-[10rem] font-inter font-bold text-black text-center">
-          ¿Cómo Trabajamos?
+      <div className="w-full flex justify-center items-center px-4" style={{marginTop: '70px', marginBottom: '80px'}}>
+        <h2 className="text-7xl md:text-[10rem] font-inter font-bold text-black text-center" style={{marginTop: window.innerWidth >= 768 ? '150px' : '0'}}>
+          Nuestro Método
         </h2>
       </div>
       
       <WorkProcess />
       
-      <div className="w-full flex justify-center items-center px-4" style={{marginTop: '250px', marginBottom: '200px'}}>
-        <h2 className="text-6xl md:text-[10rem] font-inter font-bold text-black text-center">
+      <div className="w-full flex justify-center items-center px-4" style={{marginTop: '150px', marginBottom: '200px'}}>
+        <h2 className="text-7xl md:text-[10rem] font-inter font-bold text-black text-center">
           Nuestros Proyectos
         </h2>
       </div>
@@ -65,7 +65,7 @@ function App() {
       <CometCardDemo />
       
       <div className="w-full flex justify-center items-center px-4" style={{marginTop: '250px', marginBottom: '200px'}}>
-        <h2 className="text-6xl md:text-[10rem] font-inter font-bold text-black text-center">
+        <h2 className="text-7xl md:text-[10rem] font-inter font-bold text-black text-center">
           Nuestros <br /> Servicios
         </h2>
       </div>

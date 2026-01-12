@@ -23,13 +23,13 @@ export default function WorkProcess() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
           {steps.map((step) => (
             <div key={step.number} className="flex flex-col space-y-4 text-center md:text-left items-center md:items-start">
-              <div className="text-9xl md:text-[10rem] font-bold" style={{color: "#ce4676"}}>
+              <div className="text-[8rem] md:text-[12rem] font-bold" style={{color: "#ce4676"}}>
                 {step.number}
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-black">
+              <h3 className="text-4xl md:text-5xl font-bold text-black">
                 {step.title}
               </h3>
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
                 {step.description}
               </p>
             </div>
