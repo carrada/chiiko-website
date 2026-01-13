@@ -82,8 +82,8 @@ function App() {
       <WhoWeWorkWithDemo />
       
       <div className="w-full flex justify-center items-center px-4 py-16" style={{marginTop: '100px', marginBottom: '50px'}}>
-        <p className="text-2xl md:text-5xl font-inter font-bold text-black text-center max-w-2xl md:max-w-4xl leading-relaxed">
-          Si buscas un sitio rápido, barato o genérico, probablemente <span style={{color: "#ce4676"}}>NO</span> somos la mejor opción.
+        <p className="text-6xl md:text-7xl font-inter font-bold text-black text-center max-w-3xl md:max-w-5xl leading-relaxed">
+          <span style={{color: "#ce4676"}}>No</span> somos para todos.
         </p>
       </div>
       
@@ -91,6 +91,18 @@ function App() {
         <p className="text-2xl md:text-5xl font-inter font-bold text-black text-center max-w-2xl md:max-w-4xl leading-relaxed">
           Si buscas un sitio pensado para durar, diferenciarte y vender, <span style={{color: "#ce4676"}}>estamos alineados.</span>
         </p>
+      </div>
+      
+      <div className="w-full flex justify-center items-center px-4" style={{marginTop: '150px', marginBottom: '100px'}}>
+        <h2 className="text-7xl md:text-[10rem] font-inter font-bold text-black text-center flex flex-col md:flex-row items-center justify-center gap-4">
+          Por qué{' '}
+          <img 
+            src="/chiikoLogoNegro.png" 
+            alt="Chiiko" 
+            className="h-80 md:h-96 w-auto -mt-16 md:mt-0"
+            style={{display: 'inline-block'}}
+          />
+        </h2>
       </div>
       
       {/* Agregar nuevos componentes aquí */}
