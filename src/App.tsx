@@ -94,13 +94,13 @@ function App() {
       </div>
       
       <div className="w-full flex justify-center items-center px-4" style={{marginTop: '150px', marginBottom: '100px'}}>
-        <h2 className="text-7xl md:text-[10rem] font-inter font-bold text-black text-center flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
+        <h2 className="text-7xl md:text-[10rem] font-inter font-bold text-black text-center flex flex-col md:flex-row items-center justify-center md:gap-4">
           Por qué
           <img 
             src="/chiikoLogoNegro.png" 
             alt="Chiiko" 
-            className="h-80 md:h-96 w-auto -mt-16 md:mt-0"
-            style={{display: 'inline-block'}}
+            className="h-80 md:h-96 w-auto md:mt-0"
+            style={{display: 'inline-block', marginTop: '-80px'}}
           />
         </h2>
       </div>
