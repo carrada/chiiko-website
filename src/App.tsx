@@ -4,6 +4,7 @@ import LoaderTwoDemo from "@/components/LoaderTwoDemo";
 import WorkProcess from "@/components/WorkProcess";
 import CometCardDemo from "@/components/CometCardDemo";
 import ServicesCards from "@/components/ServicesCards";
+import WhoWeWorkWithDemo from "@/components/WhoWeWorkWithDemo";
 import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
@@ -71,6 +72,26 @@ function App() {
       </div>
       
       <ServicesCards />
+      
+      <div className="w-full flex justify-center items-center px-4" style={{marginTop: '150px', marginBottom: '100px'}}>
+        <h2 className="text-7xl md:text-[10rem] font-inter font-bold text-black text-center">
+          Con quien trabajamos
+        </h2>
+      </div>
+      
+      <WhoWeWorkWithDemo />
+      
+      <div className="w-full flex justify-center items-center px-4 py-16" style={{marginTop: '100px', marginBottom: '50px'}}>
+        <p className="text-2xl md:text-5xl font-inter font-bold text-black text-center max-w-2xl md:max-w-4xl leading-relaxed">
+          Si buscas un sitio rápido, barato o genérico, probablemente <span style={{color: "#ce4676"}}>NO</span> somos la mejor opción.
+        </p>
+      </div>
+      
+      <div className="w-full flex justify-center items-center px-4 py-16">
+        <p className="text-2xl md:text-5xl font-inter font-bold text-black text-center max-w-2xl md:max-w-4xl leading-relaxed">
+          Si buscas un sitio pensado para durar, diferenciarte y vender, <span style={{color: "#ce4676"}}>estamos alineados.</span>
+        </p>
+      </div>
       
       {/* Agregar nuevos componentes aquí */}
       
