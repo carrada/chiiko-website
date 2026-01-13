@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+.logo-mobile-spacing {
+  margin-top: -7rem;
+}
+
+@media (min-width: 768px) {
+  .logo-mobile-spacing {
+    margin-top: 0;
+  }
+}

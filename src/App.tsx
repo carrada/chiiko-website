@@ -94,20 +94,66 @@ function App() {
       </div>
       
       <div className="w-full flex justify-center items-center px-4" style={{marginTop: '150px', marginBottom: '100px'}}>
-        <h2 className="text-7xl md:text-[10rem] font-inter font-bold text-black text-center flex flex-col md:flex-row items-center justify-center md:gap-4">
-          Por qué
-          <img 
-            src="/chiikoLogoNegro.png" 
-            alt="Chiiko" 
-            className="h-80 md:h-96 w-auto md:mt-0"
-            style={{display: 'inline-block', marginTop: '-80px'}}
-          />
-        </h2>
+        <div className="flex flex-col items-center gap-6 md:gap-8">
+          <h2 className="text-7xl md:text-[10rem] font-inter font-bold text-black text-center">
+            ¿Por qué elegirnos?
+          </h2>
+          <p className="text-2xl md:text-4xl font-inter font-bold text-black text-center max-w-3xl">
+            No hacemos sitios web. Construimos activos digitales que <span style={{color: "#ce4676"}}>venden.</span>
+          </p>
+        </div>
       </div>
       
-      {/* Agregar nuevos componentes aquí */}
+      <div className="w-full flex justify-center items-center px-4 py-20">
+        <div className="max-w-7xl w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+            <div className="flex flex-col space-y-4 text-center md:text-left items-center md:items-start">
+              <div className="text-[8rem] md:text-[12rem] font-bold" style={{color: "#ce4676"}}>
+                01
+              </div>
+              <h3 className="text-4xl md:text-5xl font-bold text-black">
+                Pensados para negocio
+              </h3>
+              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+                Cada decisión de diseño tiene una razón: conversión, claridad y crecimiento.
+              </p>
+            </div>
+            <div className="flex flex-col space-y-4 text-center md:text-left items-center md:items-start">
+              <div className="text-[8rem] md:text-[12rem] font-bold" style={{color: "#ce4676"}}>
+                02
+              </div>
+              <h3 className="text-4xl md:text-5xl font-bold text-black">
+                Diseño con identidad
+              </h3>
+              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+                No usamos plantillas genéricas. Cada sitio tiene carácter, concepto y propósito.
+              </p>
+            </div>
+            <div className="flex flex-col space-y-4 text-center md:text-left items-center md:items-start">
+              <div className="text-[8rem] md:text-[12rem] font-bold" style={{color: "#ce4676"}}>
+                03
+              </div>
+              <h3 className="text-4xl md:text-5xl font-bold text-black">
+                Construidos para durar
+              </h3>
+              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+                Sitios rápidos, escalables y listos para evolucionar con tu proyecto.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
       
-      <div className="h-96"></div>
+      <div className="w-full flex justify-center items-center px-4 py-20" style={{marginTop: '100px', marginBottom: '100px'}}>
+        <div className="flex flex-col items-center gap-8">
+          <h2 className="text-7xl md:text-[10rem] font-inter font-bold text-black text-center">
+            ¿Listo para <span style={{color: "#ce4676"}}>construir</span> juntos?
+          </h2>
+          <button className="px-16 py-6 bg-white text-black text-lg font-bold rounded-full border-2 border-black hover:bg-black hover:text-white transition-all">
+            Iniciar Proyecto
+          </button>
+        </div>
+      </div>
       </motion.div>
     </>
   )

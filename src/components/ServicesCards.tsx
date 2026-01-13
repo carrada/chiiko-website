@@ -15,7 +15,7 @@ export default function ServicesCards() {
     {
       title: "Ecommerce premium",
       description: "Tiendas online completas diseñadas para maximizar conversiones y ofrecer experiencias de compra excepcionales.",
-      image: "/ecommercepremium.png"
+      image: "/ecommerce.png"
     },
     {
       title: "Landing pages de conversión",
@@ -26,6 +26,11 @@ export default function ServicesCards() {
       title: "Identidad digital",
       description: "Construimos y fortalecemos la presencia digital de tu marca con consistencia y personalidad única.",
       image: "/identidaddigital.png"
+    },
+    {
+      title: "Optimización y crecimiento continuo",
+      description: "No solo podemos lanzar tu sitio y desaparecer. Medimos, ajustamos y mejoramos para que siga vendiendo.",
+      image: "/optimizacion.png"
     }
   ];
 
