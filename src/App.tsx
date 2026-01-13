@@ -94,8 +94,8 @@ function App() {
       </div>
       
       <div className="w-full flex justify-center items-center px-4" style={{marginTop: '150px', marginBottom: '100px'}}>
-        <h2 className="text-7xl md:text-[10rem] font-inter font-bold text-black text-center flex flex-col md:flex-row items-center justify-center gap-4">
-          Por qué{' '}
+        <h2 className="text-7xl md:text-[10rem] font-inter font-bold text-black text-center flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
+          Por qué
           <img 
             src="/chiikoLogoNegro.png" 
             alt="Chiiko" 
