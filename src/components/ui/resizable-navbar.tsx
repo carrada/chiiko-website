@@ -98,7 +98,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         damping: 50,
       }}
       className={cn(
-        "relative z-60 flex w-auto min-w-[320px] lg:min-w-[400px] flex-row items-center justify-center gap-4 lg:gap-6 rounded-full bg-transparent px-8 py-3 lg:px-12 lg:py-5 overflow-visible dark:bg-transparent",
+        "relative z-60 flex w-auto min-w-[320px] lg:min-w-[400px] flex-row items-center justify-center gap-4 lg:gap-6 rounded-full bg-transparent px-4 py-2 lg:px-6 lg:py-3 overflow-visible dark:bg-transparent",
         visible && "lg:bg-white/80",
         className,
       )}

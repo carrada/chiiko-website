@@ -6,6 +6,7 @@ import CometCardDemo from "@/components/CometCardDemo";
 import ServicesCards from "@/components/ServicesCards";
 import WhoWeWorkWithDemo from "@/components/WhoWeWorkWithDemo";
 import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
+import { ProjectInitButton } from "@/components/ProjectInitButton";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -149,9 +150,7 @@ function App() {
           <h2 className="text-7xl md:text-[10rem] font-inter font-bold text-black text-center">
             ¿Listo para <span style={{color: "#ce4676"}}>construir</span> juntos?
           </h2>
-          <button className="px-16 py-6 bg-white text-black text-lg font-bold rounded-full border-2 border-black hover:bg-black hover:text-white transition-all">
-            Iniciar Proyecto
-          </button>
+          <ProjectInitButton />
         </div>
       </div>
       </motion.div>

@@ -36,10 +36,10 @@ export default function ServicesCards() {
 
   return (
     <div className="w-full flex justify-center items-center px-4 py-20">
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16 place-items-center">
+      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1 md:gap-x-8 md:gap-y-0 place-items-center">
         {services.map((service, index) => (
           <CardContainer key={index} className="inter-var w-full max-w-xs md:max-w-2xl">
-            <CardBody className="bg-white md:bg-white relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-4 md:p-10 border flex flex-col items-center">
+            <CardBody className="bg-white md:bg-white relative group/card hover:shadow-2xl hover:shadow-black/[0.2] dark:hover:shadow-2xl dark:hover:shadow-black/[0.2] dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-4 md:p-10 border flex flex-col items-center">
               <CardItem
                 translateZ="50"
                 className="text-base md:text-2xl font-bold text-black md:text-black mb-2 text-center"

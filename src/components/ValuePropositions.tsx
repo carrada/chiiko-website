@@ -1,6 +1,6 @@
 export default function ValuePropositions() {
   return (
-    <div className="flex justify-center items-center py-20 pb-8 md:pb-40 px-4">
+    <div className="flex justify-center items-center py-8 md:py-20 pb-8 md:pb-40 px-4 -mt-40">
       <div className="text-center max-w-7xl space-y-32">
         <p className="text-2xl md:text-4xl font-semibold text-black">
           Diseñamos sitios web con{" "}
