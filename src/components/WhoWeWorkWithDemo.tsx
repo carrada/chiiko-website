@@ -4,7 +4,7 @@ export default function WhoWeWorkWithDemo() {
   const words = ["Estudios", "Marcas", "Proyectos", "Negocios", "Startups", "Firmas", "Despachos"];
 
   return (
-    <div className="w-full flex flex-col justify-center items-center px-4 py-16 md:py-32">
+    <div className="w-full flex flex-col justify-center items-center px-4 py-6 md:py-12 mb-40 mt-24 md:mt-32">
       <div className="w-full flex flex-col md:flex-row gap-6 md:gap-4 items-center justify-center">
         {/* Mobile: Stacked layout */}
         <div className="flex flex-col md:hidden items-center gap-4">
