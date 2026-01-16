@@ -29,7 +29,7 @@ export default function ServicesCards() {
     },
     {
       title: "Optimización y crecimiento continuo",
-      description: "No solo podemos lanzar tu sitio y desaparecer. Medimos, ajustamos y mejoramos para que siga vendiendo.",
+      description: "Medimos, ajustamos y mejoramos para que siga vendiendo.",
       image: "/optimizacion.png"
     }
   ];

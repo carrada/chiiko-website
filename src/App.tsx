@@ -152,6 +152,50 @@ function App() {
           <ProjectInitButton />
         </div>
       </div>
+      
+      <footer className="w-full bg-black py-12 md:py-16">
+        <style>{`
+          .footer-icon-link {
+            cursor: pointer;
+            display: inline-flex;
+          }
+          .footer-icon-link img {
+            width: 2rem;
+            height: 2rem;
+          }
+          @media (min-width: 768px) {
+            .footer-icon-link img {
+              width: 2.5rem;
+              height: 2.5rem;
+            }
+          }
+        `}</style>
+        <div className="max-w-7xl mx-auto px-4 flex flex-col justify-center items-center gap-8">
+          <img src="/logochiikofooter.png" alt="Chiiko" className="h-24 md:h-32 object-contain" />
+          
+          <div className="flex gap-6 md:gap-8 justify-center items-center">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="footer-icon-link">
+              <img src="/instagram.svg" alt="Instagram" />
+            </a>
+            
+            <a href="https://behance.net" target="_blank" rel="noopener noreferrer" className="footer-icon-link">
+              <img src="/behance.svg" alt="Behance" />
+            </a>
+            
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="footer-icon-link">
+              <img src="/linkedin.svg" alt="LinkedIn" />
+            </a>
+            
+            <a href="mailto:info@chiiko.com" className="footer-icon-link">
+              <img src="/envelope.svg" alt="Email" />
+            </a>
+          </div>
+          
+          <p className="text-gray-500 text-sm md:text-base text-center">
+            © 2026 Chiiko. Todos los derechos reservados.
+          </p>
+        </div>
+      </footer>
       </motion.div>
     </>
   )
