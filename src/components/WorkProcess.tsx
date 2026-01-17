@@ -1,19 +1,23 @@
+import { useTranslation } from "react-i18next";
+
 export default function WorkProcess() {
+  const { t } = useTranslation();
+
   const steps = [
     {
       number: "01",
-      title: "Estrategia",
-      description: "Analizamos tu marca, tu mercado y el objetivo real del proyecto antes de diseñar."
+      title: t('process.step1.title'),
+      description: t('process.step1.desc')
     },
     {
       number: "02",
-      title: "Diseño & desarrollo",
-      description: "Diseñamos y construimos una experiencia clara, rápida y diferenciada."
+      title: t('process.step2.title'),
+      description: t('process.step2.desc')
     },
     {
       number: "03",
-      title: "Entrega & evolución",
-      description: "Publicamos el sitio y lo dejamos listo para crecer, medir y escalar."
+      title: t('process.step3.title'),
+      description: t('process.step3.desc')
     }
   ];
 

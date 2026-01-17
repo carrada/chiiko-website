@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const ProjectInitButton = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <button
@@ -66,7 +68,7 @@ export const ProjectInitButton = () => {
 
       {/* Text */}
       <span className="relative z-10 text-black drop-shadow-lg">
-        Iniciar proyecto
+        {t('button.startProject')}
       </span>
 
       {/* CSS Animations */}

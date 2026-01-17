@@ -98,7 +98,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         damping: 50,
       }}
       className={cn(
-        "relative z-60 flex w-auto min-w-[320px] lg:min-w-[400px] flex-row items-center justify-center gap-4 lg:gap-6 rounded-full bg-transparent px-4 py-2 lg:px-6 lg:py-3 overflow-visible dark:bg-transparent",
+        "relative z-60 flex w-auto min-w-[320px] lg:min-w-[400px] flex-row items-center justify-center gap-2 lg:gap-3 rounded-full bg-transparent px-3 py-1 lg:px-4 lg:py-2 overflow-visible dark:bg-transparent",
         visible && "lg:bg-white/80",
         className,
       )}
@@ -115,7 +115,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "flex flex-row items-center justify-start gap-3 lg:gap-4 text-base lg:text-base font-medium text-zinc-600 transition duration-200 hover:text-zinc-800",
+        "flex flex-row items-center justify-start gap-2 lg:gap-3 text-base lg:text-base font-medium text-zinc-600 transition duration-200 hover:text-zinc-800",
         className,
       )}
     >
@@ -123,7 +123,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         <a
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-3 py-2 lg:px-4 lg:py-2 text-neutral-600 dark:text-neutral-300"
+          className="relative px-2 py-1 lg:px-3 lg:py-1 text-neutral-600 dark:text-neutral-300"
           key={`link-${idx}`}
           href={item.link}
         >
@@ -231,10 +231,17 @@ export const NavbarLogo = () => {
       className="relative z-20 flex items-center px-2 py-1 cursor-pointer transition-transform hover:scale-110 focus:outline-none flex-shrink-0"
       aria-label="Ir al inicio"
     >
+      {/* Favicon en móviles */}
+      <img
+        src="/logooChiiko.png"
+        alt="chiikö"
+        className="md:hidden w-6 h-6"
+      />
+      {/* Logo normal en desktop */}
       <img
         src="/chiikoLogoNegro.png"
         alt="Chiiko Logo"
-        className="w-12 h-12 lg:w-[65px] lg:h-[65px]"
+        className="hidden md:block w-[65px] h-[65px]"
       />
     </button>
   );

@@ -1,29 +1,33 @@
+import { useTranslation } from "react-i18next";
+
 export default function ValuePropositions() {
+  const { t } = useTranslation();
+
   return (
-    <div className="flex justify-center items-center py-20 md:py-48 px-4">
-      <div className="text-center max-w-7xl space-y-20 md:space-y-48">
-        <p className="text-sm md:text-2xl font-semibold text-black">
-          Diseñamos sitios web con{" "}
-          <span className="block text-7xl md:text-[16rem] font-bold leading-none mt-2 md:mt-3" style={{color: "#ce4676"}}>
-            intención.
+    <div className="flex justify-center items-center py-20 tablet:py-32 md:py-48 px-4">
+      <div className="text-center max-w-7xl space-y-20 tablet:space-y-32 md:space-y-48">
+        <p className="text-sm tablet:text-xl md:text-2xl font-semibold text-black">
+          {t('hero.value1')}{" "}
+          <span className="block text-7xl tablet:text-9xl md:text-[16rem] font-bold leading-none mt-2 md:mt-3" style={{color: "#ce4676"}}>
+            {t('hero.value1.highlight')}
           </span>
         </p>
-        <p className="text-sm md:text-2xl font-semibold text-black">
-          Artesanía digital, con{" "}
-          <span className="block text-7xl md:text-[16rem] font-bold leading-none mt-2 md:mt-3" style={{color: "#ce4676"}}>
-            identidad.
+        <p className="text-sm tablet:text-xl md:text-2xl font-semibold text-black">
+          {t('hero.value2')}{" "}
+          <span className="block text-7xl tablet:text-9xl md:text-[16rem] font-bold leading-none mt-2 md:mt-3" style={{color: "#ce4676"}}>
+            {t('hero.value2.highlight')}
           </span>
         </p>
-        <p className="text-sm md:text-2xl font-semibold text-black">
-          Pensados para{" "}
-          <span className="block text-7xl md:text-[16rem] font-bold leading-none mt-2 md:mt-3" style={{color: "#ce4676"}}>
-            vender.
+        <p className="text-sm tablet:text-xl md:text-2xl font-semibold text-black">
+          {t('hero.value3')}{" "}
+          <span className="block text-7xl tablet:text-9xl md:text-[16rem] font-bold leading-none mt-2 md:mt-3" style={{color: "#ce4676"}}>
+            {t('hero.value3.highlight')}
           </span>
         </p>
-        <p className="text-sm md:text-2xl font-semibold text-black">
-          Hechos para{" "}
-          <span className="block text-7xl md:text-[16rem] font-bold leading-none mt-2 md:mt-3" style={{color: "#ce4676"}}>
-            durar.
+        <p className="text-sm tablet:text-xl md:text-2xl font-semibold text-black">
+          {t('hero.value4')}{" "}
+          <span className="block text-7xl tablet:text-9xl md:text-[16rem] font-bold leading-none mt-2 md:mt-3" style={{color: "#ce4676"}}>
+            {t('hero.value4.highlight')}
           </span>
         </p>
       </div>

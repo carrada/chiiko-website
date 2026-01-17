@@ -1,15 +1,18 @@
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
+import { useTranslation } from "react-i18next";
 
 export default function HeroScrollDemo() {
+  const { t } = useTranslation();
+
   return (
     <div className="w-full flex justify-center items-center pb-32 md:pb-48">
       <ContainerScroll
         titleComponent={
           <>
             <h1 className="text-lg md:text-2xl font-semibold text-black">
-              Convertimos sitios web en <br />
+              {t('hero.intro')} <br />
               <span className="block text-5xl md:text-8xl font-bold mt-2 leading-none text-black">
-                Artesanias Digitales
+                {t('hero.title')}
               </span>
             </h1>
           </>
