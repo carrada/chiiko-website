@@ -1,8 +1,6 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
-  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const { t } = useTranslation();
 
   const navLinks = [
@@ -37,8 +35,6 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    onMouseEnter={() => setHoveredLink(link.label)}
-                    onMouseLeave={() => setHoveredLink(null)}
                     className="text-sm md:text-base text-gray-600 font-light transition-opacity duration-200 hover:text-gray-900 inline-block"
                   >
                     {link.label}
