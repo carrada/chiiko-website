@@ -56,10 +56,10 @@ export default function Footer() {
             <address className="not-italic space-y-2 md:space-y-3">
               <div>
                 <a
-                  href="mailto:hola@chiiko.mx"
+                  href={`mailto:${t('footer.email')}`}
                   className="text-sm md:text-base text-gray-600 font-light transition-opacity duration-200 hover:text-gray-900 block"
                 >
-                  hola@chiiko.mx
+                  {t('footer.email')}
                 </a>
               </div>
               <div>
