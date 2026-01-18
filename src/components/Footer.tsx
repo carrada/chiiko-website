@@ -19,17 +19,20 @@ export default function Footer() {
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 tablet:px-6 md:px-8 py-16 tablet:py-18 md:py-24">
         {/* 3-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 tablet:gap-14 md:gap-20 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 tablet:gap-14 md:gap-20 w-full text-left">
           {/* Brand Column */}
-          <div className="flex flex-col items-start w-full pl-0">
-            <img
-              src="/chiikoLogoNegro.png"
-              alt="chiikö"
-              className="h-16 tablet:h-20 md:h-24 object-contain w-fit mb-1 md:mb-2 -ml-2"
-            />
-            <p className="text-xs tablet:text-xs md:text-sm text-gray-600 leading-snug font-light max-w-xs">
-              {t('footer.tagline')}
-            </p>
+          <div className="flex flex-col items-start w-full">
+            <div className="flex flex-col items-start w-full">
+              <img
+                src="/chiikoLogoNegro.png"
+                alt="chiikö"
+                className="h-16 tablet:h-20 md:h-24 object-contain object-left mb-1 md:mb-2"
+                style={{ marginLeft: '-8px' }}
+              />
+              <p className="text-xs tablet:text-xs md:text-sm text-gray-600 leading-snug font-light max-w-xs">
+                {t('footer.tagline')}
+              </p>
+            </div>
           </div>
 
           {/* Navigation Column */}
