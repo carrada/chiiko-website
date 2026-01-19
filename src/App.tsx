@@ -8,7 +8,7 @@ import WhoWeWorkWithDemo from "@/components/WhoWeWorkWithDemo";
 import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import { ProjectInitButton } from "@/components/ProjectInitButton";
 import Footer from "@/components/Footer";
-import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import PrivacyPolicy from "@/components/PrivacyPolicy";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useTranslation } from "react-i18next";
