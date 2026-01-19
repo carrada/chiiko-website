@@ -13,7 +13,7 @@ export function ResizableNavbarDemo() {
 
   const navItems = [
     { name: t('nav.about'), link: "#nosotros" },
-    { name: t('nav.plans'), link: "#planes" },
+    { name: t('nav.plans'), link: "/planes" },
     { name: t('nav.contact'), link: "#contacto" },
   ];
 

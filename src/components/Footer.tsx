@@ -8,7 +8,7 @@ export default function Footer() {
     { label: t('nav.home'), href: '/' },
     { label: t('nav.about'), href: '#nosotros' },
     { label: t('nav.method'), href: '#metodo' },
-    { label: t('nav.plans'), href: '#planes' },
+    { label: t('nav.plans'), href: '/planes' },
     { label: t('nav.contact'), href: '#contacto' },
     { label: t('nav.privacy'), href: '/privacidad' },
     { label: t('nav.faq'), href: '/faq' },

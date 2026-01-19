@@ -14,6 +14,7 @@ import Help from "@/components/Help";
 import TermsAndConditions from "@/components/TermsAndConditions";
 import CookiePolicy from "@/components/CookiePolicy";
 import LegalNotice from "@/components/LegalNotice";
+import Plans from "@/components/Plans";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useTranslation } from "react-i18next";
@@ -56,6 +57,7 @@ function App() {
         <Route path="/terminos" element={<TermsAndConditions />} />
         <Route path="/cookies" element={<CookiePolicy />} />
         <Route path="/legal" element={<LegalNotice />} />
+        <Route path="/planes" element={<Plans />} />
         <Route path="/" element={
           <>
             <AnimatePresence>
