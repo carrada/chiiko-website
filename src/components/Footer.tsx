@@ -1,15 +1,16 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const { t } = useTranslation();
 
   const navLinks = [
-    { label: t('nav.home'), href: '#' },
+    { label: t('nav.home'), href: '/' },
     { label: t('nav.about'), href: '#nosotros' },
     { label: t('nav.method'), href: '#metodo' },
     { label: t('nav.plans'), href: '#planes' },
     { label: t('nav.contact'), href: '#contacto' },
-    { label: t('nav.privacy'), href: '#privacidad' },
+    { label: t('nav.privacy'), href: '/privacidad' },
     { label: t('nav.faq'), href: '#faq' },
     { label: t('nav.help'), href: '#ayuda' },
   ];
@@ -40,12 +41,21 @@ export default function Footer() {
             <ul className="space-y-2 md:space-y-3">
               {navLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm md:text-base text-gray-600 font-light transition-opacity duration-200 hover:text-gray-900 inline-block"
-                  >
-                    {link.label}
-                  </a>
+                  {link.href.startsWith('/') ? (
+                    <Link
+                      to={link.href}
+                      className="text-sm md:text-base text-gray-600 font-light transition-opacity duration-200 hover:text-gray-900 inline-block"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="text-sm md:text-base text-gray-600 font-light transition-opacity duration-200 hover:text-gray-900 inline-block"
+                    >
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

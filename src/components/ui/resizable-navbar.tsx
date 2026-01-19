@@ -7,6 +7,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
+import { Link } from "react-router-dom";
 
 import React, { useRef, useState } from "react";
 
@@ -221,13 +222,9 @@ export const MobileNavToggle = ({
 };
 
 export const NavbarLogo = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
-    <button
-      onClick={scrollToTop}
+    <Link
+      to="/"
       className="relative z-20 flex items-center px-2 py-1 cursor-pointer transition-transform hover:scale-110 focus:outline-none flex-shrink-0"
       aria-label="Ir al inicio"
     >
@@ -243,7 +240,7 @@ export const NavbarLogo = () => {
         alt="Chiiko Logo"
         className="hidden md:block w-[65px] h-[65px]"
       />
-    </button>
+    </Link>
   );
 };
 
