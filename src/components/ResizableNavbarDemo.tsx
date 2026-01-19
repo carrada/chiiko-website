@@ -12,7 +12,7 @@ export function ResizableNavbarDemo() {
   const { t } = useTranslation();
 
   const navItems = [
-    { name: t('nav.about'), link: "#nosotros" },
+    { name: t('nav.about'), link: "/nosotros" },
     { name: t('nav.plans'), link: "/planes" },
     { name: t('nav.contact'), link: "#contacto" },
   ];

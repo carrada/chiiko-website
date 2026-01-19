@@ -6,7 +6,7 @@ export default function Footer() {
 
   const navLinks = [
     { label: t('nav.home'), href: '/' },
-    { label: t('nav.about'), href: '#nosotros' },
+    { label: t('nav.about'), href: '/nosotros' },
     { label: t('nav.method'), href: '#metodo' },
     { label: t('nav.plans'), href: '/planes' },
     { label: t('nav.contact'), href: '#contacto' },
