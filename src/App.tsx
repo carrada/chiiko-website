@@ -11,6 +11,9 @@ import Footer from "@/components/Footer";
 import PrivacyPolicy from "@/components/PrivacyPolicy";
 import FAQ from "@/components/FAQ";
 import Help from "@/components/Help";
+import TermsAndConditions from "@/components/TermsAndConditions";
+import CookiePolicy from "@/components/CookiePolicy";
+import LegalNotice from "@/components/LegalNotice";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useTranslation } from "react-i18next";
@@ -38,6 +41,9 @@ function App() {
         <Route path="/privacidad" element={<PrivacyPolicy />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/ayuda" element={<Help />} />
+        <Route path="/terminos" element={<TermsAndConditions />} />
+        <Route path="/cookies" element={<CookiePolicy />} />
+        <Route path="/legal" element={<LegalNotice />} />
         <Route path="/" element={
           <>
             <AnimatePresence>

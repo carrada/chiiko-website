@@ -13,6 +13,9 @@ export default function Footer() {
     { label: t('nav.privacy'), href: '/privacidad' },
     { label: t('nav.faq'), href: '/faq' },
     { label: t('nav.help'), href: '/ayuda' },
+    { label: t('nav.terms'), href: '/terminos' },
+    { label: t('nav.cookies'), href: '/cookies' },
+    { label: t('nav.legal'), href: '/legal' },
   ];
 
   return (
