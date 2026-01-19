@@ -51,7 +51,7 @@ function SpanishContent() {
         </p>
         <ul className="list-disc list-inside space-y-2 text-base md:text-lg text-gray-700 font-light ml-4">
           <li><strong className="font-medium">Nombre comercial:</strong> Chiikö</li>
-          <li><strong className="font-medium">Responsable:</strong> Chiikö</li>
+          <li><strong className="font-medium">Responsable:</strong> Cristopher Carrada</li>
           <li><strong className="font-medium">Sitio web:</strong> <a href="https://chiiko.design" className="text-gray-900 underline hover:opacity-70 transition-opacity">https://chiiko.design</a></li>
           <li><strong className="font-medium">Correo electrónico:</strong> <a href="mailto:soporte@chiiko.design" className="text-gray-900 underline hover:opacity-70 transition-opacity">soporte@chiiko.design</a></li>
         </ul>

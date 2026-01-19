@@ -9,6 +9,8 @@ import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import { ProjectInitButton } from "@/components/ProjectInitButton";
 import Footer from "@/components/Footer";
 import PrivacyPolicy from "@/components/PrivacyPolicy";
+import FAQ from "@/components/FAQ";
+import Help from "@/components/Help";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useTranslation } from "react-i18next";
@@ -34,6 +36,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/privacidad" element={<PrivacyPolicy />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/ayuda" element={<Help />} />
         <Route path="/" element={
           <>
             <AnimatePresence>

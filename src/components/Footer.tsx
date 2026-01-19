@@ -11,8 +11,8 @@ export default function Footer() {
     { label: t('nav.plans'), href: '#planes' },
     { label: t('nav.contact'), href: '#contacto' },
     { label: t('nav.privacy'), href: '/privacidad' },
-    { label: t('nav.faq'), href: '#faq' },
-    { label: t('nav.help'), href: '#ayuda' },
+    { label: t('nav.faq'), href: '/faq' },
+    { label: t('nav.help'), href: '/ayuda' },
   ];
 
   return (
