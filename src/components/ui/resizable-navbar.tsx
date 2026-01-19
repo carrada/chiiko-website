@@ -57,6 +57,8 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     offset: ["start start", "end start"],
   });
   const [visible, setVisible] = useState<boolean>(false);
+  const [navY, setNavY] = useState<number>(0);
+  const prevScrollY = useRef(0);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 100) {
@@ -64,11 +66,25 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     } else {
       setVisible(false);
     }
+    
+    // Detect scroll direction and move navbar accordingly
+    const difference = latest - prevScrollY.current;
+    
+    if (difference > 0) {
+      // Scrolling down - move navbar down
+      setNavY(prev => Math.min(prev + difference * 0.15, 15));
+    } else {
+      // Scrolling up - move navbar back up
+      setNavY(prev => Math.max(prev + difference * 0.15, 0));
+    }
+    
+    prevScrollY.current = latest;
   });
 
   return (
     <motion.div
       ref={ref}
+      style={{ y: navY }}
       // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
       className={cn("sticky inset-x-0 top-0 z-40 w-full flex justify-center px-4", className)}
     >
