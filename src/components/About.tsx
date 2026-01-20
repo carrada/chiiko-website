@@ -93,9 +93,13 @@ const SpanishTimeline = [
         <p className="text-neutral-800 text-sm md:text-base font-light mb-4 leading-relaxed">
           Este año tomamos una decisión clave: profesionalizarnos al máximo y evolucionar nuevamente nuestra identidad.
         </p>
-        <p className="text-neutral-800 text-sm md:text-base font-light mb-8 leading-relaxed">
+        <p className="text-neutral-800 text-sm md:text-base font-light mb-4 leading-relaxed">
           Así nace chiiko.
         </p>
+        <div className="flex flex-col md:flex-row gap-4 mt-6">
+          <img src="/LogoPortadaChiiko.png" alt="Logo Portada Chiiko" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+          <img src="/Entrevista.png" alt="Entrevista" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+        </div>
       </div>
     ),
   },
@@ -125,6 +129,10 @@ const SpanishTimeline = [
         <p className="text-neutral-800 text-sm md:text-base font-light mb-8 leading-relaxed">
           Seguimos creciendo, aprendiendo y transformando la manera en la que se conciben y se crean los sitios web.
         </p>
+        <div className="flex flex-col md:flex-row gap-4 mt-6">
+          <img src="/Pinterest.png" alt="Pinterest" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+          <img src="/Google.png" alt="Google" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+        </div>
       </div>
     ),
   },
@@ -142,10 +150,10 @@ const EnglishTimeline = [
           Creativa Carrada was born as a very small studio, driven by curiosity and necessity.
           At this stage we created simple websites using accessible tools like Canva, learning from scratch about design, structure, and digital presence for emerging brands.
         </p>
-        <p className="text-neutral-800 text-sm md:text-base font-light mb-8 leading-relaxed">
+        <p className="text-neutral-800 text-sm md:text-base font-light mb-4 leading-relaxed">
           It was the beginning of a mindset that remains active today: doing the best possible with what you have.
         </p>
-        <img src="/CreativaCarrada.png" alt="Creativa Carrada" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+        <img src="/logoCreativCarrada.png" alt="Creativa Carrada" className="max-w-xs md:max-w-sm h-auto rounded-lg mt-6" />
       </div>
     ),
   },
@@ -156,10 +164,14 @@ const EnglishTimeline = [
         <p className="text-neutral-800 text-sm md:text-base font-semibold mb-4 leading-relaxed">
           First Important Steps
         </p>
-        <p className="text-neutral-800 text-sm md:text-base font-light mb-8 leading-relaxed">
+        <p className="text-neutral-800 text-sm md:text-base font-light mb-4 leading-relaxed">
           Thanks to perseverance and continuous work, we managed to collaborate with UNAM in creating digital resources.
           Here we developed our first websites for a highly relevant institution in the country, marking a turning point in our level of responsibility, quality, and professional vision.
         </p>
+        <div className="flex flex-col md:flex-row gap-4 mt-6">
+          <img src="/EquipoUNAM.jpeg" alt="Equipo UNAM" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+          <img src="/pizarronUNAM.jpeg" alt="Pizarrón UNAM" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+        </div>
       </div>
     ),
   },
@@ -174,9 +186,10 @@ const EnglishTimeline = [
           From this experience, we began working with organizations like Citibanamex and Universidad Anáhuac.
           Our role evolved: we no longer just built websites, but participated in marketing strategies, digital decisions, and strategic planning.
         </p>
-        <p className="text-neutral-800 text-sm md:text-base font-light mb-8 leading-relaxed">
+        <p className="text-neutral-800 text-sm md:text-base font-light mb-4 leading-relaxed">
           The project stopped being just design and became impact.
         </p>
+        <img src="/PropuestaCitibanamex.png" alt="Propuesta Citibanamex" className="max-w-xs md:max-w-sm h-auto rounded-lg mt-6" />
       </div>
     ),
   },
@@ -191,9 +204,13 @@ const EnglishTimeline = [
           We changed stages and rebranded as Zoi Marketing.
           This year we worked with larger companies like Sanborns and UNAM's CENAPyME, while also beginning to advise prominent influencers in Mexico on brand, strategy, and digital presence.
         </p>
-        <p className="text-neutral-800 text-sm md:text-base font-light mb-8 leading-relaxed">
+        <p className="text-neutral-800 text-sm md:text-base font-light mb-4 leading-relaxed">
           Our network grew, as did our creative ambition.
         </p>
+        <div className="flex flex-col md:flex-row gap-4 mt-6">
+          <img src="/PortadaZoiMarketing.png" alt="Portada Zoi Marketing" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+          <img src="/ReuGob.png" alt="Reunión Gobierno" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+        </div>
       </div>
     ),
   },
@@ -211,9 +228,13 @@ const EnglishTimeline = [
         <p className="text-neutral-800 text-sm md:text-base font-light mb-4 leading-relaxed">
           This year we made a key decision: professionalize ourselves to the maximum and evolve our identity once again.
         </p>
-        <p className="text-neutral-800 text-sm md:text-base font-light mb-8 leading-relaxed">
+        <p className="text-neutral-800 text-sm md:text-base font-light mb-4 leading-relaxed">
           Thus chiiko was born.
         </p>
+        <div className="flex flex-col md:flex-row gap-4 mt-6">
+          <img src="/LogoPortadaChiiko.png" alt="Logo Portada Chiiko" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+          <img src="/Entrevista.png" alt="Entrevista" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+        </div>
       </div>
     ),
   },
@@ -243,6 +264,10 @@ const EnglishTimeline = [
         <p className="text-neutral-800 text-sm md:text-base font-light mb-8 leading-relaxed">
           We continue growing, learning, and transforming the way websites are conceived and created.
         </p>
+        <div className="flex flex-col md:flex-row gap-4 mt-6">
+          <img src="/Pinterest.png" alt="Pinterest" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+          <img src="/Google.png" alt="Google" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+        </div>
       </div>
     ),
   },
