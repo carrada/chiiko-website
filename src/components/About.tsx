@@ -51,9 +51,10 @@ const SpanishTimeline = [
           A partir de esta experiencia, comenzamos a trabajar con organizaciones como Citibanamex, la Universidad Anáhuac y el Partido Acción Nacional (PAN).
           Nuestro rol evolucionó: ya no solo construíamos sitios web, sino que participábamos en estrategias de marketing, decisiones digitales y planeación estratégica.
         </p>
-        <p className="text-neutral-800 text-sm md:text-base font-light mb-8 leading-relaxed">
+        <p className="text-neutral-800 text-sm md:text-base font-light mb-4 leading-relaxed">
           El proyecto dejó de ser solo diseño y se convirtió en impacto.
         </p>
+        <img src="/PropuestaCitibanamex.png" alt="Propuesta Citibanamex" className="max-w-xs md:max-w-sm h-auto rounded-lg mt-6" />
       </div>
     ),
   },
@@ -66,7 +67,7 @@ const SpanishTimeline = [
         </p>
         <p className="text-neutral-800 text-sm md:text-base font-light mb-4 leading-relaxed">
           Cambiamos de etapa y nos renombramos como Zoi Marketing.
-          Este año trabajamos con empresas más grandes como Sanborns y el CENAPyME de la UNAM, además de comenzar a asesorar a influencers destacados en México en temas de marca, estrategia y presencia digital.
+          Este año trabajamos con empresas más grandes como Sanborns, el CENAPyME de la UNAM y el Gobierno de México, además de comenzar a asesorar a influencers destacados en México en temas de marca, estrategia y presencia digital.
         </p>
         <p className="text-neutral-800 text-sm md:text-base font-light mb-8 leading-relaxed">
           Nuestra red creció, al igual que nuestra ambición creativa.
