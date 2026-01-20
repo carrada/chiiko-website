@@ -33,6 +33,10 @@ const SpanishTimeline = [
           Gracias a la constancia y al trabajo continuo, logramos colaborar con la UNAM en la creación de recursos digitales.
           Aquí desarrollamos nuestros primeros sitios web para una institución de gran relevancia en el país, marcando un antes y un después en nuestro nivel de responsabilidad, calidad y visión profesional.
         </p>
+        <div className="flex flex-col md:flex-row gap-4 mt-6">
+          <img src="/EquipoUNAM.jpeg" alt="Equipo UNAM" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+          <img src="/pizarronUNAM.jpeg" alt="Pizarrón UNAM" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+        </div>
       </div>
     ),
   },
@@ -136,7 +140,7 @@ const EnglishTimeline = [
         <p className="text-neutral-800 text-sm md:text-base font-light mb-8 leading-relaxed">
           It was the beginning of a mindset that remains active today: doing the best possible with what you have.
         </p>
-        <img src="/logoCreativCarrada.png" alt="Creativa Carrada" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+        <img src="/CreativaCarrada.png" alt="Creativa Carrada" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
       </div>
     ),
   },
