@@ -38,7 +38,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white max-w-4xl mb-4">
-          Changelog from my journey
+          Nuestra Historia
         </h2>
         <p className="text-base md:text-lg text-gray-700 dark:text-neutral-300 font-light leading-relaxed max-w-2xl">
           I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s

@@ -8,10 +8,15 @@ const SpanishTimeline = [
     title: "2020",
     content: (
       <div>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-semibold mb-4 leading-relaxed">
+          El origen
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          Creativa Carrada nace como un estudio muy pequeño, impulsado por curiosidad y necesidad.
+          En esta etapa creábamos sitios web sencillos utilizando herramientas accesibles como Canva, aprendiendo desde cero sobre diseño, estructura y presencia digital para marcas emergentes.
+        </p>
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-8 leading-relaxed">
-          Nace chiikö como respuesta a la falta de diseño estratégico en el mercado digital. 
-          Desde el inicio, nuestra visión fue clara: crear sitios web que no solo se vean bien, 
-          sino que comuniquen con claridad y conviertan visitantes en clientes.
+          Fue el inicio de una mentalidad que sigue vigente: hacer lo mejor posible con lo que se tiene.
         </p>
       </div>
     ),
@@ -20,11 +25,12 @@ const SpanishTimeline = [
     title: "2021",
     content: (
       <div>
-        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-8 leading-relaxed">
-          Consolidamos nuestro proceso de trabajo y metodología. Aprendimos que cada proyecto 
-          es único y que la fase estratégica es tan importante como el diseño mismo. 
-          Comenzamos a trabajar con marcas que valoran la diferencia entre tener presencia 
-          digital y tener presencia con propósito.
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-semibold mb-4 leading-relaxed">
+          Primeros pasos importantes
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          Gracias a la constancia y al trabajo continuo, logramos colaborar con la UNAM en la creación de recursos digitales.
+          Aquí desarrollamos nuestros primeros sitios web para una institución de gran relevancia en el país, marcando un antes y un después en nuestro nivel de responsabilidad, calidad y visión profesional.
         </p>
       </div>
     ),
@@ -33,10 +39,15 @@ const SpanishTimeline = [
     title: "2022",
     content: (
       <div>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-semibold mb-4 leading-relaxed">
+          Expansión y estrategia
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          A partir de esta experiencia, comenzamos a trabajar con organizaciones como Citibanamex y la Universidad Anáhuac.
+          Nuestro rol evolucionó: ya no solo construíamos sitios web, sino que participábamos en estrategias de marketing, decisiones digitales y planeación estratégica.
+        </p>
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-8 leading-relaxed">
-          Expandimos nuestros servicios y refinamos nuestra propuesta. Definimos los tres pilares 
-          que guían cada proyecto: estrategia, diseño y desarrollo a medida. Nos convertimos en 
-          el socio creativo de estudios, despachos y marcas que buscan destacar sin gritar.
+          El proyecto dejó de ser solo diseño y se convirtió en impacto.
         </p>
       </div>
     ),
@@ -45,10 +56,15 @@ const SpanishTimeline = [
     title: "2023",
     content: (
       <div>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-semibold mb-4 leading-relaxed">
+          Nueva identidad, nuevos horizontes
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          Cambiamos de etapa y nos renombramos como Zoi Marketing.
+          Este año trabajamos con empresas más grandes como Sanborns y el CENAPyME de la UNAM, además de comenzar a asesorar a influencers destacados en México en temas de marca, estrategia y presencia digital.
+        </p>
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-8 leading-relaxed">
-          Implementamos un sistema de trabajo más enfocado. Decidimos trabajar con cupos limitados 
-          para garantizar la calidad que nos define. Cada proyecto recibe el tiempo y la atención 
-          que merece, sin comprometer la experiencia del cliente ni el resultado final.
+          Nuestra red creció, al igual que nuestra ambición creativa.
         </p>
       </div>
     ),
@@ -57,24 +73,47 @@ const SpanishTimeline = [
     title: "2024",
     content: (
       <div>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-semibold mb-4 leading-relaxed">
+          Reconocimiento y profesionalización
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          Nuestra trayectoria fue reconocida con una entrevista en el podcast "Ley de Atracción", donde compartimos nuestra historia y visión.
+          Al mismo tiempo, fortalecimos relaciones con clientes y empezamos a trabajar en proyectos relacionados con nuevas áreas del software, ampliando nuestro campo de acción.
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          Este año tomamos una decisión clave: profesionalizarnos al máximo y evolucionar nuevamente nuestra identidad.
+        </p>
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-8 leading-relaxed">
-          Lanzamos nuestra metodología de Artesanía Digital, pensada para marcas premium que 
-          entienden el valor de una experiencia única. Comenzamos a documentar casos de estudio 
-          y a compartir nuestro proceso, demostrando que el diseño bien hecho es una inversión, 
-          no un gasto.
+          Así nace chiiko.
         </p>
       </div>
     ),
   },
   {
-    title: "2025 - Presente",
+    title: "2026",
     content: (
       <div>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-semibold mb-4 leading-relaxed">
+          Chiiko hoy
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          Hoy, en chiiko, cultivamos alianzas con grandes empresas y comunidades de la industria tecnológica.
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          Con Pinterest México, elevamos nuestro diseño y aprendemos de una empresa que transforma tendencias para millones de usuarios.
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          Con Google México, exploramos nuevas formas de entender el software y repensar cómo se construyen los productos digitales.
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          Colaboramos y aprendemos junto a empresas y comunidades como OpenAI, Red Hat y actores clave del ecosistema tecnológico.
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          Todo esto nos llevó a crear nuestra propia visión:
+          las webs como artesanías digitales, construidas con intención, criterio y profundidad.
+        </p>
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-8 leading-relaxed">
-          Hoy, chiikö es un estudio creativo reconocido por su enfoque en calidad sobre cantidad. 
-          Trabajamos con clientes en México y el mundo, ayudándolos a comunicar mejor, vender más 
-          y crecer de forma sostenible. Seguimos creyendo que el diseño debe ser claro, funcional 
-          y memorable, sin ruido innecesario.
+          Seguimos creciendo, aprendiendo y transformando la manera en la que se conciben y se crean los sitios web.
         </p>
       </div>
     ),
@@ -86,10 +125,15 @@ const EnglishTimeline = [
     title: "2020",
     content: (
       <div>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-semibold mb-4 leading-relaxed">
+          The Beginning
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          Creativa Carrada was born as a very small studio, driven by curiosity and necessity.
+          At this stage we created simple websites using accessible tools like Canva, learning from scratch about design, structure, and digital presence for emerging brands.
+        </p>
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-8 leading-relaxed">
-          chiikö was born as a response to the lack of strategic design in the digital market. 
-          From the beginning, our vision was clear: create websites that don't just look good, 
-          but communicate clearly and convert visitors into clients.
+          It was the beginning of a mindset that remains active today: doing the best possible with what you have.
         </p>
       </div>
     ),
@@ -98,11 +142,12 @@ const EnglishTimeline = [
     title: "2021",
     content: (
       <div>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-semibold mb-4 leading-relaxed">
+          First Important Steps
+        </p>
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-8 leading-relaxed">
-          We consolidated our work process and methodology. We learned that each project is unique 
-          and that the strategic phase is as important as the design itself. We started working 
-          with brands that value the difference between having a digital presence and having 
-          presence with purpose.
+          Thanks to perseverance and continuous work, we managed to collaborate with UNAM in creating digital resources.
+          Here we developed our first websites for a highly relevant institution in the country, marking a turning point in our level of responsibility, quality, and professional vision.
         </p>
       </div>
     ),
@@ -111,10 +156,15 @@ const EnglishTimeline = [
     title: "2022",
     content: (
       <div>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-semibold mb-4 leading-relaxed">
+          Expansion and Strategy
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          From this experience, we began working with organizations like Citibanamex and Universidad Anáhuac.
+          Our role evolved: we no longer just built websites, but participated in marketing strategies, digital decisions, and strategic planning.
+        </p>
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-8 leading-relaxed">
-          We expanded our services and refined our proposal. We defined the three pillars that 
-          guide each project: strategy, design, and custom development. We became the creative 
-          partner for studios, firms, and brands looking to stand out without shouting.
+          The project stopped being just design and became impact.
         </p>
       </div>
     ),
@@ -123,10 +173,15 @@ const EnglishTimeline = [
     title: "2023",
     content: (
       <div>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-semibold mb-4 leading-relaxed">
+          New Identity, New Horizons
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          We changed stages and rebranded as Zoi Marketing.
+          This year we worked with larger companies like Sanborns and UNAM's CENAPyME, while also beginning to advise prominent influencers in Mexico on brand, strategy, and digital presence.
+        </p>
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-8 leading-relaxed">
-          We implemented a more focused work system. We decided to work with limited slots to 
-          guarantee the quality that defines us. Each project receives the time and attention 
-          it deserves, without compromising the client experience or the final result.
+          Our network grew, as did our creative ambition.
         </p>
       </div>
     ),
@@ -135,23 +190,47 @@ const EnglishTimeline = [
     title: "2024",
     content: (
       <div>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-semibold mb-4 leading-relaxed">
+          Recognition and Professionalization
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          Our trajectory was recognized with an interview on the "Ley de Atracción" podcast, where we shared our story and vision.
+          At the same time, we strengthened client relationships and began working on projects related to new areas of software, expanding our field of action.
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          This year we made a key decision: professionalize ourselves to the maximum and evolve our identity once again.
+        </p>
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-8 leading-relaxed">
-          We launched our Digital Craftsmanship methodology, designed for premium brands that 
-          understand the value of a unique experience. We started documenting case studies and 
-          sharing our process, demonstrating that well-done design is an investment, not an expense.
+          Thus chiiko was born.
         </p>
       </div>
     ),
   },
   {
-    title: "2025 - Present",
+    title: "2026",
     content: (
       <div>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-semibold mb-4 leading-relaxed">
+          Chiiko Today
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          Today, at chiiko, we cultivate alliances with major companies and communities in the technology industry.
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          With Pinterest Mexico, we elevate our design and learn from a company that transforms trends for millions of users.
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          With Google Mexico, we explore new ways to understand software and rethink how digital products are built.
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          We collaborate and learn together with companies and communities like OpenAI, Red Hat, and key players in the technology ecosystem.
+        </p>
+        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
+          All of this led us to create our own vision:
+          websites as digital craftsmanship, built with intention, criterion, and depth.
+        </p>
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-8 leading-relaxed">
-          Today, chiikö is a creative studio recognized for its focus on quality over quantity. 
-          We work with clients in Mexico and around the world, helping them communicate better, 
-          sell more, and grow sustainably. We continue to believe that design should be clear, 
-          functional, and memorable, without unnecessary noise.
+          We continue growing, learning, and transforming the way websites are conceived and created.
         </p>
       </div>
     ),
