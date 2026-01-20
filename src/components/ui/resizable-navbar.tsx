@@ -7,7 +7,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import React, { useRef, useState } from "react";
 
@@ -127,6 +127,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
 
 export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
+  const location = useLocation();
 
   return (
     <motion.div
@@ -138,6 +139,9 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     >
       {items.map((item, idx) => {
         const isRoute = item.link.startsWith('/');
+        const isActive = isRoute && location.pathname === item.link;
+        const showSpotlight = isActive || hovered === idx;
+        
         const commonProps = {
           onMouseEnter: () => setHovered(idx),
           onClick: onItemClick,
@@ -150,9 +154,9 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             {...commonProps}
             to={item.link}
           >
-            {hovered === idx && (
+            {showSpotlight && (
               <motion.div
-                layoutId="hovered"
+                layoutId={isActive ? `active-${idx}` : "hovered"}
                 className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800"
               />
             )}
@@ -163,7 +167,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             {...commonProps}
             href={item.link}
           >
-            {hovered === idx && (
+            {showSpotlight && (
               <motion.div
                 layoutId="hovered"
                 className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800"
