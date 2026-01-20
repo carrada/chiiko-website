@@ -18,6 +18,7 @@ const SpanishTimeline = [
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-8 leading-relaxed">
           Fue el inicio de una mentalidad que sigue vigente: hacer lo mejor posible con lo que se tiene.
         </p>
+        <img src="/logoCreativCarrada.png" alt="Creativa Carrada" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
       </div>
     ),
   },
@@ -43,7 +44,7 @@ const SpanishTimeline = [
           Expansión y estrategia
         </p>
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-4 leading-relaxed">
-          A partir de esta experiencia, comenzamos a trabajar con organizaciones como Citibanamex y la Universidad Anáhuac.
+          A partir de esta experiencia, comenzamos a trabajar con organizaciones como Citibanamex, la Universidad Anáhuac y el Partido Acción Nacional (PAN).
           Nuestro rol evolucionó: ya no solo construíamos sitios web, sino que participábamos en estrategias de marketing, decisiones digitales y planeación estratégica.
         </p>
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-8 leading-relaxed">
@@ -135,6 +136,7 @@ const EnglishTimeline = [
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-light mb-8 leading-relaxed">
           It was the beginning of a mindset that remains active today: doing the best possible with what you have.
         </p>
+        <img src="/logoCreativCarrada.png" alt="Creativa Carrada" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
       </div>
     ),
   },
