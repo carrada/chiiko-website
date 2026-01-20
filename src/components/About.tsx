@@ -69,9 +69,13 @@ const SpanishTimeline = [
           Cambiamos de etapa y nos renombramos como Zoi Marketing.
           Este año trabajamos con empresas más grandes como Sanborns, el CENAPyME de la UNAM y el Gobierno de México, además de comenzar a asesorar a influencers destacados en México en temas de marca, estrategia y presencia digital.
         </p>
-        <p className="text-neutral-800 text-sm md:text-base font-light mb-8 leading-relaxed">
+        <p className="text-neutral-800 text-sm md:text-base font-light mb-4 leading-relaxed">
           Nuestra red creció, al igual que nuestra ambición creativa.
         </p>
+        <div className="flex flex-col md:flex-row gap-4 mt-6">
+          <img src="/PortadaZoiMarketing.png" alt="Portada Zoi Marketing" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+          <img src="/ReuGob.png" alt="Reunión Gobierno" className="max-w-xs md:max-w-sm h-auto rounded-lg" />
+        </div>
       </div>
     ),
   },
