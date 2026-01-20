@@ -241,10 +241,25 @@ export default function About() {
   const { i18n } = useTranslation();
   const timelineData = i18n.language === 'es' ? SpanishTimeline : EnglishTimeline;
 
+  const title = i18n.language === 'es' ? 'Nuestra historia' : 'Our story';
+  const description = i18n.language === 'es' 
+    ? 'Desde nuestros humildes comienzos hasta hoy, hemos crecido cultivando alianzas, aprendiendo constantemente y transformando la forma en que se conciben los sitios web. Cada capítulo de nuestra trayectoria refleja nuestra compromiso con la excelencia y la innovación.'
+    : 'From our humble beginnings to today, we have grown by cultivating alliances, constantly learning, and transforming the way websites are conceived. Each chapter of our journey reflects our commitment to excellence and innovation.';
+
   return (
     <div className="min-h-screen bg-white">
       <ResizableNavbarDemo />
       <div className="py-12 tablet:py-16 md:py-24"></div>
+      
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-16">
+        <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
+          {title}
+        </h1>
+        <p className="text-sm md:text-base text-gray-700 font-light leading-relaxed">
+          {description}
+        </p>
+      </div>
+
       <Timeline data={timelineData} />
       <Footer />
     </div>
