@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { ResizableNavbarDemo } from './ResizableNavbarDemo';
 import Footer from './Footer';
+import SEO from './SEO';
 
 const SpanishContent = () => (
   <div className="w-full bg-white">
@@ -236,6 +237,12 @@ export default function CookiePolicy() {
 
   return (
     <div className="w-full bg-white">
+      <SEO
+        title="Cookie Policy | Chiiko"
+        description={isSpanish ? "Política de cookies de Chiiko. Conoce cómo usamos cookies." : "Chiiko's cookie policy. Learn how we use cookies."}
+        keywords={[isSpanish ? "cookies" : "cookies"]}
+        url="/cookies"
+      />
       <ResizableNavbarDemo />
       {isSpanish ? <SpanishContent /> : <EnglishContent />}
       <Footer />

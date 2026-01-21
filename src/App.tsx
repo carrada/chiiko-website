@@ -17,10 +17,13 @@ import LegalNotice from "@/components/LegalNotice";
 import Plans from "@/components/Plans";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import SEO from "@/components/SEO";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { SEO_PAGES, generateOrganizationSchema } from "@/lib/seo";
 import '@/i18n/config';
 
 // Componente que hace scroll al top cuando cambia la ruta
@@ -50,8 +53,9 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <ScrollToTop />
+    <HelmetProvider>
+      <Router>
+        <ScrollToTop />
       <Routes>
         <Route path="/privacidad" element={<PrivacyPolicy />} />
         <Route path="/faq" element={<FAQ />} />
@@ -64,6 +68,13 @@ function App() {
         <Route path="/contacto" element={<Contact />} />
         <Route path="/" element={
           <>
+            <SEO
+              title={SEO_PAGES.home.es.title}
+              description={SEO_PAGES.home.es.description}
+              keywords={SEO_PAGES.home.es.keywords}
+              url="/"
+              schema={generateOrganizationSchema()}
+            />
             <AnimatePresence>
               {loading && (
                 <motion.div
@@ -197,6 +208,7 @@ function App() {
         } />
       </Routes>
     </Router>
+    </HelmetProvider>
   )
 }
 

@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { ResizableNavbarDemo } from './ResizableNavbarDemo';
 import Footer from './Footer';
+import SEO from './SEO';
 
 const SpanishContent = () => (
   <div className="w-full bg-white">
@@ -236,6 +237,12 @@ export default function LegalNotice() {
 
   return (
     <div className="w-full bg-white">
+      <SEO
+        title="Legal Notice | Chiiko"
+        description={isSpanish ? "Aviso legal de Chiiko." : "Chiiko's legal notice."}
+        keywords={[isSpanish ? "legal" : "legal"]}
+        url="/legal"
+      />
       <ResizableNavbarDemo />
       {isSpanish ? <SpanishContent /> : <EnglishContent />}
       <Footer />

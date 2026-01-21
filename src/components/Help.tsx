@@ -1,6 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { ResizableNavbarDemo } from './ResizableNavbarDemo';
 import Footer from './Footer';
+import SEO from './SEO';
+import { SEO_PAGES } from '@/lib/seo';
 
 const SpanishContent = () => (
   <div className="w-full bg-white">
@@ -278,6 +280,12 @@ export default function Help() {
 
   return (
     <div className="w-full bg-white">
+      <SEO
+        title={SEO_PAGES.help[isSpanish ? 'es' : 'en'].title}
+        description={SEO_PAGES.help[isSpanish ? 'es' : 'en'].description}
+        keywords={SEO_PAGES.help[isSpanish ? 'es' : 'en'].keywords}
+        url="/ayuda"
+      />
       <ResizableNavbarDemo />
       {isSpanish ? <SpanishContent /> : <EnglishContent />}
       <Footer />

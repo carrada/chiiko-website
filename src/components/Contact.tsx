@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { useForm, ValidationError } from "@formspree/react";
+import { SEO_PAGES } from "@/lib/seo";
 
 export default function Contact() {
   const { i18n } = useTranslation();
@@ -61,6 +63,12 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title={SEO_PAGES.contact[isSpanish ? 'es' : 'en'].title}
+        description={SEO_PAGES.contact[isSpanish ? 'es' : 'en'].description}
+        keywords={SEO_PAGES.contact[isSpanish ? 'es' : 'en'].keywords}
+        url="/contacto"
+      />
       <ResizableNavbarDemo />
       <div className="py-12 tablet:py-16 md:py-24"></div>
 

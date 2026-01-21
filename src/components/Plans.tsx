@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import { SEO_PAGES } from "@/lib/seo";
 
 const SpanishContent = () => (
   <>
@@ -409,6 +411,12 @@ export default function Plans() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title={SEO_PAGES.plans[i18n.language === 'es' ? 'es' : 'en'].title}
+        description={SEO_PAGES.plans[i18n.language === 'es' ? 'es' : 'en'].description}
+        keywords={SEO_PAGES.plans[i18n.language === 'es' ? 'es' : 'en'].keywords}
+        url="/planes"
+      />
       <ResizableNavbarDemo />
       <div className="py-12 tablet:py-16 md:py-24"></div>
       <div className="max-w-7xl mx-auto px-4 py-16 md:py-24">

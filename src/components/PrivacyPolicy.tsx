@@ -1,6 +1,8 @@
 import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { useTranslation } from 'react-i18next';
+import { SEO_PAGES } from "@/lib/seo";
 
 export default function PrivacyPolicy() {
   const { i18n } = useTranslation();
@@ -8,6 +10,12 @@ export default function PrivacyPolicy() {
 
   return (
     <div className="w-full bg-white">
+      <SEO
+        title={SEO_PAGES.privacy[isSpanish ? 'es' : 'en'].title}
+        description={SEO_PAGES.privacy[isSpanish ? 'es' : 'en'].description}
+        keywords={SEO_PAGES.privacy[isSpanish ? 'es' : 'en'].keywords}
+        url="/privacidad"
+      />
       <ResizableNavbarDemo />
       <div className="py-12 tablet:py-16 md:py-24"></div>
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-24">

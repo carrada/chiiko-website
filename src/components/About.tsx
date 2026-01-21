@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Timeline } from "@/components/ui/timeline";
+import { SEO_PAGES } from "@/lib/seo";
 
 const SpanishTimeline = [
   {
@@ -348,6 +350,12 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title={SEO_PAGES.about[i18n.language === 'es' ? 'es' : 'en'].title}
+        description={SEO_PAGES.about[i18n.language === 'es' ? 'es' : 'en'].description}
+        keywords={SEO_PAGES.about[i18n.language === 'es' ? 'es' : 'en'].keywords}
+        url="/nosotros"
+      />
       <ResizableNavbarDemo />
       <div className="py-12 tablet:py-16 md:py-24"></div>
       
