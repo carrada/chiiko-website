@@ -15,7 +15,7 @@ export interface SEOConfig {
 }
 
 // Base URL for the site
-export const SITE_URL = "https://chiiko.vercel.app";
+export const SITE_URL = "https://www.chiiko.design";
 export const SITE_NAME = "Chiiko";
 export const SITE_DESCRIPTION = "Strategic design and development studio. We create thoughtful digital experiences for brands that matter.";
 

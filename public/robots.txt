@@ -21,4 +21,4 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://chiiko.vercel.app/sitemap.xml
+Sitemap: https://www.chiiko.design/sitemap.xml
