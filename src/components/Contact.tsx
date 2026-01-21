@@ -201,7 +201,7 @@ export default function Contact() {
                     type="text"
                     name="name"
                     required
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg bg-white text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-800 focus:border-transparent transition"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg bg-white text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#ce4676] focus:border-transparent transition"
                     placeholder={content.fullName}
                   />
                   <ValidationError field="name" prefix="Name" errors={state.errors} />
@@ -217,7 +217,7 @@ export default function Contact() {
                     type="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg bg-white text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-800 focus:border-transparent transition"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg bg-white text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#ce4676] focus:border-transparent transition"
                     placeholder={content.email}
                   />
                   <ValidationError field="email" prefix="Email" errors={state.errors} />
@@ -232,7 +232,7 @@ export default function Contact() {
                     id="projectType"
                     name="projectType"
                     required
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg bg-white text-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-800 focus:border-transparent transition"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg bg-white text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#ce4676] focus:border-transparent transition"
                   >
                     <option value="">{content.projectTypePlaceholder}</option>
                     <option value="Website">{content.website}</option>
@@ -252,7 +252,7 @@ export default function Contact() {
                     id="budget"
                     name="budget"
                     required
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg bg-white text-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-800 focus:border-transparent transition"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg bg-white text-neutral-800 focus:outline-none focus:ring-2 focus:ring-[#ce4676] focus:border-transparent transition"
                   >
                     <option value="">{content.budgetPlaceholder}</option>
                     <option value="25000-35000">{content.budget1}</option>
@@ -272,7 +272,7 @@ export default function Contact() {
                     name="description"
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg bg-white text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-neutral-800 focus:border-transparent transition resize-none"
+                    className="w-full px-4 py-3 border border-neutral-300 rounded-lg bg-white text-neutral-800 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-[#ce4676] focus:border-transparent transition resize-none"
                     placeholder={content.descriptionPlaceholder}
                   />
                   <ValidationError field="description" prefix="Description" errors={state.errors} />
@@ -283,7 +283,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={state.submitting}
-                    className="w-full px-6 py-3 bg-neutral-800 text-white font-medium rounded-lg hover:bg-neutral-700 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full px-6 py-3 bg-neutral-800 text-white font-medium rounded-lg hover:bg-[#ce4676] focus:outline-none focus:ring-2 focus:ring-[#ce4676] transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {state.submitting ? (
                       <>
