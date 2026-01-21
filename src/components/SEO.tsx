@@ -1,9 +1,11 @@
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 import type { SEOConfig } from "@/lib/seo";
 import { SITE_NAME, SITE_URL, DEFAULT_OG_IMAGE } from "@/lib/seo";
 
 interface SEOProps extends SEOConfig {
   children?: React.ReactNode;
+  hreflangs?: { lang: string; href: string }[];
 }
 
 export default function SEO({
@@ -17,14 +19,22 @@ export default function SEO({
   canonicalUrl,
   author = SITE_NAME,
   schema,
+  hreflangs,
 }: SEOProps) {
+  const { i18n } = useTranslation();
+  const currentLang = i18n.language || "es";
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
   const fullUrl = url ? (url.startsWith("http") ? url : `${SITE_URL}${url}`) : SITE_URL;
   const canonical = canonicalUrl ? (canonicalUrl.startsWith("http") ? canonicalUrl : `${SITE_URL}${canonicalUrl}`) : fullUrl;
 
+  // Determine locale dynamically
+  const ogLocale = currentLang === "en" ? "en_US" : "es_MX";
+  const alternateLocale = currentLang === "en" ? "es_MX" : "en_US";
+
   return (
     <Helmet>
       {/* Basic Meta Tags */}
+      <html lang={currentLang} />
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="author" content={author} />
@@ -33,33 +43,48 @@ export default function SEO({
       {/* Canonical URL */}
       <link rel="canonical" href={canonical} />
 
+      {/* hreflang for alternate language versions */}
+      {hreflangs &&
+        hreflangs.map((item) => (
+          <link key={item.lang} rel="alternate" hrefLang={item.lang} href={item.href} />
+        ))}
+
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:title" content={ogTitle || fullTitle} />
       <meta property="og:description" content={ogDescription || description} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={SITE_NAME} />
       <meta property="og:site_name" content={SITE_NAME} />
-      <meta property="og:locale" content="es_MX" />
-      <meta property="og:locale:alternate" content="en_US" />
+      <meta property="og:locale" content={ogLocale} />
+      <meta property="og:locale:alternate" content={alternateLocale} />
 
-      {/* Social Media - LinkedIn & Behance */}
-      <meta property="og:see_also" content="https://www.linkedin.com/company/chiiko/" />
-      <meta property="og:see_also" content="https://www.behance.net/chiiko" />
+      {/* Twitter Card (universal standard for all platforms) */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content={fullUrl} />
+      <meta name="twitter:title" content={ogTitle || fullTitle} />
+      <meta name="twitter:description" content={ogDescription || description} />
+      <meta name="twitter:image" content={ogImage} />
+
+      {/* LinkedIn & Behance Profile Links */}
       <link rel="me" href="https://www.linkedin.com/company/chiiko/" />
       <link rel="me" href="https://www.behance.net/chiiko" />
 
       {/* Additional Meta Tags */}
-      <meta name="robots" content="index, follow" />
+      <meta
+        name="robots"
+        content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+      />
       <meta name="language" content="Spanish, English" />
       <meta httpEquiv="content-language" content="es, en" />
-      <meta name="theme-color" content="#ffffff" />
+      <meta name="theme-color" content="#1a1a2e" />
 
       {/* Schema.org Structured Data */}
       {schema && (
-        <script type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(schema)}</script>
       )}
     </Helmet>
   );

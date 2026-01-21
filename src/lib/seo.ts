@@ -87,20 +87,48 @@ export const SEO_PAGES = {
     es: {
       title: "Política de Privacidad | Chiiko",
       description: "Política de privacidad de Chiiko. Conoce cómo protegemos tus datos.",
+      url: "/privacidad",
     },
     en: {
       title: "Privacy Policy | Chiiko",
       description: "Chiiko's privacy policy. Learn how we protect your data.",
+      url: "/privacy",
     },
   },
   terms: {
     es: {
       title: "Términos y Condiciones | Chiiko",
       description: "Términos y condiciones de uso de los servicios de Chiiko.",
+      url: "/terminos",
     },
     en: {
       title: "Terms and Conditions | Chiiko",
       description: "Terms and conditions for using Chiiko's services.",
+      url: "/terms",
+    },
+  },
+  cookies: {
+    es: {
+      title: "Política de Cookies | Chiiko",
+      description: "Nuestra política de cookies. Conoce cómo usamos cookies en el sitio.",
+      url: "/politica-cookies",
+    },
+    en: {
+      title: "Cookie Policy | Chiiko",
+      description: "Our cookie policy. Learn how we use cookies on our site.",
+      url: "/cookie-policy",
+    },
+  },
+  legal: {
+    es: {
+      title: "Aviso Legal | Chiiko",
+      description: "Aviso legal de Chiiko. Información legal importante.",
+      url: "/aviso-legal",
+    },
+    en: {
+      title: "Legal Notice | Chiiko",
+      description: "Chiiko's legal notice. Important legal information.",
+      url: "/legal",
     },
   },
 };
@@ -114,14 +142,21 @@ export const generateOrganizationSchema = () => ({
   logo: `${SITE_URL}/logo.png`,
   description: SITE_DESCRIPTION,
   sameAs: [
+    "https://www.linkedin.com/company/chiiko/",
+    "https://www.behance.net/chiiko",
     "https://instagram.com/chiiko.design",
-    "https://twitter.com/chiiko",
   ],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "Customer Service",
     email: "hola@chiiko.design",
+    telephone: "+52-MX",
     availableLanguage: ["es", "en"],
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "MX",
+    addressRegion: "Ciudad de México",
   },
 });
 
@@ -139,9 +174,14 @@ export const generateLocalBusinessSchema = () => ({
   },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "",
+    streetAddress: "Ciudad de México",
+    addressRegion: "CDMX",
     addressCountry: "MX",
   },
+  sameAs: [
+    "https://www.linkedin.com/company/chiiko/",
+    "https://www.behance.net/chiiko",
+  ],
 });
 
 export const generateBreadcrumbSchema = (breadcrumbs: { name: string; url: string }[]) => ({

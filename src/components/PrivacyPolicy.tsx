@@ -2,18 +2,25 @@ import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import { SEO_PAGES } from "@/lib/seo";
 
 export default function PrivacyPolicy() {
   const { i18n } = useTranslation();
+  const location = useLocation();
   const isSpanish = i18n.language === 'es';
+  const currentPath = location.pathname; // Will be /privacidad or /privacy
 
   return (
     <div className="w-full bg-white">
       <SEO
         title={SEO_PAGES.privacy[isSpanish ? 'es' : 'en'].title}
         description={SEO_PAGES.privacy[isSpanish ? 'es' : 'en'].description}
-        url="/privacidad"
+        url={currentPath}
+        hreflangs={[
+          { lang: 'es', href: `${SEO_PAGES.privacy.es.url || 'https://www.chiiko.design/privacidad'}` },
+          { lang: 'en', href: `${SEO_PAGES.privacy.en.url || 'https://www.chiiko.design/privacy'}` },
+        ]}
       />
       <ResizableNavbarDemo />
       <div className="py-12 tablet:py-16 md:py-24"></div>

@@ -1,23 +1,18 @@
-# Robots.txt for Chiiko
-# Allow all search engines to crawl the site
+# Robots.txt for Chiiko Design Studio
+# Allow all search engines
 
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /.env
-Disallow: /.git/
-Disallow: /node_modules/
-Disallow: /dist/
 
-# Specific rules for Google
+# Sitemap location
+Sitemap: https://www.chiiko.design/sitemap.xml
+
+# Specific crawl rates (optional)
 User-agent: Googlebot
-Allow: /
+Crawl-delay: 0
 
-# Specific rules for Bing
 User-agent: Bingbot
-Allow: /
-
-# Crawl delay (optional)
+Crawl-delay: 0
 Crawl-delay: 1
 
 # Sitemap location

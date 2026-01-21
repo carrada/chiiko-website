@@ -57,15 +57,28 @@ function App() {
       <Router>
         <ScrollToTop />
       <Routes>
+        {/* Spanish Routes */}
         <Route path="/privacidad" element={<PrivacyPolicy />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/ayuda" element={<Help />} />
         <Route path="/terminos" element={<TermsAndConditions />} />
-        <Route path="/cookies" element={<CookiePolicy />} />
-        <Route path="/legal" element={<LegalNotice />} />
+        <Route path="/politica-cookies" element={<CookiePolicy />} />
+        <Route path="/aviso-legal" element={<LegalNotice />} />
         <Route path="/planes" element={<Plans />} />
         <Route path="/nosotros" element={<About />} />
         <Route path="/contacto" element={<Contact />} />
+
+        {/* English Routes - same components, will detect language and show English content */}
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsAndConditions />} />
+        <Route path="/cookie-policy" element={<CookiePolicy />} />
+        <Route path="/legal" element={<LegalNotice />} />
+        <Route path="/plans" element={<Plans />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/help" element={<Help />} />
+
+        {/* Home */}
         <Route path="/" element={
           <>
             <SEO
