@@ -43,13 +43,11 @@ export default function SEO({
       <meta property="og:locale" content="es_MX" />
       <meta property="og:locale:alternate" content="en_US" />
 
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={fullUrl} />
-      <meta name="twitter:title" content={ogTitle || fullTitle} />
-      <meta name="twitter:description" content={ogDescription || description} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:creator" content="@chiiko" />
+      {/* Social Media - LinkedIn & Behance */}
+      <meta property="og:see_also" content="https://www.linkedin.com/company/chiiko/" />
+      <meta property="og:see_also" content="https://www.behance.net/chiiko" />
+      <link rel="me" href="https://www.linkedin.com/company/chiiko/" />
+      <link rel="me" href="https://www.behance.net/chiiko" />
 
       {/* Additional Meta Tags */}
       <meta name="robots" content="index, follow" />
