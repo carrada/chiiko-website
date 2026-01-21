@@ -141,16 +141,20 @@ export default function Contact() {
         {state.succeeded ? (
           <div 
             ref={successRef}
-            className="bg-green-50 border border-green-300 rounded-lg p-8 md:p-10 text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-500"
+            className="bg-white border rounded-lg p-8 md:p-10 text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-500"
+            style={{ borderColor: '#ce4676' }}
           >
             <div className="flex justify-center mb-4">
-              <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+              <div 
+                className="w-12 h-12 rounded-full flex items-center justify-center"
+                style={{ backgroundColor: '#ce4676' }}
+              >
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
             </div>
-            <p className="text-green-800 text-base md:text-lg font-light leading-relaxed">
+            <p className="text-neutral-800 text-base md:text-lg font-light leading-relaxed">
               {content.successMessage}
             </p>
           </div>
@@ -161,12 +165,13 @@ export default function Contact() {
               <div 
                 className={`fixed top-4 right-4 p-4 rounded-lg flex items-center gap-3 shadow-lg animate-in slide-in-from-right duration-300 z-50 max-w-md ${
                   toast.type === "success" 
-                    ? "bg-green-50 border border-green-300" 
+                    ? "border" 
                     : "bg-red-50 border border-red-300"
                 }`}
+                style={toast.type === 'success' ? { backgroundColor: 'rgba(206, 70, 118, 0.08)', borderColor: '#ce4676' } : undefined}
               >
                 {toast.type === "success" ? (
-                  <svg className="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 flex-shrink-0" style={{ color: '#ce4676' }} fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                 ) : (
@@ -174,7 +179,7 @@ export default function Contact() {
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                   </svg>
                 )}
-                <span className={toast.type === "success" ? "text-green-800" : "text-red-800"}>
+                <span className={toast.type === "success" ? "text-neutral-800" : "text-red-800"}>
                   {toast.message}
                 </span>
               </div>
