@@ -7,7 +7,7 @@ import { SEO_PAGES } from "@/lib/seo";
 
 export default function Contact() {
   const { i18n } = useTranslation();
-  const [state, handleSubmit] = useForm("xkdojwvd");
+  const [state, handleSubmit] = useForm("xpqqneqg");
 
   const isSpanish = i18n.language === "es";
 
