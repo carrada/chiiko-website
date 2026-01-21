@@ -431,7 +431,6 @@ export default function TermsAndConditions() {
       <SEO
         title={SEO_PAGES.terms[isSpanish ? 'es' : 'en'].title}
         description={SEO_PAGES.terms[isSpanish ? 'es' : 'en'].description}
-        keywords={SEO_PAGES.terms[isSpanish ? 'es' : 'en'].keywords}
         url="/terminos"
       />
       <ResizableNavbarDemo />

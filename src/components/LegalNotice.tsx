@@ -240,7 +240,6 @@ export default function LegalNotice() {
       <SEO
         title="Legal Notice | Chiiko"
         description={isSpanish ? "Aviso legal de Chiiko." : "Chiiko's legal notice."}
-        keywords={[isSpanish ? "legal" : "legal"]}
         url="/legal"
       />
       <ResizableNavbarDemo />

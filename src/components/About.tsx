@@ -353,7 +353,6 @@ export default function About() {
       <SEO
         title={SEO_PAGES.about[i18n.language === 'es' ? 'es' : 'en'].title}
         description={SEO_PAGES.about[i18n.language === 'es' ? 'es' : 'en'].description}
-        keywords={SEO_PAGES.about[i18n.language === 'es' ? 'es' : 'en'].keywords}
         url="/nosotros"
       />
       <ResizableNavbarDemo />

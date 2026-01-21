@@ -13,7 +13,6 @@ export default function PrivacyPolicy() {
       <SEO
         title={SEO_PAGES.privacy[isSpanish ? 'es' : 'en'].title}
         description={SEO_PAGES.privacy[isSpanish ? 'es' : 'en'].description}
-        keywords={SEO_PAGES.privacy[isSpanish ? 'es' : 'en'].keywords}
         url="/privacidad"
       />
       <ResizableNavbarDemo />

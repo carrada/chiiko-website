@@ -505,7 +505,6 @@ export default function FAQ() {
       <SEO
         title={SEO_PAGES.faq[isSpanish ? 'es' : 'en'].title}
         description={SEO_PAGES.faq[isSpanish ? 'es' : 'en'].description}
-        keywords={SEO_PAGES.faq[isSpanish ? 'es' : 'en'].keywords}
         url="/faq"
       />
       <ResizableNavbarDemo />

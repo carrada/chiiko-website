@@ -66,7 +66,6 @@ export default function Contact() {
       <SEO
         title={SEO_PAGES.contact[isSpanish ? 'es' : 'en'].title}
         description={SEO_PAGES.contact[isSpanish ? 'es' : 'en'].description}
-        keywords={SEO_PAGES.contact[isSpanish ? 'es' : 'en'].keywords}
         url="/contacto"
       />
       <ResizableNavbarDemo />

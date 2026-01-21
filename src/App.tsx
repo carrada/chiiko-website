@@ -71,7 +71,6 @@ function App() {
             <SEO
               title={SEO_PAGES.home.es.title}
               description={SEO_PAGES.home.es.description}
-              keywords={SEO_PAGES.home.es.keywords}
               url="/"
               schema={generateOrganizationSchema()}
             />

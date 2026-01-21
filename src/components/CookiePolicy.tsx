@@ -240,7 +240,6 @@ export default function CookiePolicy() {
       <SEO
         title="Cookie Policy | Chiiko"
         description={isSpanish ? "Política de cookies de Chiiko. Conoce cómo usamos cookies." : "Chiiko's cookie policy. Learn how we use cookies."}
-        keywords={[isSpanish ? "cookies" : "cookies"]}
         url="/cookies"
       />
       <ResizableNavbarDemo />

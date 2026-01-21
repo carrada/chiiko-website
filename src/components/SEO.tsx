@@ -9,7 +9,6 @@ interface SEOProps extends SEOConfig {
 export default function SEO({
   title,
   description,
-  keywords = [],
   ogTitle,
   ogDescription,
   ogImage = DEFAULT_OG_IMAGE,
@@ -28,7 +27,6 @@ export default function SEO({
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(", ")} />
       <meta name="author" content={author} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 

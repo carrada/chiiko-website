@@ -414,7 +414,6 @@ export default function Plans() {
       <SEO
         title={SEO_PAGES.plans[i18n.language === 'es' ? 'es' : 'en'].title}
         description={SEO_PAGES.plans[i18n.language === 'es' ? 'es' : 'en'].description}
-        keywords={SEO_PAGES.plans[i18n.language === 'es' ? 'es' : 'en'].keywords}
         url="/planes"
       />
       <ResizableNavbarDemo />

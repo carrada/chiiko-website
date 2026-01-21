@@ -283,7 +283,6 @@ export default function Help() {
       <SEO
         title={SEO_PAGES.help[isSpanish ? 'es' : 'en'].title}
         description={SEO_PAGES.help[isSpanish ? 'es' : 'en'].description}
-        keywords={SEO_PAGES.help[isSpanish ? 'es' : 'en'].keywords}
         url="/ayuda"
       />
       <ResizableNavbarDemo />
