@@ -16,6 +16,7 @@ import CookiePolicy from "@/components/CookiePolicy";
 import LegalNotice from "@/components/LegalNotice";
 import Plans from "@/components/Plans";
 import About from "@/components/About";
+import Contact from "@/components/Contact";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useTranslation } from "react-i18next";
@@ -60,6 +61,7 @@ function App() {
         <Route path="/legal" element={<LegalNotice />} />
         <Route path="/planes" element={<Plans />} />
         <Route path="/nosotros" element={<About />} />
+        <Route path="/contacto" element={<Contact />} />
         <Route path="/" element={
           <>
             <AnimatePresence>
