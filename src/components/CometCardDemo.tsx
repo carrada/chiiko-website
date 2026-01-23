@@ -11,21 +11,15 @@ export default function CometCardDemo() {
     {
       title: "Proyecto 2", 
       description: "Descripción del proyecto",
-      image: "/2chiiko.png",
-      link: null
-    },
-    {
-      title: "Proyecto 3",
-      description: "Descripción del proyecto", 
-      image: "/3chiiko.png",
-      link: null
+      image: "/PortadaEmicarrada.png",
+      link: "https://emicarrada.com"
     }
   ];
 
   return (
     <div className="w-full flex justify-center items-center px-8 md:px-4 py-20">
       <div className="max-w-7xl w-full">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 place-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 place-items-center">
           {projects.map((project, index) => (
             <CometCard key={index} className="w-full max-w-xs mx-auto">
               <div 

@@ -17,6 +17,7 @@ import LegalNotice from "@/components/LegalNotice";
 import Plans from "@/components/Plans";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import HowWeWork from "@/components/HowWeWork";
 import SEO from "@/components/SEO";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
@@ -67,6 +68,7 @@ function App() {
         <Route path="/planes" element={<Plans />} />
         <Route path="/nosotros" element={<About />} />
         <Route path="/contacto" element={<Contact />} />
+        <Route path="/como-trabajamos" element={<HowWeWork />} />
 
         {/* English Routes - same components, will detect language and show English content */}
         <Route path="/privacy" element={<PrivacyPolicy />} />
@@ -77,6 +79,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/help" element={<Help />} />
+        <Route path="/how-we-work" element={<HowWeWork />} />
 
         {/* Home */}
         <Route path="/" element={

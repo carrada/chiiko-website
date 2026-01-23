@@ -2,20 +2,21 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isSpanish = i18n.language === 'es';
 
   const navLinks = [
     { label: t('nav.home'), href: '/' },
-    { label: t('nav.about'), href: '/nosotros' },
-    { label: t('nav.method'), href: '#metodo' },
-    { label: t('nav.plans'), href: '/planes' },
-    { label: t('nav.contact'), href: '/contacto' },
-    { label: t('nav.privacy'), href: '/privacidad' },
+    { label: t('nav.about'), href: isSpanish ? '/nosotros' : '/about' },
+    { label: t('nav.method'), href: isSpanish ? '/como-trabajamos' : '/how-we-work' },
+    { label: t('nav.plans'), href: isSpanish ? '/planes' : '/plans' },
+    { label: t('nav.contact'), href: isSpanish ? '/contacto' : '/contact' },
+    { label: t('nav.privacy'), href: isSpanish ? '/privacidad' : '/privacy' },
     { label: t('nav.faq'), href: '/faq' },
-    { label: t('nav.help'), href: '/ayuda' },
-    { label: t('nav.terms'), href: '/terminos' },
-    { label: t('nav.cookies'), href: '/cookies' },
-    { label: t('nav.legal'), href: '/legal' },
+    { label: t('nav.help'), href: isSpanish ? '/ayuda' : '/help' },
+    { label: t('nav.terms'), href: isSpanish ? '/terminos' : '/terms' },
+    { label: t('nav.cookies'), href: isSpanish ? '/politica-cookies' : '/cookie-policy' },
+    { label: t('nav.legal'), href: isSpanish ? '/aviso-legal' : '/legal' },
   ];
 
   return (

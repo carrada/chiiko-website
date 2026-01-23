@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export const ProjectInitButton = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isSpanish = i18n.language === 'es';
 
   return (
-    <button
+    <Link
+      to={isSpanish ? '/contacto' : '/contact'}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="
@@ -27,6 +30,7 @@ export const ProjectInitButton = () => {
         focus:ring-2
         focus:ring-white/50
         focus:ring-offset-2
+        inline-block
       "
       style={{
         background: 'rgba(255, 255, 255, 0.02)',
@@ -84,7 +88,7 @@ export const ProjectInitButton = () => {
           50% { transform: translate(0, 0) scale(1.5); opacity: 1; }
         }
       `}</style>
-    </button>
+    </Link>
   );
 };
 
