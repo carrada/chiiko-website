@@ -1,5 +1,5 @@
 import { Route } from "react-router-dom";
-import { ReactElement } from "react";
+import { type ReactElement } from "react";
 import PrivacyPolicy from "@/components/PrivacyPolicy";
 import FAQ from "@/components/FAQ";
 import Help from "@/components/Help";
