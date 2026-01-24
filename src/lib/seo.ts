@@ -1,4 +1,10 @@
 // SEO Configuration and utilities
+import { 
+  OrganizationSchemaBuilder, 
+  LocalBusinessSchemaBuilder, 
+  BreadcrumbSchemaBuilder 
+} from "./seo-builders";
+import { Validator } from "./validators";
 
 export interface SEOConfig {
   title: string;
@@ -133,64 +139,54 @@ export const SEO_PAGES = {
   },
 };
 
-// Generate structured data (Schema.org JSON-LD)
-export const generateOrganizationSchema = () => ({
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: SITE_NAME,
-  url: SITE_URL,
-  logo: `${SITE_URL}/logo.png`,
-  description: SITE_DESCRIPTION,
-  sameAs: [
-    "https://www.linkedin.com/company/chiiko/",
-    "https://www.behance.net/chiiko",
-    "https://instagram.com/chiiko.design",
-  ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "Customer Service",
-    email: "hola@chiiko.design",
-    telephone: "+52-MX",
-    availableLanguage: ["es", "en"],
-  },
-  address: {
-    "@type": "PostalAddress",
-    addressCountry: "MX",
-    addressRegion: "Ciudad de México",
-  },
-});
+// Generate structured data (Schema.org JSON-LD) using Builder Pattern
+export const generateOrganizationSchema = () => {
+  return new OrganizationSchemaBuilder()
+    .setName(SITE_NAME)
+    .setUrl(SITE_URL)
+    .setLogo(`${SITE_URL}/logo.png`)
+    .setDescription(SITE_DESCRIPTION)
+    .addSocialProfile("https://www.linkedin.com/company/chiiko/")
+    .addSocialProfile("https://www.behance.net/chiiko")
+    .addSocialProfile("https://instagram.com/chiiko.design")
+    .setContactPoint("hola@chiiko.design", "+52-MX", ["es", "en"])
+    .setAddress("Ciudad de México", "CDMX", "MX")
+    .build();
+};
 
-export const generateLocalBusinessSchema = () => ({
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: SITE_NAME,
-  url: SITE_URL,
-  image: `${SITE_URL}/logo.png`,
-  description: SITE_DESCRIPTION,
-  priceRange: "$$$",
-  areaServed: {
-    "@type": "Country",
-    name: "MX",
-  },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Ciudad de México",
-    addressRegion: "CDMX",
-    addressCountry: "MX",
-  },
-  sameAs: [
-    "https://www.linkedin.com/company/chiiko/",
-    "https://www.behance.net/chiiko",
-  ],
-});
+export const generateLocalBusinessSchema = () => {
+  return new LocalBusinessSchemaBuilder()
+    .setName(SITE_NAME)
+    .setUrl(SITE_URL)
+    .setImage(`${SITE_URL}/logo.png`)
+    .setDescription(SITE_DESCRIPTION)
+    .setPriceRange("$$$")
+    .setAreaServed("MX", "Mexico")
+    .setAddress("Ciudad de México", "CDMX", "MX")
+    .addSocialProfile("https://www.linkedin.com/company/chiiko/")
+    .addSocialProfile("https://www.behance.net/chiiko")
+    .build();
+};
 
-export const generateBreadcrumbSchema = (breadcrumbs: { name: string; url: string }[]) => ({
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: breadcrumbs.map((item, index) => ({
-    "@type": "ListItem",
-    position: index + 1,
-    name: item.name,
-    item: item.url,
-  })),
-});
+export const generateBreadcrumbSchema = (breadcrumbs: { name: string; url: string }[]) => {
+  // Defensive programming: fail fast with clear error messages (Preconditions)
+  Validator.requireNonNull(breadcrumbs, "Breadcrumbs");
+  Validator.require(Array.isArray(breadcrumbs), "Breadcrumbs must be an array");
+  Validator.requireNonEmptyArray(breadcrumbs, "Breadcrumbs");
+
+  const builder = new BreadcrumbSchemaBuilder();
+  
+  breadcrumbs.forEach((item, index) => {
+    Validator.require(
+      item && typeof item === 'object',
+      `Invalid breadcrumb at position ${index}: must be an object`
+    );
+    Validator.require(
+      Boolean(item.name && item.url),
+      `Invalid breadcrumb at position ${index}: name and url are required`
+    );
+    builder.addBreadcrumb(item.name, item.url);
+  });
+
+  return builder.build();
+};
