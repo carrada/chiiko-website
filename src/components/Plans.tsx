@@ -65,7 +65,7 @@ const SpanishContent = () => (
             $25,000 – $35,000 <span className="text-base font-normal text-gray-600">MXN</span>
           </p>
           <a 
-            href="https://calendly.com/chiiko-design/sitio-esencial-llamada-de-alineacion" 
+            href="https://cal.com/chiiko.design/sitio-esencial-llamada-de-alineacion" 
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full text-center px-6 py-3 bg-white border border-gray-900 text-gray-900 font-medium rounded-full hover:bg-gray-900 hover:text-white transition-colors"
@@ -131,7 +131,7 @@ const SpanishContent = () => (
             $40,000 – $60,000 <span className="text-base font-normal text-gray-600">MXN</span>
           </p>
           <a 
-            href="https://calendly.com/chiiko-design/30min" 
+            href="https://cal.com/chiiko.design/sitio-estrategico-llamada-de-descubrimiento" 
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full text-center px-6 py-3 bg-black text-white font-medium rounded-full hover:bg-gray-800 transition-colors"
@@ -191,7 +191,7 @@ const SpanishContent = () => (
             $70,000 – $120,000+ <span className="text-base font-normal text-gray-600">MXN</span>
           </p>
           <a 
-            href="https://calendly.com/chiiko-design/artesania-digital-llamada-de-exploracion" 
+            href="https://cal.com/chiiko.design/artesania-digital-llamada-de-exploracion" 
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full text-center px-6 py-3 bg-white border border-gray-900 text-gray-900 font-medium rounded-full hover:bg-gray-900 hover:text-white transition-colors"
@@ -272,7 +272,7 @@ const EnglishContent = () => (
             $1,400 – $1,950 <span className="text-base font-normal text-gray-600">USD</span>
           </p>
           <a 
-            href="https://calendly.com/chiiko-design/essential-website-alignment-call" 
+            href="https://cal.com/chiiko.design/essential-website-alignment-call" 
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full text-center px-6 py-3 bg-white border border-gray-900 text-gray-900 font-medium rounded-full hover:bg-gray-900 hover:text-white transition-colors"
@@ -338,10 +338,10 @@ const EnglishContent = () => (
             $2,200 – $3,350 <span className="text-base font-normal text-gray-600">USD</span>
           </p>
           <a 
-            href="https://calendly.com/chiiko-design/strategic-website-discovery-call" 
+            href="https://cal.com/chiiko.design/digital-craft-exploration-call" 
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full text-center px-6 py-3 bg-black text-white font-medium rounded-full hover:bg-gray-800 transition-colors"
+            className="block w-full text-center px-6 py-3 bg-black text-white font-medium rounded-full hover:bg-gray-900 hover:text-white transition-colors"
           >
             Schedule strategic call
           </a>
@@ -398,7 +398,7 @@ const EnglishContent = () => (
             $3,900 – $6,700+ <span className="text-base font-normal text-gray-600">USD</span>
           </p>
           <a 
-            href="https://calendly.com/chiiko-design/digital-craft-exploration-call" 
+            href="https://cal.com/chiiko.design/digital-craft-exploration-call" 
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full text-center px-6 py-3 bg-white border border-gray-900 text-gray-900 font-medium rounded-full hover:bg-gray-900 hover:text-white transition-colors"
