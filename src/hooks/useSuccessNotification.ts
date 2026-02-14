@@ -1,10 +1,5 @@
 import { useEffect, type RefObject } from "react";
 
-const scrollToElement = (element: HTMLElement | null) => {
-  if (!element) return;
-  element.scrollIntoView({ behavior: "smooth", block: "center" });
-};
-
 export function useSuccessNotification(
   hasSucceeded: boolean,
   successRef: RefObject<HTMLDivElement | null>,
@@ -15,7 +10,8 @@ export function useSuccessNotification(
 
     console.log("✅ Form submitted successfully");
     
-    scrollToElement(successRef.current);
+    // Scroll suave al inicio de la página para ver el mensaje de éxito
+    window.scrollTo({ top: 0, behavior: "smooth" });
     onSuccess();
   }, [hasSucceeded, successRef, onSuccess]);
 }
