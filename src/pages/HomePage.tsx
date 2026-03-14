@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
-import { SEO_PAGES, generateOrganizationSchema } from "@/lib/seo";
+import { SEO_PAGES, generateOrganizationSchema, generateWebSiteSchema } from "@/lib/seo";
 import { LAYOUT_SPACING, COLORS } from "@/constants";
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
@@ -32,15 +32,21 @@ function CallToActionSection({ children }: { children: React.ReactNode }) {
 }
 
 export default function HomePage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language === "en" ? "en" : "es";
 
   return (
     <>
       <SEO
-        title={SEO_PAGES.home.es.title}
-        description={SEO_PAGES.home.es.description}
+        title={SEO_PAGES.home[lang].title}
+        description={SEO_PAGES.home[lang].description}
         url="/"
-        schema={generateOrganizationSchema()}
+        schema={[generateOrganizationSchema(), generateWebSiteSchema()]}
+        hreflangs={[
+          { lang: 'es', href: 'https://www.chiiko.design/' },
+          { lang: 'en', href: 'https://www.chiiko.design/' },
+          { lang: 'x-default', href: 'https://www.chiiko.design/' },
+        ]}
       />
       
       <motion.div

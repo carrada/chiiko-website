@@ -431,7 +431,12 @@ export default function TermsAndConditions() {
       <SEO
         title={SEO_PAGES.terms[isSpanish ? 'es' : 'en'].title}
         description={SEO_PAGES.terms[isSpanish ? 'es' : 'en'].description}
-        url="/terminos"
+        url={isSpanish ? '/terminos' : '/terms'}
+        noindex
+        hreflangs={[
+          { lang: 'es', href: 'https://www.chiiko.design/terminos' },
+          { lang: 'en', href: 'https://www.chiiko.design/terms' },
+        ]}
       />
       <ResizableNavbarDemo />
       {isSpanish ? <SpanishContent /> : <EnglishContent />}

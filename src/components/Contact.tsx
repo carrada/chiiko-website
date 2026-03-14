@@ -65,7 +65,12 @@ export default function Contact() {
       <SEO
         title={SEO_PAGES.contact[isSpanish ? 'es' : 'en'].title}
         description={SEO_PAGES.contact[isSpanish ? 'es' : 'en'].description}
-        url="/contacto"
+        url={isSpanish ? '/contacto' : '/contact'}
+        hreflangs={[
+          { lang: 'es', href: 'https://www.chiiko.design/contacto' },
+          { lang: 'en', href: 'https://www.chiiko.design/contact' },
+          { lang: 'x-default', href: 'https://www.chiiko.design/contacto' },
+        ]}
       />
       <ResizableNavbarDemo />
       <div className="py-12 tablet:py-16 md:py-24"></div>

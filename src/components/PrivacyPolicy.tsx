@@ -17,9 +17,10 @@ export default function PrivacyPolicy() {
         title={SEO_PAGES.privacy[isSpanish ? 'es' : 'en'].title}
         description={SEO_PAGES.privacy[isSpanish ? 'es' : 'en'].description}
         url={currentPath}
+        noindex
         hreflangs={[
-          { lang: 'es', href: `${SEO_PAGES.privacy.es.url || 'https://www.chiiko.design/privacidad'}` },
-          { lang: 'en', href: `${SEO_PAGES.privacy.en.url || 'https://www.chiiko.design/privacy'}` },
+          { lang: 'es', href: 'https://www.chiiko.design/privacidad' },
+          { lang: 'en', href: 'https://www.chiiko.design/privacy' },
         ]}
       />
       <ResizableNavbarDemo />

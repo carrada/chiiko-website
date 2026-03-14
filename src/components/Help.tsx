@@ -283,7 +283,12 @@ export default function Help() {
       <SEO
         title={SEO_PAGES.help[isSpanish ? 'es' : 'en'].title}
         description={SEO_PAGES.help[isSpanish ? 'es' : 'en'].description}
-        url="/ayuda"
+        url={isSpanish ? '/ayuda' : '/help'}
+        hreflangs={[
+          { lang: 'es', href: 'https://www.chiiko.design/ayuda' },
+          { lang: 'en', href: 'https://www.chiiko.design/help' },
+          { lang: 'x-default', href: 'https://www.chiiko.design/ayuda' },
+        ]}
       />
       <ResizableNavbarDemo />
       {isSpanish ? <SpanishContent /> : <EnglishContent />}

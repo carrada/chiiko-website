@@ -20,6 +20,7 @@ export default function SEO({
   author = SITE_NAME,
   schema,
   hreflangs,
+  noindex = false,
 }: SEOProps) {
   const { i18n } = useTranslation();
   const currentLang = i18n.language || "es";
@@ -64,6 +65,7 @@ export default function SEO({
 
       {/* Twitter Card (universal standard for all platforms) */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@chiiko_design" />
       <meta name="twitter:url" content={fullUrl} />
       <meta name="twitter:title" content={ogTitle || fullTitle} />
       <meta name="twitter:description" content={ogDescription || description} />
@@ -73,18 +75,24 @@ export default function SEO({
       <link rel="me" href="https://www.linkedin.com/company/chiiko/" />
       <link rel="me" href="https://www.behance.net/chiiko" />
 
+      {/* Geo targeting — Ciudad de México */}
+      <meta name="geo.region" content="MX-CMX" />
+      <meta name="geo.placename" content="Ciudad de México" />
+      <meta name="geo.position" content="19.4326;-99.1332" />
+      <meta name="ICBM" content="19.4326, -99.1332" />
+
       {/* Additional Meta Tags */}
       <meta
         name="robots"
-        content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        content={noindex ? "noindex, follow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"}
       />
-      <meta name="language" content="Spanish, English" />
-      <meta httpEquiv="content-language" content="es, en" />
       <meta name="theme-color" content="#1a1a2e" />
 
       {/* Schema.org Structured Data */}
       {schema && (
-        <script type="application/ld+json">{JSON.stringify(schema)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(Array.isArray(schema) ? schema : [schema])}
+        </script>
       )}
     </Helmet>
   );

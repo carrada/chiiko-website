@@ -122,6 +122,11 @@ const HowWeWork = () => {
         title={isSpanish ? "Cómo Trabajamos | Chiikö" : "How We Work | Chiikö"}
         description={isSpanish ? "Nuestro proceso de trabajo: estratégico, deliberado y enfocado en calidad" : "Our work process: strategic, deliberate, and quality-focused"}
         url={isSpanish ? "/como-trabajamos" : "/how-we-work"}
+        hreflangs={[
+          { lang: 'es', href: 'https://www.chiiko.design/como-trabajamos' },
+          { lang: 'en', href: 'https://www.chiiko.design/how-we-work' },
+          { lang: 'x-default', href: 'https://www.chiiko.design/como-trabajamos' },
+        ]}
       />
       <div className="relative w-full min-h-screen bg-white">
         <ResizableNavbarDemo />

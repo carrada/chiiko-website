@@ -353,7 +353,12 @@ export default function About() {
       <SEO
         title={SEO_PAGES.about[i18n.language === 'es' ? 'es' : 'en'].title}
         description={SEO_PAGES.about[i18n.language === 'es' ? 'es' : 'en'].description}
-        url="/nosotros"
+        url={i18n.language === 'es' ? '/nosotros' : '/about'}
+        hreflangs={[
+          { lang: 'es', href: 'https://www.chiiko.design/nosotros' },
+          { lang: 'en', href: 'https://www.chiiko.design/about' },
+          { lang: 'x-default', href: 'https://www.chiiko.design/nosotros' },
+        ]}
       />
       <ResizableNavbarDemo />
       <div className="py-12 tablet:py-16 md:py-24"></div>

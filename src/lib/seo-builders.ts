@@ -177,3 +177,31 @@ export class BreadcrumbSchemaBuilder {
     };
   }
 }
+
+export class FAQPageSchemaBuilder {
+  private questions: Array<{ question: string; answer: string }> = [];
+
+  addQuestion(question: string, answer: string): this {
+    Validator.requireNonEmptyString(question, "FAQ question");
+    Validator.requireNonEmptyString(answer, "FAQ answer");
+    this.questions.push({ question, answer });
+    return this;
+  }
+
+  build(): SchemaObject {
+    Validator.requireNonEmptyArray(this.questions, "FAQ questions list");
+
+    return {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: this.questions.map(({ question, answer }) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: answer,
+        },
+      })),
+    };
+  }
+}

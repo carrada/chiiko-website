@@ -238,9 +238,14 @@ export default function CookiePolicy() {
   return (
     <div className="w-full bg-white">
       <SEO
-        title="Cookie Policy | Chiiko"
-        description={isSpanish ? "Política de cookies de Chiiko. Conoce cómo usamos cookies." : "Chiiko's cookie policy. Learn how we use cookies."}
-        url="/cookies"
+        title={isSpanish ? 'Política de Cookies | Chiiko' : 'Cookie Policy | Chiiko'}
+        description={isSpanish ? 'Política de cookies de Chiiko. Conoce cómo usamos cookies.' : "Chiiko's cookie policy. Learn how we use cookies."}
+        url={isSpanish ? '/politica-cookies' : '/cookie-policy'}
+        noindex
+        hreflangs={[
+          { lang: 'es', href: 'https://www.chiiko.design/politica-cookies' },
+          { lang: 'en', href: 'https://www.chiiko.design/cookie-policy' },
+        ]}
       />
       <ResizableNavbarDemo />
       {isSpanish ? <SpanishContent /> : <EnglishContent />}

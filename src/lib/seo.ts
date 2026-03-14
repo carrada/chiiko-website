@@ -2,7 +2,8 @@
 import { 
   OrganizationSchemaBuilder, 
   LocalBusinessSchemaBuilder, 
-  BreadcrumbSchemaBuilder 
+  BreadcrumbSchemaBuilder,
+  FAQPageSchemaBuilder,
 } from "./seo-builders";
 import { Validator } from "./validators";
 
@@ -16,7 +17,8 @@ export interface SEOConfig {
   url?: string;
   canonicalUrl?: string;
   author?: string;
-  schema?: object;
+  schema?: object | object[];
+  noindex?: boolean;
 }
 
 // Base URL for the site
@@ -189,4 +191,117 @@ export const generateBreadcrumbSchema = (breadcrumbs: { name: string; url: strin
   });
 
   return builder.build();
+};
+
+export const generateFAQSchema = (
+  faqs: { question: string; answer: string }[]
+) => {
+  Validator.requireNonNull(faqs, "FAQs");
+  Validator.requireNonEmptyArray(faqs, "FAQs");
+
+  const builder = new FAQPageSchemaBuilder();
+  faqs.forEach(({ question, answer }) => builder.addQuestion(question, answer));
+  return builder.build();
+};
+
+export const generateWebSiteSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_NAME,
+  url: SITE_URL,
+  description: SITE_DESCRIPTION,
+  inLanguage: ["es", "en"],
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${SITE_URL}/?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
+});
+
+export const generatePlansSchema = (lang: "es" | "en") => {
+  const plans =
+    lang === "es"
+      ? [
+          {
+            name: "Sitio Esencial",
+            description:
+              "Un sitio web bien diseñado para marcas que entienden que menos es más y necesitan verse profesionales desde el día uno.",
+            lowPrice: 25000,
+            highPrice: 35000,
+          },
+          {
+            name: "Sitio Estratégico",
+            description:
+              "No es solo un sitio web. Es una herramienta pensada para comunicar mejor, convertir y crecer.",
+            lowPrice: 40000,
+            highPrice: 60000,
+          },
+          {
+            name: "Artesanía Digital",
+            description:
+              "Para marcas que no quieren parecerse a nadie y entienden el valor de una experiencia digital bien construida.",
+            lowPrice: 70000,
+            highPrice: 120000,
+          },
+        ]
+      : [
+          {
+            name: "Essential Site",
+            description:
+              "A well-designed website for brands that understand that less is more and need to look professional from day one.",
+            lowPrice: 1250,
+            highPrice: 1750,
+          },
+          {
+            name: "Strategic Site",
+            description:
+              "It's not just a website. It's a tool designed to communicate better, convert, and grow.",
+            lowPrice: 2000,
+            highPrice: 3000,
+          },
+          {
+            name: "Digital Craftsmanship",
+            description:
+              "For brands that don't want to look like anyone else and understand the value of a well-built digital experience.",
+            lowPrice: 3500,
+            highPrice: 6000,
+          },
+        ];
+
+  const currency = lang === "es" ? "MXN" : "USD";
+  const pageUrl = `${SITE_URL}/${lang === "es" ? "planes" : "plans"}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: lang === "es" ? "Planes de Chiiko" : "Chiiko Plans",
+    url: pageUrl,
+    itemListElement: plans.map((plan, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Service",
+        name: plan.name,
+        description: plan.description,
+        provider: {
+          "@type": "Organization",
+          name: SITE_NAME,
+          url: SITE_URL,
+        },
+        offers: {
+          "@type": "AggregateOffer",
+          lowPrice: plan.lowPrice,
+          highPrice: plan.highPrice,
+          priceCurrency: currency,
+          offerCount: 1,
+        },
+        url: pageUrl,
+        areaServed: lang === "es" ? "MX" : "Worldwide",
+        availableLanguage: lang === "es" ? "Spanish" : "English",
+      },
+    })),
+  };
 };

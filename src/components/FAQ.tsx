@@ -2,7 +2,45 @@ import { useTranslation } from 'react-i18next';
 import { ResizableNavbarDemo } from './ResizableNavbarDemo';
 import Footer from './Footer';
 import SEO from './SEO';
-import { SEO_PAGES } from '@/lib/seo';
+import { SEO_PAGES, generateFAQSchema } from '@/lib/seo';
+
+const FAQ_ES = [
+  { question: "¿Qué es Chiikö?", answer: "Chiikö es un estudio digital especializado en diseño y desarrollo web estratégico. Creamos sitios web pensados para diferenciar marcas, comunicar con claridad y convertir visitantes en clientes." },
+  { question: "¿Qué servicios ofrecen?", answer: "En Chiikö ofrecemos diseño y desarrollo de sitios web, landing pages orientadas a conversión, rediseño y optimización de sitios existentes, diseño UI/UX, estructuración y contenido web estratégico, y soporte y mejoras continuas." },
+  { question: "¿Trabajan con plantillas?", answer: "No. Todos nuestros sitios web son diseñados a medida. Utilizamos herramientas modernas, pero el diseño, estructura y experiencia son personalizados para cada marca." },
+  { question: "¿Cuánto cuesta un sitio web?", answer: "El costo depende del alcance, complejidad y objetivos del proyecto. Después de una breve llamada o formulario, te enviamos una propuesta clara con tiempos y costos definidos." },
+  { question: "¿Cuánto tiempo tarda un proyecto?", answer: "Los tiempos varían según el tipo de proyecto: landing page de 2 a 3 semanas, sitio web corporativo de 3 a 6 semanas, y proyectos más complejos según alcance. Los tiempos finales se confirman antes de iniciar." },
+  { question: "¿Qué necesitan de mí para empezar?", answer: "Principalmente información sobre tu negocio o marca, objetivos del sitio web, referencias visuales (si las tienes) y contenido base (texto, imágenes, logotipo). Si no cuentas con todo, podemos ayudarte a definirlo." },
+  { question: "¿Incluyen el contenido del sitio?", answer: "Podemos trabajar con contenido proporcionado por el cliente o ayudarte a estructurarlo y optimizarlo. La creación de copywriting completo puede cotizarse como un servicio adicional." },
+  { question: "¿Ofrecen mantenimiento o soporte?", answer: "Sí. Ofrecemos planes de soporte y mantenimiento para actualizaciones, mejoras, ajustes técnicos y acompañamiento posterior al lanzamiento." },
+  { question: "¿Trabajan con clientes internacionales?", answer: "Sí. Trabajamos con clientes de diferentes países y zonas horarias. Todo el proceso puede realizarse de forma remota." },
+  { question: "¿El sitio web será responsive?", answer: "Sí. Todos los sitios web que desarrollamos están optimizados para dispositivos móviles, tabletas y computadoras." },
+  { question: "¿Usan SEO?", answer: "Aplicamos buenas prácticas de SEO técnico y estructural desde el desarrollo del sitio. Estrategias avanzadas de posicionamiento pueden contratarse como servicio adicional." },
+  { question: "¿Qué plataformas o tecnologías utilizan?", answer: "Seleccionamos la tecnología adecuada según cada proyecto. Podemos trabajar con herramientas modernas de desarrollo, CMS y soluciones personalizadas según las necesidades del cliente." },
+  { question: "¿Cómo es el proceso de trabajo?", answer: "Nuestro proceso incluye: análisis y entendimiento del proyecto, estrategia y estructura del sitio, diseño visual y experiencia de usuario, desarrollo y pruebas, y lanzamiento. La comunicación es constante durante todo el proceso." },
+  { question: "¿Puedo solicitar cambios durante el proyecto?", answer: "Sí. Cada proyecto incluye rondas de revisión previamente acordadas. Cambios adicionales fuera del alcance inicial pueden implicar ajustes en tiempos o costos." },
+  { question: "¿Qué pasa después de que el sitio se publica?", answer: "Una vez lanzado el sitio, puedes contratar soporte continuo o solicitar mejoras futuras según tus necesidades." },
+  { question: "¿Cómo puedo contactarlos?", answer: "Puedes escribirnos a hola@chiiko.design o utilizar el formulario de contacto disponible en el sitio web." },
+];
+
+const FAQ_EN = [
+  { question: "What is Chiikö?", answer: "Chiikö is a digital studio specialized in strategic web design and development. We create websites designed to differentiate brands, communicate clearly, and convert visitors into clients." },
+  { question: "What services do you offer?", answer: "At Chiikö, we primarily offer website design and development, conversion-focused landing pages, website redesign and optimization, UI/UX design, strategic website structure and content, and ongoing support and improvements." },
+  { question: "Do you use templates?", answer: "No. All our websites are custom-designed. While we use modern tools and technologies, the design, structure, and experience are fully tailored to each brand." },
+  { question: "How much does a website cost?", answer: "The cost depends on the scope, complexity, and objectives of the project. After a brief call or form submission, we provide a clear proposal with defined timelines and costs." },
+  { question: "How long does a project take?", answer: "Timelines vary depending on the type of project: landing page 2–3 weeks, corporate website 3–6 weeks, more complex projects based on scope. Final timelines are confirmed before the project begins." },
+  { question: "What do you need from me to get started?", answer: "Mainly information about your business or brand, website goals, visual references (if available), and base content (text, images, logo). If you don't have everything ready, we can help you define it." },
+  { question: "Do you include website content?", answer: "We can work with content provided by the client or assist in structuring and optimizing it. Full copywriting services can be quoted as an additional service." },
+  { question: "Do you offer maintenance or support?", answer: "Yes. We offer support and maintenance plans for updates, improvements, technical adjustments, and post-launch assistance." },
+  { question: "Do you work with international clients?", answer: "Yes. We work with clients from different countries and time zones. The entire process can be handled remotely." },
+  { question: "Will my website be responsive?", answer: "Yes. All websites we develop are optimized for mobile devices, tablets, and desktop computers." },
+  { question: "Do you implement SEO?", answer: "We apply technical and structural SEO best practices during development. Advanced SEO strategies can be contracted as an additional service." },
+  { question: "What platforms or technologies do you use?", answer: "We select the most appropriate technology based on each project's needs. We work with modern development tools, CMS platforms, and custom solutions when required." },
+  { question: "What is your working process?", answer: "Our process typically includes: project analysis and discovery, strategy and website structure, visual design and user experience, development and testing, and launch. Communication is continuous throughout the entire process." },
+  { question: "Can I request changes during the project?", answer: "Yes. Each project includes previously agreed revision rounds. Additional changes outside the original scope may affect timelines or costs." },
+  { question: "What happens after the website is launched?", answer: "After launch, you may hire ongoing support or request future improvements as needed." },
+  { question: "How can I contact you?", answer: "You can reach us at hello@chiiko.design or by using the contact form available on the website." },
+];
 
 const SpanishContent = () => (
   <div className="w-full bg-white">
@@ -506,6 +544,12 @@ export default function FAQ() {
         title={SEO_PAGES.faq[isSpanish ? 'es' : 'en'].title}
         description={SEO_PAGES.faq[isSpanish ? 'es' : 'en'].description}
         url="/faq"
+        schema={generateFAQSchema(isSpanish ? FAQ_ES : FAQ_EN)}
+        hreflangs={[
+          { lang: 'es', href: 'https://www.chiiko.design/faq' },
+          { lang: 'en', href: 'https://www.chiiko.design/faq' },
+          { lang: 'x-default', href: 'https://www.chiiko.design/faq' },
+        ]}
       />
       <ResizableNavbarDemo />
       {isSpanish ? <SpanishContent /> : <EnglishContent />}

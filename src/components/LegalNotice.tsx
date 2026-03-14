@@ -238,9 +238,14 @@ export default function LegalNotice() {
   return (
     <div className="w-full bg-white">
       <SEO
-        title="Legal Notice | Chiiko"
-        description={isSpanish ? "Aviso legal de Chiiko." : "Chiiko's legal notice."}
-        url="/legal"
+        title={isSpanish ? 'Aviso Legal | Chiiko' : 'Legal Notice | Chiiko'}
+        description={isSpanish ? 'Aviso legal de Chiiko.' : "Chiiko's legal notice."}
+        url={isSpanish ? '/aviso-legal' : '/legal'}
+        noindex
+        hreflangs={[
+          { lang: 'es', href: 'https://www.chiiko.design/aviso-legal' },
+          { lang: 'en', href: 'https://www.chiiko.design/legal' },
+        ]}
       />
       <ResizableNavbarDemo />
       {isSpanish ? <SpanishContent /> : <EnglishContent />}

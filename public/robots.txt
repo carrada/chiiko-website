@@ -7,13 +7,9 @@ Allow: /
 # Sitemap location
 Sitemap: https://www.chiiko.design/sitemap.xml
 
-# Specific crawl rates (optional)
+# Specific crawl rates
 User-agent: Googlebot
 Crawl-delay: 0
 
 User-agent: Bingbot
-Crawl-delay: 0
 Crawl-delay: 1
-
-# Sitemap location
-Sitemap: https://www.chiiko.design/sitemap.xml
