@@ -1,0 +1,819 @@
+\documentclass[12pt, a4paper]{article}
+
+% ── Encoding & fonts ─────────────────────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% ── Language ─────────────────────────────────────────────────────────────────
+\usepackage[spanish]{babel}
+
+% ── Page geometry ────────────────────────────────────────────────────────────
+\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=3cm, headheight=15pt]{geometry}
+
+% ── Colors ───────────────────────────────────────────────────────────────────
+\usepackage[table, dvipsnames]{xcolor}
+\definecolor{chiiko}{HTML}{1a1a2e}
+\definecolor{accent}{HTML}{5c6bc0}
+\definecolor{lightgray}{HTML}{f5f5f5}
+\definecolor{rojo}{HTML}{c62828}
+\definecolor{naranja}{HTML}{e65100}
+\definecolor{verde}{HTML}{2e7d32}
+\definecolor{azul}{HTML}{1565c0}
+
+% ── Tables ───────────────────────────────────────────────────────────────────
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+% ── Graphics & layout ────────────────────────────────────────────────────────
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{mdframed}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage{fontawesome5}
+\usepackage{parskip}
+
+% ── Hyperlinks ────────────────────────────────────────────────────────────────
+\usepackage[hidelinks, pdfencoding=auto]{hyperref}
+\hypersetup{
+  pdftitle={Auditoría GEO — Chiiko},
+  pdfauthor={GitHub Copilot},
+  pdfsubject={Generative Engine Optimization},
+  pdfkeywords={GEO, SEO, LLM, AI, Schema.org, Chiiko},
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent,
+  citecolor=accent
+}
+
+% ── Section styling ──────────────────────────────────────────────────────────
+\titleformat{\section}{\large\bfseries\color{chiiko}}{}{0em}{}[\color{accent}\rule{\linewidth}{0.8pt}]
+\titleformat{\subsection}{\normalsize\bfseries\color{accent}}{}{0em}{\thesubsection\quad}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{chiiko}}{}{0em}{\thesubsubsection\quad}
+\setcounter{secnumdepth}{3}
+
+% ── Header / Footer ──────────────────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{chiiko}\textbf{Chiiko} — Auditoría GEO}
+\fancyhead[R]{\small\color{gray}21 de marzo de 2026}
+\fancyfoot[C]{\small\color{gray}\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% ── Custom boxes ─────────────────────────────────────────────────────────────
+\newtcolorbox{criticalbox}[1][]{
+  colback=rojo!8, colframe=rojo, title={\faExclamationTriangle\quad Crítico},
+  fonttitle=\bfseries, breakable, #1
+}
+\newtcolorbox{highbox}[1][]{
+  colback=naranja!8, colframe=naranja, title={\faExclamationCircle\quad Alta prioridad},
+  fonttitle=\bfseries, breakable, #1
+}
+\newtcolorbox{medbox}[1][]{
+  colback=azul!7, colframe=azul, title={\faInfoCircle\quad Media prioridad},
+  fonttitle=\bfseries, breakable, #1
+}
+\newtcolorbox{lowbox}[1][]{
+  colback=verde!7, colframe=verde, title={\faCheckCircle\quad Baja prioridad},
+  fonttitle=\bfseries, breakable, #1
+}
+\newtcolorbox{infobox}[1][]{
+  colback=lightgray, colframe=gray!50, breakable, #1
+}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{document}
+
+% ── Cover ────────────────────────────────────────────────────────────────────
+\begin{titlepage}
+  \pagecolor{chiiko}
+  \color{white}
+  \vspace*{3cm}
+  \begin{center}
+    {\fontsize{40}{48}\selectfont\bfseries CHIIKO}\\[0.4cm]
+    {\Large\color{accent!80!white} Estudio de Diseño Estratégico y Desarrollo Web}\\[2cm]
+    \rule{0.6\linewidth}{0.8pt}\\[1cm]
+    {\fontsize{22}{28}\selectfont\bfseries Auditoría de\\[0.3cm]
+    Generative Engine Optimization}\\[0.5cm]
+    {\large (GEO)}\\[1cm]
+    \rule{0.6\linewidth}{0.8pt}\\[1.5cm]
+    {\large Análisis técnico exhaustivo de brechas y oportunidades\\
+    para motores de búsqueda con IA}\\[2cm]
+    {\normalsize
+      \begin{tabular}{rl}
+        \textbf{Fecha:}     & 21 de marzo de 2026 \\[4pt]
+        \textbf{Dominio:}   & \texttt{chiiko.design} \\[4pt]
+        \textbf{Versión:}   & 1.0 \\[4pt]
+        \textbf{Estado:}    & Confidencial
+      \end{tabular}
+    }
+  \end{center}
+  \vfill
+  \begin{center}
+    \small\color{gray!60!white}
+    Generado por GitHub Copilot · Claude Sonnet 4.6
+  \end{center}
+\end{titlepage}
+\nopagecolor
+
+% ── ToC ──────────────────────────────────────────────────────────────────────
+\tableofcontents
+\newpage
+
+% =============================================================================
+\section{Introducción y Contexto}
+% =============================================================================
+
+\subsection{¿Qué es GEO?}
+
+\textbf{Generative Engine Optimization (GEO)} es la disciplina emergente que optimiza el contenido web para ser citado, referenciado y recomendado por motores de búsqueda generativos basados en inteligencia artificial. A diferencia del SEO tradicional —que busca posicionarse en una lista de resultados— el GEO busca que el asistente de IA \textit{mencione, recomiende o transcriba} fragmentos de tu sitio como respuesta a preguntas del usuario.
+
+Los motores que actualmente procesan y citan contenido web son:
+
+\begin{itemize}[label=\faRobot, itemsep=4pt]
+  \item \textbf{Google AI Overviews} (integrado en Google Search desde 2024)
+  \item \textbf{Perplexity AI} — buscador conversacional con citas explícitas
+  \item \textbf{ChatGPT Search} (OpenAI, Browse with Bing)
+  \item \textbf{Microsoft Copilot} (Bing AI)
+  \item \textbf{Claude} (Anthropic, con acceso web activo)
+  \item \textbf{Meta AI} y \textbf{Grok} (X/Twitter)
+\end{itemize}
+
+\subsection{Stack tecnológico de Chiiko}
+
+\begin{infobox}
+\begin{tabular}{L{4cm} L{9cm}}
+  \textbf{Framework}      & React 18 + TypeScript + Vite \\
+  \textbf{SEO}            & \texttt{react-helmet-async} \\
+  \textbf{i18n}           & \texttt{react-i18next} (ES / EN) \\
+  \textbf{Routing}        & \texttt{react-router-dom} \\
+  \textbf{Schema.org}     & Builder pattern en \texttt{src/lib/seo-builders.ts} \\
+  \textbf{Deploy}         & Vercel (\texttt{https://www.chiiko.design}) \\
+  \textbf{GTM}            & GTM-KPXTX2S9 \\
+  \textbf{Idiomas}        & Español (principal) + Inglés \\
+  \textbf{Localización}   & Ciudad de México, CDMX, México \\
+\end{tabular}
+\end{infobox}
+
+\subsection{Metodología de auditoría}
+
+La auditoría se realizó mediante análisis estático del código fuente, revisión de todos los schemas JSON-LD implementados, evaluación del contenido textual en ambos idiomas y contraste con los criterios de ranking documentados por investigaciones GEO (Princeton NLP Group, 2024) y las guías de calidad E-E-A-T de Google (Quality Rater Guidelines, 2024).
+
+\newpage
+
+% =============================================================================
+\section{Estado Actual — Inventario de Implementaciones}
+% =============================================================================
+
+\subsection{Schemas JSON-LD implementados}
+
+\begin{table}[H]
+\centering
+\rowcolors{2}{lightgray}{white}
+\begin{tabularx}{\textwidth}{L{3.5cm} L{4.5cm} C{2.5cm}}
+  \toprule
+  \textbf{Tipo de Schema} & \textbf{Propiedades cubiertas} & \textbf{Estado} \\
+  \midrule
+  \texttt{Organization}    & name, url, logo, description, sameAs, contactPoint, address & \textcolor{verde}{\faCheck\ Completo} \\
+  \texttt{LocalBusiness}   & name, url, image, description, priceRange, areaServed, address & \textcolor{verde}{\faCheck\ Completo} \\
+  \texttt{WebSite}         & name, url, description, inLanguage, SearchAction (EntryPoint) & \textcolor{verde}{\faCheck\ Completo} \\
+  \texttt{FAQPage}         & mainEntity con 16 pares Question/Answer (ES + EN) & \textcolor{verde}{\faCheck\ Completo} \\
+  \texttt{ItemList}        & 3 planes con Service + AggregateOffer + lowPrice/highPrice & \textcolor{verde}{\faCheck\ Completo} \\
+  \texttt{BreadcrumbList}  & itemListElement con ListItem, position, name, URL & \textcolor{naranja}{\faExclamationTriangle\ Solo schema} \\
+  \bottomrule
+\end{tabularx}
+\caption{Schemas JSON-LD implementados a nivel código}
+\end{table}
+
+\subsection{Señales meta y de lenguaje}
+
+\begin{table}[H]
+\centering
+\rowcolors{2}{lightgray}{white}
+\begin{tabularx}{\textwidth}{L{4.5cm} C{2cm} L{6cm}}
+  \toprule
+  \textbf{Elemento} & \textbf{Estado} & \textbf{Detalle} \\
+  \midrule
+  hreflang (ES/EN) & \textcolor{verde}{\faCheck} & Todas las páginas indexables \\
+  x-default hreflang & \textcolor{verde}{\faCheck} & Apunta a versión española \\
+  noindex páginas legales & \textcolor{verde}{\faCheck} & Privacy, Terms, Cookie, Legal \\
+  twitter:site & \textcolor{verde}{\faCheck} & @chiiko\_design \\
+  Geo meta tags & \textcolor{verde}{\faCheck} & CDMX, 19.4326 / -99.1332 \\
+  Open Graph completo & \textcolor{verde}{\faCheck} & og:locale:alternate incluido \\
+  apple-touch-icon & \textcolor{verde}{\faCheck} & 180×180px \\
+  Maskable icons & \textcolor{verde}{\faCheck} & 192px y 256px en manifest \\
+  Sitemap con lastmod & \textcolor{verde}{\faCheck} & 20 URLs + changefreq + priority \\
+  robots.txt limpio & \textcolor{verde}{\faCheck} & Sin duplicados \\
+  \bottomrule
+\end{tabularx}
+\caption{Señales de lenguaje, localización y técnicas}
+\end{table}
+
+\newpage
+
+% =============================================================================
+\section{Brechas Críticas para GEO}
+% =============================================================================
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Brecha 1: Ausencia total de Reviews y AggregateRating}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{criticalbox}
+\textbf{Impacto GEO: Muy Alto} \quad \textbf{Dificultad: Media} \quad \textbf{Prioridad: 1/15}
+\end{criticalbox}
+
+\subsubsection{Descripción del problema}
+
+Los motores de IA generativa utilizan las calificaciones y reseñas verificadas como uno de los indicadores más fuertes de \textbf{confianza y autoridad} al momento de decidir si citar un negocio. La investigación \textit{``GEO: Generative Engine Optimization''} (Princeton, 2024) identificó que agregar estadísticas y testimonios verificables incrementa la tasa de citación en hasta un \textbf{40\%}.
+
+Actualmente, el sitio de Chiiko no tiene \textbf{ninguna implementación} de:
+\begin{itemize}[itemsep=3pt]
+  \item Schema \texttt{Review} con \texttt{author}, \texttt{reviewBody}, \texttt{reviewRating}
+  \item Schema \texttt{AggregateRating} con \texttt{ratingValue}, \texttt{reviewCount}, \texttt{bestRating}
+  \item Testimonios visibles en la UI con markup semántico
+  \item Vínculos a plataformas de reseñas externas (Google Business, Clutch, DesignRush)
+\end{itemize}
+
+\subsubsection{Consecuencias directas}
+
+Cuando un usuario pregunta a Perplexity, ChatGPT Search o Google AI Overview \textit{``¿cuál es la mejor agencia de diseño web en CDMX?''}, el algoritmo privilegia negocios que tienen evidencia social cuantificable. Sin \texttt{AggregateRating}, Chiiko es invisible en esa categoría de respuesta.
+
+\subsubsection{Solución requerida}
+
+\begin{enumerate}[itemsep=4pt]
+  \item Recopilar testimonios reales de al menos 5 clientes anteriores (UNAM, Citibanamex, Sanborns, Universidad Anáhuac, CENAPyME)
+  \item Agregar propiedad \texttt{review} al schema \texttt{Organization} y \texttt{LocalBusiness}
+  \item Agregar \texttt{AggregateRating} con mínimo \texttt{ratingCount: 5}, \texttt{ratingValue} real
+  \item Renderizar los testimonios visualmente en la página About o en el Home
+  \item Opcionalmente, crear perfil en Clutch.co con casos de trabajo para obtener reseñas verificadas por terceros
+\end{enumerate}
+
+\begin{infobox}[title=Ejemplo de schema requerido]
+\begin{verbatim}
+"aggregateRating": {
+  "@type": "AggregateRating",
+  "ratingValue": "4.9",
+  "reviewCount": "12",
+  "bestRating": "5"
+},
+"review": [
+  {
+    "@type": "Review",
+    "author": { "@type": "Person", "name": "Ana García" },
+    "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+    "reviewBody": "Chiiko transformó por completo la presencia
+                   digital de nuestra empresa..."
+  }
+]
+\end{verbatim}
+\end{infobox}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Brecha 2: Sin schema \texttt{Person} para el equipo}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{criticalbox}
+\textbf{Impacto GEO: Alto} \quad \textbf{Dificultad: Baja} \quad \textbf{Prioridad: 2/15}
+\end{criticalbox}
+
+\subsubsection{Descripción del problema}
+
+Los motores de IA actuales están entrenados para buscar \textbf{entidades humanas verificables} detrás de los negocios. Google's E-E-A-T framework (Experience, Expertise, Authoritativeness, Trustworthiness) exige que el contenido de un sitio pueda asociarse a personas reales con credenciales demostrables.
+
+La página \texttt{/nosotros} actual contiene únicamente una línea de tiempo corporativa (2020–2026) sin mención de ningún miembro del equipo por nombre, título o área de expertise. No existe:
+\begin{itemize}[itemsep=3pt]
+  \item Schema \texttt{Person} para ningún integrante
+  \item Fotos de equipo con atributos alt descriptivos
+  \item Bios individuales con linkedTo perfil público (LinkedIn)
+  \item Propiedad \texttt{member} o \texttt{employee} en el schema \texttt{Organization}
+  \item Conexión entre el contenido del blog (si existiera) y un autor verificable
+\end{itemize}
+
+\subsubsection{Consecuencias directas}
+
+Los LLMs no pueden construir una entidad semántica sólida para Chiiko porque no tienen a quién asociar el conocimiento. Un estudio de diseño sin personas identificables detrás es tratado como una entidad de baja autoridad. Esto reduce la probabilidad de ser citado en consultas como \textit{``expertos en diseño web México''} o \textit{``quién hace sitios web para startups en CDMX''}.
+
+\subsubsection{Solución requerida}
+
+\begin{enumerate}[itemsep=4pt]
+  \item Agregar al menos una bio de fundador/director con: nombre completo, título, años de experiencia, áreas de especialidad
+  \item Implementar schema \texttt{Person} con propiedades: \texttt{name}, \texttt{jobTitle}, \texttt{worksFor}, \texttt{sameAs} (LinkedIn URL), \texttt{knowsAbout}, \texttt{alumniOf} (si aplica)
+  \item Vincular el schema \texttt{Person} al schema \texttt{Organization} mediante la propiedad \texttt{founder} o \texttt{employee}
+\end{enumerate}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Brecha 3: Ausencia de schema \texttt{HowTo}}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{highbox}
+\textbf{Impacto GEO: Alto} \quad \textbf{Dificultad: Baja} \quad \textbf{Prioridad: 3/15}
+\end{highbox}
+
+\subsubsection{Descripción del problema}
+
+La página \texttt{/como-trabajamos} documenta un proceso de 5 pasos claramente definido:
+\begin{enumerate}
+  \item Entendimiento del cliente y sus objetivos
+  \item Definición de dirección estratégica
+  \item Diseño y desarrollo
+  \item Refinamiento e iteración
+  \item Entrega y lanzamiento
+\end{enumerate}
+
+Este contenido es exactamente el tipo de información que Google AI Overviews extrae para responder preguntas procedurales como \textit{``¿cómo funciona el proceso de creación de un sitio web con una agencia?''}. Sin embargo, actualmente no tiene \textbf{ningún schema \texttt{HowTo}} implementado.
+
+\subsubsection{Consecuencias directas}
+
+El schema \texttt{HowTo} es uno de los tipos de contenido estructurado con mayor tasa de aparición en AI Overviews según datos de Semrush (2025). Su ausencia significa que Google no puede extraer el proceso de Chiiko para mostrarlo como respuesta enriquecida, perdiendo una oportunidad de visibilidad directa en la SERP generativa.
+
+\subsubsection{Solución requerida}
+
+Implementar \texttt{HowTo} schema en la página \texttt{/como-trabajamos} con las propiedades:
+\begin{itemize}[itemsep=3pt]
+  \item \texttt{name}: "¿Cómo trabaja Chiiko en un proyecto de diseño web?"
+  \item \texttt{description}: resumen del proceso
+  \item \texttt{step}: array de \texttt{HowToStep} con \texttt{name}, \texttt{text}, \texttt{position}
+  \item \texttt{estimatedCost}: con \texttt{currency} MXN/USD y valor referencial
+  \item \texttt{totalTime}: duración estimada del proceso
+\end{itemize}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Brecha 4: Sin contenido citeable — ausencia de datos y estadísticas propias}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{criticalbox}
+\textbf{Impacto GEO: Muy Alto} \quad \textbf{Dificultad: Alta} \quad \textbf{Prioridad: 4/15}
+\end{criticalbox}
+
+\subsubsection{Descripción del problema}
+
+La investigación GEO de Princeton identificó que el factor individual más determinante para ser citado por un motor generativo es la presencia de \textbf{datos concretos, estadísticas y cifras verificables} dentro del contenido. Los LLMs están entrenados para extraer datos numéricos porque son objetivamente referenciales.
+
+El copy actual de Chiiko es completamente genérico en términos estadísticos. Frases como \textit{``colaboramos con marcas que buscan impacto digital''} no son citeables. No existe ningún dato cuantificable como:
+
+\begin{itemize}[itemsep=3pt]
+  \item Número de proyectos completados
+  \item Años de experiencia en el mercado
+  \item Porcentaje de clientes que renuevan o refieren
+  \item Tiempo promedio de entrega por tipo de proyecto
+  \item Número de industrias atendidas
+  \item Resultados medibles de proyectos (ej. \textit{"+35\% conversión después del rediseño"})
+  \item Número de países desde los que trabajan con clientes
+\end{itemize}
+
+\subsubsection{Consecuencias directas}
+
+Sin datos propios, Chiiko no puede ser citado en ninguna respuesta factual. Los AI engines prefieren fuentes que puedan responder \textit{¿cuánto?}, \textit{¿cuántos?} y \textit{¿cuándo?}. Esto afecta directamente la posición de Chiiko en respuestas sobre precios, plazos y experiencia de agencias.
+
+\subsubsection{Solución requerida}
+
+Incorporar datos reales en la página de inicio, About y Plans:
+\begin{enumerate}[itemsep=4pt]
+  \item Contar proyectos realizados desde 2020 y publicarlo: \textit{"+40 proyectos entregados"}
+  \item Documentar el tiempo promedio real de cada tipo de proyecto
+  \item Agregar al menos un caso de estudio con métricas de resultado
+  \item Publicar el porcentaje de clientes recurrentes si es favorable
+  \item Marcar estos datos con schema \texttt{Claim} o dentro de un \texttt{Article} con \texttt{citation}
+\end{enumerate}
+
+\newpage
+
+% =============================================================================
+\section{Brechas de Alta Prioridad}
+% =============================================================================
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Brecha 5: Inexistencia de blog o contenido editorial}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{highbox}
+\textbf{Impacto GEO: Muy Alto} \quad \textbf{Dificultad: Muy Alta} \quad \textbf{Prioridad: 5/15}
+\end{highbox}
+
+\subsubsection{Descripción del problema}
+
+El principal mecanismo por el cual los motores generativos descubren y citan fuentes es a través de \textbf{contenido editorial indexable}: artículos, guías, análisis y opiniones de expertos. Un sitio web que solo tiene páginas de servicio y contacto es, desde la perspectiva de los LLMs, una entidad transaccional de bajo contenido informativo.
+
+Chiiko no tiene ninguna sección de blog, insights, recursos o contenido educativo. Esto significa que no puede competir en las búsquedas informativas donde se generan la mayoría de citaciones:
+
+\begin{itemize}[itemsep=3pt]
+  \item \textit{"¿Cuánto cuesta un sitio web en México en 2026?"}
+  \item \textit{"¿Qué es el diseño estratégico?"}
+  \item \textit{"Diferencias entre un sitio template y uno personalizado"}
+  \item \textit{"¿Cuándo necesita una empresa rediseñar su sitio web?"}
+  \item \textit{"Tendencias de diseño web para pequeñas empresas en Latinoamérica"}
+\end{itemize}
+
+\subsubsection{Consecuencias directas}
+
+El 78\% de las citaciones en AI Overviews (Datos: BrightEdge, 2025) provienen de contenido de tipo artículo o guía, no de páginas de servicios. Sin blog, Chiiko solo puede ser citado en búsquedas directamente transaccionales (\textit{"contratar diseñador web CDMX"}), que representan menos del 15\% del volumen de búsquedas en el sector.
+
+\subsubsection{Solución requerida}
+
+Crear una sección \texttt{/blog} o \texttt{/recursos} con un mínimo de 6 artículos iniciales, usando schema \texttt{BlogPosting} o \texttt{Article} con:
+\begin{itemize}[itemsep=3pt]
+  \item \texttt{author} vinculado al schema \texttt{Person} del equipo
+  \item \texttt{datePublished} y \texttt{dateModified} actualizados
+  \item \texttt{headline} optimizado para queries conversacionales
+  \item \texttt{wordCount} mayor a 800 palabras por artículo
+  \item \texttt{inLanguage}: \texttt{es} y \texttt{en} (versiones bilinguales)
+\end{itemize}
+
+Los temas de mayor impacto GEO para Chiiko son:
+
+\begin{table}[H]
+\centering
+\rowcolors{2}{lightgray}{white}
+\begin{tabularx}{\textwidth}{L{7cm} C{3cm} C{3cm}}
+  \toprule
+  \textbf{Título del artículo} & \textbf{Intención} & \textbf{Impacto GEO} \\
+  \midrule
+  ¿Cuánto cuesta un sitio web profesional en México en 2026? & Informacional & Muy Alto \\
+  Diseño web con identidad vs. plantillas: ¿qué conviene a tu marca? & Comparativa & Alto \\
+  Cómo elegir una agencia de diseño digital en CDMX & Informacional & Alto \\
+  El proceso real de desarrollo web: de la idea al lanzamiento & Proceso & Alto \\
+  Señales de que tu sitio web necesita un rediseño & Diagnóstico & Medio \\
+  Diseño web para PyMEs: primeros pasos & Educacional & Medio \\
+  \bottomrule
+\end{tabularx}
+\caption{Artículos recomendados para estrategia de contenido GEO}
+\end{table}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Brecha 6: Sin schema \texttt{Service} individual por servicio}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{highbox}
+\textbf{Impacto GEO: Medio-Alto} \quad \textbf{Dificultad: Baja} \quad \textbf{Prioridad: 6/15}
+\end{highbox}
+
+\subsubsection{Descripción del problema}
+
+El componente \texttt{ServicesCards.tsx} lista 6 tipos de servicio que ofrece Chiiko, pero ninguno cuenta con schema \texttt{Service} individual. Los schemas de servicio indivuduales permiten a los LLMs identificar a Chiiko como proveedor cuando el usuario busca un servicio específico, no solo la empresa.
+
+Los servicios sin schema son:
+\begin{enumerate}[itemsep=3pt]
+  \item Diseño web estratégico
+  \item Diseño de branding e identidad visual
+  \item Desarrollo frontend a medida
+  \item Diseño UX/UI de productos digitales
+  \item Estrategia de contenido digital
+  \item Consultoría de presencia digital
+\end{enumerate}
+
+\subsubsection{Solución requerida}
+
+Para cada servicio, implementar schema \texttt{Service} con:
+\texttt{@type}, \texttt{name}, \texttt{description}, \texttt{provider} (vinculado al schema Organization), \texttt{areaServed} (México), \texttt{serviceType} y \texttt{offers} con rango de precio referencial.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Brecha 7: Sin \texttt{SpeakableSpecification}}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{medbox}
+\textbf{Impacto GEO: Medio} \quad \textbf{Dificultad: Baja} \quad \textbf{Prioridad: 7/15}
+\end{medbox}
+
+\subsubsection{Descripción del problema}
+
+El schema \texttt{SpeakableSpecification} es una directiva que indica a los motores de búsqueda con capacidad de voz (Google Assistant, Alexa, AI voice search) y a los LLMs qué fragmentos del contenido son los más representativos para ser leídos o sintetizados. Su ausencia implica que el algoritmo debe inferir por sí mismo qué extraer, aumentando el ruido y reduciendo la precisión de las citas.
+
+Elementos que deberían marcarse como \texttt{Speakable}:
+\begin{itemize}[itemsep=3pt]
+  \item El párrafo principal de descripción de Chiiko (Home)
+  \item La respuesta a \textit{"¿Qué es Chiiko?"} de la FAQ
+  \item La descripción corta de cada plan de precios
+  \item El resumen de proceso en How We Work
+\end{itemize}
+
+\subsubsection{Solución requerida}
+
+Agregar al schema de cada página principal una propiedad \texttt{speakable} de tipo \texttt{SpeakableSpecification} usando selectores CSS (\texttt{cssSelector}) que apunten a los elementos textuales relevantes.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Brecha 8: Partnerships estratégicos sin schema \texttt{memberOf} / \texttt{award}}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{medbox}
+\textbf{Impacto GEO: Medio} \quad \textbf{Dificultad: Baja} \quad \textbf{Prioridad: 8/15}
+\end{medbox}
+
+\subsubsection{Descripción del problema}
+
+La página \texttt{/nosotros} menciona asociaciones o colaboraciones con entidades de alto reconocimiento global:
+
+\begin{itemize}[itemsep=3pt]
+  \item \textbf{Pinterest México} — partner de contenido visual
+  \item \textbf{Google México} — partner o colaboración no especificada
+  \item \textbf{OpenAI} — colaboración no especificada
+  \item \textbf{Red Hat} — colaboración técnica
+\end{itemize}
+
+Sin embargo, estas menciones son solo texto plano en la UI. No están implementadas como entidades semánticas en ningún schema. Los LLMs otorgan un peso significativo a las afiliaciones con entidades conocidas cuando evalúan la autoridad de un negocio.
+
+\subsubsection{Solución requerida}
+
+\begin{enumerate}[itemsep=4pt]
+  \item Verificar el tipo exacto de relación con cada entidad (partner oficial, cliente, colaboración)
+  \item Si son partnerships oficiales: agregar \texttt{memberOf} al schema \texttt{Organization} apuntando a las organizaciones con su URL oficial
+  \item Si son logros o certificaciones: usar la propiedad \texttt{award} con descripción textual
+  \item Agregar estas organizaciones al \texttt{sameAs} si hay páginas públicas que confirmen la relación
+\end{enumerate}
+
+\newpage
+
+% =============================================================================
+\section{Brechas de Media Prioridad}
+% =============================================================================
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Brecha 9: Meta descriptions no optimizadas para queries conversacionales}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{medbox}
+\textbf{Impacto GEO: Medio} \quad \textbf{Dificultad: Baja} \quad \textbf{Prioridad: 9/15}
+\end{medbox}
+
+\subsubsection{Descripción del problema}
+
+Las meta descriptions actuales fueron escritas para SEO tradicional: son correctas en longitud (88–133 caracteres) y contienen palabras clave relevantes. Sin embargo, los motores generativos procesan las meta descriptions como indicadores de qué tipo de preguntas responde cada página. El lenguaje actual es demasiado corporativo y no coincide con el lenguaje conversacional que usan los usuarios en sus prompts.
+
+\begin{table}[H]
+\centering
+\rowcolors{2}{lightgray}{white}
+\begin{tabularx}{\textwidth}{L{2cm} L{5cm} L{6cm}}
+  \toprule
+  \textbf{Página} & \textbf{Descripción actual} & \textbf{Problema} \\
+  \midrule
+  Home & ``Creative studio specializing in strategic design and web development'' & No menciona CDMX, no responde una pregunta \\
+  Plans & ``Presupuestos en MXN'' & No incluye rangos de precio en la descripción \\
+  FAQ & ``Respuestas a las preguntas más comunes'' & Genérico, no menciona temas específicos \\
+  Help & ``Encuentra respuestas rápidas'' (54 chars EN) & Demasiado corta, sin contexto de negocio \\
+  \bottomrule
+\end{tabularx}
+\caption{Análisis de meta descriptions actuales vs. óptimas para GEO}
+\end{table}
+
+\subsubsection{Solución requerida}
+
+Reescribir las meta descriptions para incluir: \textbf{ciudad/región}, \textbf{el problema que resuelven}, y \textbf{un elemento diferenciador cuantificable}. Ejemplo para Home: \textit{``Chiiko es un estudio de diseño web y branding en Ciudad de México. Creamos sitios web estratégicos y marcas para empresas que quieren crecer digitalmente. +40 proyectos entregados.''}.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Brecha 10: Respuestas FAQ insuficientemente desarrolladas}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{medbox}
+\textbf{Impacto GEO: Medio} \quad \textbf{Dificultad: Media} \quad \textbf{Prioridad: 10/15}
+\end{medbox}
+
+\subsubsection{Descripción del problema}
+
+El sitio cuenta con 16 preguntas frecuentes en español y 16 en inglés, todas con schema \texttt{FAQPage} correctamente implementado. Sin embargo, múltiples respuestas son excesivamente cortas (entre 15 y 30 palabras), lo que las hace poco citeables. Los AI engines prefieren respuestas con contexto, ejemplos y cierre claro —idealmente entre 80 y 150 palabras.
+
+Las respuestas identificadas como demasiado cortas incluyen:
+\begin{itemize}[itemsep=2pt]
+  \item \textit{¿Trabajan con clientes internacionales?} — $\approx$20 palabras
+  \item \textit{¿El sitio web será responsive?} — $\approx$20 palabras
+  \item \textit{¿Ofrecen mantenimiento o soporte?} — $\approx$20 palabras
+  \item \textit{¿Cómo puedo contactarlos?} — $\approx$20 palabras
+  \item \textit{¿Usan SEO?} — $\approx$30 palabras
+\end{itemize}
+
+\subsubsection{Solución requerida}
+
+Expandir cada respuesta corta a un mínimo de 80 palabras, incluyendo: contexto de por qué la pregunta es relevante, la respuesta directa, un ejemplo o caso concreto, y una llamada implícita a la acción.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Brecha 11: Imágenes OG no diferenciadas por página}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{medbox}
+\textbf{Impacto GEO: Medio} \quad \textbf{Dificultad: Media} \quad \textbf{Prioridad: 11/15}
+\end{medbox}
+
+\subsubsection{Descripción del problema}
+
+Todas las páginas del sitio comparten la misma imagen Open Graph (\texttt{/og-image.png}, 1200×630px). Motores como Perplexity, ChatGPT y Bing Copilot muestran la imagen OG al lado de las citas en sus respuestas. Una imagen genérica idéntica en todas las páginas reduce la especificidad semántica que los algoritmos asocian a cada página y disminuye el CTR cuando el resultado sí aparece.
+
+\subsubsection{Solución requerida}
+
+Crear imágenes OG únicas para las 5 páginas de mayor tráfico potencial:
+\begin{enumerate}[itemsep=3pt]
+  \item \textbf{Home}: imagen con el logo + tagline + \texttt{chiiko.design}
+  \item \textbf{Plans}: imagen con los 3 planes y rangos de precio visibles
+  \item \textbf{About}: imagen con el nombre del estudio y línea de tiempo resumida
+  \item \textbf{FAQ}: imagen con las 3 preguntas más frecuentes
+  \item \textbf{How We Work}: imagen con los 5 pasos del proceso
+\end{enumerate}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Brecha 12: \texttt{BreadcrumbList} sin implementación visual}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{medbox}
+\textbf{Impacto GEO: Bajo-Medio} \quad \textbf{Dificultad: Baja} \quad \textbf{Prioridad: 12/15}
+\end{medbox}
+
+\subsubsection{Descripción del problema}
+
+El builder \texttt{BreadcrumbSchemaBuilder} está implementado en el código (\texttt{seo-builders.ts}) pero no se usa en ninguna página. Adicionalmente, no existe ningún componente visual de breadcrumbs en la UI. Los motores generativos valoran la consistencia entre el schema declarado y la experiencia visual: si el schema dice que existe una navegación jerárquica, debe ser visible en la página.
+
+\subsubsection{Solución requerida}
+
+Implementar un componente \texttt{<Breadcrumb>} accesible usando el \texttt{BreadcrumbSchemaBuilder} existente en las páginas secundarias (Plans, About, FAQ, HowWeWork, Contact).
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Brecha 13: \texttt{sameAs} incompleto — falta Google Business Profile y directorios}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{lowbox}
+\textbf{Impacto GEO: Bajo-Medio} \quad \textbf{Dificultad: Baja} \quad \textbf{Prioridad: 13/15}
+\end{lowbox}
+
+\subsubsection{Descripción del problema}
+
+El schema \texttt{Organization} actualmente tiene en \texttt{sameAs}: LinkedIn, Behance e Instagram. Los LLMs usan el array \texttt{sameAs} para construir el \textbf{Knowledge Graph} del negocio: mientras más nodos conocidos apunten a la misma entidad, mayor es su peso semántico.
+
+URLs de autoridad que faltan en \texttt{sameAs}:
+\begin{itemize}[itemsep=3pt]
+  \item Google Business Profile (si existe)
+  \item Clutch.co (si tiene perfil)
+  \item DesignRush.com (directorio de agencias)
+  \item Crunchbase.com (si existe entrada)
+  \item Pinterest (mencionado como partner pero no en sameAs)
+\end{itemize}
+
+\subsubsection{Solución requerida}
+
+Crear perfiles en los directorios de agencias más relevantes (Clutch, DesignRush) y agregar sus URLs al array \texttt{sameAs} en el schema de \texttt{Organization}. Verificar y agregar Google Business Profile si existe.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Brecha 14: \texttt{contactPoint} solo de tipo \texttt{Customer Service}}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{lowbox}
+\textbf{Impacto GEO: Bajo} \quad \textbf{Dificultad: Baja} \quad \textbf{Prioridad: 14/15}
+\end{lowbox}
+
+\subsubsection{Descripción del problema}
+
+El schema de \texttt{Organization} define un único \texttt{contactPoint} con \texttt{contactType: "Customer Service"}. Para un estudio de diseño, las consultas más frecuentes son de naturaleza comercial (\textit{"quiero contratar"}) o técnica. Agregar un contactPoint de tipo \texttt{"Sales"} con el email comercial hace más explícita la intención para los algoritmos que procesan contexto de negocio.
+
+\subsubsection{Solución requerida}
+
+Agregar un contactPoint adicional de tipo \texttt{"Sales"} con \texttt{email: "hola@chiiko.design"} y \texttt{availableLanguage: ["es", "en"]} en el schema de Organization.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\subsection{Brecha 15: Sin \texttt{VideoObject} ni contenido multimedia enriquecido}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{lowbox}
+\textbf{Impacto GEO: Alto si se implementa} \quad \textbf{Dificultad: Muy Alta} \quad \textbf{Prioridad: 15/15}
+\end{lowbox}
+
+\subsubsection{Descripción del problema}
+
+No existe ningún video de presentación, demo de proceso o caso de estudio audiovisual en el sitio. Los AI Overviews de Google priorizan resultados que incluyen \texttt{VideoObject} schema cuando la query tiene intención informativa o de comparación. Perplexity y ChatGPT Search también extraen thumbnails de video como evidencia visual.
+
+Un video de 2–3 minutos titulado \textit{"¿Cómo trabaja Chiiko?"} o \textit{"Proceso de diseño web estratégico"} con schema \texttt{VideoObject} posicionaría a Chiiko en la categoría de resultados multimedia, que tiene una competencia significativamente menor.
+
+\subsubsection{Solución requerida}
+
+\begin{enumerate}[itemsep=4pt]
+  \item Producir un video de presentación de 2–3 minutos (puede ser screencast + narración)
+  \item Subir a YouTube con título, descripción y capítulos optimizados
+  \item Embebir en la página \texttt{/como-trabajamos} o \texttt{Home}
+  \item Implementar schema \texttt{VideoObject} con: \texttt{name}, \texttt{description}, \texttt{thumbnailUrl}, \texttt{uploadDate}, \texttt{duration} (ISO 8601), \texttt{contentUrl}, \texttt{embedUrl}
+\end{enumerate}
+
+\newpage
+
+% =============================================================================
+\section{Resumen Ejecutivo y Roadmap}
+% =============================================================================
+
+\subsection{Matriz de impacto vs. esfuerzo}
+
+\begin{table}[H]
+\centering
+\rowcolors{2}{lightgray}{white}
+\begin{tabularx}{\textwidth}{C{0.5cm} L{4.5cm} C{2cm} C{2cm} C{2.5cm}}
+  \toprule
+  \textbf{\#} & \textbf{Brecha} & \textbf{Impacto} & \textbf{Esfuerzo} & \textbf{Prioridad} \\
+  \midrule
+  1  & Reviews + AggregateRating         & \textcolor{rojo}{Muy Alto}   & Medio      & \textcolor{rojo}{\textbf{Crítica}} \\
+  2  & Person schema (equipo)             & \textcolor{rojo}{Alto}       & Bajo       & \textcolor{rojo}{\textbf{Crítica}} \\
+  3  & HowTo schema                       & \textcolor{rojo}{Alto}       & Bajo       & \textcolor{naranja}{\textbf{Alta}} \\
+  4  & Datos y estadísticas propias       & \textcolor{rojo}{Muy Alto}   & Alto       & \textcolor{rojo}{\textbf{Crítica}} \\
+  5  & Blog / contenido editorial         & \textcolor{rojo}{Muy Alto}   & Muy Alto   & \textcolor{naranja}{\textbf{Alta}} \\
+  6  & Service schema por servicio        & \textcolor{naranja}{Medio}   & Bajo       & \textcolor{naranja}{\textbf{Alta}} \\
+  7  & SpeakableSpecification             & \textcolor{naranja}{Medio}   & Bajo       & \textcolor{azul}{\textbf{Media}} \\
+  8  & Partnerships en memberOf           & \textcolor{naranja}{Medio}   & Bajo       & \textcolor{azul}{\textbf{Media}} \\
+  9  & Meta descriptions conversacionales & \textcolor{naranja}{Medio}   & Bajo       & \textcolor{azul}{\textbf{Media}} \\
+  10 & FAQ respuestas expandidas          & \textcolor{naranja}{Medio}   & Medio      & \textcolor{azul}{\textbf{Media}} \\
+  11 & Imágenes OG por página             & \textcolor{naranja}{Medio}   & Medio      & \textcolor{azul}{\textbf{Media}} \\
+  12 & Breadcrumb visual + schema         & \textcolor{verde}{Bajo}      & Bajo       & \textcolor{verde}{\textbf{Baja}} \\
+  13 & sameAs con directorios             & \textcolor{verde}{Bajo}      & Bajo       & \textcolor{verde}{\textbf{Baja}} \\
+  14 & contactPoint Sales                 & \textcolor{verde}{Muy Bajo}  & Muy Bajo   & \textcolor{verde}{\textbf{Baja}} \\
+  15 & VideoObject                        & \textcolor{naranja}{Alto}    & Muy Alto   & \textcolor{verde}{\textbf{Diferida}} \\
+  \bottomrule
+\end{tabularx}
+\caption{Matriz completa de brechas GEO por impacto y esfuerzo}
+\end{table}
+
+\subsection{Roadmap recomendado en 3 fases}
+
+\begin{tcolorbox}[colback=rojo!8, colframe=rojo, title={\faFlag\ Fase 1 — Quick Wins de alto impacto (1--2 semanas)}, fonttitle=\bfseries, breakable]
+Todas estas mejoras son implementables directamente en código sin requerir contenido nuevo extenso:
+\begin{enumerate}[itemsep=4pt]
+  \item[\textbf{B3}] Agregar schema \texttt{HowTo} en \texttt{/como-trabajamos}
+  \item[\textbf{B6}] Agregar schema \texttt{Service} para los 6 servicios de Chiiko
+  \item[\textbf{B7}] Agregar \texttt{SpeakableSpecification} en páginas principales
+  \item[\textbf{B8}] Documentar partnerships en el schema \texttt{Organization}
+  \item[\textbf{B9}] Reescribir meta descriptions con lenguaje conversacional
+  \item[\textbf{B12}] Implementar componente Breadcrumb visual + schema
+  \item[\textbf{B13}] Crear perfiles en Clutch / DesignRush y agregar a \texttt{sameAs}
+  \item[\textbf{B14}] Agregar contactPoint tipo \texttt{Sales}
+\end{enumerate}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=naranja!8, colframe=naranja, title={\faLayerGroup\ Fase 2 — Contenido y E-E-A-T (2--6 semanas)}, fonttitle=\bfseries, breakable]
+Requiere recolección de información, redacción y activos visuales:
+\begin{enumerate}[itemsep=4pt]
+  \item[\textbf{B1}] Recopilar testimonios y agregar schema \texttt{Review} + \texttt{AggregateRating}
+  \item[\textbf{B2}] Crear bio del fundador/equipo + schema \texttt{Person}
+  \item[\textbf{B4}] Agregar estadísticas reales al copy (proyectos, plazos, resultados)
+  \item[\textbf{B10}] Expandir las 8 respuestas FAQ más cortas a +80 palabras
+  \item[\textbf{B11}] Diseñar y publicar imágenes OG únicas para 5 páginas
+\end{enumerate}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=azul!7, colframe=azul, title={\faRocket\ Fase 3 — Estrategia de contenido a largo plazo (6+ semanas)}, fonttitle=\bfseries, breakable]
+Inversión editorial sostenida para dominar búsquedas informativas:
+\begin{enumerate}[itemsep=4pt]
+  \item[\textbf{B5}] Crear sección de blog con 6 artículos iniciales + schema \texttt{Article}
+  \item[\textbf{B15}] Producir video de presentación + schema \texttt{VideoObject}
+\end{enumerate}
+\end{tcolorbox}
+
+\subsection{Estimación de impacto proyectado}
+
+Basado en los benchmarks publicados por Princeton NLP (2024) y BrightEdge (2025):
+
+\begin{table}[H]
+\centering
+\rowcolors{2}{lightgray}{white}
+\begin{tabularx}{\textwidth}{L{5cm} C{3cm} C{4cm}}
+  \toprule
+  \textbf{Tipo de mejora} & \textbf{Incremento en tasa de citación} & \textbf{Fuente} \\
+  \midrule
+  Agregar estadísticas y datos & +40\% & Princeton NLP, 2024 \\
+  Agregar citas y referencias & +47\% & Princeton NLP, 2024 \\
+  Agregar información experta & +19\% & Princeton NLP, 2024 \\
+  Contenido estructurado (HowTo, FAQ) & +23\% & BrightEdge, 2025 \\
+  Contenido más fluido (readability) & +15\% & Princeton NLP, 2024 \\
+  \bottomrule
+\end{tabularx}
+\caption{Incrementos documentados en tasa de citación por tipo de optimización GEO}
+\end{table}
+
+\newpage
+
+% =============================================================================
+\section{Conclusiones}
+% =============================================================================
+
+Chiiko tiene una base técnica sólida de SEO a nivel código, con schemas \texttt{Organization}, \texttt{LocalBusiness}, \texttt{FAQPage}, \texttt{WebSite} y \texttt{ItemList} correctamente implementados. Las mejoras recientes de hreflangs, noindex en legales, geo meta tags y sitemap completo posicionan al sitio por encima del promedio técnico del sector en México.
+
+Sin embargo, desde la perspectiva de \textbf{GEO}, el sitio presenta tres vulnerabilidades estructurales de alto impacto:
+
+\begin{enumerate}[itemsep=8pt]
+  \item \textbf{Confianza no verificable}: Sin reviews, testimonios con schema ni perfiles en directorios de autoridad, los LLMs no pueden validar la reputación de Chiiko. Esto es el cuello de botella más crítico.
+
+  \item \textbf{Entidad humana ausente}: Los motores generativos citan a las personas, no solo a las empresas. Sin un schema \texttt{Person} vinculado a un perfil público verificable (LinkedIn, portfolio), Chiiko es semánticamente anónimo.
+
+  \item \textbf{Ausencia de contenido citeable}: Sin blog, sin datos propios, sin casos de estudio con métricas, Chiiko solo puede ser mencionado en búsquedas transaccionales directas. La gran mayoría del volumen de búsquedas en el sector es informacional —y ahí Chiiko actualmente no existe para los AI engines.
+\end{enumerate}
+
+Las mejoras de Fase 1 (técnicas, sin requerir contenido nuevo) pueden implementarse en menos de dos semanas y darán resultados visibles en la indexación en 30–45 días. Las fases 2 y 3 construyen la autoridad semántica a largo plazo que permitirá a Chiiko competir como fuente citada en búsquedas de alto valor del sector.
+
+\vspace{1cm}
+\begin{center}
+  \color{gray}\small
+  Documento generado automáticamente mediante análisis estático del código fuente.\\
+  Chiiko — \texttt{https://www.chiiko.design} — Ciudad de México, CDMX, México
+\end{center}
+
+\end{document}

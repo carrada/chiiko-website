@@ -24,3 +24,47 @@ coverage
 *.sln
 *.sw?
 .vercel
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Testing
+coverage/
+*.lcov
+.nyc_output
+
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+
+# Build artifacts
+build/
+out/
+
+# LaTeX build artifacts (docs/)
+docs/*.aux
+docs/*.log
+docs/*.out
+docs/*.toc
+docs/*.fls
+docs/*.fdb_latexmk
+docs/*.synctex.gz
+docs/*.bbl
+docs/*.blg
+docs/*.lof
+docs/*.lot
+docs/*.idx
+docs/*.ilg
+docs/*.ind
