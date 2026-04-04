@@ -5,8 +5,8 @@ export default function CometCardDemo() {
     {
       title: "Estudio Arquitectura MX (EAMX)",
       description: "Sitio moderno y elegante que refleja la precisión y calidad de EAMX, con visuales sofisticados, estructura clara y navegación intuitiva.",
-      image: "/portada-eamx-proyectos.png",
-      link: "https://eamx-website.vercel.app/"
+      image: "/compufestLogo - Negro.svg",
+      link: "https://compufest.cc"
     },
     {
       title: "Proyecto 2", 
@@ -29,7 +29,10 @@ export default function CometCardDemo() {
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-80 object-cover"
+                  className={project.image.endsWith(".svg")
+                    ? "w-full h-80 object-contain p-12 md:p-14"
+                    : "w-full h-80 object-cover"
+                  }
                 />
               </div>
             </CometCard>
