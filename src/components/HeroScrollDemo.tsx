@@ -19,9 +19,9 @@ export default function HeroScrollDemo() {
         }
       >
         <picture className="h-full w-full flex items-center justify-center p-0 md:p-8">
-          <source media="(max-width: 768px)" srcSet="/huicholTabletMovil.png" />
+          <source media="(max-width: 768px)" srcSet="/huichol..svg" />
           <img
-            src="/imagen_tableta.png"
+            src="/huichol..svg"
             alt="Tablet Huichol"
             className="mx-auto rounded-2xl object-cover aspect-video w-full"
           />
