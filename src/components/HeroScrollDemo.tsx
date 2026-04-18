@@ -5,7 +5,7 @@ export default function HeroScrollDemo() {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full flex justify-center items-center pb-32 md:pb-48">
+    <div className="w-full flex justify-center items-center pb-24 md:pb-48">
       <ContainerScroll
         titleComponent={
           <>

@@ -16,7 +16,7 @@ import { LAYOUT_SPACING, COLORS } from "@/constants";
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
     <div className="w-full flex justify-center items-center px-4" style={{marginTop: LAYOUT_SPACING.SECTION_GAP.marginTop, marginBottom: LAYOUT_SPACING.SECTION_GAP.marginBottom}}>
-      <h2 className="text-6xl tablet:text-[9rem] md:text-[14rem] font-inter font-bold text-black text-center">
+      <h2 className="text-6xl tablet:text-[9rem] md:text-[14rem] font-inter font-bold text-black text-center leading-[0.9] md:leading-none">
         {children}
       </h2>
     </div>
@@ -56,7 +56,7 @@ export default function HomePage() {
         className="w-full"
       >
         <ResizableNavbarDemo />
-        <div className="py-12 tablet:py-16 md:py-24"></div>
+        <div className="py-10 tablet:py-16 md:py-24"></div>
         
         <HeroScrollDemo />
         <ValuePropositions />
@@ -71,7 +71,7 @@ export default function HomePage() {
         <ServicesCards />
         
         <div className="w-full flex justify-center items-center px-4" style={{marginTop: LAYOUT_SPACING.SECTION_GAP.marginTop, marginBottom: LAYOUT_SPACING.SECTION_GAP_SMALL.marginBottom}}>
-          <h2 className="text-5xl tablet:text-7xl md:text-[14rem] font-inter font-bold text-black text-center">
+          <h2 className="text-5xl tablet:text-7xl md:text-[14rem] font-inter font-bold text-black text-center leading-[0.9] md:leading-none">
             {t('section.whoWeWork')}
           </h2>
         </div>
@@ -79,28 +79,28 @@ export default function HomePage() {
         <WhoWeWorkWithDemo />
         
         <CallToActionSection>
-          <div className="flex flex-col items-center gap-6 tablet:gap-7 md:gap-8">
-            <p className="text-5xl tablet:text-6xl md:text-7xl font-inter font-bold text-black text-center max-w-4xl tablet:max-w-5xl md:max-w-6xl leading-relaxed">
-              <span style={{color: COLORS.PRIMARY}}>No</span> {t('cta.notForEveryone')}
+          <div className="flex flex-col items-center gap-5 tablet:gap-7 md:gap-8 px-2 md:px-0">
+            <p className="text-5xl tablet:text-6xl md:text-7xl font-inter font-bold text-black text-center max-w-4xl tablet:max-w-5xl md:max-w-6xl leading-[1.08] md:leading-relaxed">
+              <span style={{color: COLORS.PRIMARY}}>No,</span> {t('cta.notForEveryone')}
             </p>
-            <p className="text-lg tablet:text-xl md:text-3xl font-inter font-bold text-black text-center max-w-3xl tablet:max-w-4xl md:max-w-5xl leading-relaxed">
+            <p className="text-lg tablet:text-xl md:text-3xl font-inter font-bold text-black text-center max-w-3xl tablet:max-w-4xl md:max-w-5xl leading-[1.35] md:leading-relaxed px-2 md:px-0">
               {t('cta.aligned')}
             </p>
           </div>
         </CallToActionSection>
         
         <CallToActionSection>
-          <div className="flex flex-col items-center gap-8 tablet:gap-10 md:gap-12">
-            <h2 className="text-6xl tablet:text-[9rem] md:text-[14rem] font-inter font-bold text-black text-center">
+          <div className="flex flex-col items-center gap-7 tablet:gap-10 md:gap-12 px-2 md:px-0">
+            <h2 className="text-6xl tablet:text-[9rem] md:text-[14rem] font-inter font-bold text-black text-center leading-[0.88] md:leading-none">
               {t('cta.whyChooseUs')}
             </h2>
-            <p className="text-lg tablet:text-2xl md:text-4xl font-inter font-bold text-black text-center max-w-4xl tablet:max-w-5xl">
+            <p className="text-lg tablet:text-2xl md:text-4xl font-inter font-bold text-black text-center max-w-4xl tablet:max-w-5xl leading-[1.3] md:leading-normal px-2 md:px-0">
               {t('cta.whatWeDo')}
             </p>
           </div>
         </CallToActionSection>
         
-        <div className="w-full flex justify-center items-center px-4 py-24 tablet:py-32">
+        <div className="w-full flex justify-center items-center px-4 py-20 tablet:py-32">
           <div className="max-w-7xl w-full">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 tablet:gap-16 md:gap-20">
               <div className="flex flex-col space-y-4 text-center md:text-left items-center md:items-start">
@@ -142,7 +142,7 @@ export default function HomePage() {
         
         <div className="w-full flex justify-center items-center px-4 py-28" style={{marginTop: LAYOUT_SPACING.SECTION_GAP_LARGE.marginTop, marginBottom: LAYOUT_SPACING.SECTION_GAP_LARGE.marginBottom}}>
           <div className="flex flex-col items-center gap-12">
-            <h2 className="text-6xl md:text-[14rem] font-inter font-bold text-black text-center">
+            <h2 className="text-6xl md:text-[14rem] font-inter font-bold text-black text-center leading-[0.9] md:leading-none">
               {t('cta.ready')}
             </h2>
             <ProjectInitButton />
