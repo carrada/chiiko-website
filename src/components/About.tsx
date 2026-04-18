@@ -2,10 +2,10 @@ import { useTranslation } from "react-i18next";
 import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { Timeline } from "@/components/ui/timeline";
 import { SEO_PAGES } from "@/lib/seo";
+import HeroParallaxDemo from "@/components/hero-parallax-demo";
 
-const SpanishTimeline = [
+const DummySpanishTimeline = [
   {
     title: "2020",
     content: (
@@ -277,76 +277,6 @@ const EnglishTimeline = [
 
 export default function About() {
   const { i18n } = useTranslation();
-  const timelineData = i18n.language === 'es' ? SpanishTimeline : EnglishTimeline;
-
-  const title = i18n.language === 'es' ? 'Nuestra historia' : 'Our story';
-  const description = i18n.language === 'es' 
-    ? 'Desde nuestros humildes comienzos hasta hoy, hemos crecido cultivando alianzas, aprendiendo constantemente y transformando la forma en que se conciben los sitios web. Cada capítulo de nuestra trayectoria refleja nuestra compromiso con la excelencia y la innovación.'
-    : 'From our humble beginnings to today, we have grown by cultivating alliances, constantly learning, and transforming the way websites are conceived. Each chapter of our journey reflects our commitment to excellence and innovation.';
-
-  const beliefs = i18n.language === 'es' ? {
-    title: 'Lo que creemos',
-    intro: 'En chiiko creemos que un sitio web no es un archivo más ni un simple canal digital.\nEs un objeto estratégico, una extensión viva de una marca y una pieza clave en cómo una empresa se presenta, se percibe y crece.',
-    p1: 'No diseñamos para seguir tendencias pasajeras.\nDiseñamos para construir criterio, claridad y coherencia a largo plazo.',
-    p2: 'Cada decisión —desde la arquitectura hasta el último detalle visual— tiene una razón.',
-  } : {
-    title: 'What we believe',
-    intro: 'At chiiko we believe that a website is not just another file or a simple digital channel.\nIt is a strategic object, a living extension of a brand and a key piece in how a company presents itself, is perceived, and grows.',
-    p1: 'We don\'t design to follow fleeting trends.\nWe design to build long-term judgment, clarity, and coherence.',
-    p2: 'Every decision—from architecture to the last visual detail—has a reason.',
-  };
-
-  const process = i18n.language === 'es' ? {
-    title: 'Nuestra forma de trabajar',
-    intro: 'Trabajamos con un proceso claro, colaborativo y profundamente intencional.',
-    p1: 'Primero entendemos el contexto:\nla marca, el negocio, sus límites y sus objetivos reales.',
-    p2: 'Después diseñamos la estructura antes que la forma.\nPensamos el contenido, la jerarquía, los flujos y la experiencia.',
-    p3: 'Finalmente, desarrollamos con precisión técnica, cuidando rendimiento, accesibilidad y escalabilidad.',
-    p4: 'No creemos en procesos inflados ni en entregables innecesarios.\nCreemos en hacer lo justo, pero hacerlo bien.',
-  } : {
-    title: 'Our way of working',
-    intro: 'We work with a clear, collaborative, and deeply intentional process.',
-    p1: 'First we understand the context:\nthe brand, the business, its limits, and its real objectives.',
-    p2: 'Then we design the structure before the form.\nWe think about content, hierarchy, flows, and experience.',
-    p3: 'Finally, we develop with technical precision, caring for performance, accessibility, and scalability.',
-    p4: 'We don\'t believe in inflated processes or unnecessary deliverables.\nWe believe in doing what\'s right, but doing it well.',
-  };
-
-  const craftsmanship = i18n.language === 'es' ? {
-    title: 'Artesanías digitales',
-    intro: 'En chiiko llamamos a nuestro trabajo artesanías digitales.',
-    p1: 'Porque no usamos plantillas.\nPorque no producimos en masa.\nPorque cada sitio se construye a medida, con tiempo, criterio y atención al detalle.',
-    p2: 'Así como una artesanía tiene intención detrás de cada corte y cada material,\nnuestros sitios tienen intención detrás de cada decisión de diseño y desarrollo.',
-  } : {
-    title: 'Digital craftsmanship',
-    intro: 'At chiiko we call our work digital craftsmanship.',
-    p1: 'Because we don\'t use templates.\nBecause we don\'t mass-produce.\nBecause each website is built to measure, with time, criterion, and attention to detail.',
-    p2: 'Just as a craft has intention behind every cut and every material,\nour sites have intention behind every design and development decision.',
-  };
-
-  const whatWeDo = i18n.language === 'es' ? {
-    title: '¿Qué hacemos (y qué no)?',
-    intro: 'Diseñamos y desarrollamos sitios web estratégicos para marcas que valoran el diseño, la claridad y el impacto real.',
-    p1: 'Trabajamos con empresas, estudios, instituciones y proyectos que entienden que su presencia digital es una inversión, no un gasto.',
-    p2: 'No somos para todos.\nY eso está bien.',
-    p3: 'Si buscas rapidez sin criterio o volumen sin profundidad, probablemente no seamos el estudio adecuado.\nSi buscas construir algo sólido, pensado y duradero, sí.',
-  } : {
-    title: 'What we do (and what we don\'t)',
-    intro: 'We design and develop strategic websites for brands that value design, clarity, and real impact.',
-    p1: 'We work with companies, studios, institutions, and projects that understand their digital presence is an investment, not an expense.',
-    p2: 'We\'re not for everyone.\nAnd that\'s okay.',
-    p3: 'If you\'re looking for speed without criterion or volume without depth, we\'re probably not the right studio.\nIf you\'re looking to build something solid, thoughtful, and lasting, we are.',
-  };
-
-  const chiikotoday = i18n.language === 'es' ? {
-    title: 'Chiiko hoy',
-    intro: 'Chiiko es un estudio creativo y tecnológico en constante evolución.\nAprendemos de la industria, colaboramos con grandes actores del ecosistema digital y nos mantenemos cerca de lo más nuevo, sin perder nuestro criterio.',
-    p1: 'Seguimos creciendo con una idea clara:\nelevar la manera en que se conciben y se construyen los sitios web.',
-  } : {
-    title: 'Chiiko today',
-    intro: 'Chiiko is a creative and technological studio in constant evolution.\nWe learn from the industry, collaborate with major players in the digital ecosystem, and stay close to the latest developments without losing our criterion.',
-    p1: 'We continue growing with a clear idea:\nelevate the way websites are conceived and built.',
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -361,71 +291,7 @@ export default function About() {
         ]}
       />
       <ResizableNavbarDemo />
-      <div className="py-12 tablet:py-16 md:py-24"></div>
-      
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
-          {title}
-        </h1>
-        <p className="text-sm md:text-base text-gray-700 font-light leading-relaxed">
-          {description}
-        </p>
-      </div>
-
-      <Timeline data={timelineData} />
-
-      {/* Lo que creemos / What we believe */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 border-b border-gray-200">
-        <h2 className="text-2xl md:text-3xl font-semibold text-black mb-6">{beliefs.title}</h2>
-        <div className="space-y-4">
-          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed whitespace-pre-line">{beliefs.intro}</p>
-          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed whitespace-pre-line">{beliefs.p1}</p>
-          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed">{beliefs.p2}</p>
-        </div>
-      </div>
-
-      {/* Nuestra forma de trabajar / Our way of working */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 border-b border-gray-200">
-        <h2 className="text-2xl md:text-3xl font-semibold text-black mb-6">{process.title}</h2>
-        <div className="space-y-4">
-          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed">{process.intro}</p>
-          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed whitespace-pre-line">{process.p1}</p>
-          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed whitespace-pre-line">{process.p2}</p>
-          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed">{process.p3}</p>
-          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed whitespace-pre-line">{process.p4}</p>
-        </div>
-      </div>
-
-      {/* Artesanías digitales / Digital craftsmanship */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 border-b border-gray-200">
-        <h2 className="text-2xl md:text-3xl font-semibold text-black mb-6">{craftsmanship.title}</h2>
-        <div className="space-y-4">
-          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed">{craftsmanship.intro}</p>
-          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed whitespace-pre-line">{craftsmanship.p1}</p>
-          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed whitespace-pre-line">{craftsmanship.p2}</p>
-        </div>
-      </div>
-
-      {/* Qué hacemos / What we do */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 border-b border-gray-200">
-        <h2 className="text-2xl md:text-3xl font-semibold text-black mb-6">{whatWeDo.title}</h2>
-        <div className="space-y-4">
-          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed">{whatWeDo.intro}</p>
-          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed">{whatWeDo.p1}</p>
-          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed whitespace-pre-line">{whatWeDo.p2}</p>
-          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed whitespace-pre-line">{whatWeDo.p3}</p>
-        </div>
-      </div>
-
-      {/* Chiiko hoy / Chiiko today */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
-        <h2 className="text-2xl md:text-3xl font-semibold text-black mb-6">{chiikotoday.title}</h2>
-        <div className="space-y-4">
-          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed whitespace-pre-line">{chiikotoday.intro}</p>
-          <p className="text-base md:text-lg text-gray-700 font-light leading-relaxed whitespace-pre-line">{chiikotoday.p1}</p>
-        </div>
-      </div>
-
+      <HeroParallaxDemo />
       <Footer />
     </div>
   );
