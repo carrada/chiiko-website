@@ -6,13 +6,15 @@ export default function CometCardDemo() {
       title: "Estudio Arquitectura MX (EAMX)",
       description: "Sitio moderno y elegante que refleja la precisión y calidad de EAMX, con visuales sofisticados, estructura clara y navegación intuitiva.",
       image: "/compufestLogo - Negro.svg",
-      link: "https://compufest.cc"
+      link: "https://compufest.cc",
+      backgroundColor: "#00FF00"
     },
     {
       title: "Proyecto 2", 
       description: "Descripción del proyecto",
       image: "/PortadaEmicarrada.png",
-      link: "https://emicarrada.com"
+      link: "https://emicarrada.com",
+      backgroundColor: "#041737"
     }
   ];
 
@@ -23,7 +25,8 @@ export default function CometCardDemo() {
           {projects.map((project, index) => (
             <CometCard key={index} className="w-full max-w-xs mx-auto">
               <div 
-                className="relative overflow-hidden rounded-2xl bg-white cursor-pointer"
+                className="relative overflow-hidden rounded-2xl cursor-pointer"
+                style={{ backgroundColor: project.backgroundColor }}
                 onClick={() => project.link && window.open(project.link, '_blank')}
               >
                 <img 
