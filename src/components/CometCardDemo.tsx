@@ -10,8 +10,15 @@ export default function CometCardDemo() {
       backgroundColor: "#b79779"
     },
     {
-      title: "Proyecto 2", 
-      description: "Descripción del proyecto",
+      title: "Compufest",
+      description: "Plataforma de programación y competencias de tecnología con alcance nacional.",
+      image: "/compufestLogo - Negro.svg",
+      link: "https://compufest.cc",
+      backgroundColor: "#00FF00"
+    },
+    {
+      title: "emicarrada", 
+      description: "Portafolio y servicios de diseño digital con enfoque estratégico.",
       image: "/emicarrada.svg",
       link: "https://emicarrada.com",
       backgroundColor: "#041737"
@@ -21,7 +28,7 @@ export default function CometCardDemo() {
   return (
     <div className="w-full flex justify-center items-center px-8 md:px-4 py-20">
       <div className="max-w-7xl w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 place-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 place-items-center">
           {projects.map((project, index) => (
             <CometCard key={index} className="w-full max-w-xs mx-auto">
               <div 
