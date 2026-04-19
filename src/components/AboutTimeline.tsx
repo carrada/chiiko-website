@@ -120,7 +120,7 @@ export default function AboutTimeline() {
         </p>
         <div className="flex justify-center">
           <ProfileCard
-            name="Chiikö"
+            name="Cristopher Carrada"
             title="Founder & CEO"
             handle="chiiko"
             status="Building Digital Arts"
@@ -132,6 +132,7 @@ export default function AboutTimeline() {
             grainUrl={undefined}
             innerGradient={undefined}
             miniAvatarUrl={undefined}
+            showUserInfo={false}
             onContactClick={() => {
               console.log('Contact clicked');
             }}
