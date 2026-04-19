@@ -7,7 +7,7 @@ export default function CometCardDemo() {
       description: "Sitio moderno y elegante que refleja la precisión y calidad de EAMX, con visuales sofisticados, estructura clara y navegación intuitiva.",
       image: "/compufestLogo - Negro.svg",
       link: "https://compufest.cc",
-      backgroundColor: "#00FF00"
+      backgroundColor: "#b79779"
     },
     {
       title: "Proyecto 2", 
