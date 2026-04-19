@@ -15,18 +15,9 @@
   --behind-glow-color: rgba(206, 70, 118, 0.5);
   --behind-glow-size: 25%;
   --inner-gradient: none;
-  --sunpillar-1: #ce4676;
-  --sunpillar-2: #ce467688;
-  --sunpillar-3: #d5599f;
-  --sunpillar-4: #7b2d5e;
-  --sunpillar-5: #5a1f47;
-  --sunpillar-6: #ce4676;
-  --sunpillar-clr-1: var(--sunpillar-1);
-  --sunpillar-clr-2: var(--sunpillar-2);
-  --sunpillar-clr-3: var(--sunpillar-3);
-  --sunpillar-clr-4: var(--sunpillar-4);
-  --sunpillar-clr-5: var(--sunpillar-5);
-  --sunpillar-clr-6: var(--sunpillar-6);
+  --primary-color: #ce4676;
+  --primary-color-light: #d5599f;
+  --primary-color-dark: #7b2d5e;
   --card-radius: 30px;
 }
 
@@ -194,12 +185,12 @@
   background-image:
     linear-gradient(
       45deg,
-      #ce4676,
-      #d5599f,
-      #7b2d5e,
-      #5a1f47,
-      #ce4676cc,
-      #ce4676
+      var(--primary-color),
+      var(--primary-color),
+      var(--primary-color),
+      var(--primary-color),
+      var(--primary-color),
+      var(--primary-color)
     ),
     radial-gradient(circle at var(--pointer-x) var(--pointer-y), hsl(0, 0%, 70%) 0%, hsla(0, 0%, 30%, 0.2) 90%),
     var(--grain);
@@ -380,7 +371,7 @@
   margin: 0;
   font-size: min(5svh, 3em);
   margin: 0;
-  background-image: linear-gradient(to bottom, #fff, #ce4676);
+  background-image: linear-gradient(to bottom, #fff, var(--primary-color));
   background-size: 1em 1.5em;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -395,7 +386,7 @@
   font-size: 16px;
   margin: 0 auto;
   width: min-content;
-  background-image: linear-gradient(to bottom, #ce4676aa, #7b2d5e);
+  background-image: linear-gradient(to bottom, var(--primary-color), var(--primary-color));
   background-size: 1em 1.5em;
   -webkit-text-fill-color: transparent;
   background-clip: text;

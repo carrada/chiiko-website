@@ -118,7 +118,7 @@ export default function AboutTimeline() {
         <p className="text-gray-600 mb-12 md:mb-16 max-w-2xl mx-auto text-sm md:text-base">
           {t('team.subtitle') || 'La gente detrás de Chiikö'}
         </p>
-        <div className="flex justify-center">
+        <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-12 items-center">
           <ProfileCard
             name="Cristopher Carrada"
             title="Founder & CEO"
@@ -133,6 +133,26 @@ export default function AboutTimeline() {
             innerGradient={undefined}
             miniAvatarUrl={undefined}
             showUserInfo={false}
+            primaryColor="#ce4676"
+            onContactClick={() => {
+              console.log('Contact clicked');
+            }}
+          />
+          <ProfileCard
+            name="Leon Arriaga"
+            title="COO"
+            handle="arriaga"
+            status="Building Digital Arts"
+            contactText={t('team.contact') || 'Contactar'}
+            avatarUrl="/leonarriaga.svg"
+            iconUrl="/calaca2.svg"
+            behindGlowColor="rgba(0, 52, 153, 0.5)"
+            behindGlowSize="50%"
+            grainUrl={undefined}
+            innerGradient={undefined}
+            miniAvatarUrl={undefined}
+            showUserInfo={false}
+            primaryColor="#003399"
             onContactClick={() => {
               console.log('Contact clicked');
             }}

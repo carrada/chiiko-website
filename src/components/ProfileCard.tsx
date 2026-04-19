@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useCallback, useMemo } from 'react';
 import './ProfileCard.css';
 
-const DEFAULT_INNER_GRADIENT = 'linear-gradient(145deg,#ce46761a 0%,#ce467633 100%)';
-
 const ANIMATION_CONFIG = {
   INITIAL_DURATION: 1200,
   INITIAL_X_OFFSET: 70,
@@ -35,6 +33,7 @@ interface ProfileCardProps {
   contactText?: string;
   showUserInfo?: boolean;
   onContactClick?: () => void;
+  primaryColor?: string;
 }
 
 const ProfileCardComponent: React.FC<ProfileCardProps> = ({
@@ -56,7 +55,8 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
   status = 'Online',
   contactText = 'Contactar',
   showUserInfo = true,
-  onContactClick
+  onContactClick,
+  primaryColor = '#ce4676'
 }) => {
   const wrapRef = useRef<HTMLDivElement>(null);
   const shellRef = useRef<HTMLDivElement>(null);
@@ -312,11 +312,18 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
     () => ({
       '--icon': iconUrl ? `url(${iconUrl})` : 'none',
       '--grain': grainUrl ? `url(${grainUrl})` : 'none',
-      '--inner-gradient': innerGradient ?? DEFAULT_INNER_GRADIENT,
-      '--behind-glow-color': behindGlowColor ?? 'rgba(206, 70, 118, 0.5)',
-      '--behind-glow-size': behindGlowSize ?? '50%'
+      '--inner-gradient': innerGradient ?? `linear-gradient(145deg,${primaryColor}1a 0%,${primaryColor}33 100%)`,
+      '--behind-glow-color': behindGlowColor ?? `${primaryColor}80`,
+      '--behind-glow-size': behindGlowSize ?? '50%',
+      '--primary-color': primaryColor,
+      '--sunpillar-1': primaryColor,
+      '--sunpillar-2': `${primaryColor}88`,
+      '--sunpillar-3': primaryColor,
+      '--sunpillar-4': primaryColor,
+      '--sunpillar-5': primaryColor,
+      '--sunpillar-6': primaryColor
     } as any),
-    [iconUrl, grainUrl, innerGradient, behindGlowColor, behindGlowSize]
+    [iconUrl, grainUrl, innerGradient, behindGlowColor, behindGlowSize, primaryColor]
   );
 
   const handleContactClick = useCallback(() => {
