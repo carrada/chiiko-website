@@ -6,7 +6,7 @@ export default function CometCardDemo() {
       title: "Estudio Arquitectura MX (EAMX)",
       description: "Sitio moderno y elegante que refleja la precisión y calidad de EAMX, con visuales sofisticados, estructura clara y navegación intuitiva.",
       image: "/eamxlogo.svg",
-      link: "https://eamx-website-93c9x3lk1-cristopher-carradas-projects.vercel.app",
+      link: "https://eamx-website.vercel.app",
       backgroundColor: "#b79779"
     },
     {
