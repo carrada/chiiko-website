@@ -226,8 +226,8 @@
   overflow: hidden;
   background-image: radial-gradient(
     farthest-corner circle at var(--pointer-x) var(--pointer-y),
-    hsl(348, 80%, 60%) 12%,
-    hsla(348, 60%, 40%, 0.8) 90%
+    var(--primary-color) 12%,
+    color-mix(in srgb, var(--primary-color) 80%, transparent) 90%
   );
   mix-blend-mode: overlay;
   filter: brightness(0.8) contrast(1.2);
@@ -242,13 +242,13 @@
 }
 
 .pc-avatar-content .avatar {
-  width: 100%;
+  width: 250%;
   position: absolute;
   left: 50%;
   transform-origin: 50% 100%;
   transform: translateX(calc(-50% + (var(--pointer-from-left) - 0.5) * 6px)) translateZ(0)
     scaleY(calc(1 + (var(--pointer-from-top) - 0.5) * 0.02)) scaleX(calc(1 + (var(--pointer-from-left) - 0.5) * 0.01));
-  bottom: -1px;
+  bottom: -30px;
   backface-visibility: hidden;
   will-change: transform;
   transition: transform 120ms ease-out;
@@ -275,9 +275,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(206, 70, 118, 0.15);
+  background: color-mix(in srgb, var(--primary-color) 15%, transparent);
   backdrop-filter: blur(30px);
-  border: 1px solid rgba(206, 70, 118, 0.3);
+  border: 1px solid color-mix(in srgb, var(--primary-color) 30%, transparent);
   border-radius: calc(max(0px, var(--card-radius) - var(--ui-inset) + var(--ui-radius-bias)));
   padding: 12px 14px;
   pointer-events: auto;
@@ -294,7 +294,7 @@
   height: 48px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid rgba(206, 70, 118, 0.4);
+  border: 1px solid color-mix(in srgb, var(--primary-color) 40%, transparent);
   flex-shrink: 0;
 }
 
@@ -321,26 +321,26 @@
 
 .pc-status {
   font-size: 14px;
-  color: rgba(206, 70, 118, 0.8);
+  color: color-mix(in srgb, var(--primary-color) 80%, transparent);
   line-height: 1;
 }
 
 .pc-contact-btn {
-  border: 1px solid rgba(206, 70, 118, 0.5);
+  border: 1px solid color-mix(in srgb, var(--primary-color) 50%, transparent);
   border-radius: 8px;
   padding: 12px 16px;
   font-size: 12px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.9);
-  background: rgba(206, 70, 118, 0.2);
+  background: color-mix(in srgb, var(--primary-color) 20%, transparent);
   cursor: pointer;
   transition: all 0.2s ease;
   backdrop-filter: blur(10px);
 }
 
 .pc-contact-btn:hover {
-  border-color: rgba(206, 70, 118, 0.8);
-  background: rgba(206, 70, 118, 0.35);
+  border-color: color-mix(in srgb, var(--primary-color) 80%, transparent);
+  background: color-mix(in srgb, var(--primary-color) 35%, transparent);
   transform: translateY(-1px);
   transition: all 0.2s ease;
 }

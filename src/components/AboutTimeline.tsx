@@ -119,45 +119,75 @@ export default function AboutTimeline() {
           {t('team.subtitle') || 'La gente detrás de Chiikö'}
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-12 items-center">
-          <ProfileCard
-            name="Cristopher Carrada"
-            title="Founder & CEO"
-            handle="chiiko"
-            status="Building Digital Arts"
-            contactText={t('team.contact') || 'Contactar'}
-            avatarUrl="/fotocarrada.svg"
-            iconUrl="/calaverahuichol.svg"
-            behindGlowColor="rgba(206, 70, 118, 0.5)"
-            behindGlowSize="50%"
-            grainUrl={undefined}
-            innerGradient={undefined}
-            miniAvatarUrl={undefined}
-            showUserInfo={false}
-            primaryColor="#ce4676"
-            onContactClick={() => {
-              console.log('Contact clicked');
-            }}
-          />
-          <ProfileCard
-            name="Leon Arriaga"
-            title="COO"
-            handle="arriaga"
-            status="Building Digital Arts"
-            contactText={t('team.contact') || 'Contactar'}
-            avatarUrl="/leonarriaga.svg"
-            iconUrl="/calaca2.svg"
-            behindGlowColor="rgba(0, 52, 153, 0.5)"
-            behindGlowSize="50%"
-            grainUrl={undefined}
-            innerGradient={undefined}
-            miniAvatarUrl={undefined}
-            showUserInfo={false}
-            primaryColor="#003399"
-            avatarFilterColor="rgba(0, 52, 153, 0.25)"
-            onContactClick={() => {
-              console.log('Contact clicked');
-            }}
-          />
+          {/* Uriel - Izquierda en desktop, orden 2 en móvil */}
+          <div className="order-2 md:order-1">
+            <ProfileCard
+              name="Uriel Aguilar"
+              title="Director de Relaciones Públicas"
+              handle="uriel"
+              status="Building Digital Arts"
+              contactText={t('team.contact') || 'Contactar'}
+              avatarUrl="/urielaguilar.svg"
+              iconUrl="/calaca3.svg"
+              behindGlowColor="rgba(34, 197, 94, 0.5)"
+              behindGlowSize="50%"
+              grainUrl={undefined}
+              innerGradient={undefined}
+              miniAvatarUrl={undefined}
+              showUserInfo={false}
+              primaryColor="#22c55e"
+              onContactClick={() => {
+                console.log('Contact clicked');
+              }}
+            />
+          </div>
+
+          {/* Cristopher - Centro en desktop, orden 1 (primero) en móvil */}
+          <div className="order-1 md:order-2">
+            <ProfileCard
+              name="Cristopher Carrada"
+              title="Fundador & Director General"
+              handle="chiiko"
+              status="Building Digital Arts"
+              contactText={t('team.contact') || 'Contactar'}
+              avatarUrl="/fotocarrada.svg"
+              iconUrl="/calaverahuichol.svg"
+              behindGlowColor="rgba(206, 70, 118, 0.5)"
+              behindGlowSize="50%"
+              grainUrl={undefined}
+              innerGradient={undefined}
+              miniAvatarUrl={undefined}
+              showUserInfo={false}
+              primaryColor="#ce4676"
+              onContactClick={() => {
+                console.log('Contact clicked');
+              }}
+            />
+          </div>
+
+          {/* Leon - Derecha en desktop, orden 3 en móvil */}
+          <div className="order-3 md:order-3">
+            <ProfileCard
+              name="Leon Arriaga"
+              title="Director de Operaciones"
+              handle="arriaga"
+              status="Building Digital Arts"
+              contactText={t('team.contact') || 'Contactar'}
+              avatarUrl="/leonarriaga.svg"
+              iconUrl="/calaca2.svg"
+              behindGlowColor="rgba(0, 52, 153, 0.5)"
+              behindGlowSize="50%"
+              grainUrl={undefined}
+              innerGradient={undefined}
+              miniAvatarUrl={undefined}
+              showUserInfo={false}
+              primaryColor="#003399"
+              avatarFilterColor="rgba(0, 52, 153, 0.25)"
+              onContactClick={() => {
+                console.log('Contact clicked');
+              }}
+            />
+          </div>
         </div>
       </div>
     </section>
