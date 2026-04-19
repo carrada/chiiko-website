@@ -153,6 +153,7 @@ export default function AboutTimeline() {
             miniAvatarUrl={undefined}
             showUserInfo={false}
             primaryColor="#003399"
+            avatarFilterColor="rgba(0, 52, 153, 0.25)"
             onContactClick={() => {
               console.log('Contact clicked');
             }}

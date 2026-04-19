@@ -61,7 +61,7 @@
     calc((var(--pointer-from-top) * 20px) - 6px) 20px -5px;
   transition: transform 1s ease;
   transform: translateZ(0) rotateX(0deg) rotateY(0deg);
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.4);
   backface-visibility: hidden;
   overflow: hidden;
 }
@@ -92,7 +92,7 @@
   inset: 0;
   position: absolute;
   background-image: var(--inner-gradient);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.3);
   transform: none;
 }
 
@@ -103,7 +103,7 @@
   mask-size: 30%;
   mask-position: 0 0;
   transition: filter 0.8s ease;
-  filter: brightness(0.66) contrast(1.33) saturate(0.33) opacity(0.5);
+  filter: brightness(0.8) contrast(1.33) saturate(0.4) opacity(0.6);
   animation: holo-bg 18s linear infinite;
   animation-play-state: running;
   mix-blend-mode: color-dodge;
@@ -261,6 +261,7 @@
   z-index: 1;
   backdrop-filter: none;
   pointer-events: none;
+  background-color: var(--avatar-filter-color);
 }
 
 .pc-user-info {

@@ -34,6 +34,7 @@ interface ProfileCardProps {
   showUserInfo?: boolean;
   onContactClick?: () => void;
   primaryColor?: string;
+  avatarFilterColor?: string;
 }
 
 const ProfileCardComponent: React.FC<ProfileCardProps> = ({
@@ -56,7 +57,8 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
   contactText = 'Contactar',
   showUserInfo = true,
   onContactClick,
-  primaryColor = '#ce4676'
+  primaryColor = '#ce4676',
+  avatarFilterColor
 }) => {
   const wrapRef = useRef<HTMLDivElement>(null);
   const shellRef = useRef<HTMLDivElement>(null);
@@ -321,9 +323,10 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
       '--sunpillar-3': primaryColor,
       '--sunpillar-4': primaryColor,
       '--sunpillar-5': primaryColor,
-      '--sunpillar-6': primaryColor
+      '--sunpillar-6': primaryColor,
+      '--avatar-filter-color': avatarFilterColor ?? 'transparent'
     } as any),
-    [iconUrl, grainUrl, innerGradient, behindGlowColor, behindGlowSize, primaryColor]
+    [iconUrl, grainUrl, innerGradient, behindGlowColor, behindGlowSize, primaryColor, avatarFilterColor]
   );
 
   const handleContactClick = useCallback(() => {
