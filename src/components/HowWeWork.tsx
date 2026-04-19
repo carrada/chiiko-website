@@ -10,7 +10,7 @@ const HowWeWork = () => {
   const content = {
     es: {
       title: "Cómo trabajamos",
-      intro1: "En Chiiko no diseñamos por intuición ni desarrollamos por volumen.",
+      intro1: "En Chiikö no diseñamos por intuición ni desarrollamos por volumen.",
       intro2: "Trabajamos con intención, estructura y enfoque estratégico.",
       intro3: "Nuestro proceso es simple, pero deliberado.",
       steps: [

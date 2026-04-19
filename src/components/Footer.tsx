@@ -1,8 +1,43 @@
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+
+// Helper function to detect equivalent routes across languages
+const getRouteType = (pathname: string): string | null => {
+  const routeMap: { [key: string]: string } = {
+    '/': 'home',
+    '/nosotros': 'about',
+    '/about': 'about',
+    '/como-trabajamos': 'method',
+    '/how-we-work': 'method',
+    '/planes': 'plans',
+    '/plans': 'plans',
+    '/contacto': 'contact',
+    '/contact': 'contact',
+    '/privacidad': 'privacy',
+    '/privacy': 'privacy',
+    '/faq': 'faq',
+    '/ayuda': 'help',
+    '/help': 'help',
+    '/terminos': 'terms',
+    '/terms': 'terms',
+    '/politica-cookies': 'cookies',
+    '/cookie-policy': 'cookies',
+    '/aviso-legal': 'legal',
+    '/legal': 'legal',
+  };
+  return routeMap[pathname] || null;
+};
+
+const isRouteActive = (currentPath: string, itemPath: string): boolean => {
+  if (currentPath === itemPath) return true;
+  const currentType = getRouteType(currentPath);
+  const itemType = getRouteType(itemPath);
+  return currentType !== null && currentType === itemType;
+};
 
 export default function Footer() {
   const { t, i18n } = useTranslation();
+  const location = useLocation();
   const isSpanish = i18n.language === 'es';
 
   const navLinks = [
@@ -19,6 +54,10 @@ export default function Footer() {
     { label: t('nav.legal'), href: isSpanish ? '/aviso-legal' : '/legal' },
   ];
 
+  const isActive = (href: string) => {
+    return isRouteActive(location.pathname, href);
+  };
+
   return (
     <footer className="w-full bg-white">
       {/* Main Footer Content */}
@@ -29,9 +68,9 @@ export default function Footer() {
           <div className="flex flex-col items-start w-full">
             <div className="flex flex-col items-start w-full">
               <img
-                src="/chiikoLogoNegro.png"
+                src="/chiikologoensvg.svg"
                 alt="chiikö"
-                className="h-16 tablet:h-20 md:h-24 object-contain object-left mb-1 md:mb-2"
+                className="h-16 tablet:h-20 md:h-40 object-contain object-left mb-1 md:mb-2"
                 style={{ marginLeft: '-8px' }}
               />
               <p className="text-xs tablet:text-xs md:text-sm text-gray-600 leading-snug font-light max-w-xs">
@@ -48,14 +87,22 @@ export default function Footer() {
                   {link.href.startsWith('/') ? (
                     <Link
                       to={link.href}
-                      className="text-sm md:text-base text-gray-600 font-light transition-opacity duration-200 hover:text-gray-900 inline-block"
+                      className={`text-sm md:text-base transition-all duration-200 inline-block ${
+                        isActive(link.href)
+                          ? 'text-gray-900 font-semibold'
+                          : 'text-gray-600 font-light hover:text-gray-900'
+                      }`}
                     >
                       {link.label}
                     </Link>
                   ) : (
                     <a
                       href={link.href}
-                      className="text-sm md:text-base text-gray-600 font-light transition-opacity duration-200 hover:text-gray-900 inline-block"
+                      className={`text-sm md:text-base transition-all duration-200 inline-block ${
+                        isActive(link.href)
+                          ? 'text-gray-900 font-semibold'
+                          : 'text-gray-600 font-light hover:text-gray-900'
+                      }`}
                     >
                       {link.label}
                     </a>

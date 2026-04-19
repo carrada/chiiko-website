@@ -11,6 +11,29 @@ import { Link, useLocation } from "react-router-dom";
 
 import React, { useRef, useState } from "react";
 
+// Helper function to detect equivalent routes across languages
+const getRouteType = (pathname: string): string | null => {
+  // Map routes to their type regardless of language
+  const routeMap: { [key: string]: string } = {
+    '/nosotros': 'about',
+    '/about': 'about',
+    '/planes': 'plans',
+    '/plans': 'plans',
+    '/contacto': 'contact',
+    '/contact': 'contact',
+  };
+  return routeMap[pathname] || null;
+};
+
+const isRouteActive = (currentPath: string, itemPath: string): boolean => {
+  // Direct match
+  if (currentPath === itemPath) return true;
+  // Check if they are equivalent routes in different languages
+  const currentType = getRouteType(currentPath);
+  const itemType = getRouteType(itemPath);
+  return currentType !== null && currentType === itemType;
+};
+
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -139,7 +162,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     >
       {items.map((item, idx) => {
         const isRoute = item.link.startsWith('/');
-        const isActive = isRoute && location.pathname === item.link;
+        const isActive = isRoute && isRouteActive(location.pathname, item.link);
         const showSpotlight = isActive || hovered === idx;
         
         const commonProps = {

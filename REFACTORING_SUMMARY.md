@@ -1,4 +1,4 @@
-# 📋 Refactorización Completa - Proyecto Chiiko
+# 📋 Refactorización Completa - Proyecto Chiikö
 
 ## Resumen de Implementaciones
 

@@ -1,4 +1,4 @@
-# Guía de Testing - Proyecto Chiiko
+# Guía de Testing - Proyecto Chiikö
 
 ## Configuración
 

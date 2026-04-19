@@ -28,7 +28,7 @@ export interface IContentStrategy {
 // Spanish content strategy
 export class SpanishContactContent implements IContentStrategy {
   getTitle() { return "Comienza un proyecto pensado"; }
-  getSubtitle() { return "Trabaja con Chiiko"; }
+  getSubtitle() { return "Trabaja con Chiikö"; }
   getIntro() { return "Colaboramos con un número limitado de proyectos cada año. Respondemos solo si hay un fit genuino entre tu visión y la nuestra."; }
   getFormTitle() { return "Cuéntanos sobre tu proyecto"; }
   getFullName() { return "Nombre completo"; }
@@ -49,13 +49,13 @@ export class SpanishContactContent implements IContentStrategy {
   getSubmit() { return "Enviar proyecto"; }
   getSuccessMessage() { return "Gracias. Hemos recibido tu propuesta de proyecto. La revisaremos y nos pondremos en contacto si hay fit."; }
   getContactEmail() { return "Para consultas inmediatas:"; }
-  getFooterText() { return "Chiiko. Diseño y desarrollo estratégico."; }
+  getFooterText() { return "Chiikö. Diseño y desarrollo estratégico."; }
 }
 
 // English content strategy
 export class EnglishContactContent implements IContentStrategy {
   getTitle() { return "Start a thoughtful project"; }
-  getSubtitle() { return "Work with Chiiko"; }
+  getSubtitle() { return "Work with Chiikö"; }
   getIntro() { return "We collaborate with a limited number of projects each year. We respond only if there's a genuine fit between your vision and ours."; }
   getFormTitle() { return "Tell us about your project"; }
   getFullName() { return "Full name"; }
@@ -76,5 +76,5 @@ export class EnglishContactContent implements IContentStrategy {
   getSubmit() { return "Submit project"; }
   getSuccessMessage() { return "Thank you. We've received your project submission. We'll review it and get back to you if there's a fit."; }
   getContactEmail() { return "For immediate inquiries:"; }
-  getFooterText() { return "Chiiko. Strategic design and development."; }
+  getFooterText() { return "Chiikö. Strategic design and development."; }
 }

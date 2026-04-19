@@ -57,27 +57,38 @@ export default function HomePage() {
       >
         <ResizableNavbarDemo />
         <div className="py-10 tablet:py-16 md:py-24"></div>
-        
-        <HeroScrollDemo />
-        <ValuePropositions />
-        
-        <SectionTitle>{t('section.method')}</SectionTitle>
-        <WorkProcess />
-        
-        <SectionTitle>{t('section.projects')}</SectionTitle>
-        <CometCardDemo />
-        
-        <SectionTitle>{t('section.services')}</SectionTitle>
-        <ServicesCards />
-        
-        <div className="w-full flex justify-center items-center px-4" style={{marginTop: LAYOUT_SPACING.SECTION_GAP.marginTop, marginBottom: LAYOUT_SPACING.SECTION_GAP_SMALL.marginBottom}}>
-          <h2 className="text-5xl tablet:text-7xl md:text-[14rem] font-inter font-bold text-black text-center leading-[0.9] md:leading-none">
-            {t('section.whoWeWork')}
-          </h2>
-        </div>
-        
-        <WhoWeWorkWithDemo />
-        
+
+        <section id="home">
+          <HeroScrollDemo />
+          <ValuePropositions />
+        </section>
+
+        <section id="method">
+          <SectionTitle>{t('section.method')}</SectionTitle>
+          <WorkProcess />
+        </section>
+
+        <section id="projects">
+          <SectionTitle>{t('section.projects')}</SectionTitle>
+          <CometCardDemo />
+        </section>
+
+        <section id="services">
+          <SectionTitle>{t('section.services')}</SectionTitle>
+          <ServicesCards />
+        </section>
+
+        <section id="who-we-work">
+          <div className="w-full flex justify-center items-center px-4" style={{marginTop: LAYOUT_SPACING.SECTION_GAP.marginTop, marginBottom: LAYOUT_SPACING.SECTION_GAP_SMALL.marginBottom}}>
+            <h2 className="text-5xl tablet:text-7xl md:text-[14rem] font-inter font-bold text-black text-center leading-[0.9] md:leading-none">
+              {t('section.whoWeWork')}
+            </h2>
+          </div>
+
+          <WhoWeWorkWithDemo />
+        </section>
+
+        <section id="contact">
         <CallToActionSection>
           <div className="flex flex-col items-center gap-5 tablet:gap-7 md:gap-8 px-2 md:px-0">
             <p className="text-5xl tablet:text-6xl md:text-7xl font-inter font-bold text-black text-center max-w-4xl tablet:max-w-5xl md:max-w-6xl leading-[1.08] md:leading-relaxed">
@@ -148,6 +159,7 @@ export default function HomePage() {
             <ProjectInitButton />
           </div>
         </div>
+        </section>
         
         <Footer />
       </motion.div>

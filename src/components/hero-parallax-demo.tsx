@@ -1,102 +1,50 @@
 "use client";
-import React from "react";
 import { HeroParallax } from "@/components/ui/hero-parallax";
 
 export default function HeroParallaxDemo() {
   return <HeroParallax products={products} />;
 }
+
 export const products = [
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/moonbeam.png",
+    title: "Pinterest",
+    thumbnail: "/fotosnosotros/Pinterest.png",
   },
   {
-    title: "Cursor",
-    link: "https://cursor.so",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/cursor.png",
+    title: "Chiiko 01",
+    thumbnail: "/fotosnosotros/photo_2026-04-18_11-17-35.jpg",
   },
   {
-    title: "Rogue",
-    link: "https://userogue.com",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/rogue.png",
-  },
-
-  {
-    title: "Editorially",
-    link: "https://editorially.org",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/editorially.png",
+    title: "Chiiko 02",
+    thumbnail: "/fotosnosotros/photo_2026-04-18_11-17-18.jpg",
   },
   {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/editrix.png",
+    title: "Chiiko 03",
+    thumbnail: "/fotosnosotros/photo_2026-04-18_11-17-21.jpg",
   },
   {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/pixelperfect.png",
-  },
-
-  {
-    title: "Algochurn",
-    link: "https://algochurn.com",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/algochurn.png",
+    title: "Chiiko 04",
+    thumbnail: "/fotosnosotros/photo_2026-04-18_11-17-23.jpg",
   },
   {
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/aceternityui.png",
+    title: "Chiiko 05",
+    thumbnail: "/fotosnosotros/photo_2026-04-18_11-17-26.jpg",
   },
   {
-    title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+    title: "Chiiko 06",
+    thumbnail: "/fotosnosotros/photo_2026-04-18_11-17-29.jpg",
   },
   {
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/smartbridge.png",
+    title: "Chiiko 07",
+    thumbnail: "/fotosnosotros/photo_2026-04-18_11-17-31.jpg",
   },
   {
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/renderwork.png",
-  },
-
-  {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/cremedigital.png",
+    title: "Chiiko 08",
+    thumbnail: "/fotosnosotros/photo_2026-04-18_11-17-35.jpg",
+    objectPosition: "center 12%",
   },
   {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
-  },
-  {
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/invoker.png",
-  },
-  {
-    title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
-    thumbnail:
-      "https://www.aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+    title: "Chiiko 09",
+    thumbnail: "/fotosnosotros/photo_2026-04-18_11-17-37.jpg",
   },
 ];
