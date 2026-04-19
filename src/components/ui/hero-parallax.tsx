@@ -107,10 +107,10 @@ export const Header = () => {
 
   return (
     <div className="max-w-7xl relative mx-auto py-8 md:py-40 px-4 w-full left-0 top-0 z-10">
-      <h1 className="text-6xl md:text-7xl font-bold dark:text-white text-black">
+      <h1 className="text-6xl md:text-7xl font-bold !text-black">
         {t('about.hero.title')}
       </h1>
-      <p className="max-w-2xl text-lg md:text-xl mt-6 md:mt-8 dark:text-neutral-200 text-gray-700">
+      <p className="max-w-2xl text-lg md:text-xl mt-6 md:mt-8 !text-black">
         {t('about.hero.description')}
       </p>
     </div>
