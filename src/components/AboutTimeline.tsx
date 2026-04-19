@@ -50,7 +50,7 @@ export default function AboutTimeline() {
   ];
 
   return (
-    <section className="w-full py-8 md:py-24 px-3 md:px-8 bg-base-100 -mt-8 md:-mt-0">
+    <section className="w-full py-16 md:py-24 px-3 md:px-8 bg-base-100 mt-8 md:mt-0">
       <div className="max-w-6xl mx-auto">
         {/* Vertical Timeline */}
         <div className="relative">

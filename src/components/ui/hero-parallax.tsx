@@ -58,7 +58,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[200vh] md:h-[300vh] py-10 md:py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[200vh] md:h-[300vh] py-20 md:py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -106,11 +106,11 @@ export const Header = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="max-w-7xl relative mx-auto py-10 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
+    <div className="max-w-7xl relative mx-auto py-16 md:py-40 px-4 w-full  left-0 top-0">
+      <h1 className="text-3xl md:text-7xl font-bold dark:text-white">
         {t('about.hero.title')}
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-4 md:mt-8 dark:text-neutral-200">
+      <p className="max-w-2xl text-lg md:text-xl mt-6 md:mt-8 dark:text-neutral-200">
         {t('about.hero.description')}
       </p>
     </div>
