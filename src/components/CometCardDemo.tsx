@@ -32,10 +32,7 @@ export default function CometCardDemo() {
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className={project.image.endsWith(".svg")
-                    ? "w-full h-80 object-contain p-12 md:p-14"
-                    : "w-full h-80 object-cover"
-                  }
+                  className="w-full h-80 object-contain p-12 md:p-14"
                 />
               </div>
             </CometCard>
