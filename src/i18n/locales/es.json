@@ -108,5 +108,8 @@
   "values.notForEveryone.p2": "Si buscas construir algo sólido, pensado y duradero, sí.",
   "values.chiikotoday": "Chiikö hoy",
   "values.chiikotoday.p1": "Chiikö es un estudio creativo y tecnológico en constante evolución. Aprendemos de la industria, colaboramos con grandes actores del ecosistema digital y nos mantenemos cerca de lo más nuevo, sin perder nuestro criterio.",
-  "values.chiikotoday.p2": "Seguimos creciendo con una idea clara: elevar la manera en que se conciben y se construyen los sitios web."
+  "values.chiikotoday.p2": "Seguimos creciendo con una idea clara: elevar la manera en que se conciben y se construyen los sitios web.",
+  "team.title": "Nuestro Equipo",
+  "team.subtitle": "La gente detrás de Chiikö",
+  "team.contact": "Contactar"
 }

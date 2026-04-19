@@ -108,5 +108,8 @@
   "values.notForEveryone.p2": "If you want to build something solid, well-thought-out and lasting, yes.",
   "values.chiikotoday": "Chiikö today",
   "values.chiikotoday.p1": "Chiikö is a creative and technological studio in constant evolution. We learn from the industry, collaborate with major players in the digital ecosystem and stay close to what's new, without losing our criteria.",
-  "values.chiikotoday.p2": "We continue to grow with one clear idea: to elevate the way websites are conceived and built."
+  "values.chiikotoday.p2": "We continue to grow with one clear idea: to elevate the way websites are conceived and built.",
+  "team.title": "Our Team",
+  "team.subtitle": "The people behind Chiikö",
+  "team.contact": "Contact"
 }

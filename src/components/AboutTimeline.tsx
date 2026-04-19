@@ -1,5 +1,6 @@
 import { IconCheck } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
+import ProfileCard from './ProfileCard';
 
 export default function AboutTimeline() {
   const { t } = useTranslation();
@@ -106,6 +107,35 @@ export default function AboutTimeline() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Our Team Section */}
+      <div className="mt-20 md:mt-32 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 md:mb-8" style={{ color: '#ce4676' }}>
+          {t('team.title') || 'Nuestro Equipo'}
+        </h2>
+        <p className="text-gray-600 mb-12 md:mb-16 max-w-2xl mx-auto text-sm md:text-base">
+          {t('team.subtitle') || 'La gente detrás de Chiikö'}
+        </p>
+        <div className="flex justify-center">
+          <ProfileCard
+            name="Chiikö"
+            title="Founder & CEO"
+            handle="chiiko"
+            status="Building Digital Arts"
+            contactText={t('team.contact') || 'Contactar'}
+            avatarUrl="/fotocarrada.svg"
+            iconUrl="/calaverahuichol.svg"
+            behindGlowColor="rgba(206, 70, 118, 0.5)"
+            behindGlowSize="50%"
+            grainUrl={undefined}
+            innerGradient={undefined}
+            miniAvatarUrl={undefined}
+            onContactClick={() => {
+              console.log('Contact clicked');
+            }}
+          />
         </div>
       </div>
     </section>
