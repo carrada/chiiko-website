@@ -12,7 +12,7 @@ export default function CometCardDemo() {
     {
       title: "Proyecto 2", 
       description: "Descripción del proyecto",
-      image: "/PortadaEmicarrada.png",
+      image: "/emicarrada.svg",
       link: "https://emicarrada.com",
       backgroundColor: "#041737"
     }
