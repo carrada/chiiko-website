@@ -27,7 +27,7 @@ export const SITE_NAME = "Chiiko";
 export const SITE_DESCRIPTION = "Strategic design and development studio. We create thoughtful digital experiences for brands that matter.";
 
 // Default OG Image
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/miniaturachiiko.jpg`;
 
 // SEO metadata by page
 export const SEO_PAGES = {

@@ -123,7 +123,7 @@ export default function AboutTimeline() {
           <div>
             <ProfileCard
               name="Cristopher Carrada"
-              title="Fundador & Director General"
+              title={t('team.founderRole') || 'Fundador & Director General'}
               handle="chiiko"
               status="Building Digital Arts"
               contactText={t('team.contact') || 'Contactar'}
