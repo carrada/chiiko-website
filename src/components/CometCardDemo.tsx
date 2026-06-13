@@ -7,7 +7,7 @@ export default function CometCardDemo() {
       description: "Sitio moderno y elegante que refleja la precisión y calidad de EAMX, con visuales sofisticados, estructura clara y navegación intuitiva.",
       image: "/eamxlogo.svg",
       link: "https://eamx-website.vercel.app",
-      backgroundColor: "#b79779"
+      backgroundColor: "#5e6e60"
     },
     {
       title: "Compufest",
