@@ -109,7 +109,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
       ref={ref}
       style={{ y: navY }}
       // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
-      className={cn("sticky inset-x-0 top-0 z-40 w-full flex justify-center px-4", className)}
+      className={cn("sticky inset-x-0 top-0 z-50 w-full flex justify-center px-4", className)}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
