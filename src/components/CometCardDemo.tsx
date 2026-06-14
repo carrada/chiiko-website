@@ -34,7 +34,7 @@ export default function CometCardDemo() {
               <div 
                 className="relative overflow-hidden rounded-2xl cursor-pointer"
                 style={{ backgroundColor: project.backgroundColor }}
-                onClick={() => project.link && window.open(project.link, '_blank')}
+                onClick={() => project.link && window.open(project.link, '_blank', 'noopener,noreferrer')}
               >
                 <img 
                   src={project.image} 

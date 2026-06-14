@@ -66,8 +66,9 @@ export const CONTACT_EMAIL = {
 } as const;
 
 // === FORM IDENTIFIERS ===
+// Formspree form ID loaded from VITE_FORMSPREE_FORM_ID env var with hardcoded fallback
 export const FORM_IDS = {
-  CONTACT_FORM: 'xpqqneqg', // Formspree form ID
+  CONTACT_FORM: import.meta.env.VITE_FORMSPREE_FORM_ID ?? 'xpqqneqg',
 } as const;
 
 // === BREAKPOINTS (for reference, Tailwind uses these) ===
