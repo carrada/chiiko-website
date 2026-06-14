@@ -14,7 +14,6 @@ export function useContactForm(formId: string = FORM_IDS.CONTACT_FORM) {
 
   const submitForm = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
     await handleSubmit(e);
   };
 

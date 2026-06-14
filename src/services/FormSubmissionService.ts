@@ -46,37 +46,60 @@ export class FormspreeService implements IFormSubmissionService {
 
 // Example of alternative implementation (demonstrating OCP)
 export class NetlifyFormsService implements IFormSubmissionService {
+  private submitting = false;
+  private succeeded = false;
+  private errors: Record<string, string> | null = null;
+
   async submitForm(formData: FormData): Promise<void> {
-    
-    const response = await fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData as any).toString()
-    });
-    
-    if (!response.ok) {
-      throw new Error("Netlify form submission failed");
+    this.submitting = true;
+    this.succeeded = false;
+    this.errors = null;
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString()
+      });
+
+      if (!response.ok) {
+        this.errors = { form: `Submission failed with status ${response.status}` };
+        throw new Error(`Netlify form submission failed with status ${response.status}`);
+      }
+
+      this.succeeded = true;
+    } catch (error) {
+      if (!this.errors) {
+        const message = error instanceof Error ? error.message : "Unknown submission error";
+        this.errors = { form: message };
+      }
+      throw error;
+    } finally {
+      this.submitting = false;
     }
   }
 
   getSubmissionState(): FormSubmissionResult {
-    // Implementation specific to Netlify
-    return { succeeded: true, errors: undefined };
+    return {
+      succeeded: this.succeeded,
+      errors: this.errors ?? undefined,
+      submitting: this.submitting
+    };
   }
 
   isSubmitting(): boolean {
-    return false;
+    return this.submitting;
   }
 
   hasSucceeded(): boolean {
-    return true;
+    return this.succeeded;
   }
 
   hasErrors(): boolean {
-    return false;
+    return this.errors !== null;
   }
 
   getErrors(): Record<string, any> | null {
-    return null;
+    return this.errors;
   }
 }

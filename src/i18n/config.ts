@@ -3,6 +3,14 @@ import { initReactI18next } from 'react-i18next';
 import es from './locales/es.json';
 import en from './locales/en.json';
 
+function getSavedLanguage(): string {
+  try {
+    return localStorage.getItem('language') || 'es';
+  } catch {
+    return 'es';
+  }
+}
+
 i18n
   .use(initReactI18next)
   .init({
@@ -10,7 +18,7 @@ i18n
       es: { translation: es },
       en: { translation: en },
     },
-    lng: localStorage.getItem('language') || 'es',
+    lng: getSavedLanguage(),
     fallbackLng: 'es',
     interpolation: {
       escapeValue: false,

@@ -1,9 +1,11 @@
 import { IconCheck } from '@tabler/icons-react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import ProfileCard from './ProfileCard';
 
 export default function AboutTimeline() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
 
   const items = [
     {
@@ -136,7 +138,9 @@ export default function AboutTimeline() {
               miniAvatarUrl={undefined}
               showUserInfo={false}
               primaryColor="#ce4676"
-              onContactClick={() => {}}
+              onContactClick={() => {
+                navigate(i18n.language === 'es' ? '/contacto' : '/contact');
+              }}
             />
           </div>
         </div>
