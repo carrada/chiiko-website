@@ -9,9 +9,10 @@ import { ProjectInitButton } from "@/components/ProjectInitButton";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { motion } from "motion/react";
-import { useTranslation } from "react-i18next";
-import { SEO_PAGES, generateOrganizationSchema, generateWebSiteSchema } from "@/lib/seo";
+import { generateOrganizationSchema, generateWebSiteSchema } from "@/lib/seo";
 import { LAYOUT_SPACING, COLORS } from "@/constants";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getPageSEOPropsWithDefault } from "@/lib/seo-utils";
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
@@ -32,21 +33,14 @@ function CallToActionSection({ children }: { children: React.ReactNode }) {
 }
 
 export default function HomePage() {
-  const { t, i18n } = useTranslation();
-  const lang = i18n.language === "en" ? "en" : "es";
+  const { t, langKey } = useLanguage();
+  const seoProps = getPageSEOPropsWithDefault('home', langKey);
 
   return (
     <>
       <SEO
-        title={SEO_PAGES.home[lang].title}
-        description={SEO_PAGES.home[lang].description}
-        url="/"
+        {...seoProps}
         schema={[generateOrganizationSchema(), generateWebSiteSchema()]}
-        hreflangs={[
-          { lang: 'es', href: 'https://www.chiiko.design/' },
-          { lang: 'en', href: 'https://www.chiiko.design/' },
-          { lang: 'x-default', href: 'https://www.chiiko.design/' },
-        ]}
       />
       
       <motion.div

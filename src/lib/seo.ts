@@ -139,6 +139,16 @@ export const SEO_PAGES = {
       url: "/legal",
     },
   },
+  how_we_work: {
+    es: {
+      title: "Cómo Trabajamos | Chiikö",
+      description: "Nuestro proceso de trabajo: estratégico, deliberado y enfocado en calidad",
+    },
+    en: {
+      title: "How We Work | Chiikö",
+      description: "Our work process: strategic, deliberate, and quality-focused",
+    },
+  },
 };
 
 // Generate structured data (Schema.org JSON-LD) using Builder Pattern

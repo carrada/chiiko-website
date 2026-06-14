@@ -1,8 +1,10 @@
-import { useTranslation } from 'react-i18next';
 import { ResizableNavbarDemo } from './ResizableNavbarDemo';
 import Footer from './Footer';
 import SEO from './SEO';
-import { SEO_PAGES, generateFAQSchema } from '@/lib/seo';
+import { generateFAQSchema } from '@/lib/seo';
+import { LegalPageContentWrapper } from './LegalPageLayout';
+import { useLanguage } from '@/hooks/useLanguage';
+import { getPageSEOProps } from '@/lib/seo-utils';
 
 const FAQ_ES = [
   { question: "¿Qué es Chiikö?", answer: "Chiikö es un estudio digital especializado en diseño y desarrollo web estratégico. Creamos sitios web pensados para diferenciar marcas, comunicar con claridad y convertir visitantes en clientes." },
@@ -43,9 +45,7 @@ const FAQ_EN = [
 ];
 
 const SpanishContent = () => (
-  <div className="w-full bg-white">
-    <div className="py-12 tablet:py-16 md:py-24"></div>
-    <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-24">
+  <LegalPageContentWrapper>
       {/* Header */}
       <div className="mb-12 md:mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
@@ -284,14 +284,11 @@ const SpanishContent = () => (
           </p>
         </div>
       </div>
-    </div>
-  </div>
+  </LegalPageContentWrapper>
 );
 
 const EnglishContent = () => (
-  <div className="w-full bg-white">
-    <div className="py-12 tablet:py-16 md:py-24"></div>
-    <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-24">
+  <LegalPageContentWrapper>
       {/* Header */}
       <div className="mb-12 md:mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
@@ -530,26 +527,18 @@ const EnglishContent = () => (
           </p>
         </div>
       </div>
-    </div>
-  </div>
+  </LegalPageContentWrapper>
 );
 
 export default function FAQ() {
-  const { i18n } = useTranslation();
-  const isSpanish = i18n.language === 'es';
+  const { isSpanish, langKey } = useLanguage();
+  const seoProps = getPageSEOProps('faq', langKey);
 
   return (
     <div className="w-full bg-white">
       <SEO
-        title={SEO_PAGES.faq[isSpanish ? 'es' : 'en'].title}
-        description={SEO_PAGES.faq[isSpanish ? 'es' : 'en'].description}
-        url="/faq"
+        {...seoProps}
         schema={generateFAQSchema(isSpanish ? FAQ_ES : FAQ_EN)}
-        hreflangs={[
-          { lang: 'es', href: 'https://www.chiiko.design/faq' },
-          { lang: 'en', href: 'https://www.chiiko.design/faq' },
-          { lang: 'x-default', href: 'https://www.chiiko.design/faq' },
-        ]}
       />
       <ResizableNavbarDemo />
       {isSpanish ? <SpanishContent /> : <EnglishContent />}
