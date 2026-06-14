@@ -136,9 +136,7 @@ export default function AboutTimeline() {
               miniAvatarUrl={undefined}
               showUserInfo={false}
               primaryColor="#ce4676"
-              onContactClick={() => {
-                console.log('Contact clicked');
-              }}
+              onContactClick={() => {}}
             />
           </div>
         </div>

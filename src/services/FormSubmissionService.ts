@@ -16,14 +16,7 @@ export class FormspreeService implements IFormSubmissionService {
   }
 
   async submitForm(formData: FormData): Promise<void> {
-    console.log("📤 Submitting form via Formspree...", Object.fromEntries(formData));
-    
-    try {
-      await this.handleSubmit(formData);
-    } catch (error) {
-      console.error("❌ Formspree submission error:", error);
-      throw error;
-    }
+    await this.handleSubmit(formData);
   }
 
   getSubmissionState(): FormSubmissionResult {
@@ -54,7 +47,6 @@ export class FormspreeService implements IFormSubmissionService {
 // Example of alternative implementation (demonstrating OCP)
 export class NetlifyFormsService implements IFormSubmissionService {
   async submitForm(formData: FormData): Promise<void> {
-    console.log("📤 Submitting form via Netlify Forms...");
     
     const response = await fetch("/", {
       method: "POST",

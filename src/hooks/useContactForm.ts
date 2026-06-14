@@ -15,15 +15,7 @@ export function useContactForm(formId: string = FORM_IDS.CONTACT_FORM) {
   const submitForm = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
-    const formData = new FormData(e.currentTarget);
-    console.log("📤 Submitting form...", Object.fromEntries(formData));
-    
-    try {
-      await handleSubmit(e);
-    } catch (error) {
-      console.error("❌ Submission error:", error);
-      throw error;
-    }
+    await handleSubmit(e);
   };
 
   return {

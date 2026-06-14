@@ -8,8 +8,6 @@ export function useSuccessNotification(
   useEffect(() => {
     if (!hasSucceeded) return;
 
-    console.log("✅ Form submitted successfully");
-    
     // Scroll suave al inicio de la página para ver el mensaje de éxito
     window.scrollTo({ top: 0, behavior: "smooth" });
     onSuccess();
