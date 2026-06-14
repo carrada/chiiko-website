@@ -1,11 +1,10 @@
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '@/hooks/useLanguage';
 
 export const ProjectInitButton = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const { t, i18n } = useTranslation();
-  const isSpanish = i18n.language === 'es';
+  const { t, isSpanish } = useLanguage();
 
   return (
     <Link

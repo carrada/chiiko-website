@@ -1,13 +1,7 @@
-import { useTranslation } from 'react-i18next';
-import { ResizableNavbarDemo } from './ResizableNavbarDemo';
-import Footer from './Footer';
-import SEO from './SEO';
-import { SEO_PAGES } from '@/lib/seo';
+import LegalPageLayout, { LegalPageContentWrapper } from './LegalPageLayout';
 
 const SpanishContent = () => (
-  <div className="w-full bg-white">
-    <div className="py-12 tablet:py-16 md:py-24"></div>
-    <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-24">
+  <LegalPageContentWrapper>
       {/* Header */}
       <div className="mb-12 md:mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
@@ -135,14 +129,11 @@ const SpanishContent = () => (
           Gracias por confiar en <strong className="font-medium">Chiikö</strong>. Estamos aquí para ayudarte y acompañarte en cada etapa de tu proyecto.
         </p>
       </div>
-    </div>
-  </div>
+  </LegalPageContentWrapper>
 );
 
 const EnglishContent = () => (
-  <div className="w-full bg-white">
-    <div className="py-12 tablet:py-16 md:py-24"></div>
-    <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-24">
+  <LegalPageContentWrapper>
       {/* Header */}
       <div className="mb-12 md:mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
@@ -270,29 +261,16 @@ const EnglishContent = () => (
           Thank you for trusting <strong className="font-medium">Chiikö</strong>. We're here to support you at every stage of your project.
         </p>
       </div>
-    </div>
-  </div>
+  </LegalPageContentWrapper>
 );
 
 export default function Help() {
-  const { i18n } = useTranslation();
-  const isSpanish = i18n.language === 'es';
-
   return (
-    <div className="w-full bg-white">
-      <SEO
-        title={SEO_PAGES.help[isSpanish ? 'es' : 'en'].title}
-        description={SEO_PAGES.help[isSpanish ? 'es' : 'en'].description}
-        url={isSpanish ? '/ayuda' : '/help'}
-        hreflangs={[
-          { lang: 'es', href: 'https://www.chiiko.design/ayuda' },
-          { lang: 'en', href: 'https://www.chiiko.design/help' },
-          { lang: 'x-default', href: 'https://www.chiiko.design/ayuda' },
-        ]}
-      />
-      <ResizableNavbarDemo />
-      {isSpanish ? <SpanishContent /> : <EnglishContent />}
-      <Footer />
-    </div>
+    <LegalPageLayout
+      pageKey="help"
+      spanishContent={<SpanishContent />}
+      englishContent={<EnglishContent />}
+      noindex={false}
+    />
   );
 }

@@ -1,5 +1,5 @@
-import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
+import { useLanguage } from '@/hooks/useLanguage';
 
 // Helper function to detect equivalent routes across languages
 const getRouteType = (pathname: string): string | null => {
@@ -36,9 +36,8 @@ const isRouteActive = (currentPath: string, itemPath: string): boolean => {
 };
 
 export default function Footer() {
-  const { t, i18n } = useTranslation();
+  const { t, isSpanish } = useLanguage();
   const location = useLocation();
-  const isSpanish = i18n.language === 'es';
 
   const navLinks = [
     { label: t('nav.home'), href: '/' },

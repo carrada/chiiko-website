@@ -1,9 +1,10 @@
-import { useTranslation } from "react-i18next";
 import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { SEO_PAGES, generatePlansSchema } from "@/lib/seo";
+import { generatePlansSchema } from "@/lib/seo";
 import PixelCard from "@/components/ui/PixelCard";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getPageSEOPropsWithDefault } from "@/lib/seo-utils";
 
 type Plan = {
   title: string;
@@ -285,25 +286,16 @@ const EnglishContent = () => {
 };
 
 export default function Plans() {
-  const { i18n } = useTranslation();
+  const { isSpanish, langKey } = useLanguage();
+  const seoProps = getPageSEOPropsWithDefault('plans', langKey);
 
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title={SEO_PAGES.plans[i18n.language === 'es' ? 'es' : 'en'].title}
-        description={SEO_PAGES.plans[i18n.language === 'es' ? 'es' : 'en'].description}
-        url={i18n.language === 'es' ? '/planes' : '/plans'}
-        schema={generatePlansSchema(i18n.language === 'es' ? 'es' : 'en')}
-        hreflangs={[
-          { lang: 'es', href: 'https://www.chiiko.design/planes' },
-          { lang: 'en', href: 'https://www.chiiko.design/plans' },
-          { lang: 'x-default', href: 'https://www.chiiko.design/planes' },
-        ]}
-      />
+      <SEO {...seoProps} schema={generatePlansSchema(langKey)} />
       <ResizableNavbarDemo />
       <div className="py-12 tablet:py-16 md:py-24"></div>
       <div className="max-w-7xl mx-auto px-4 py-16 md:py-24">
-        {i18n.language === 'es' ? <SpanishContent /> : <EnglishContent />}
+        {isSpanish ? <SpanishContent /> : <EnglishContent />}
       </div>
       <Footer />
     </div>

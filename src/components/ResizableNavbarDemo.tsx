@@ -6,11 +6,10 @@ import {
   NavbarLogo,
 } from "@/components/ui/resizable-navbar";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
-import { useTranslation } from "react-i18next";
+import { useLanguage } from "@/hooks/useLanguage";
 
 export function ResizableNavbarDemo() {
-  const { t, i18n } = useTranslation();
-  const isSpanish = i18n.language === 'es';
+  const { t, isSpanish } = useLanguage();
 
   const navItems = [
     { name: t('nav.about'), link: isSpanish ? "/nosotros" : "/about" },

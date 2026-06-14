@@ -1,16 +1,15 @@
-import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
 import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { ValidationError, useForm } from "@formspree/react";
-import { SEO_PAGES } from "@/lib/seo";
 import { ContentStrategyFactory } from "@/strategies/ContentStrategyFactory";
 import { CONTACT_EMAIL, FORM_IDS } from "@/constants";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getPageSEOPropsWithDefault } from "@/lib/seo-utils";
 
 export default function Contact() {
-  const { i18n } = useTranslation();
-  const isSpanish = i18n.language === "es";
+  const { i18n, isSpanish, langKey } = useLanguage();
   
   // Strategy Pattern: Get content based on language
   const contentStrategy = ContentStrategyFactory.getContactContent(i18n.language);
@@ -62,16 +61,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title={SEO_PAGES.contact[isSpanish ? 'es' : 'en'].title}
-        description={SEO_PAGES.contact[isSpanish ? 'es' : 'en'].description}
-        url={isSpanish ? '/contacto' : '/contact'}
-        hreflangs={[
-          { lang: 'es', href: 'https://www.chiiko.design/contacto' },
-          { lang: 'en', href: 'https://www.chiiko.design/contact' },
-          { lang: 'x-default', href: 'https://www.chiiko.design/contacto' },
-        ]}
-      />
+      <SEO {...getPageSEOPropsWithDefault('contact', langKey)} />
       <ResizableNavbarDemo />
       <div className="py-12 tablet:py-16 md:py-24"></div>
 

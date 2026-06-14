@@ -1,11 +1,11 @@
-import { useTranslation } from "react-i18next";
 import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { useLanguage } from "@/hooks/useLanguage";
+import { getPageSEOPropsWithDefault } from "@/lib/seo-utils";
 
 const HowWeWork = () => {
-  const { i18n } = useTranslation();
-  const isSpanish = i18n.language === 'es';
+  const { isSpanish, langKey } = useLanguage();
 
   const content = {
     es: {
@@ -118,16 +118,7 @@ const HowWeWork = () => {
 
   return (
     <>
-      <SEO
-        title={isSpanish ? "Cómo Trabajamos | Chiikö" : "How We Work | Chiikö"}
-        description={isSpanish ? "Nuestro proceso de trabajo: estratégico, deliberado y enfocado en calidad" : "Our work process: strategic, deliberate, and quality-focused"}
-        url={isSpanish ? "/como-trabajamos" : "/how-we-work"}
-        hreflangs={[
-          { lang: 'es', href: 'https://www.chiiko.design/como-trabajamos' },
-          { lang: 'en', href: 'https://www.chiiko.design/how-we-work' },
-          { lang: 'x-default', href: 'https://www.chiiko.design/como-trabajamos' },
-        ]}
-      />
+      <SEO {...getPageSEOPropsWithDefault('how_we_work', langKey)} />
       <div className="relative w-full min-h-screen bg-white">
         <ResizableNavbarDemo />
         
