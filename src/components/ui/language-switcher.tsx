@@ -6,7 +6,11 @@ export function LanguageSwitcher() {
   const toggleLanguage = () => {
     const newLang = i18n.language === 'es' ? 'en' : 'es';
     i18n.changeLanguage(newLang);
-    localStorage.setItem('language', newLang);
+    try {
+      localStorage.setItem('language', newLang);
+    } catch {
+      // Storage may be unavailable in private browsing or when quota is exceeded
+    }
   };
 
   return (
