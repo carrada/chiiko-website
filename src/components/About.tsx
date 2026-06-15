@@ -1,26 +1,26 @@
-import { useTranslation } from "react-i18next";
 import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { SEO_PAGES } from "@/lib/seo";
+import { getPageSeo } from "@/lib/seo-meta";
+import { buildHreflangs } from "@/lib/seo-i18n";
+import { useAppLanguage } from "@/hooks/useAppLanguage";
+import { useLocation } from "react-router-dom";
 import HeroParallaxDemo from "@/components/hero-parallax-demo";
 import AboutTimeline from "@/components/AboutTimeline";
 import AboutValues from "@/components/AboutValues";
 
 export default function About() {
-  const { i18n } = useTranslation();
+  const { language, usesSpanishRoutes } = useAppLanguage();
+  const location = useLocation();
+  const seo = getPageSeo("about", language);
 
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title={SEO_PAGES.about[i18n.language === "es" ? "es" : "en"].title}
-        description={SEO_PAGES.about[i18n.language === "es" ? "es" : "en"].description}
-        url={i18n.language === "es" ? "/nosotros" : "/about"}
-        hreflangs={[
-          { lang: "es", href: "https://www.chiiko.design/nosotros" },
-          { lang: "en", href: "https://www.chiiko.design/about" },
-          { lang: "x-default", href: "https://www.chiiko.design/nosotros" },
-        ]}
+        title={seo.title}
+        description={seo.description}
+        url={usesSpanishRoutes ? "/nosotros" : "/about"}
+        hreflangs={buildHreflangs(location.pathname)}
       />
       <ResizableNavbarDemo />
       <HeroParallaxDemo />

@@ -7,15 +7,16 @@ import {
 } from "@/components/ui/resizable-navbar";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import { useTranslation } from "react-i18next";
+import { useAppLanguage } from "@/hooks/useAppLanguage";
 
 export function ResizableNavbarDemo() {
-  const { t, i18n } = useTranslation();
-  const isSpanish = i18n.language === 'es';
+  const { t } = useTranslation();
+  const { usesSpanishRoutes } = useAppLanguage();
 
   const navItems = [
     { name: t('nav.home'), link: "/" },
-    { name: t('nav.projects'), link: "/proyectos" },
-    { name: t('nav.plans'), link: isSpanish ? "/planes" : "/plans" },
+    { name: t('nav.projects'), link: usesSpanishRoutes ? "/proyectos" : "/projects" },
+    { name: t('nav.plans'), link: usesSpanishRoutes ? "/planes" : "/plans" },
   ];
 
   return (

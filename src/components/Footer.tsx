@@ -1,8 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
+import { getRouteType as getSharedRouteType } from '@/lib/localizedRoutes';
+import { useAppLanguage } from '@/hooks/useAppLanguage';
 
 // Helper function to detect equivalent routes across languages
 const getRouteType = (pathname: string): string | null => {
+  const sharedType = getSharedRouteType(pathname);
+  if (sharedType) return sharedType;
+
   const routeMap: { [key: string]: string } = {
     '/': 'home',
     '/nosotros': 'about',
@@ -37,22 +42,22 @@ const isRouteActive = (currentPath: string, itemPath: string): boolean => {
 };
 
 export default function Footer() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const location = useLocation();
-  const isSpanish = i18n.language === 'es';
+  const { usesSpanishRoutes } = useAppLanguage();
 
   const navLinks = [
     { label: t('nav.home'), href: '/' },
-    { label: t('nav.about'), href: isSpanish ? '/nosotros' : '/about' },
-    { label: t('nav.method'), href: isSpanish ? '/como-trabajamos' : '/how-we-work' },
-    { label: t('nav.plans'), href: isSpanish ? '/planes' : '/plans' },
+    { label: t('nav.about'), href: usesSpanishRoutes ? '/nosotros' : '/about' },
+    { label: t('nav.method'), href: usesSpanishRoutes ? '/como-trabajamos' : '/how-we-work' },
+    { label: t('nav.plans'), href: usesSpanishRoutes ? '/planes' : '/plans' },
     { label: 'Blog', href: '/blog' },
-    { label: t('nav.privacy'), href: isSpanish ? '/privacidad' : '/privacy' },
+    { label: t('nav.privacy'), href: usesSpanishRoutes ? '/privacidad' : '/privacy' },
     { label: t('nav.faq'), href: '/faq' },
-    { label: t('nav.help'), href: isSpanish ? '/ayuda' : '/help' },
-    { label: t('nav.terms'), href: isSpanish ? '/terminos' : '/terms' },
-    { label: t('nav.cookies'), href: isSpanish ? '/politica-cookies' : '/cookie-policy' },
-    { label: t('nav.legal'), href: isSpanish ? '/aviso-legal' : '/legal' },
+    { label: t('nav.help'), href: usesSpanishRoutes ? '/ayuda' : '/help' },
+    { label: t('nav.terms'), href: usesSpanishRoutes ? '/terminos' : '/terms' },
+    { label: t('nav.cookies'), href: usesSpanishRoutes ? '/politica-cookies' : '/cookie-policy' },
+    { label: t('nav.legal'), href: usesSpanishRoutes ? '/aviso-legal' : '/legal' },
   ];
 
   const isActive = (href: string) => {

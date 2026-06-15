@@ -16,7 +16,7 @@ export class ContentStrategyFactory {
 
   private static normalizeLanguage(language: string): SupportedLanguage {
     const lang = language.toLowerCase().substring(0, 2);
-    return (lang === 'es' || lang === 'en') ? lang : 'en';
+    return lang === 'es' ? 'es' : 'en';
   }
 
   // Future-proof: Add new language without modifying existing code

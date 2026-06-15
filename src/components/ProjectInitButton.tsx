@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { useAppLanguage } from '@/hooks/useAppLanguage';
 
 export const ProjectInitButton = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const { t, i18n } = useTranslation();
-  const isSpanish = i18n.language === 'es';
+  const { t } = useTranslation();
+  const { usesSpanishRoutes } = useAppLanguage();
 
   return (
     <Link
-      to={isSpanish ? '/contacto' : '/contact'}
+      to={usesSpanishRoutes ? '/contacto' : '/contact'}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="

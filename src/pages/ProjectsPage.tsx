@@ -3,24 +3,19 @@ import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
-import { PROJECTS, getProjectPath } from "@/data/projects";
+import { getProjectPath, getProjectsListPath } from "@/data/projects";
+import { useProjectTranslations } from "@/hooks/useProjectTranslations";
 import { motion } from "motion/react";
-import { useTranslation } from "react-i18next";
 
 export default function ProjectsPage() {
-  const { i18n } = useTranslation();
-  const lang = i18n.language === "en" ? "en" : "es";
+  const { lang, page, labels, projects } = useProjectTranslations();
 
   return (
     <>
       <SEO
-        title={lang === "en" ? "Projects" : "Proyectos"}
-        description={
-          lang === "en"
-            ? "Explore our projects and case studies"
-            : "Explora nuestros proyectos y casos de estudio"
-        }
-        url={lang === "en" ? "/projects" : "/proyectos"}
+        title={page.title}
+        description={page.seoDescription}
+        url={getProjectsListPath(lang)}
       />
 
       <motion.div
@@ -34,16 +29,12 @@ export default function ProjectsPage() {
         <div className="flex-grow py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-black mb-8">
-              {lang === "en" ? "Projects" : "Proyectos"}
+              {page.title}
             </h1>
-            <p className="text-lg text-gray-600 mb-16">
-              {lang === "en"
-                ? "Here you can see our latest projects and case studies."
-                : "Aquí puedes ver nuestros últimos proyectos y casos de estudio."}
-            </p>
+            <p className="text-lg text-gray-600 mb-16">{page.description}</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center">
-              {PROJECTS.map((project) => (
+              {projects.map((project) => (
                 <Link
                   key={project.slug}
                   to={getProjectPath(project.slug, lang)}
@@ -55,13 +46,15 @@ export default function ProjectsPage() {
                     childrenClassName="max-w-sm"
                   >
                     <p className="font-bold text-xl">{project.title}</p>
-                    <p className="font-normal text-sm mt-1">{project.description}</p>
+                    <p className="font-normal text-sm mt-1">
+                      {project.description}
+                    </p>
                     <p className="font-normal text-xs mt-3 opacity-90">
-                      <span className="font-semibold">Servicios:</span>{" "}
+                      <span className="font-semibold">{labels.services}:</span>{" "}
                       {project.services}
                     </p>
                     <p className="font-normal text-xs mt-1 opacity-90">
-                      <span className="font-semibold">Cliente:</span>{" "}
+                      <span className="font-semibold">{labels.client}:</span>{" "}
                       {project.client}
                     </p>
                   </DirectionAwareHover>

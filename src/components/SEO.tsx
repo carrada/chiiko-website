@@ -2,6 +2,13 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import type { SEOConfig } from "@/lib/seo";
 import { SITE_NAME, SITE_URL, DEFAULT_OG_IMAGE } from "@/lib/seo";
+import {
+  GEO_PLACE,
+  GEO_REGION,
+  HTML_LANG,
+  normalizeLanguage,
+  OG_LOCALE,
+} from "@/lib/i18n";
 
 interface SEOProps extends SEOConfig {
   children?: React.ReactNode;
@@ -23,34 +30,35 @@ export default function SEO({
   noindex = false,
 }: SEOProps) {
   const { i18n } = useTranslation();
-  const currentLang = i18n.language || "es";
+  const currentLang = normalizeLanguage(i18n.language || "es");
+  const htmlLang = HTML_LANG[currentLang];
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
   const fullUrl = url ? (url.startsWith("http") ? url : `${SITE_URL}${url}`) : SITE_URL;
-  const canonical = canonicalUrl ? (canonicalUrl.startsWith("http") ? canonicalUrl : `${SITE_URL}${canonicalUrl}`) : fullUrl;
+  const canonical = canonicalUrl
+    ? canonicalUrl.startsWith("http")
+      ? canonicalUrl
+      : `${SITE_URL}${canonicalUrl}`
+    : fullUrl;
 
-  // Determine locale dynamically
-  const ogLocale = currentLang === "en" ? "en_US" : "es_MX";
-  const alternateLocale = currentLang === "en" ? "es_MX" : "en_US";
+  const ogLocale = OG_LOCALE[currentLang];
+  const alternateLocales = Object.entries(OG_LOCALE)
+    .filter(([code]) => code !== currentLang)
+    .map(([, locale]) => locale)
+    .slice(0, 4);
 
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
-      <html lang={currentLang} />
+      <html lang={htmlLang} />
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="author" content={author} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-      {/* Canonical URL */}
       <link rel="canonical" href={canonical} />
 
-      {/* hreflang for alternate language versions */}
-      {hreflangs &&
-        hreflangs.map((item) => (
-          <link key={item.lang} rel="alternate" hrefLang={item.lang} href={item.href} />
-        ))}
+      {hreflangs?.map((item) => (
+        <link key={item.lang} rel="alternate" hrefLang={item.lang} href={item.href} />
+      ))}
 
-      {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:title" content={ogTitle || fullTitle} />
@@ -61,9 +69,10 @@ export default function SEO({
       <meta property="og:image:alt" content={SITE_NAME} />
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:locale" content={ogLocale} />
-      <meta property="og:locale:alternate" content={alternateLocale} />
+      {alternateLocales.map((locale) => (
+        <meta key={locale} property="og:locale:alternate" content={locale} />
+      ))}
 
-      {/* Twitter Card (universal standard for all platforms) */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@chiiko_design" />
       <meta name="twitter:url" content={fullUrl} />
@@ -71,24 +80,24 @@ export default function SEO({
       <meta name="twitter:description" content={ogDescription || description} />
       <meta name="twitter:image" content={ogImage} />
 
-      {/* LinkedIn & Behance Profile Links */}
       <link rel="me" href="https://www.linkedin.com/company/chiiko/" />
       <link rel="me" href="https://www.behance.net/chiiko" />
 
-      {/* Geo targeting — Ciudad de México */}
-      <meta name="geo.region" content="MX-CMX" />
-      <meta name="geo.placename" content="Ciudad de México" />
+      <meta name="geo.region" content={GEO_REGION[currentLang]} />
+      <meta name="geo.placename" content={GEO_PLACE[currentLang]} />
       <meta name="geo.position" content="19.4326;-99.1332" />
       <meta name="ICBM" content="19.4326, -99.1332" />
 
-      {/* Additional Meta Tags */}
       <meta
         name="robots"
-        content={noindex ? "noindex, follow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"}
+        content={
+          noindex
+            ? "noindex, follow"
+            : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        }
       />
       <meta name="theme-color" content="#1a1a2e" />
 
-      {/* Schema.org Structured Data */}
       {schema && (
         <script type="application/ld+json">
           {JSON.stringify(Array.isArray(schema) ? schema : [schema])}

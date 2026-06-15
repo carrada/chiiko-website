@@ -1,10 +1,13 @@
 import type { ProjectDetailContent } from "@/data/projectDetails";
+import { useProjectTranslations } from "@/hooks/useProjectTranslations";
 
 interface ProjectCaseStudyProps {
   content: ProjectDetailContent;
 }
 
 export default function ProjectCaseStudy({ content }: ProjectCaseStudyProps) {
+  const { labels } = useProjectTranslations();
+
   return (
     <div className="space-y-16 mt-16">
       <section className="space-y-4 border-t border-gray-200 pt-12">
@@ -13,11 +16,11 @@ export default function ProjectCaseStudy({ content }: ProjectCaseStudyProps) {
         </p>
         <div className="space-y-1 text-gray-600">
           <p>
-            <span className="font-semibold text-black">Servicios:</span>{" "}
+            <span className="font-semibold text-black">{labels.services}:</span>{" "}
             {content.services}
           </p>
           <p>
-            <span className="font-semibold text-black">Cliente:</span>{" "}
+            <span className="font-semibold text-black">{labels.client}:</span>{" "}
             {content.client}
           </p>
         </div>
@@ -71,10 +74,10 @@ export default function ProjectCaseStudy({ content }: ProjectCaseStudyProps) {
                 <thead>
                   <tr className="border-b border-gray-200">
                     <th className="py-3 pr-4 font-semibold text-black">
-                      Componente UI
+                      {labels.uiComponent}
                     </th>
                     <th className="py-3 font-semibold text-black">
-                      Ingeniería & Experiencia
+                      {labels.engineering}
                     </th>
                   </tr>
                 </thead>
@@ -101,7 +104,7 @@ export default function ProjectCaseStudy({ content }: ProjectCaseStudyProps) {
 
       <section className="space-y-6 border-t border-gray-200 pt-12">
         <h2 className="text-2xl md:text-3xl font-bold text-black">
-          El Impacto
+          {labels.impact}
         </h2>
         <blockquote className="border-l-4 border-black pl-6">
           <p className="text-gray-600 leading-relaxed italic">

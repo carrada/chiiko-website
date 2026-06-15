@@ -151,7 +151,18 @@ export const generateOrganizationSchema = () => {
     .addSocialProfile("https://www.linkedin.com/company/chiiko/")
     .addSocialProfile("https://www.behance.net/chiiko")
     .addSocialProfile("https://instagram.com/chiiko.design")
-    .setContactPoint("hola@chiiko.design", "+52-MX", ["es", "en"])
+    .setContactPoint("hola@chiiko.design", "+52-MX", [
+      "es",
+      "en",
+      "fr",
+      "de",
+      "pt",
+      "it",
+      "ja",
+      "ko",
+      "nl",
+      "zh",
+    ])
     .setAddress("Ciudad de México", "CDMX", "MX")
     .build();
 };
@@ -221,70 +232,25 @@ export const generateWebSiteSchema = () => ({
   },
 });
 
-export const generatePlansSchema = (lang: "es" | "en") => {
-  const plans =
-    lang === "es"
-      ? [
-          {
-            name: "Sitio Esencial",
-            description:
-              "Un sitio web bien diseñado para marcas que entienden que menos es más y necesitan verse profesionales desde el día uno.",
-            lowPrice: 25000,
-            highPrice: 35000,
-          },
-          {
-            name: "Sitio Estratégico",
-            description:
-              "No es solo un sitio web. Es una herramienta pensada para comunicar mejor, convertir y crecer.",
-            lowPrice: 40000,
-            highPrice: 60000,
-          },
-          {
-            name: "Artesanía Digital",
-            description:
-              "Para marcas que no quieren parecerse a nadie y entienden el valor de una experiencia digital bien construida.",
-            lowPrice: 70000,
-            highPrice: 120000,
-          },
-        ]
-      : [
-          {
-            name: "Essential Site",
-            description:
-              "A well-designed website for brands that understand that less is more and need to look professional from day one.",
-            lowPrice: 1250,
-            highPrice: 1750,
-          },
-          {
-            name: "Strategic Site",
-            description:
-              "It's not just a website. It's a tool designed to communicate better, convert, and grow.",
-            lowPrice: 2000,
-            highPrice: 3000,
-          },
-          {
-            name: "Digital Craftsmanship",
-            description:
-              "For brands that don't want to look like anyone else and understand the value of a well-built digital experience.",
-            lowPrice: 3500,
-            highPrice: 6000,
-          },
-        ];
-
-  const currency = lang === "es" ? "MXN" : "USD";
-  const pageUrl = `${SITE_URL}/${lang === "es" ? "planes" : "plans"}`;
+export const generatePlansSchema = (
+  content: import("@/i18n/locales/plans/types").PlansPageContent,
+  pagePath: string
+) => {
+  const pageUrl = pagePath.startsWith("http")
+    ? pagePath
+    : `${SITE_URL}${pagePath}`;
 
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: lang === "es" ? "Planes de Chiiko" : "Chiiko Plans",
+    name: content.schemaListName,
     url: pageUrl,
-    itemListElement: plans.map((plan, index) => ({
+    itemListElement: content.items.map((plan, index) => ({
       "@type": "ListItem",
       position: index + 1,
       item: {
         "@type": "Service",
-        name: plan.name,
+        name: plan.title,
         description: plan.description,
         provider: {
           "@type": "Organization",
@@ -293,14 +259,14 @@ export const generatePlansSchema = (lang: "es" | "en") => {
         },
         offers: {
           "@type": "AggregateOffer",
-          lowPrice: plan.lowPrice,
-          highPrice: plan.highPrice,
-          priceCurrency: currency,
+          lowPrice: plan.priceLow,
+          highPrice: plan.priceHigh,
+          priceCurrency: plan.currency,
           offerCount: 1,
         },
         url: pageUrl,
-        areaServed: lang === "es" ? "MX" : "Worldwide",
-        availableLanguage: lang === "es" ? "Spanish" : "English",
+        areaServed: content.areaServed,
+        availableLanguage: content.availableLanguage,
       },
     })),
   };

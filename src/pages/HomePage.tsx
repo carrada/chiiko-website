@@ -10,7 +10,11 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
-import { SEO_PAGES, generateOrganizationSchema, generateWebSiteSchema } from "@/lib/seo";
+import { generateOrganizationSchema, generateWebSiteSchema } from "@/lib/seo";
+import { getPageSeo } from "@/lib/seo-meta";
+import { buildHreflangs } from "@/lib/seo-i18n";
+import { useAppLanguage } from "@/hooks/useAppLanguage";
+import { useLocation } from "react-router-dom";
 import { LAYOUT_SPACING, COLORS } from "@/constants";
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
@@ -32,21 +36,19 @@ function CallToActionSection({ children }: { children: React.ReactNode }) {
 }
 
 export default function HomePage() {
-  const { t, i18n } = useTranslation();
-  const lang = i18n.language === "en" ? "en" : "es";
+  const { t } = useTranslation();
+  const { language } = useAppLanguage();
+  const location = useLocation();
+  const seo = getPageSeo("home", language);
 
   return (
     <>
       <SEO
-        title={SEO_PAGES.home[lang].title}
-        description={SEO_PAGES.home[lang].description}
+        title={seo.title}
+        description={seo.description}
         url="/"
         schema={[generateOrganizationSchema(), generateWebSiteSchema()]}
-        hreflangs={[
-          { lang: 'es', href: 'https://www.chiiko.design/' },
-          { lang: 'en', href: 'https://www.chiiko.design/' },
-          { lang: 'x-default', href: 'https://www.chiiko.design/' },
-        ]}
+        hreflangs={buildHreflangs(location.pathname)}
       />
       
       <motion.div

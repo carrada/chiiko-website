@@ -1,23 +1,21 @@
 import { IconArrowUpRight } from "@tabler/icons-react";
 import { useEffect } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { motion } from "motion/react";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import ProjectCaseStudy from "@/components/ProjectCaseStudy";
 import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Masonry from "@/components/ui/Masonry";
-import { getProjectDetail } from "@/data/projectDetails";
+import { getProjectPath, getProjectsListPath } from "@/data/projects";
 import { getProjectMasonryItems } from "@/data/projectGallery";
-import { getProjectBySlug, getProjectPath } from "@/data/projects";
+import { useProjectTranslations } from "@/hooks/useProjectTranslations";
 
 export default function ProjectDetailPage() {
   const { slug } = useParams<{ slug: string }>();
-  const { i18n } = useTranslation();
-  const lang = i18n.language === "en" ? "en" : "es";
-  const project = getProjectBySlug(slug);
-  const detail = slug ? getProjectDetail(slug) : undefined;
+  const { lang, page, getProject, getProjectDetail } = useProjectTranslations();
+  const project = getProject(slug);
+  const detail = getProjectDetail(slug);
   const masonryItems = slug ? getProjectMasonryItems(slug) : [];
 
   useEffect(() => {
@@ -25,7 +23,7 @@ export default function ProjectDetailPage() {
   }, [slug]);
 
   if (!project || !detail) {
-    return <Navigate to={lang === "en" ? "/projects" : "/proyectos"} replace />;
+    return <Navigate to={getProjectsListPath(lang)} replace />;
   }
 
   return (
@@ -47,10 +45,10 @@ export default function ProjectDetailPage() {
         <div className="flex-grow py-20 px-4">
           <div className="max-w-4xl mx-auto">
             <Link
-              to={lang === "en" ? "/projects" : "/proyectos"}
+              to={getProjectsListPath(lang)}
               className="inline-block text-gray-500 hover:text-black mb-8 transition-colors"
             >
-              {lang === "en" ? "← Back to projects" : "← Volver a proyectos"}
+              {page.back}
             </Link>
 
             <img
@@ -73,7 +71,7 @@ export default function ProjectDetailPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-full border border-black text-black text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-[#ce4676] hover:border-[#ce4676] hover:text-white group"
               >
-                {lang === "en" ? "Visit website" : "Visitar sitio web"}
+                {page.visitWebsite}
                 <IconArrowUpRight
                   size={18}
                   className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

@@ -10,10 +10,13 @@ import {
 import { Link, useLocation } from "react-router-dom";
 
 import React, { useRef, useState } from "react";
+import { getRouteType as getSharedRouteType } from "@/lib/localizedRoutes";
 
 // Helper function to detect equivalent routes across languages
 const getRouteType = (pathname: string): string | null => {
-  // Map routes to their type regardless of language
+  const sharedType = getSharedRouteType(pathname);
+  if (sharedType) return sharedType;
+
   const routeMap: { [key: string]: string } = {
     '/nosotros': 'about',
     '/about': 'about',
