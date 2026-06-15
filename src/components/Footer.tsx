@@ -51,7 +51,7 @@ export default function Footer() {
     { label: t('nav.about'), href: usesSpanishRoutes ? '/nosotros' : '/about' },
     { label: t('nav.method'), href: usesSpanishRoutes ? '/como-trabajamos' : '/how-we-work' },
     { label: t('nav.plans'), href: usesSpanishRoutes ? '/planes' : '/plans' },
-    { label: 'Blog', href: '/blog' },
+    { label: t("nav.blog"), href: "/blog" },
     { label: t('nav.privacy'), href: usesSpanishRoutes ? '/privacidad' : '/privacy' },
     { label: t('nav.faq'), href: '/faq' },
     { label: t('nav.help'), href: usesSpanishRoutes ? '/ayuda' : '/help' },

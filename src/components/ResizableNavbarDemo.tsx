@@ -14,9 +14,9 @@ export function ResizableNavbarDemo() {
   const { usesSpanishRoutes } = useAppLanguage();
 
   const navItems = [
-    { name: t('nav.home'), link: "/" },
-    { name: t('nav.projects'), link: usesSpanishRoutes ? "/proyectos" : "/projects" },
-    { name: t('nav.plans'), link: usesSpanishRoutes ? "/planes" : "/plans" },
+    { name: t("nav.about"), link: usesSpanishRoutes ? "/nosotros" : "/about" },
+    { name: t("nav.projects"), link: usesSpanishRoutes ? "/proyectos" : "/projects" },
+    { name: t("nav.plans"), link: usesSpanishRoutes ? "/planes" : "/plans" },
   ];
 
   return (

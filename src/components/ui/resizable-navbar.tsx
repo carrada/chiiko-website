@@ -24,6 +24,9 @@ const getRouteType = (pathname: string): string | null => {
     '/plans': 'plans',
     '/contacto': 'contact',
     '/contact': 'contact',
+    '/blog': 'blog',
+    '/politica-cookies': 'cookies',
+    '/cookie-policy': 'cookies',
   };
   return routeMap[pathname] || null;
 };

@@ -64,6 +64,8 @@ export function getRouteType(pathname: string): string | null {
     "/como-trabajamos": "method",
     "/how-we-work": "method",
     "/blog": "blog",
+    "/politica-cookies": "cookies",
+    "/cookie-policy": "cookies",
   };
 
   if (routeMap[pathname]) return routeMap[pathname];
