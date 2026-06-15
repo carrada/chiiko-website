@@ -1,0 +1,144 @@
+import type { MasonryItem } from "@/components/ui/Masonry";
+
+const GALLERY_FOLDERS: Record<string, string> = {
+  "eamx": "EAMXChiiko",
+  "compufest": "compufestChiiko",
+  "emicarrada": "emicarradaChiiko",
+  "alancrespo_ai": "AlanCrespoChiiko"
+};
+
+const GALLERY_FILES: Record<string, string[]> = {
+  "eamx": [
+    "05d84694-6d39-4713-b1ab-ec4a35e6fb49.webp",
+    "Captura desde 2026-06-14 17-36-24.webp",
+    "Captura desde 2026-06-14 17-36-31.webp",
+    "Captura desde 2026-06-14 17-36-37.webp",
+    "Captura desde 2026-06-14 17-36-47.webp",
+    "Captura desde 2026-06-14 17-36-53.webp",
+    "Captura desde 2026-06-14 17-37-00.webp",
+    "Captura desde 2026-06-14 17-37-07.webp",
+    "Captura desde 2026-06-14 17-37-13.webp",
+    "Captura desde 2026-06-14 17-49-30.webp",
+    "Captura desde 2026-06-14 17-49-40.webp",
+    "Captura desde 2026-06-14 17-49-44.webp",
+    "Captura desde 2026-06-14 17-49-47.webp",
+    "Captura desde 2026-06-14 17-49-49.webp",
+    "Captura desde 2026-06-14 17-49-51.webp",
+    "IMG_0249-scaled.webp",
+    "IMG_0251-768x1024.webp",
+    "IMG_0252-768x1024.webp",
+    "IMG_0266-scaled.webp",
+    "IMG_0276-768x1024.webp",
+    "IMG_1345-768x1024.webp",
+    "IMG_2148-768x1024.webp",
+    "IMG_3675-768x1024.webp",
+    "IMG_3677-768x576.webp",
+    "IMG_3678-768x576.webp",
+    "IMG_3680-768x1024.webp",
+    "IMG_3690-1-768x576.webp",
+    "IMG_3692-768x576.webp",
+    "IMG_7024-768x576.webp",
+    "IMG_7335-768x1024.webp",
+    "arquitectura-contemporanea.webp",
+    "arquitectura-industrial.webp",
+    "cdmx.webp"
+  ],
+  "compufest": [
+    "Captura desde 2026-06-14 17-20-08.webp",
+    "Captura desde 2026-06-14 17-20-25.webp",
+    "Captura desde 2026-06-14 17-20-35.webp",
+    "Captura desde 2026-06-14 17-20-45.webp",
+    "Captura desde 2026-06-14 17-21-00.webp",
+    "Captura desde 2026-06-14 17-21-06.webp",
+    "Captura desde 2026-06-14 17-21-16.webp",
+    "Captura desde 2026-06-14 17-21-34.webp",
+    "Captura desde 2026-06-14 17-22-05.webp",
+    "Captura desde 2026-06-14 17-22-25.webp",
+    "Captura desde 2026-06-14 17-22-38.webp",
+    "Captura desde 2026-06-14 17-22-45.webp",
+    "Captura desde 2026-06-14 17-22-50.webp",
+    "Captura desde 2026-06-14 17-23-09.webp",
+    "IMG_5543.webp",
+    "IMG_5575.webp",
+    "IMG_5611.webp",
+    "IMG_5642.webp",
+    "IMG_5667.webp",
+    "IMG_5670.webp",
+    "IMG_5736.webp",
+    "WhatsApp Image 2026-04-29 at 20.18.16 (4).webp",
+    "WhatsApp Image 2026-04-29 at 20.18.16 (5).webp",
+    "WhatsApp Image 2026-04-29 at 20.18.17 (2).webp",
+    "WhatsApp Image 2026-04-29 at 20.18.17 (6).webp",
+    "WhatsApp Image 2026-04-29 at 20.18.17.webp",
+    "_MG_5439.webp",
+    "_MG_5456.webp",
+    "_MG_5570.webp",
+    "_MG_5623.webp",
+    "_MG_5706.webp",
+    "_MG_5916.webp",
+    "_MG_5927.webp"
+  ],
+  "emicarrada": [
+    "Captura desde 2026-06-14 17-50-38.webp",
+    "Captura desde 2026-06-14 17-50-48.webp",
+    "Captura desde 2026-06-14 17-51-02.webp",
+    "Captura desde 2026-06-14 17-51-07.webp",
+    "Captura desde 2026-06-14 17-51-11.webp",
+    "Captura desde 2026-06-14 17-51-14.webp",
+    "Captura desde 2026-06-14 17-56-30.webp",
+    "Captura desde 2026-06-14 17-56-35.webp",
+    "Captura desde 2026-06-14 17-56-40.webp",
+    "Captura desde 2026-06-14 17-56-46.webp",
+    "Captura desde 2026-06-14 17-56-52.webp",
+    "Captura desde 2026-06-14 17-57-03.webp",
+    "Captura desde 2026-06-14 17-57-12.webp",
+    "Captura desde 2026-06-14 17-57-20.webp",
+    "Captura desde 2026-06-14 17-57-41.webp",
+    "Captura desde 2026-06-14 17-57-46.webp",
+    "Captura desde 2026-06-14 17-57-58.webp",
+    "Captura desde 2026-06-14 17-58-05.webp",
+    "Captura desde 2026-06-14 18-29-44.webp",
+    "Captura desde 2026-06-14 18-29-52.webp",
+    "Captura desde 2026-06-14 18-30-39.webp"
+  ],
+  "alancrespo_ai": [
+    "ALANCRESPOMURILLO.webp",
+    "Captura desde 2026-06-14 17-15-42.webp",
+    "Captura desde 2026-06-14 17-15-58.webp",
+    "Captura desde 2026-06-14 17-16-04.webp",
+    "Captura desde 2026-06-14 17-16-10.webp",
+    "Captura desde 2026-06-14 17-16-13.webp",
+    "Captura desde 2026-06-14 17-16-15.webp",
+    "Captura desde 2026-06-14 17-16-20.webp",
+    "Captura desde 2026-06-14 17-16-24.webp",
+    "Captura desde 2026-06-14 17-16-31.webp",
+    "Captura desde 2026-06-14 17-16-34.webp",
+    "Captura desde 2026-06-14 17-17-08.webp",
+    "Captura desde 2026-06-14 17-17-19.webp",
+    "Captura desde 2026-06-14 17-17-29.webp",
+    "Captura desde 2026-06-14 17-17-37.webp",
+    "Captura desde 2026-06-14 17-17-45.webp",
+    "Captura desde 2026-06-14 17-47-13.webp",
+    "Captura desde 2026-06-14 17-47-23.webp",
+    "Captura desde 2026-06-14 17-47-29.webp",
+    "Captura desde 2026-06-14 17-47-50.webp",
+    "Captura desde 2026-06-14 17-47-56.webp",
+    "Captura desde 2026-06-14 17-48-02.webp",
+    "Captura desde 2026-06-14 17-48-11.webp",
+    "foto1.webp"
+  ]
+};
+
+const MASONRY_HEIGHTS = [520, 380, 440, 300, 360, 480, 420, 340, 560, 400, 500, 320];
+
+export function getProjectMasonryItems(slug: string): MasonryItem[] {
+  const folder = GALLERY_FOLDERS[slug];
+  const files = GALLERY_FILES[slug];
+  if (!folder || !files) return [];
+
+  return files.map((file, index) => ({
+    id: `${slug}-${index}`,
+    img: `/${folder}/${encodeURIComponent(file)}`,
+    height: MASONRY_HEIGHTS[index % MASONRY_HEIGHTS.length],
+  }));
+}

@@ -105,3 +105,11 @@ export const ANIMATIONS = {
     exit: { opacity: 0, y: -20 },
   },
 } as const;
+
+// === SEO METADATA ===
+export const SEO_METADATA = {
+  BLOG: {
+    TITLE: "Blog - Chiiko",
+    DESCRIPTION: "Noticias, artículos y actualizaciones de Chiiko.",
+  },
+} as const;

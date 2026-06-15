@@ -13,9 +13,9 @@ export function ResizableNavbarDemo() {
   const isSpanish = i18n.language === 'es';
 
   const navItems = [
-    { name: t('nav.about'), link: isSpanish ? "/nosotros" : "/about" },
+    { name: t('nav.home'), link: "/" },
+    { name: t('nav.projects'), link: "/proyectos" },
     { name: t('nav.plans'), link: isSpanish ? "/planes" : "/plans" },
-    { name: t('nav.contact'), link: isSpanish ? "/contacto" : "/contact" },
   ];
 
   return (

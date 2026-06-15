@@ -68,3 +68,4 @@ docs/*.lot
 docs/*.idx
 docs/*.ilg
 docs/*.ind
+.aider*

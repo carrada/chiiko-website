@@ -10,6 +10,9 @@ import Plans from "@/components/Plans";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import HowWeWork from "@/components/HowWeWork";
+import ProjectsPage from "@/pages/ProjectsPage";
+import ProjectDetailPage from "@/pages/ProjectDetailPage";
+import BlogPage from "@/pages/BlogPage";
 
 interface RouteConfig {
   path: string;
@@ -28,10 +31,16 @@ export const SPANISH_ROUTES: RouteConfig[] = [
   { path: "/nosotros", element: <About /> },
   { path: "/contacto", element: <Contact /> },
   { path: "/como-trabajamos", element: <HowWeWork /> },
+  { path: "/proyectos", element: <ProjectsPage /> },
+  { path: "/proyectos/:slug", element: <ProjectDetailPage /> },
+  { path: "/blog", element: <BlogPage /> },
 ];
 
 // English routes configuration (same components, language detection handled internally)
 export const ENGLISH_ROUTES: RouteConfig[] = [
+  { path: "/projects", element: <ProjectsPage /> },
+  { path: "/projects/:slug", element: <ProjectDetailPage /> },
+  { path: "/blog", element: <BlogPage /> },
   { path: "/privacy", element: <PrivacyPolicy /> },
   { path: "/terms", element: <TermsAndConditions /> },
   { path: "/cookie-policy", element: <CookiePolicy /> },

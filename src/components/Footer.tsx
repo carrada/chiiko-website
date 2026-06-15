@@ -24,6 +24,7 @@ const getRouteType = (pathname: string): string | null => {
     '/cookie-policy': 'cookies',
     '/aviso-legal': 'legal',
     '/legal': 'legal',
+    '/blog': 'blog',
   };
   return routeMap[pathname] || null;
 };
@@ -45,7 +46,7 @@ export default function Footer() {
     { label: t('nav.about'), href: isSpanish ? '/nosotros' : '/about' },
     { label: t('nav.method'), href: isSpanish ? '/como-trabajamos' : '/how-we-work' },
     { label: t('nav.plans'), href: isSpanish ? '/planes' : '/plans' },
-    { label: t('nav.contact'), href: isSpanish ? '/contacto' : '/contact' },
+    { label: 'Blog', href: '/blog' },
     { label: t('nav.privacy'), href: isSpanish ? '/privacidad' : '/privacy' },
     { label: t('nav.faq'), href: '/faq' },
     { label: t('nav.help'), href: isSpanish ? '/ayuda' : '/help' },
