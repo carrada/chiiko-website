@@ -6,7 +6,7 @@ export const blogPageContent: BlogPageContent = {
   seoTitle: "Blog | Chiikö",
   seoDescription: "Visitas, proyectos, talleres y comunidad. Crónicas del estudio Chiikö sobre diseño, tecnología y cultura digital.",
   title: "Blog",
-  description: "Crónicas del estudio: visitas a Google y Pinterest, proyectos con Sophie Gomez, talleres en la UNAM y patrocinio de Compufest 2026.",
+  description: "Reflexiones del estudio Chiikö sobre diseño, tecnología y cultura digital.",
   readMore: "Leer artículo",
   readTimeLabel: "min de lectura",
   backToBlog: "← Volver al blog",
