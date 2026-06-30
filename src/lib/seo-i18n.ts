@@ -29,7 +29,7 @@ function resolvePaths(pathname: string): { esPath: string; enPath: string } | nu
       return { esPath: pathname.replace(pair.en, pair.es), enPath: pathname };
     }
   }
-  if (pathname === "/" || pathname === "/faq" || pathname === "/blog") {
+  if (pathname === "/" || pathname === "/faq" || pathname === "/blog" || pathname.startsWith("/blog/")) {
     return { esPath: pathname, enPath: pathname };
   }
   return null;

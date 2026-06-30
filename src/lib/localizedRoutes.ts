@@ -74,6 +74,10 @@ export function getRouteType(pathname: string): string | null {
     return "projects";
   }
 
+  if (pathname.startsWith("/blog/")) {
+    return "blog";
+  }
+
   return null;
 }
 

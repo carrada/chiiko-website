@@ -31,6 +31,7 @@ const getRouteType = (pathname: string): string | null => {
     '/legal': 'legal',
     '/blog': 'blog',
   };
+  if (pathname.startsWith('/blog/')) return 'blog';
   return routeMap[pathname] || null;
 };
 

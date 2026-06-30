@@ -13,6 +13,7 @@ import HowWeWork from "@/components/HowWeWork";
 import ProjectsPage from "@/pages/ProjectsPage";
 import ProjectDetailPage from "@/pages/ProjectDetailPage";
 import BlogPage from "@/pages/BlogPage";
+import BlogPostPage from "@/pages/BlogPostPage";
 
 interface RouteConfig {
   path: string;
@@ -34,6 +35,7 @@ export const SPANISH_ROUTES: RouteConfig[] = [
   { path: "/proyectos", element: <ProjectsPage /> },
   { path: "/proyectos/:slug", element: <ProjectDetailPage /> },
   { path: "/blog", element: <BlogPage /> },
+  { path: "/blog/:slug", element: <BlogPostPage /> },
 ];
 
 // English routes configuration (same components, language detection handled internally)
@@ -41,6 +43,7 @@ export const ENGLISH_ROUTES: RouteConfig[] = [
   { path: "/projects", element: <ProjectsPage /> },
   { path: "/projects/:slug", element: <ProjectDetailPage /> },
   { path: "/blog", element: <BlogPage /> },
+  { path: "/blog/:slug", element: <BlogPostPage /> },
   { path: "/privacy", element: <PrivacyPolicy /> },
   { path: "/terms", element: <TermsAndConditions /> },
   { path: "/cookie-policy", element: <CookiePolicy /> },

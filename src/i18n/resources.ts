@@ -78,6 +78,17 @@ import { helpPageContent as helpNl } from "./locales/help/content.nl";
 import { helpPageContent as helpZh } from "./locales/help/content.zh";
 import { legalBundles } from "./legalBundles";
 
+import { blogPageContent as blogEs } from "./locales/blog/content.es";
+import { blogPageContent as blogEn } from "./locales/blog/content.en";
+import { blogPageContent as blogFr } from "./locales/blog/content.fr";
+import { blogPageContent as blogDe } from "./locales/blog/content.de";
+import { blogPageContent as blogPt } from "./locales/blog/content.pt";
+import { blogPageContent as blogIt } from "./locales/blog/content.it";
+import { blogPageContent as blogJa } from "./locales/blog/content.ja";
+import { blogPageContent as blogKo } from "./locales/blog/content.ko";
+import { blogPageContent as blogNl } from "./locales/blog/content.nl";
+import { blogPageContent as blogZh } from "./locales/blog/content.zh";
+
 type JsonBundle = Record<string, string>;
 
 function merge(
@@ -100,6 +111,7 @@ export const i18nResources: Record<
     contactPage: contactEs,
     faqPage: faqEs,
     helpPage: helpEs,
+    blogPage: blogEs,
     ...legal.es,
   }),
   en: merge(en, {
@@ -109,6 +121,7 @@ export const i18nResources: Record<
     contactPage: contactEn,
     faqPage: faqEn,
     helpPage: helpEn,
+    blogPage: blogEn,
     ...legal.en,
   }),
   fr: merge(fr, {
@@ -118,6 +131,7 @@ export const i18nResources: Record<
     contactPage: contactFr,
     faqPage: faqFr,
     helpPage: helpFr,
+    blogPage: blogFr,
     ...legal.fr,
   }),
   de: merge(de, {
@@ -127,6 +141,7 @@ export const i18nResources: Record<
     contactPage: contactDe,
     faqPage: faqDe,
     helpPage: helpDe,
+    blogPage: blogDe,
     ...legal.de,
   }),
   pt: merge(pt, {
@@ -136,6 +151,7 @@ export const i18nResources: Record<
     contactPage: contactPt,
     faqPage: faqPt,
     helpPage: helpPt,
+    blogPage: blogPt,
     ...legal.pt,
   }),
   it: merge(it, {
@@ -145,6 +161,7 @@ export const i18nResources: Record<
     contactPage: contactIt,
     faqPage: faqIt,
     helpPage: helpIt,
+    blogPage: blogIt,
     ...legal.it,
   }),
   ja: merge(ja, {
@@ -154,6 +171,7 @@ export const i18nResources: Record<
     contactPage: contactJa,
     faqPage: faqJa,
     helpPage: helpJa,
+    blogPage: blogJa,
     ...legal.ja,
   }),
   ko: merge(ko, {
@@ -163,6 +181,7 @@ export const i18nResources: Record<
     contactPage: contactKo,
     faqPage: faqKo,
     helpPage: helpKo,
+    blogPage: blogKo,
     ...legal.ko,
   }),
   nl: merge(nl, {
@@ -172,6 +191,7 @@ export const i18nResources: Record<
     contactPage: contactNl,
     faqPage: faqNl,
     helpPage: helpNl,
+    blogPage: blogNl,
     ...legal.nl,
   }),
   zh: merge(zh, {
@@ -181,6 +201,7 @@ export const i18nResources: Record<
     contactPage: contactZh,
     faqPage: faqZh,
     helpPage: helpZh,
+    blogPage: blogZh,
     ...legal.zh,
   }),
 };
