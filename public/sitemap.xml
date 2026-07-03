@@ -360,4 +360,310 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/legal" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/aviso-legal" />
   </url>
+
+  <url>
+    <loc>https://www.chiiko.design/blog</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.chiiko.design/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chiiko.design/blog" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chiiko.design/blog" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.chiiko.design/blog" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.chiiko.design/blog" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.chiiko.design/blog" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.chiiko.design/blog" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.chiiko.design/blog" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chiiko.design/blog" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/blog" />
+  </url>
+
+  <url>
+    <loc>https://www.chiiko.design/proyectos</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.chiiko.design/proyectos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/proyectos" />
+  </url>
+
+  <url>
+    <loc>https://www.chiiko.design/projects</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.chiiko.design/proyectos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/projects" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/proyectos" />
+  </url>
+
+  <url>
+    <loc>https://www.chiiko.design/blog/google-ecosystem-visit</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.chiiko.design/blog/google-ecosystem-visit" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chiiko.design/blog/google-ecosystem-visit" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chiiko.design/blog/google-ecosystem-visit" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.chiiko.design/blog/google-ecosystem-visit" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.chiiko.design/blog/google-ecosystem-visit" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.chiiko.design/blog/google-ecosystem-visit" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.chiiko.design/blog/google-ecosystem-visit" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.chiiko.design/blog/google-ecosystem-visit" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chiiko.design/blog/google-ecosystem-visit" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/blog/google-ecosystem-visit" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/blog/google-ecosystem-visit" />
+  </url>
+
+  <url>
+    <loc>https://www.chiiko.design/blog/pinterest-visual-culture-visit</loc>
+    <lastmod>2026-01-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.chiiko.design/blog/pinterest-visual-culture-visit" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chiiko.design/blog/pinterest-visual-culture-visit" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chiiko.design/blog/pinterest-visual-culture-visit" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.chiiko.design/blog/pinterest-visual-culture-visit" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.chiiko.design/blog/pinterest-visual-culture-visit" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.chiiko.design/blog/pinterest-visual-culture-visit" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.chiiko.design/blog/pinterest-visual-culture-visit" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.chiiko.design/blog/pinterest-visual-culture-visit" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chiiko.design/blog/pinterest-visual-culture-visit" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/blog/pinterest-visual-culture-visit" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/blog/pinterest-visual-culture-visit" />
+  </url>
+
+  <url>
+    <loc>https://www.chiiko.design/blog/sophie-gomez-digital-identity</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.chiiko.design/blog/sophie-gomez-digital-identity" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chiiko.design/blog/sophie-gomez-digital-identity" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chiiko.design/blog/sophie-gomez-digital-identity" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.chiiko.design/blog/sophie-gomez-digital-identity" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.chiiko.design/blog/sophie-gomez-digital-identity" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.chiiko.design/blog/sophie-gomez-digital-identity" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.chiiko.design/blog/sophie-gomez-digital-identity" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.chiiko.design/blog/sophie-gomez-digital-identity" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chiiko.design/blog/sophie-gomez-digital-identity" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/blog/sophie-gomez-digital-identity" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/blog/sophie-gomez-digital-identity" />
+  </url>
+
+  <url>
+    <loc>https://www.chiiko.design/blog/unam-democratic-design-workshop</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.chiiko.design/blog/unam-democratic-design-workshop" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chiiko.design/blog/unam-democratic-design-workshop" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chiiko.design/blog/unam-democratic-design-workshop" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.chiiko.design/blog/unam-democratic-design-workshop" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.chiiko.design/blog/unam-democratic-design-workshop" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.chiiko.design/blog/unam-democratic-design-workshop" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.chiiko.design/blog/unam-democratic-design-workshop" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.chiiko.design/blog/unam-democratic-design-workshop" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chiiko.design/blog/unam-democratic-design-workshop" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/blog/unam-democratic-design-workshop" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/blog/unam-democratic-design-workshop" />
+  </url>
+
+  <url>
+    <loc>https://www.chiiko.design/blog/anti-marketing-unam</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.chiiko.design/blog/anti-marketing-unam" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chiiko.design/blog/anti-marketing-unam" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chiiko.design/blog/anti-marketing-unam" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.chiiko.design/blog/anti-marketing-unam" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.chiiko.design/blog/anti-marketing-unam" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.chiiko.design/blog/anti-marketing-unam" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.chiiko.design/blog/anti-marketing-unam" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.chiiko.design/blog/anti-marketing-unam" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chiiko.design/blog/anti-marketing-unam" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/blog/anti-marketing-unam" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/blog/anti-marketing-unam" />
+  </url>
+
+  <url>
+    <loc>https://www.chiiko.design/blog/compufest-2026-sponsors</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.chiiko.design/blog/compufest-2026-sponsors" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chiiko.design/blog/compufest-2026-sponsors" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chiiko.design/blog/compufest-2026-sponsors" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.chiiko.design/blog/compufest-2026-sponsors" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.chiiko.design/blog/compufest-2026-sponsors" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.chiiko.design/blog/compufest-2026-sponsors" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.chiiko.design/blog/compufest-2026-sponsors" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.chiiko.design/blog/compufest-2026-sponsors" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chiiko.design/blog/compufest-2026-sponsors" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/blog/compufest-2026-sponsors" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/blog/compufest-2026-sponsors" />
+  </url>
+
+  <url>
+    <loc>https://www.chiiko.design/proyectos/eamx</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.chiiko.design/proyectos/eamx" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/proyectos/eamx" />
+  </url>
+
+  <url>
+    <loc>https://www.chiiko.design/projects/eamx</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.chiiko.design/proyectos/eamx" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/projects/eamx" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/proyectos/eamx" />
+  </url>
+
+  <url>
+    <loc>https://www.chiiko.design/proyectos/compufest</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.chiiko.design/proyectos/compufest" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/proyectos/compufest" />
+  </url>
+
+  <url>
+    <loc>https://www.chiiko.design/projects/compufest</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.chiiko.design/proyectos/compufest" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/projects/compufest" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/proyectos/compufest" />
+  </url>
+
+  <url>
+    <loc>https://www.chiiko.design/proyectos/emicarrada</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.chiiko.design/proyectos/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/proyectos/emicarrada" />
+  </url>
+
+  <url>
+    <loc>https://www.chiiko.design/projects/emicarrada</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.chiiko.design/proyectos/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/projects/emicarrada" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/proyectos/emicarrada" />
+  </url>
+
+  <url>
+    <loc>https://www.chiiko.design/proyectos/alancrespo_ai</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.chiiko.design/proyectos/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/proyectos/alancrespo_ai" />
+  </url>
+
+  <url>
+    <loc>https://www.chiiko.design/projects/alancrespo_ai</loc>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.chiiko.design/proyectos/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.chiiko.design/projects/alancrespo_ai" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.chiiko.design/proyectos/alancrespo_ai" />
+  </url>
 </urlset>

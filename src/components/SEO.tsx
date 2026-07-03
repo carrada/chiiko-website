@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import type { SEOConfig } from "@/lib/seo";
-import { SITE_NAME, SITE_URL, DEFAULT_OG_IMAGE } from "@/lib/seo";
+import { SITE_NAME, SITE_URL, DEFAULT_OG_IMAGE, buildPageTitle, toAbsoluteUrl } from "@/lib/seo";
 import {
   GEO_PLACE,
   GEO_REGION,
@@ -15,16 +15,26 @@ interface SEOProps extends SEOConfig {
   hreflangs?: { lang: string; href: string }[];
 }
 
+function resolveAbsoluteUrl(url?: string): string {
+  if (!url) return SITE_URL;
+  return toAbsoluteUrl(url);
+}
+
 export default function SEO({
   title,
   description,
   ogTitle,
   ogDescription,
   ogImage = DEFAULT_OG_IMAGE,
+  ogImageAlt,
   ogType = "website",
   url,
   canonicalUrl,
   author = SITE_NAME,
+  publishedTime,
+  modifiedTime,
+  articleSection,
+  articleAuthor,
   schema,
   hreflangs,
   noindex = false,
@@ -32,25 +42,23 @@ export default function SEO({
   const { i18n } = useTranslation();
   const currentLang = normalizeLanguage(i18n.language || "es");
   const htmlLang = HTML_LANG[currentLang];
-  const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
-  const fullUrl = url ? (url.startsWith("http") ? url : `${SITE_URL}${url}`) : SITE_URL;
-  const canonical = canonicalUrl
-    ? canonicalUrl.startsWith("http")
-      ? canonicalUrl
-      : `${SITE_URL}${canonicalUrl}`
-    : fullUrl;
+  const fullTitle = buildPageTitle(title);
+  const fullUrl = resolveAbsoluteUrl(url);
+  const canonical = canonicalUrl ? resolveAbsoluteUrl(canonicalUrl) : fullUrl;
+  const absoluteOgImage = toAbsoluteUrl(ogImage);
+  const imageAlt = ogImageAlt || ogTitle || fullTitle;
 
   const ogLocale = OG_LOCALE[currentLang];
   const alternateLocales = Object.entries(OG_LOCALE)
     .filter(([code]) => code !== currentLang)
-    .map(([, locale]) => locale)
-    .slice(0, 4);
+    .map(([, locale]) => locale);
 
   return (
     <Helmet>
       <html lang={htmlLang} />
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
+      <meta httpEquiv="content-language" content={htmlLang} />
       <meta name="author" content={author} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="canonical" href={canonical} />
@@ -63,22 +71,35 @@ export default function SEO({
       <meta property="og:url" content={fullUrl} />
       <meta property="og:title" content={ogTitle || fullTitle} />
       <meta property="og:description" content={ogDescription || description} />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content={absoluteOgImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={SITE_NAME} />
+      <meta property="og:image:alt" content={imageAlt} />
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:locale" content={ogLocale} />
       {alternateLocales.map((locale) => (
         <meta key={locale} property="og:locale:alternate" content={locale} />
       ))}
 
+      {ogType === "article" && publishedTime && (
+        <meta property="article:published_time" content={publishedTime} />
+      )}
+      {ogType === "article" && modifiedTime && (
+        <meta property="article:modified_time" content={modifiedTime} />
+      )}
+      {ogType === "article" && articleSection && (
+        <meta property="article:section" content={articleSection} />
+      )}
+      {ogType === "article" && articleAuthor && (
+        <meta property="article:author" content={articleAuthor} />
+      )}
+
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@chiiko_design" />
       <meta name="twitter:url" content={fullUrl} />
       <meta name="twitter:title" content={ogTitle || fullTitle} />
       <meta name="twitter:description" content={ogDescription || description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image" content={absoluteOgImage} />
 
       <link rel="me" href="https://www.linkedin.com/company/chiiko/" />
       <link rel="me" href="https://www.behance.net/chiiko" />

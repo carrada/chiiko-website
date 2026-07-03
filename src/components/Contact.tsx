@@ -5,16 +5,20 @@ import SEO from "@/components/SEO";
 import { ValidationError, useForm } from "@formspree/react";
 import { getPageSeo } from "@/lib/seo-meta";
 import { buildHreflangs } from "@/lib/seo-i18n";
+import { buildBreadcrumbSchema, generateLocalBusinessSchema } from "@/lib/seo";
 import { useAppLanguage } from "@/hooks/useAppLanguage";
 import { useContactContent } from "@/hooks/useContactContent";
 import { FORM_IDS } from "@/constants";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
   const { usesSpanishRoutes, language } = useAppLanguage();
   const content = useContactContent();
   const location = useLocation();
+  const { t } = useTranslation();
   const seo = getPageSeo("contact", language);
+  const contactPath = usesSpanishRoutes ? "/contacto" : "/contact";
   const [state, handleSubmit] = useForm(FORM_IDS.CONTACT_FORM);
   const [showNotification, setShowNotification] = useState(false);
   const [notificationType, setNotificationType] = useState<"success" | "error">("success");
@@ -55,8 +59,15 @@ export default function Contact() {
       <SEO
         title={seo.title}
         description={seo.description}
-        url={usesSpanishRoutes ? "/contacto" : "/contact"}
+        url={contactPath}
         hreflangs={buildHreflangs(location.pathname)}
+        schema={[
+          generateLocalBusinessSchema(),
+          buildBreadcrumbSchema([
+            { name: t("nav.home"), path: "/" },
+            { name: t("nav.contact"), path: contactPath },
+          ]),
+        ]}
       />
       <ResizableNavbarDemo />
       <div className="py-12 tablet:py-16 md:py-24"></div>

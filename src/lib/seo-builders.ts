@@ -77,6 +77,15 @@ export class OrganizationSchemaBuilder {
     return this;
   }
 
+  setGeo(latitude: number, longitude: number): this {
+    this.schema.geo = {
+      "@type": "GeoCoordinates",
+      latitude,
+      longitude,
+    };
+    return this;
+  }
+
   build(): SchemaObject {
     // Validate required fields before building (Postcondition)
     Validator.require(!!this.schema.name, "Organization name is required before building");
@@ -131,7 +140,16 @@ export class LocalBusinessSchemaBuilder {
       "@type": "PostalAddress",
       streetAddress,
       addressRegion,
-      addressCountry
+      addressCountry,
+    };
+    return this;
+  }
+
+  setGeo(latitude: number, longitude: number): this {
+    this.schema.geo = {
+      "@type": "GeoCoordinates",
+      latitude,
+      longitude,
     };
     return this;
   }

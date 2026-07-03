@@ -5,9 +5,29 @@ import { dirname, join } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const SITE_URL = "https://www.chiiko.design";
-const LASTMOD = "2026-06-14";
+const DEFAULT_LASTMOD = "2026-06-14";
 
 const LANGS = ["es", "en", "fr", "de", "pt", "it", "ja", "ko", "nl", "zh"];
+
+const BLOG_SLUGS = [
+  "google-ecosystem-visit",
+  "pinterest-visual-culture-visit",
+  "sophie-gomez-digital-identity",
+  "unam-democratic-design-workshop",
+  "anti-marketing-unam",
+  "compufest-2026-sponsors",
+];
+
+const BLOG_DATES = {
+  "google-ecosystem-visit": "2026-04-07",
+  "pinterest-visual-culture-visit": "2026-01-13",
+  "sophie-gomez-digital-identity": "2026-06-29",
+  "unam-democratic-design-workshop": "2026-05-07",
+  "anti-marketing-unam": "2026-06-25",
+  "compufest-2026-sponsors": "2026-04-23",
+};
+
+const PROJECT_SLUGS = ["eamx", "compufest", "emicarrada", "alancrespo_ai"];
 
 const entries = [
   { loc: "/", esPath: "/", enPath: "/", changefreq: "monthly", priority: "1.0" },
@@ -30,7 +50,38 @@ const entries = [
   { loc: "/cookie-policy", esPath: "/politica-cookies", enPath: "/cookie-policy", changefreq: "yearly", priority: "0.3" },
   { loc: "/aviso-legal", esPath: "/aviso-legal", enPath: "/legal", changefreq: "yearly", priority: "0.3" },
   { loc: "/legal", esPath: "/aviso-legal", enPath: "/legal", changefreq: "yearly", priority: "0.3" },
+  { loc: "/blog", esPath: "/blog", enPath: "/blog", changefreq: "weekly", priority: "0.8", lastmod: "2026-06-29" },
+  { loc: "/proyectos", esPath: "/proyectos", enPath: "/projects", changefreq: "monthly", priority: "0.8" },
+  { loc: "/projects", esPath: "/proyectos", enPath: "/projects", changefreq: "monthly", priority: "0.8" },
 ];
+
+for (const slug of BLOG_SLUGS) {
+  entries.push({
+    loc: `/blog/${slug}`,
+    esPath: `/blog/${slug}`,
+    enPath: `/blog/${slug}`,
+    changefreq: "monthly",
+    priority: "0.7",
+    lastmod: BLOG_DATES[slug],
+  });
+}
+
+for (const slug of PROJECT_SLUGS) {
+  entries.push({
+    loc: `/proyectos/${slug}`,
+    esPath: `/proyectos/${slug}`,
+    enPath: `/projects/${slug}`,
+    changefreq: "monthly",
+    priority: "0.7",
+  });
+  entries.push({
+    loc: `/projects/${slug}`,
+    esPath: `/proyectos/${slug}`,
+    enPath: `/projects/${slug}`,
+    changefreq: "monthly",
+    priority: "0.7",
+  });
+}
 
 function hreflangLinks(esPath, enPath) {
   const esHref = `${SITE_URL}${esPath}`;
@@ -47,7 +98,7 @@ const body = entries
   .map(
     (entry) => `  <url>
     <loc>${SITE_URL}${entry.loc}</loc>
-    <lastmod>${LASTMOD}</lastmod>
+    <lastmod>${entry.lastmod ?? DEFAULT_LASTMOD}</lastmod>
     <changefreq>${entry.changefreq}</changefreq>
     <priority>${entry.priority}</priority>
 ${hreflangLinks(entry.esPath, entry.enPath)}
@@ -63,4 +114,4 @@ ${body}
 `;
 
 writeFileSync(join(__dirname, "../public/sitemap.xml"), xml);
-console.log("Generated public/sitemap.xml with", LANGS.length, "hreflang alternates per URL");
+console.log("Generated public/sitemap.xml with", entries.length, "URLs and", LANGS.length, "hreflang alternates per URL");

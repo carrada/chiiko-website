@@ -2,6 +2,7 @@ import { IconArrowUpRight } from "@tabler/icons-react";
 import { useEffect } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import ProjectCaseStudy from "@/components/ProjectCaseStudy";
@@ -9,11 +10,19 @@ import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Masonry from "@/components/ui/Masonry";
 import { getProjectPath, getProjectsListPath } from "@/data/projects";
 import { getProjectMasonryItems } from "@/data/projectGallery";
+import { usePageSeo } from "@/hooks/usePageSeo";
 import { useProjectTranslations } from "@/hooks/useProjectTranslations";
+import {
+  buildBreadcrumbSchema,
+  generateCreativeWorkSchema,
+  toAbsoluteUrl,
+} from "@/lib/seo";
 
 export default function ProjectDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const { lang, page, getProject, getProjectDetail } = useProjectTranslations();
+  const { hreflangs, canonicalPath } = usePageSeo();
+  const { t } = useTranslation();
   const project = getProject(slug);
   const detail = getProjectDetail(slug);
   const masonryItems = slug ? getProjectMasonryItems(slug) : [];
@@ -26,12 +35,34 @@ export default function ProjectDetailPage() {
     return <Navigate to={getProjectsListPath(lang)} replace />;
   }
 
+  const projectPath = getProjectPath(project.slug, lang);
+  const creativeWorkSchema = generateCreativeWorkSchema(
+    {
+      title: project.title,
+      description: project.description,
+      image: project.image,
+      slug: project.slug,
+    },
+    projectPath,
+    lang
+  );
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: t("nav.home"), path: "/" },
+    { name: page.title, path: getProjectsListPath(lang) },
+    { name: project.title, path: projectPath },
+  ]);
+
   return (
     <>
       <SEO
         title={project.title}
         description={project.description}
-        url={getProjectPath(project.slug, lang)}
+        url={projectPath}
+        canonicalUrl={canonicalPath}
+        hreflangs={hreflangs}
+        ogImage={toAbsoluteUrl(project.image)}
+        ogImageAlt={project.title}
+        schema={[creativeWorkSchema, breadcrumbSchema]}
       />
 
       <motion.div

@@ -6,6 +6,8 @@ import {
   FAQPageSchemaBuilder,
 } from "./seo-builders";
 import { Validator } from "./validators";
+import { APP_LANGUAGES, HTML_LANG, type AppLanguage } from "./i18n";
+import { getProjectPath } from "@/data/projects";
 
 export interface SEOConfig {
   title: string;
@@ -13,10 +15,15 @@ export interface SEOConfig {
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
+  ogImageAlt?: string;
   ogType?: string;
   url?: string;
   canonicalUrl?: string;
   author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  articleSection?: string;
+  articleAuthor?: string;
   schema?: object | object[];
   noindex?: boolean;
 }
@@ -28,6 +35,26 @@ export const SITE_DESCRIPTION = "Strategic design and development studio. We cre
 
 // Default OG Image
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/miniaturachiiko.jpg`;
+
+export const CDMX_COORDINATES = {
+  latitude: 19.4326,
+  longitude: -99.1332,
+} as const;
+
+export function toAbsoluteUrl(path: string): string {
+  if (path.startsWith("http://") || path.startsWith("https://")) {
+    return path;
+  }
+  return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
+export function buildPageTitle(title: string): string {
+  const normalizedTitle = title.trim();
+  if (/chiik[oö]/i.test(normalizedTitle)) {
+    return normalizedTitle;
+  }
+  return `${normalizedTitle} | ${SITE_NAME}`;
+}
 
 // SEO metadata by page
 export const SEO_PAGES = {
@@ -164,6 +191,7 @@ export const generateOrganizationSchema = () => {
       "zh",
     ])
     .setAddress("Ciudad de México", "CDMX", "MX")
+    .setGeo(CDMX_COORDINATES.latitude, CDMX_COORDINATES.longitude)
     .build();
 };
 
@@ -176,10 +204,19 @@ export const generateLocalBusinessSchema = () => {
     .setPriceRange("$$$")
     .setAreaServed("MX", "Mexico")
     .setAddress("Ciudad de México", "CDMX", "MX")
+    .setGeo(CDMX_COORDINATES.latitude, CDMX_COORDINATES.longitude)
     .addSocialProfile("https://www.linkedin.com/company/chiiko/")
     .addSocialProfile("https://www.behance.net/chiiko")
     .build();
 };
+
+export function generateHomeSchemas() {
+  return [
+    generateOrganizationSchema(),
+    generateLocalBusinessSchema(),
+    generateWebSiteSchema(),
+  ];
+}
 
 export const generateBreadcrumbSchema = (breadcrumbs: { name: string; url: string }[]) => {
   // Defensive programming: fail fast with clear error messages (Preconditions)
@@ -204,6 +241,141 @@ export const generateBreadcrumbSchema = (breadcrumbs: { name: string; url: strin
   return builder.build();
 };
 
+export function buildBreadcrumbSchema(items: { name: string; path: string }[]) {
+  return generateBreadcrumbSchema(
+    items.map((item) => ({
+      name: item.name,
+      url: toAbsoluteUrl(item.path),
+    }))
+  );
+}
+
+export interface BlogPostSeoInput {
+  title: string;
+  description: string;
+  slug: string;
+  image: string;
+  datePublished: string;
+  section?: string;
+}
+
+export function generateBlogPostingSchema(
+  post: BlogPostSeoInput,
+  lang: AppLanguage
+) {
+  const pageUrl = `${SITE_URL}/blog/${post.slug}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    image: toAbsoluteUrl(post.image),
+    datePublished: post.datePublished,
+    dateModified: post.datePublished,
+    author: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/logo.png`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": pageUrl,
+    },
+    url: pageUrl,
+    inLanguage: HTML_LANG[lang],
+    ...(post.section ? { articleSection: post.section } : {}),
+  };
+}
+
+export function generateBlogListSchema(
+  posts: { title: string; slug: string; datePublished: string }[],
+  pagePath: string,
+  listName: string
+) {
+  const pageUrl = toAbsoluteUrl(pagePath);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: listName,
+    url: pageUrl,
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: posts.map((post, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `${SITE_URL}/blog/${post.slug}`,
+        name: post.title,
+      })),
+    },
+  };
+}
+
+export function generateCreativeWorkSchema(
+  project: {
+    title: string;
+    description: string;
+    image: string;
+    slug: string;
+  },
+  pagePath: string,
+  lang: AppLanguage
+) {
+  const pageUrl = toAbsoluteUrl(pagePath);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: project.title,
+    description: project.description,
+    image: toAbsoluteUrl(project.image),
+    url: pageUrl,
+    creator: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    inLanguage: HTML_LANG[lang],
+  };
+}
+
+export function generateProjectsListSchema(
+  projects: { title: string; slug: string; description: string }[],
+  pagePath: string,
+  listName: string,
+  lang: AppLanguage
+) {
+  const pageUrl = toAbsoluteUrl(pagePath);
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: listName,
+    url: pageUrl,
+    inLanguage: HTML_LANG[lang],
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: projects.map((project, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: toAbsoluteUrl(getProjectPath(project.slug, lang)),
+        name: project.title,
+        description: project.description,
+      })),
+    },
+  };
+}
+
 export const generateFAQSchema = (
   faqs: { question: string; answer: string }[]
 ) => {
@@ -221,7 +393,7 @@ export const generateWebSiteSchema = () => ({
   name: SITE_NAME,
   url: SITE_URL,
   description: SITE_DESCRIPTION,
-  inLanguage: ["es", "en"],
+  inLanguage: APP_LANGUAGES.map((lang) => HTML_LANG[lang]),
   potentialAction: {
     "@type": "SearchAction",
     target: {

@@ -1,21 +1,41 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { BlogCard } from "@/components/BlogCard";
 import { getBlogListPath } from "@/data/blog";
 import { useBlogTranslations } from "@/hooks/useBlogTranslations";
-import { buildHreflangs } from "@/lib/seo-i18n";
+import { usePageSeo } from "@/hooks/usePageSeo";
+import {
+  buildBreadcrumbSchema,
+  generateBlogListSchema,
+} from "@/lib/seo";
 
 export default function BlogPage() {
   const { page, posts, formatDate, formatReadTime } = useBlogTranslations();
-  const location = useLocation();
+  const { hreflangs, canonicalPath } = usePageSeo();
+  const { t } = useTranslation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const blogListSchema = generateBlogListSchema(
+    posts.map((post) => ({
+      title: post.title,
+      slug: post.slug,
+      datePublished: post.date,
+    })),
+    getBlogListPath(),
+    page.title
+  );
+
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: t("nav.home"), path: "/" },
+    { name: page.title, path: getBlogListPath() },
+  ]);
 
   return (
     <>
@@ -23,7 +43,9 @@ export default function BlogPage() {
         title={page.seoTitle}
         description={page.seoDescription}
         url={getBlogListPath()}
-        hreflangs={buildHreflangs(location.pathname)}
+        canonicalUrl={canonicalPath}
+        hreflangs={hreflangs}
+        schema={[blogListSchema, breadcrumbSchema]}
       />
 
       <motion.div

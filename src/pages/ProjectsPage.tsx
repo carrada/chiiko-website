@@ -1,21 +1,48 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
 import { getProjectPath, getProjectsListPath } from "@/data/projects";
+import { usePageSeo } from "@/hooks/usePageSeo";
 import { useProjectTranslations } from "@/hooks/useProjectTranslations";
+import {
+  buildBreadcrumbSchema,
+  generateProjectsListSchema,
+} from "@/lib/seo";
 import { motion } from "motion/react";
 
 export default function ProjectsPage() {
   const { lang, page, labels, projects } = useProjectTranslations();
+  const { hreflangs, canonicalPath } = usePageSeo();
+  const { t } = useTranslation();
+  const listPath = getProjectsListPath(lang);
+
+  const projectsListSchema = generateProjectsListSchema(
+    projects.map((project) => ({
+      title: project.title,
+      slug: project.slug,
+      description: project.description,
+    })),
+    listPath,
+    page.title,
+    lang
+  );
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: t("nav.home"), path: "/" },
+    { name: page.title, path: listPath },
+  ]);
 
   return (
     <>
       <SEO
         title={page.title}
         description={page.seoDescription}
-        url={getProjectsListPath(lang)}
+        url={listPath}
+        canonicalUrl={canonicalPath}
+        hreflangs={hreflangs}
+        schema={[projectsListSchema, breadcrumbSchema]}
       />
 
       <motion.div

@@ -1,20 +1,30 @@
 import { useEffect } from "react";
-import { Link, Navigate, useParams, useLocation } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Masonry from "@/components/ui/Masonry";
 import { getBlogListPath, getBlogPostPath } from "@/data/blog";
 import { getBlogMasonryItems } from "@/data/blogGallery";
+import { useAppLanguage } from "@/hooks/useAppLanguage";
 import { useBlogTranslations } from "@/hooks/useBlogTranslations";
-import { buildHreflangs } from "@/lib/seo-i18n";
+import { usePageSeo } from "@/hooks/usePageSeo";
+import {
+  buildBreadcrumbSchema,
+  generateBlogPostingSchema,
+  SITE_NAME,
+  toAbsoluteUrl,
+} from "@/lib/seo";
 
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
   const { page, getPost, formatDate, formatReadTime } = useBlogTranslations();
+  const { language } = useAppLanguage();
+  const { hreflangs, canonicalPath } = usePageSeo();
+  const { t } = useTranslation();
   const post = getPost(slug);
-  const location = useLocation();
   const masonryItems = slug ? getBlogMasonryItems(slug) : [];
 
   useEffect(() => {
@@ -25,13 +35,39 @@ export default function BlogPostPage() {
     return <Navigate to={getBlogListPath()} replace />;
   }
 
+  const postPath = getBlogPostPath(post.slug);
+  const blogPostingSchema = generateBlogPostingSchema(
+    {
+      title: post.title,
+      description: post.excerpt,
+      slug: post.slug,
+      image: post.image,
+      datePublished: post.date,
+      section: post.category,
+    },
+    language
+  );
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: t("nav.home"), path: "/" },
+    { name: page.title, path: getBlogListPath() },
+    { name: post.title, path: postPath },
+  ]);
+
   return (
     <>
       <SEO
-        title={`${post.title} | Chiikö`}
+        title={post.title}
         description={post.excerpt}
-        url={getBlogPostPath(post.slug)}
-        hreflangs={buildHreflangs(location.pathname)}
+        url={postPath}
+        canonicalUrl={canonicalPath}
+        hreflangs={hreflangs}
+        ogType="article"
+        ogImage={toAbsoluteUrl(post.image)}
+        ogImageAlt={post.title}
+        publishedTime={post.date}
+        articleSection={post.category}
+        articleAuthor={SITE_NAME}
+        schema={[blogPostingSchema, breadcrumbSchema]}
       />
 
       <motion.div

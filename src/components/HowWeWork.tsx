@@ -4,20 +4,28 @@ import SEO from "@/components/SEO";
 import { useAppLanguage } from "@/hooks/useAppLanguage";
 import { useHowWeWorkContent } from "@/hooks/usePageContent";
 import { buildHreflangs } from "@/lib/seo-i18n";
+import { buildBreadcrumbSchema } from "@/lib/seo";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const HowWeWork = () => {
   const { usesSpanishRoutes } = useAppLanguage();
   const location = useLocation();
+  const { t } = useTranslation();
   const data = useHowWeWorkContent();
+  const howWeWorkPath = usesSpanishRoutes ? "/como-trabajamos" : "/how-we-work";
 
   return (
     <>
       <SEO
         title={data.seoTitle}
         description={data.seoDescription}
-        url={usesSpanishRoutes ? "/como-trabajamos" : "/how-we-work"}
+        url={howWeWorkPath}
         hreflangs={buildHreflangs(location.pathname)}
+        schema={buildBreadcrumbSchema([
+          { name: t("nav.home"), path: "/" },
+          { name: t("nav.method"), path: howWeWorkPath },
+        ])}
       />
       <div className="relative w-full min-h-screen bg-white">
         <ResizableNavbarDemo />

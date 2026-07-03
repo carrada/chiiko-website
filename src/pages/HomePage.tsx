@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
-import { generateOrganizationSchema, generateWebSiteSchema } from "@/lib/seo";
+import { generateHomeSchemas } from "@/lib/seo";
 import { getPageSeo } from "@/lib/seo-meta";
 import { buildHreflangs } from "@/lib/seo-i18n";
 import { useAppLanguage } from "@/hooks/useAppLanguage";
@@ -47,7 +47,7 @@ export default function HomePage() {
         title={seo.title}
         description={seo.description}
         url="/"
-        schema={[generateOrganizationSchema(), generateWebSiteSchema()]}
+        schema={generateHomeSchemas()}
         hreflangs={buildHreflangs(location.pathname)}
       />
       
