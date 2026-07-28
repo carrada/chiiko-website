@@ -10,6 +10,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const outDir = path.join(__dirname, "../src/i18n/locales/blog");
 
 const SLUGS = [
+  "veraz-news-platform-case",
   "google-ecosystem-visit",
   "pinterest-visual-culture-visit",
   "sophie-gomez-digital-identity",
@@ -31,6 +32,20 @@ const bundles = {
     readTimeLabel: "min de lectura",
     backToBlog: "← Volver al blog",
     posts: [
+      {
+        slug: "veraz-news-platform-case",
+        title: "Informar sin influenciar: Veraz y la artesanía de producto",
+        excerpt:
+          "Cómo diseñamos y construimos Veraz — plataforma de noticias con design system tokenizado, globo 3D y lectura bilingüe donde la IA nunca bloquea la noticia.",
+        category: "Proyectos",
+        body: [
+          "Un producto de medios honesto no necesita vender humo de inteligencia artificial: necesita fuentes claras, tipografía legible y una arquitectura que priorice la lectura.",
+          "Veraz (veraz.app) nació con un lema simple: informar sin influenciar. Desde Chiikö en Ciudad de México acompañamos el diseño y la ingeniería de una plataforma que agrega RSS verificables, muestra titulares y extractos con atribución y enlaza al medio original — sin republicar el artículo completo. La IA es opcional y fail-open: si falla, la noticia se publica igual.",
+          "En la capa visual construimos un design system en tokens (tema oscuro, tipografía propia), una landing con motion GSAP y un globo terrestre interactivo en React Three Fiber que comunica alcance global sin caer en el cliché del periódico genérico. El producto de lectura en /noticias organiza verticales, banners de confianza en fuentes prestigiosas y detalle con SEO y JSON-LD.",
+          "Detrás, un monolito modular Next.js 15 + Supabase con ingesta RSS multi-fuente, cron en Vercel y operación social en AWS. Es el tipo de proyecto que nos permite demostrar desde CDMX qué significa diseño web estratégico unido a producto real.",
+          "Puedes explorar el caso completo en nuestro portafolio (/proyectos/veraz) y la plataforma en producción en veraz.app.",
+        ],
+      },
       {
         slug: "google-ecosystem-visit",
         title: "Inspiración en el ecosistema: Visita a Google",

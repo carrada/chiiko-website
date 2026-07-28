@@ -13,6 +13,8 @@ export interface LocalizedProject extends ProjectMeta {
   description: string;
   services: string;
   client: string;
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
 export function useProjectTranslations() {
@@ -23,6 +25,7 @@ export function useProjectTranslations() {
     () => ({
       title: t("projects.page.title"),
       description: t("projects.page.description"),
+      seoTitle: t("projects.page.seoTitle"),
       seoDescription: t("projects.page.seoDescription"),
       back: t("projects.page.back"),
       visitWebsite: t("projects.page.visitWebsite"),
@@ -44,13 +47,22 @@ export function useProjectTranslations() {
 
   const projects = useMemo<LocalizedProject[]>(
     () =>
-      PROJECT_SLUGS.map((slug) => ({
-        ...PROJECT_META[slug],
-        title: t(`projects.items.${slug}.title`),
-        description: t(`projects.items.${slug}.description`),
-        services: t(`projects.items.${slug}.services`),
-        client: t(`projects.items.${slug}.client`),
-      })),
+      PROJECT_SLUGS.map((slug) => {
+        const title = t(`projects.items.${slug}.title`);
+        const seoTitle = t(`projects.items.${slug}.seoTitle`);
+        const seoDescription = t(`projects.items.${slug}.seoDescription`);
+        return {
+          ...PROJECT_META[slug],
+          title,
+          description: t(`projects.items.${slug}.description`),
+          services: t(`projects.items.${slug}.services`),
+          client: t(`projects.items.${slug}.client`),
+          seoTitle: seoTitle.includes("projects.items.") ? title : seoTitle,
+          seoDescription: seoDescription.includes("projects.items.")
+            ? t(`projects.items.${slug}.description`)
+            : seoDescription,
+        };
+      }),
     [t, i18n.language]
   );
 

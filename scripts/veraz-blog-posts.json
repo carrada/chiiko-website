@@ -1,0 +1,124 @@
+{
+  "es": {
+    "slug": "veraz-news-platform-case",
+    "title": "Informar sin influenciar: Veraz y la artesanía de producto",
+    "excerpt": "Cómo diseñamos y construimos Veraz — plataforma de noticias con design system tokenizado, globo 3D y lectura bilingüe donde la IA nunca bloquea la noticia.",
+    "category": "Proyectos",
+    "body": [
+      "Un producto de medios honesto no necesita vender humo de inteligencia artificial: necesita fuentes claras, tipografía legible y una arquitectura que priorice la lectura.",
+      "Veraz (veraz.app) nació con un lema simple: informar sin influenciar. Desde Chiikö en Ciudad de México acompañamos el diseño y la ingeniería de una plataforma que agrega RSS verificables, muestra titulares y extractos con atribución y enlaza al medio original — sin republicar el artículo completo. La IA es opcional y fail-open: si falla, la noticia se publica igual.",
+      "En la capa visual construimos un design system en tokens (tema oscuro, tipografía propia), una landing con motion GSAP y un globo terrestre interactivo en React Three Fiber que comunica alcance global sin caer en el cliché del periódico genérico. El producto de lectura en /noticias organiza verticales, banners de confianza en fuentes prestigiosas y detalle con SEO y JSON-LD.",
+      "Detrás, un monolito modular Next.js 15 + Supabase con ingesta RSS multi-fuente, cron en Vercel y operación social en AWS. Es el tipo de proyecto que nos permite demostrar desde CDMX qué significa diseño web estratégico unido a producto real.",
+      "Puedes explorar el caso completo en nuestro portafolio (/proyectos/veraz) y la plataforma en producción en veraz.app."
+    ]
+  },
+  "en": {
+    "slug": "veraz-news-platform-case",
+    "title": "Inform without influencing: Veraz and product craftsmanship",
+    "excerpt": "How we designed and built Veraz — a news platform with a tokenized design system, 3D globe, and bilingual reading where AI never blocks the story.",
+    "category": "Projects",
+    "body": [
+      "An honest media product does not need AI hype: it needs clear sources, readable type, and architecture that puts reading first.",
+      "Veraz (veraz.app) was born with a simple motto: inform without influencing. From Chiikö in Mexico City we shaped design and engineering for a platform that aggregates verifiable RSS, shows headlines and excerpts with attribution, and links to the original outlet — without republishing full articles. AI is optional and fail-open.",
+      "Visually we built a tokenized design system (dark theme, custom typography), a GSAP marketing landing, and an interactive React Three Fiber globe. The reading product at /noticias organizes verticals, trust banners for prestigious sources, and article detail with SEO and JSON-LD.",
+      "Behind it: a modular Next.js 15 + Supabase monolith with multi-source RSS ingestion, Vercel cron, and social operations on AWS — strategic web design meeting a live media product from CDMX.",
+      "Explore the full case study at /proyectos/veraz and the live platform at veraz.app."
+    ]
+  },
+  "fr": {
+    "slug": "veraz-news-platform-case",
+    "title": "Informer sans influencer : Veraz et l’artisanat produit",
+    "excerpt": "Comment nous avons conçu Veraz — plateforme d’actualités, design system, globe 3D et lecture bilingue sans IA bloquante.",
+    "category": "Projets",
+    "body": [
+      "Un produit média honnête ne vend pas du hype IA : il exige des sources claires et une architecture lecture-first.",
+      "Veraz (veraz.app) agrège des flux RSS vérifiables avec attribution et lien vers l’original. L’IA est optionnelle.",
+      "Design system tokenisé, landing GSAP, globe R3F, produit /noticias bilingue. Backend Next.js 15 + Supabase depuis Mexico.",
+      "Cas complet : /proyectos/veraz — plateforme : veraz.app."
+    ]
+  },
+  "de": {
+    "slug": "veraz-news-platform-case",
+    "title": "Informieren ohne Beeinflussung: Veraz",
+    "excerpt": "Veraz: Nachrichtenplattform mit Design System, 3D-Globus und bilingualer UX — KI optional.",
+    "category": "Projekte",
+    "body": [
+      "Ehrliche Medienprodukte setzen auf Quellenklarheit statt KI-Hype.",
+      "Veraz (veraz.app) kuratiert RSS mit Attribution und Original-Link.",
+      "Token-Design, GSAP-Landing, R3F-Globus, Next.js + Supabase aus Mexico City.",
+      "Fallstudie: /proyectos/veraz — Live: veraz.app."
+    ]
+  },
+  "pt": {
+    "slug": "veraz-news-platform-case",
+    "title": "Informar sem influenciar: Veraz",
+    "excerpt": "Plataforma de notícias com design system, globo 3D e leitura bilíngue — IA opcional.",
+    "category": "Projetos",
+    "body": [
+      "Produto de mídia honesto prioriza leitura e fontes verificáveis.",
+      "Veraz (veraz.app) agrega RSS com atribuição clara.",
+      "Design tokenizado, GSAP, R3F, Next.js + Supabase. Chiikö na CDMX.",
+      "Case: /proyectos/veraz — veraz.app."
+    ]
+  },
+  "it": {
+    "slug": "veraz-news-platform-case",
+    "title": "Informare senza influenzare: Veraz",
+    "excerpt": "Piattaforma news con design system, globo 3D e prodotto bilingue.",
+    "category": "Progetti",
+    "body": [
+      "Un media product onesto mette la lettura al centro.",
+      "Veraz (veraz.app) cura RSS con attribuzione e link alla fonte.",
+      "Token, GSAP, R3F, Next.js + Supabase da Città del Messico.",
+      "Case study: /proyectos/veraz — veraz.app."
+    ]
+  },
+  "ja": {
+    "slug": "veraz-news-platform-case",
+    "title": "影響せずに伝える：Veraz",
+    "excerpt": "デザインシステム、3D地球儀、二言語のニュースプラットフォーム。",
+    "category": "プロジェクト",
+    "body": [
+      "誠実なメディアプロダクトはソースの透明性を最優先します。",
+      "Veraz（veraz.app）はRSSを集約し、原文へリンクします。",
+      "GSAP、R3F、Next.js + Supabase。Chiikö（CDMX）。",
+      "事例：/proyectos/veraz — veraz.app。"
+    ]
+  },
+  "ko": {
+    "slug": "veraz-news-platform-case",
+    "title": "영향 없이 inform: Veraz",
+    "excerpt": "디자인 시스템, 3D 지구본, 이중 언어 뉴스 플랫폼.",
+    "category": "프로젝트",
+    "body": [
+      "진정한 미디어 제품은 읽기와 출처를 우선합니다.",
+      "Veraz(veraz.app)는 RSS를 큐레이션하고 원문으로 연결합니다.",
+      "GSAP, R3F, Next.js + Supabase. Chiikö CDMX.",
+      "사례: /proyectos/veraz — veraz.app."
+    ]
+  },
+  "nl": {
+    "slug": "veraz-news-platform-case",
+    "title": "Informeren zonder beïnvloeden: Veraz",
+    "excerpt": "Nieuwsplatform met design system, 3D-globe en tweetalige lezing.",
+    "category": "Projecten",
+    "body": [
+      "Eerlijke media zetten bronnen en leesbaarheid voorop.",
+      "Veraz (veraz.app) aggregeert RSS met attributie.",
+      "GSAP, R3F, Next.js + Supabase uit Mexico-Stad.",
+      "Case: /proyectos/veraz — veraz.app."
+    ]
+  },
+  "zh": {
+    "slug": "veraz-news-platform-case",
+    "title": "inform 而不影响：Veraz",
+    "excerpt": "新闻平台：设计系统、3D 地球仪、双语阅读，AI 可选。",
+    "category": "项目",
+    "body": [
+      "诚实的新闻产品优先阅读与来源透明。",
+      "Veraz（veraz.app）聚合 RSS 并链接原文。",
+      "GSAP、R3F、Next.js + Supabase。Chiikö 墨西哥城。",
+      "案例：/proyectos/veraz — veraz.app。"
+    ]
+  }
+}

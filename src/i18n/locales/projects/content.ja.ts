@@ -1,11 +1,15 @@
 import type { ProjectDetailContent } from "@/data/projectDetails";
+import { mergeProjectItemSeo, projectsPageSeo } from "./project-seo";
+import { verazDetailsJa } from "./veraz/details.i18n";
+import { verazItems } from "./veraz/items";
 
 export const projectContent = {
   page: {
     title: "プロジェクト",
     description:
       "最新のプロジェクトとケーススタディをご覧ください。",
-    seoDescription: "プロジェクトとケーススタディを探索",
+    seoTitle: projectsPageSeo.ja.seoTitle,
+    seoDescription: projectsPageSeo.ja.seoDescription,
     back: "← プロジェクトに戻る",
     visitWebsite: "ウェブサイトを見る",
   },
@@ -18,6 +22,7 @@ export const projectContent = {
     engineering: "エンジニアリング & 体験",
   },
   items: {
+    veraz: mergeProjectItemSeo("veraz", "ja", verazItems.ja),
     eamx: {
       title: "EAMX",
       description: "建築と構造精度をデジタル領域へ。",
@@ -44,6 +49,7 @@ export const projectContent = {
     },
   },
   details: {
+    veraz: verazDetailsJa,
     eamx: {
       tagline: "将建筑与结构精度带入数字平面。",
       services: "数字策略、交互设计、高级前端开发。",

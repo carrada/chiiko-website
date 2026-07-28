@@ -1,6 +1,7 @@
 import type { MasonryItem } from "@/components/ui/Masonry";
 
 const BLOG_FOLDERS = {
+  "veraz-news-platform-case": "Veraz",
   "google-ecosystem-visit": "VisitaGoogle",
   "pinterest-visual-culture-visit": "Visita Pinterest",
   "sophie-gomez-digital-identity": "Sophie Gomez",
@@ -12,6 +13,7 @@ const BLOG_FOLDERS = {
 export type BlogGallerySlug = keyof typeof BLOG_FOLDERS;
 
 const BLOG_HERO_FILES: Record<BlogGallerySlug, string> = {
+  "veraz-news-platform-case": "inicio.jpg",
   "google-ecosystem-visit": "inicio.jpg",
   "pinterest-visual-culture-visit": "inicio.jpeg",
   "sophie-gomez-digital-identity": "inicio.jpg",
@@ -22,6 +24,7 @@ const BLOG_HERO_FILES: Record<BlogGallerySlug, string> = {
 
 // ISO dates parsed from public/blog/<folder>/fecha.txt
 export const BLOG_DATES: Record<BlogGallerySlug, string> = {
+  "veraz-news-platform-case": "2026-07-28",
   "google-ecosystem-visit": "2026-04-07",
   "pinterest-visual-culture-visit": "2026-01-13",
   "sophie-gomez-digital-identity": "2026-06-29",
@@ -31,6 +34,17 @@ export const BLOG_DATES: Record<BlogGallerySlug, string> = {
 };
 
 const BLOG_GALLERY_FILES: Record<BlogGallerySlug, string[]> = {
+  "veraz-news-platform-case": [
+    "10.jpg",
+    "17.jpg",
+    "5.jpg",
+    "6.jpg",
+    "Captura desde 2026-07-28 17-20-24.png",
+    "Captura desde 2026-07-28 17-20-52.png",
+    "Captura desde 2026-07-28 17-21-14.png",
+    "¿Cómo funciona Veraz.jpg",
+    "estudiantes-vendio-a-mikel-amondarain-la-joya-que-lo-salvo-en-la-copa-libertador-1f968a9b (Copiar).png",
+  ],
   "google-ecosystem-visit": [
     "4so.jpeg",
     "GoogleOf.jpg",

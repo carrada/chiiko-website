@@ -1,11 +1,15 @@
 import type { ProjectDetailContent } from "@/data/projectDetails";
+import { mergeProjectItemSeo, projectsPageSeo } from "./project-seo";
+import { verazDetailsEn } from "./veraz/details.en";
+import { verazItems } from "./veraz/items";
 
 export const projectContent = {
   page: {
     title: "Projects",
     description:
       "Here you can explore our latest projects and case studies.",
-    seoDescription: "Explore our projects and case studies",
+    seoTitle: projectsPageSeo.en.seoTitle,
+    seoDescription: projectsPageSeo.en.seoDescription,
     back: "← Back to projects",
     visitWebsite: "Visit website",
   },
@@ -18,6 +22,7 @@ export const projectContent = {
     engineering: "Engineering & Experience",
   },
   items: {
+    veraz: mergeProjectItemSeo("veraz", "en", verazItems.en),
     eamx: {
       title: "EAMX",
       description:
@@ -50,6 +55,7 @@ export const projectContent = {
     },
   },
   details: {
+    veraz: verazDetailsEn,
     eamx: {
       tagline:
         "Architecture and structural precision brought to the digital plane.",

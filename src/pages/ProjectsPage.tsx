@@ -11,6 +11,7 @@ import {
   buildBreadcrumbSchema,
   generateProjectsListSchema,
 } from "@/lib/seo";
+import { getStudioSeoMeta } from "@/lib/seo-studio";
 import { motion } from "motion/react";
 
 export default function ProjectsPage() {
@@ -18,6 +19,7 @@ export default function ProjectsPage() {
   const { hreflangs, canonicalPath } = usePageSeo();
   const { t } = useTranslation();
   const listPath = getProjectsListPath(lang);
+  const studioSeo = getStudioSeoMeta(lang);
 
   const projectsListSchema = generateProjectsListSchema(
     projects.map((project) => ({
@@ -37,8 +39,9 @@ export default function ProjectsPage() {
   return (
     <>
       <SEO
-        title={page.title}
+        title={page.seoTitle}
         description={page.seoDescription}
+        keywords={studioSeo.keywords}
         url={listPath}
         canonicalUrl={canonicalPath}
         hreflangs={hreflangs}

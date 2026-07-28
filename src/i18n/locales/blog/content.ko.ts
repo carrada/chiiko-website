@@ -12,6 +12,18 @@ export const blogPageContent: BlogPageContent = {
   backToBlog: "← 블로그로 돌아가기",
   posts: [
     {
+      slug: "veraz-news-platform-case",
+      title: "영향 없이 inform: Veraz",
+      excerpt: "디자인 시스템, 3D 지구본, 이중 언어 뉴스 플랫폼.",
+      category: "프로젝트",
+      body: body([
+        "진정한 미디어 제품은 읽기와 출처를 우선합니다.",
+        "Veraz(veraz.app)는 RSS를 큐레이션하고 원문으로 연결합니다.",
+        "GSAP, R3F, Next.js + Supabase. Chiikö CDMX.",
+        "사례: /proyectos/veraz — veraz.app.",
+      ]),
+    },
+    {
       slug: "google-ecosystem-visit",
       title: "생태계에서 얻은 영감: Google 방문",
       excerpt: "인터랙션 설계는 화면 안에서만이 아니라 기술 생태계 전체를 이해할 때 깊어진다.",

@@ -35,6 +35,7 @@ export default function SEO({
   modifiedTime,
   articleSection,
   articleAuthor,
+  keywords,
   schema,
   hreflangs,
   noindex = false,
@@ -58,6 +59,7 @@ export default function SEO({
       <html lang={htmlLang} />
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
       <meta httpEquiv="content-language" content={htmlLang} />
       <meta name="author" content={author} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />

@@ -12,6 +12,19 @@ export const blogPageContent: BlogPageContent = {
   backToBlog: "← Back to blog",
   posts: [
     {
+      slug: "veraz-news-platform-case",
+      title: "Inform without influencing: Veraz and product craftsmanship",
+      excerpt: "How we designed and built Veraz — a news platform with a tokenized design system, 3D globe, and bilingual reading where AI never blocks the story.",
+      category: "Projects",
+      body: body([
+        "An honest media product does not need AI hype: it needs clear sources, readable type, and architecture that puts reading first.",
+        "Veraz (veraz.app) was born with a simple motto: inform without influencing. From Chiikö in Mexico City we shaped design and engineering for a platform that aggregates verifiable RSS, shows headlines and excerpts with attribution, and links to the original outlet — without republishing full articles. AI is optional and fail-open.",
+        "Visually we built a tokenized design system (dark theme, custom typography), a GSAP marketing landing, and an interactive React Three Fiber globe. The reading product at /noticias organizes verticals, trust banners for prestigious sources, and article detail with SEO and JSON-LD.",
+        "Behind it: a modular Next.js 15 + Supabase monolith with multi-source RSS ingestion, Vercel cron, and social operations on AWS — strategic web design meeting a live media product from CDMX.",
+        "Explore the full case study at /proyectos/veraz and the live platform at veraz.app.",
+      ]),
+    },
+    {
       slug: "google-ecosystem-visit",
       title: "Inspiration in the ecosystem: A visit to Google",
       excerpt: "Interaction design grows by understanding the global technology ecosystem.",

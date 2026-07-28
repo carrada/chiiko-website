@@ -1,6 +1,7 @@
 import type { MasonryItem } from "@/components/ui/Masonry";
 
 const GALLERY_FOLDERS: Record<string, string> = {
+  "veraz": "VerazMedia",
   "eamx": "EAMXChiiko",
   "compufest": "compufestChiiko",
   "emicarrada": "emicarradaChiiko",
@@ -8,6 +9,17 @@ const GALLERY_FOLDERS: Record<string, string> = {
 };
 
 const GALLERY_FILES: Record<string, string[]> = {
+  "veraz": [
+    "10.jpg",
+    "17.jpg",
+    "5.jpg",
+    "6.jpg",
+    "Captura desde 2026-07-28 17-20-24.png",
+    "Captura desde 2026-07-28 17-20-52.png",
+    "Captura desde 2026-07-28 17-21-14.png",
+    "¿Cómo funciona Veraz.jpg",
+    "estudiantes-vendio-a-mikel-amondarain-la-joya-que-lo-salvo-en-la-copa-libertador-1f968a9b (Copiar).png",
+  ],
   "eamx": [
     "05d84694-6d39-4713-b1ab-ec4a35e6fb49.webp",
     "Captura desde 2026-06-14 17-36-24.webp",

@@ -12,6 +12,18 @@ export const blogPageContent: BlogPageContent = {
   backToBlog: "← ブログへ戻る",
   posts: [
     {
+      slug: "veraz-news-platform-case",
+      title: "影響せずに伝える：Veraz",
+      excerpt: "デザインシステム、3D地球儀、二言語のニュースプラットフォーム。",
+      category: "プロジェクト",
+      body: body([
+        "誠実なメディアプロダクトはソースの透明性を最優先します。",
+        "Veraz（veraz.app）はRSSを集約し、原文へリンクします。",
+        "GSAP、R3F、Next.js + Supabase。Chiikö（CDMX）。",
+        "事例：/proyectos/veraz — veraz.app。",
+      ]),
+    },
+    {
       slug: "google-ecosystem-visit",
       title: "生態系から得た着想：Google 訪問記",
       excerpt: "対話設計は画面の内側だけでなく、技術生態系全体の理解から育つ。",

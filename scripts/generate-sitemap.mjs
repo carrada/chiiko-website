@@ -10,6 +10,7 @@ const DEFAULT_LASTMOD = "2026-06-14";
 const LANGS = ["es", "en", "fr", "de", "pt", "it", "ja", "ko", "nl", "zh"];
 
 const BLOG_SLUGS = [
+  "veraz-news-platform-case",
   "google-ecosystem-visit",
   "pinterest-visual-culture-visit",
   "sophie-gomez-digital-identity",
@@ -19,6 +20,7 @@ const BLOG_SLUGS = [
 ];
 
 const BLOG_DATES = {
+  "veraz-news-platform-case": "2026-07-28",
   "google-ecosystem-visit": "2026-04-07",
   "pinterest-visual-culture-visit": "2026-01-13",
   "sophie-gomez-digital-identity": "2026-06-29",
@@ -27,7 +29,7 @@ const BLOG_DATES = {
   "compufest-2026-sponsors": "2026-04-23",
 };
 
-const PROJECT_SLUGS = ["eamx", "compufest", "emicarrada", "alancrespo_ai"];
+const PROJECT_SLUGS = ["veraz", "eamx", "compufest", "emicarrada", "alancrespo_ai"];
 
 const entries = [
   { loc: "/", esPath: "/", enPath: "/", changefreq: "monthly", priority: "1.0" },

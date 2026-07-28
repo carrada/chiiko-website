@@ -1,11 +1,15 @@
 import type { ProjectDetailContent } from "@/data/projectDetails";
+import { mergeProjectItemSeo, projectsPageSeo } from "./project-seo";
+import { verazDetailsKo } from "./veraz/details.i18n";
+import { verazItems } from "./veraz/items";
 
 export const projectContent = {
   page: {
     title: "프로젝트",
     description:
       "최신 프로젝트와 케이스 스터디를 살펴보세요.",
-    seoDescription: "프로젝트와 케이스 스터디 탐색",
+    seoTitle: projectsPageSeo.ko.seoTitle,
+    seoDescription: projectsPageSeo.ko.seoDescription,
     back: "← 프로젝트로 돌아가기",
     visitWebsite: "웹사이트 방문",
   },
@@ -18,6 +22,7 @@ export const projectContent = {
     engineering: "엔지니어링 & 경험",
   },
   items: {
+    veraz: mergeProjectItemSeo("veraz", "ko", verazItems.ko),
     eamx: {
       title: "EAMX",
       description: "건축과 구조적 정밀성을 디지털 영역으로.",
@@ -46,6 +51,7 @@ export const projectContent = {
     },
   },
   details: {
+    veraz: verazDetailsKo,
     eamx: {
       tagline:
         "Architektur und strukturelle Präzision auf die digitale Ebene gebracht.",

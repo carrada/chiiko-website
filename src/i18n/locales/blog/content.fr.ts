@@ -12,6 +12,18 @@ export const blogPageContent: BlogPageContent = {
   backToBlog: "← Retour au blog",
   posts: [
     {
+      slug: "veraz-news-platform-case",
+      title: "Informer sans influencer : Veraz et l’artisanat produit",
+      excerpt: "Comment nous avons conçu Veraz — plateforme d’actualités, design system, globe 3D et lecture bilingue sans IA bloquante.",
+      category: "Projets",
+      body: body([
+        "Un produit média honnête ne vend pas du hype IA : il exige des sources claires et une architecture lecture-first.",
+        "Veraz (veraz.app) agrège des flux RSS vérifiables avec attribution et lien vers l’original. L’IA est optionnelle.",
+        "Design system tokenisé, landing GSAP, globe R3F, produit /noticias bilingue. Backend Next.js 15 + Supabase depuis Mexico.",
+        "Cas complet : /proyectos/veraz — plateforme : veraz.app.",
+      ]),
+    },
+    {
       slug: "google-ecosystem-visit",
       title: "Inspiration dans l'écosystème : visite chez Google",
       excerpt: "Le design d'interaction progresse en comprenant l'écosystème technologique mondial.",

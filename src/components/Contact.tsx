@@ -6,6 +6,10 @@ import { ValidationError, useForm } from "@formspree/react";
 import { getPageSeo } from "@/lib/seo-meta";
 import { buildHreflangs } from "@/lib/seo-i18n";
 import { buildBreadcrumbSchema, generateLocalBusinessSchema } from "@/lib/seo";
+import {
+  generateProfessionalServiceSchema,
+  getStudioSeoMeta,
+} from "@/lib/seo-studio";
 import { useAppLanguage } from "@/hooks/useAppLanguage";
 import { useContactContent } from "@/hooks/useContactContent";
 import { FORM_IDS } from "@/constants";
@@ -18,6 +22,7 @@ export default function Contact() {
   const location = useLocation();
   const { t } = useTranslation();
   const seo = getPageSeo("contact", language);
+  const studioSeo = getStudioSeoMeta(language);
   const contactPath = usesSpanishRoutes ? "/contacto" : "/contact";
   const [state, handleSubmit] = useForm(FORM_IDS.CONTACT_FORM);
   const [showNotification, setShowNotification] = useState(false);
@@ -59,10 +64,12 @@ export default function Contact() {
       <SEO
         title={seo.title}
         description={seo.description}
+        keywords={studioSeo.keywords}
         url={contactPath}
         hreflangs={buildHreflangs(location.pathname)}
         schema={[
-          generateLocalBusinessSchema(),
+          generateLocalBusinessSchema(language),
+          generateProfessionalServiceSchema(language),
           buildBreadcrumbSchema([
             { name: t("nav.home"), path: "/" },
             { name: t("nav.contact"), path: contactPath },

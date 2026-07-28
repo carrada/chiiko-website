@@ -5,54 +5,54 @@ type SeoEntry = { title: string; description: string };
 
 const HOME: Record<AppLanguage, SeoEntry> = {
   es: {
-    title: "Chiiko | Diseño y Desarrollo Estratégico",
+    title: "Chiikö | Diseño web y desarrollo en CDMX",
     description:
-      "Estudio creativo especializado en diseño estratégico y desarrollo web. Colaboramos con marcas que buscan impacto digital.",
+      "Estudio de diseño web en Ciudad de México (CDMX): UX/UI, desarrollo frontend, branding y producto digital. Chiikö — artesanía digital para marcas en México y LATAM.",
   },
   en: {
-    title: "Chiiko | Strategic Design and Development",
+    title: "Chiikö | Web design & development in Mexico City",
     description:
-      "Creative studio specializing in strategic design and web development. We collaborate with brands seeking digital impact.",
+      "Web design studio in Mexico City (CDMX): UX/UI, advanced frontend, branding, and digital products. Chiikö — digital craftsmanship for brands in Mexico and LATAM.",
   },
   fr: {
-    title: "Chiiko | Design et développement stratégique",
+    title: "Chiikö | Design web à Mexico (CDMX)",
     description:
-      "Studio créatif spécialisé en design stratégique et développement web. Nous collaborons avec des marques en quête d'impact digital.",
+      "Studio de design web à Mexico : UX/UI, frontend, branding et produit digital. Chiikö — Ciudad de México et LATAM.",
   },
   de: {
-    title: "Chiiko | Strategisches Design und Entwicklung",
+    title: "Chiikö | Webdesign in Mexico City (CDMX)",
     description:
-      "Kreativstudio für strategisches Design und Webentwicklung. Wir arbeiten mit Marken, die digitalen Impact suchen.",
+      "Webdesign-Studio in Mexico City: UX/UI, Frontend, Branding und digitale Produkte. Chiikö — CDMX und LATAM.",
   },
   pt: {
-    title: "Chiiko | Design e desenvolvimento estratégico",
+    title: "Chiikö | Design web na CDMX",
     description:
-      "Estúdio criativo especializado em design estratégico e desenvolvimento web. Colaboramos com marcas que buscam impacto digital.",
+      "Estúdio de design web na Cidade do México: UX/UI, frontend, branding e produto digital. Chiikö.",
   },
   it: {
-    title: "Chiiko | Design e sviluppo strategico",
+    title: "Chiikö | Web design a Città del Messico",
     description:
-      "Studio creativo specializzato in design strategico e sviluppo web. Collaboriamo con brand che cercano impatto digitale.",
+      "Studio di web design a CDMX: UX/UI, frontend, branding e prodotto digitale. Chiikö.",
   },
   ja: {
-    title: "Chiiko | 戦略的デザインと開発",
+    title: "Chiikö | CDMX Webデザイン・開発",
     description:
-      "戦略的デザインとウェブ開発に特化したクリエイティブスタジオ。デジタルインパクトを求めるブランドと協働します。",
+      "メキシコシティのWebデザインスタジオ：UX/UI、フロントエンド、ブランディング。Chiikö。",
   },
   ko: {
-    title: "Chiiko | 전략적 디자인과 개발",
+    title: "Chiikö | CDMX 웹 디자인·개발",
     description:
-      "전략적 디자인과 웹 개발에 특화된 크리에이티브 스튜디오. 디지털 임팩트를 추구하는 브랜드와 협업합니다.",
+      "멕시코시티 웹 디자인 스튜디오: UX/UI, 프론트엔드, 브랜딩. Chiikö.",
   },
   nl: {
-    title: "Chiiko | Strategisch design en ontwikkeling",
+    title: "Chiikö | Webdesign Mexico-Stad (CDMX)",
     description:
-      "Creatief studio gespecialiseerd in strategisch design en webontwikkeling. We werken met merken die digital impact zoeken.",
+      "Webdesignstudio in Mexico-Stad: UX/UI, frontend, branding. Chiikö.",
   },
   zh: {
-    title: "Chiiko | 战略设计与开发",
+    title: "Chiikö | 墨西哥城网站设计",
     description:
-      "专注于战略设计与网站开发的创意工作室。与追求数字影响力的品牌合作。",
+      "墨西哥城（CDMX）网站设计工作室：UX/UI、前端、品牌与数字产品。Chiikö。",
   },
 };
 
@@ -111,14 +111,14 @@ const ABOUT: Record<AppLanguage, SeoEntry> = {
 
 const CONTACT: Record<AppLanguage, SeoEntry> = {
   es: {
-    title: "Contacto | Comienza tu Proyecto",
+    title: "Contacto | Diseño web CDMX — Chiikö",
     description:
-      "¿Tienes un proyecto en mente? Contáctanos y cuéntanos sobre tu visión. Respondemos en 48 horas.",
+      "¿Proyecto de diseño web en Ciudad de México? Contáctanos: UX/UI, desarrollo y branding. Respuesta en 48 horas desde CDMX.",
   },
   en: {
-    title: "Contact | Start Your Project",
+    title: "Contact | Web design Mexico City — Chiikö",
     description:
-      "Have a project in mind? Contact us and tell us about your vision. We respond within 48 hours.",
+      "Start a web design project in Mexico City? Contact Chiikö for UX/UI, development, and branding. We reply within 48 hours.",
   },
   fr: {
     title: "Contact | Lancez votre projet",

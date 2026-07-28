@@ -86,8 +86,17 @@ export class OrganizationSchemaBuilder {
     return this;
   }
 
+  setSlogan(slogan: string): this {
+    this.schema.slogan = slogan;
+    return this;
+  }
+
+  setKnowsAbout(topics: string[]): this {
+    this.schema.knowsAbout = topics;
+    return this;
+  }
+
   build(): SchemaObject {
-    // Validate required fields before building (Postcondition)
     Validator.require(!!this.schema.name, "Organization name is required before building");
     Validator.require(!!this.schema.url, "Organization URL is required before building");
     
@@ -159,6 +168,16 @@ export class LocalBusinessSchemaBuilder {
       this.schema.sameAs = [];
     }
     this.schema.sameAs.push(url);
+    return this;
+  }
+
+  setSlogan(slogan: string): this {
+    this.schema.slogan = slogan;
+    return this;
+  }
+
+  setKnowsAbout(topics: string[]): this {
+    this.schema.knowsAbout = topics;
     return this;
   }
 

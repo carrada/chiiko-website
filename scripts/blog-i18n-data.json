@@ -9,6 +9,19 @@
     "backToBlog": "← Back to blog",
     "posts": [
       {
+        "slug": "veraz-news-platform-case",
+        "title": "Inform without influencing: Veraz and product craftsmanship",
+        "excerpt": "How we designed and built Veraz — a news platform with a tokenized design system, 3D globe, and bilingual reading where AI never blocks the story.",
+        "category": "Projects",
+        "body": [
+          "An honest media product does not need AI hype: it needs clear sources, readable type, and architecture that puts reading first.",
+          "Veraz (veraz.app) was born with a simple motto: inform without influencing. From Chiikö in Mexico City we shaped design and engineering for a platform that aggregates verifiable RSS, shows headlines and excerpts with attribution, and links to the original outlet — without republishing full articles. AI is optional and fail-open.",
+          "Visually we built a tokenized design system (dark theme, custom typography), a GSAP marketing landing, and an interactive React Three Fiber globe. The reading product at /noticias organizes verticals, trust banners for prestigious sources, and article detail with SEO and JSON-LD.",
+          "Behind it: a modular Next.js 15 + Supabase monolith with multi-source RSS ingestion, Vercel cron, and social operations on AWS — strategic web design meeting a live media product from CDMX.",
+          "Explore the full case study at /proyectos/veraz and the live platform at veraz.app."
+        ]
+      },
+      {
         "slug": "google-ecosystem-visit",
         "title": "Inspiration in the ecosystem: A visit to Google",
         "excerpt": "Interaction design grows by understanding the global technology ecosystem.",
@@ -91,6 +104,18 @@
     "readTimeLabel": "min de lecture",
     "backToBlog": "← Retour au blog",
     "posts": [
+      {
+        "slug": "veraz-news-platform-case",
+        "title": "Informer sans influencer : Veraz et l’artisanat produit",
+        "excerpt": "Comment nous avons conçu Veraz — plateforme d’actualités, design system, globe 3D et lecture bilingue sans IA bloquante.",
+        "category": "Projets",
+        "body": [
+          "Un produit média honnête ne vend pas du hype IA : il exige des sources claires et une architecture lecture-first.",
+          "Veraz (veraz.app) agrège des flux RSS vérifiables avec attribution et lien vers l’original. L’IA est optionnelle.",
+          "Design system tokenisé, landing GSAP, globe R3F, produit /noticias bilingue. Backend Next.js 15 + Supabase depuis Mexico.",
+          "Cas complet : /proyectos/veraz — plateforme : veraz.app."
+        ]
+      },
       {
         "slug": "google-ecosystem-visit",
         "title": "Inspiration dans l'écosystème : visite chez Google",
@@ -175,6 +200,18 @@
     "backToBlog": "← Zurück zum Blog",
     "posts": [
       {
+        "slug": "veraz-news-platform-case",
+        "title": "Informieren ohne Beeinflussung: Veraz",
+        "excerpt": "Veraz: Nachrichtenplattform mit Design System, 3D-Globus und bilingualer UX — KI optional.",
+        "category": "Projekte",
+        "body": [
+          "Ehrliche Medienprodukte setzen auf Quellenklarheit statt KI-Hype.",
+          "Veraz (veraz.app) kuratiert RSS mit Attribution und Original-Link.",
+          "Token-Design, GSAP-Landing, R3F-Globus, Next.js + Supabase aus Mexico City.",
+          "Fallstudie: /proyectos/veraz — Live: veraz.app."
+        ]
+      },
+      {
         "slug": "google-ecosystem-visit",
         "title": "Inspiration im Ökosystem: Ein Besuch bei Google",
         "excerpt": "Interaktionsgestaltung wächst durch das Verständnis des globalen Technologieökosystems.",
@@ -257,6 +294,18 @@
     "readTimeLabel": "min de leitura",
     "backToBlog": "← Voltar ao blog",
     "posts": [
+      {
+        "slug": "veraz-news-platform-case",
+        "title": "Informar sem influenciar: Veraz",
+        "excerpt": "Plataforma de notícias com design system, globo 3D e leitura bilíngue — IA opcional.",
+        "category": "Projetos",
+        "body": [
+          "Produto de mídia honesto prioriza leitura e fontes verificáveis.",
+          "Veraz (veraz.app) agrega RSS com atribuição clara.",
+          "Design tokenizado, GSAP, R3F, Next.js + Supabase. Chiikö na CDMX.",
+          "Case: /proyectos/veraz — veraz.app."
+        ]
+      },
       {
         "slug": "google-ecosystem-visit",
         "title": "Inspiração no ecossistema: visita ao Google",
@@ -341,6 +390,18 @@
     "backToBlog": "← Torna al blog",
     "posts": [
       {
+        "slug": "veraz-news-platform-case",
+        "title": "Informare senza influenzare: Veraz",
+        "excerpt": "Piattaforma news con design system, globo 3D e prodotto bilingue.",
+        "category": "Progetti",
+        "body": [
+          "Un media product onesto mette la lettura al centro.",
+          "Veraz (veraz.app) cura RSS con attribuzione e link alla fonte.",
+          "Token, GSAP, R3F, Next.js + Supabase da Città del Messico.",
+          "Case study: /proyectos/veraz — veraz.app."
+        ]
+      },
+      {
         "slug": "google-ecosystem-visit",
         "title": "Ispirazione nell'ecosistema: visita a Google",
         "excerpt": "La progettazione di interazione cresce comprendendo l'ecosistema tecnologico globale.",
@@ -423,6 +484,18 @@
     "readTimeLabel": "分で読了",
     "backToBlog": "← ブログへ戻る",
     "posts": [
+      {
+        "slug": "veraz-news-platform-case",
+        "title": "影響せずに伝える：Veraz",
+        "excerpt": "デザインシステム、3D地球儀、二言語のニュースプラットフォーム。",
+        "category": "プロジェクト",
+        "body": [
+          "誠実なメディアプロダクトはソースの透明性を最優先します。",
+          "Veraz（veraz.app）はRSSを集約し、原文へリンクします。",
+          "GSAP、R3F、Next.js + Supabase。Chiikö（CDMX）。",
+          "事例：/proyectos/veraz — veraz.app。"
+        ]
+      },
       {
         "slug": "google-ecosystem-visit",
         "title": "生態系から得た着想：Google 訪問記",
@@ -507,6 +580,18 @@
     "backToBlog": "← 블로그로 돌아가기",
     "posts": [
       {
+        "slug": "veraz-news-platform-case",
+        "title": "영향 없이 inform: Veraz",
+        "excerpt": "디자인 시스템, 3D 지구본, 이중 언어 뉴스 플랫폼.",
+        "category": "프로젝트",
+        "body": [
+          "진정한 미디어 제품은 읽기와 출처를 우선합니다.",
+          "Veraz(veraz.app)는 RSS를 큐레이션하고 원문으로 연결합니다.",
+          "GSAP, R3F, Next.js + Supabase. Chiikö CDMX.",
+          "사례: /proyectos/veraz — veraz.app."
+        ]
+      },
+      {
         "slug": "google-ecosystem-visit",
         "title": "생태계에서 얻은 영감: Google 방문",
         "excerpt": "인터랙션 설계는 화면 안에서만이 아니라 기술 생태계 전체를 이해할 때 깊어진다.",
@@ -590,6 +675,18 @@
     "backToBlog": "← Terug naar blog",
     "posts": [
       {
+        "slug": "veraz-news-platform-case",
+        "title": "Informeren zonder beïnvloeden: Veraz",
+        "excerpt": "Nieuwsplatform met design system, 3D-globe en tweetalige lezing.",
+        "category": "Projecten",
+        "body": [
+          "Eerlijke media zetten bronnen en leesbaarheid voorop.",
+          "Veraz (veraz.app) aggregeert RSS met attributie.",
+          "GSAP, R3F, Next.js + Supabase uit Mexico-Stad.",
+          "Case: /proyectos/veraz — veraz.app."
+        ]
+      },
+      {
         "slug": "google-ecosystem-visit",
         "title": "Inspiratie in het ecosysteem: een bezoek aan Google",
         "excerpt": "Interactief ontwerp groeit door het wereldwijde technologie-ecosysteem te begrijpen.",
@@ -672,6 +769,18 @@
     "readTimeLabel": "分钟阅读",
     "backToBlog": "← 返回博客",
     "posts": [
+      {
+        "slug": "veraz-news-platform-case",
+        "title": "inform 而不影响：Veraz",
+        "excerpt": "新闻平台：设计系统、3D 地球仪、双语阅读，AI 可选。",
+        "category": "项目",
+        "body": [
+          "诚实的新闻产品优先阅读与来源透明。",
+          "Veraz（veraz.app）聚合 RSS 并链接原文。",
+          "GSAP、R3F、Next.js + Supabase。Chiikö 墨西哥城。",
+          "案例：/proyectos/veraz — veraz.app。"
+        ]
+      },
       {
         "slug": "google-ecosystem-visit",
         "title": "生态中的灵感：走访 Google",

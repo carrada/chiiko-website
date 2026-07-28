@@ -1,11 +1,15 @@
 import type { ProjectDetailContent } from "@/data/projectDetails";
+import { mergeProjectItemSeo, projectsPageSeo } from "./project-seo";
+import { verazDetailsPt } from "./veraz/details.i18n";
+import { verazItems } from "./veraz/items";
 
 export const projectContent = {
   page: {
     title: "Projetos",
     description:
       "Aqui você pode ver nossos últimos projetos e estudos de caso.",
-    seoDescription: "Explore nossos projetos e estudos de caso",
+    seoTitle: projectsPageSeo.pt.seoTitle,
+    seoDescription: projectsPageSeo.pt.seoDescription,
     back: "← Voltar aos projetos",
     visitWebsite: "Visitar site",
   },
@@ -18,6 +22,7 @@ export const projectContent = {
     engineering: "Engenharia & Experiência",
   },
   items: {
+    veraz: mergeProjectItemSeo("veraz", "pt", verazItems.pt),
     eamx: {
       title: "EAMX",
       description:
@@ -50,6 +55,7 @@ export const projectContent = {
     },
   },
   details: {
+    veraz: verazDetailsPt,
     eamx: {
       tagline:
         "Arquitetura y precisión estructural llevadas al plano digital.",

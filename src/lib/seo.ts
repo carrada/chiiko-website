@@ -8,6 +8,10 @@ import {
 import { Validator } from "./validators";
 import { APP_LANGUAGES, HTML_LANG, type AppLanguage } from "./i18n";
 import { getProjectPath } from "@/data/projects";
+import {
+  generateProfessionalServiceSchema,
+  getStudioSeoMeta,
+} from "./seo-studio";
 
 export interface SEOConfig {
   title: string;
@@ -24,6 +28,7 @@ export interface SEOConfig {
   modifiedTime?: string;
   articleSection?: string;
   articleAuthor?: string;
+  keywords?: string;
   schema?: object | object[];
   noindex?: boolean;
 }
@@ -169,12 +174,15 @@ export const SEO_PAGES = {
 };
 
 // Generate structured data (Schema.org JSON-LD) using Builder Pattern
-export const generateOrganizationSchema = () => {
+export const generateOrganizationSchema = (lang: AppLanguage = "es") => {
+  const meta = getStudioSeoMeta(lang);
   return new OrganizationSchemaBuilder()
     .setName(SITE_NAME)
     .setUrl(SITE_URL)
     .setLogo(`${SITE_URL}/logo.png`)
-    .setDescription(SITE_DESCRIPTION)
+    .setDescription(meta.organizationDescription)
+    .setSlogan(meta.slogan)
+    .setKnowsAbout(meta.knowsAbout)
     .addSocialProfile("https://www.linkedin.com/company/chiiko/")
     .addSocialProfile("https://www.behance.net/chiiko")
     .addSocialProfile("https://instagram.com/chiiko.design")
@@ -195,12 +203,15 @@ export const generateOrganizationSchema = () => {
     .build();
 };
 
-export const generateLocalBusinessSchema = () => {
+export const generateLocalBusinessSchema = (lang: AppLanguage = "es") => {
+  const meta = getStudioSeoMeta(lang);
   return new LocalBusinessSchemaBuilder()
     .setName(SITE_NAME)
     .setUrl(SITE_URL)
     .setImage(`${SITE_URL}/logo.png`)
-    .setDescription(SITE_DESCRIPTION)
+    .setDescription(meta.localBusinessDescription)
+    .setSlogan(meta.slogan)
+    .setKnowsAbout(meta.knowsAbout)
     .setPriceRange("$$$")
     .setAreaServed("MX", "Mexico")
     .setAddress("Ciudad de México", "CDMX", "MX")
@@ -210,11 +221,12 @@ export const generateLocalBusinessSchema = () => {
     .build();
 };
 
-export function generateHomeSchemas() {
+export function generateHomeSchemas(lang: AppLanguage = "es") {
   return [
-    generateOrganizationSchema(),
-    generateLocalBusinessSchema(),
-    generateWebSiteSchema(),
+    generateOrganizationSchema(lang),
+    generateLocalBusinessSchema(lang),
+    generateWebSiteSchema(lang),
+    generateProfessionalServiceSchema(lang),
   ];
 }
 
@@ -327,25 +339,38 @@ export function generateCreativeWorkSchema(
     description: string;
     image: string;
     slug: string;
+    seoDescription?: string;
   },
   pagePath: string,
   lang: AppLanguage
 ) {
   const pageUrl = toAbsoluteUrl(pagePath);
+  const meta = getStudioSeoMeta(lang);
 
   return {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
     name: project.title,
-    description: project.description,
+    description: project.seoDescription ?? project.description,
     image: toAbsoluteUrl(project.image),
     url: pageUrl,
     creator: {
       "@type": "Organization",
       name: SITE_NAME,
       url: SITE_URL,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Ciudad de México",
+        addressRegion: "CDMX",
+        addressCountry: "MX",
+      },
     },
     inLanguage: HTML_LANG[lang],
+    keywords: meta.knowsAbout.slice(0, 6).join(", "),
+    contentLocation: {
+      "@type": "City",
+      name: "Ciudad de México",
+    },
   };
 }
 
@@ -387,13 +412,16 @@ export const generateFAQSchema = (
   return builder.build();
 };
 
-export const generateWebSiteSchema = () => ({
+export const generateWebSiteSchema = (lang: AppLanguage = "es") => {
+  const meta = getStudioSeoMeta(lang);
+  return {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: SITE_NAME,
   url: SITE_URL,
-  description: SITE_DESCRIPTION,
-  inLanguage: APP_LANGUAGES.map((lang) => HTML_LANG[lang]),
+  description: meta.organizationDescription,
+  inLanguage: APP_LANGUAGES.map((code) => HTML_LANG[code]),
+  about: meta.knowsAbout,
   potentialAction: {
     "@type": "SearchAction",
     target: {
@@ -402,7 +430,8 @@ export const generateWebSiteSchema = () => ({
     },
     "query-input": "required name=search_term_string",
   },
-});
+  };
+};
 
 export const generatePlansSchema = (
   content: import("@/i18n/locales/plans/types").PlansPageContent,

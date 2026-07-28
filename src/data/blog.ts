@@ -1,6 +1,7 @@
 import { BLOG_DATES, getBlogHeroImage } from "@/data/blogGallery";
 
 export const BLOG_SLUGS = [
+  "veraz-news-platform-case",
   "google-ecosystem-visit",
   "pinterest-visual-culture-visit",
   "sophie-gomez-digital-identity",
@@ -19,6 +20,12 @@ export interface BlogPostMeta {
 }
 
 export const BLOG_POST_META: Record<BlogSlug, BlogPostMeta> = {
+  "veraz-news-platform-case": {
+    slug: "veraz-news-platform-case",
+    image: getBlogHeroImage("veraz-news-platform-case"),
+    date: BLOG_DATES["veraz-news-platform-case"],
+    readMinutes: 6,
+  },
   "google-ecosystem-visit": {
     slug: "google-ecosystem-visit",
     image: getBlogHeroImage("google-ecosystem-visit"),

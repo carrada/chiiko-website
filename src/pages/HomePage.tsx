@@ -11,6 +11,7 @@ import SEO from "@/components/SEO";
 import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { generateHomeSchemas } from "@/lib/seo";
+import { getStudioSeoMeta } from "@/lib/seo-studio";
 import { getPageSeo } from "@/lib/seo-meta";
 import { buildHreflangs } from "@/lib/seo-i18n";
 import { useAppLanguage } from "@/hooks/useAppLanguage";
@@ -40,14 +41,16 @@ export default function HomePage() {
   const { language } = useAppLanguage();
   const location = useLocation();
   const seo = getPageSeo("home", language);
+  const studioSeo = getStudioSeoMeta(language);
 
   return (
     <>
       <SEO
         title={seo.title}
         description={seo.description}
+        keywords={studioSeo.keywords}
         url="/"
-        schema={generateHomeSchemas()}
+        schema={generateHomeSchemas(language)}
         hreflangs={buildHreflangs(location.pathname)}
       />
       

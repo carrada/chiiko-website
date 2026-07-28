@@ -2,6 +2,7 @@ import type { AppLanguage } from "@/lib/i18n";
 import { getRouteLanguage } from "@/lib/i18n";
 
 export const PROJECT_SLUGS = [
+  "veraz",
   "eamx",
   "compufest",
   "emicarrada",
@@ -17,6 +18,11 @@ export interface ProjectMeta {
 }
 
 export const PROJECT_META: Record<ProjectSlug, ProjectMeta> = {
+  veraz: {
+    slug: "veraz",
+    image: "/VerazMedia/Verazcover.jpg",
+    websiteUrl: "https://veraz.app",
+  },
   eamx: {
     slug: "eamx",
     image: "/EAMX.png",

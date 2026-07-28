@@ -12,6 +12,18 @@ export const blogPageContent: BlogPageContent = {
   backToBlog: "← Torna al blog",
   posts: [
     {
+      slug: "veraz-news-platform-case",
+      title: "Informare senza influenzare: Veraz",
+      excerpt: "Piattaforma news con design system, globo 3D e prodotto bilingue.",
+      category: "Progetti",
+      body: body([
+        "Un media product onesto mette la lettura al centro.",
+        "Veraz (veraz.app) cura RSS con attribuzione e link alla fonte.",
+        "Token, GSAP, R3F, Next.js + Supabase da Città del Messico.",
+        "Case study: /proyectos/veraz — veraz.app.",
+      ]),
+    },
+    {
       slug: "google-ecosystem-visit",
       title: "Ispirazione nell'ecosistema: visita a Google",
       excerpt: "La progettazione di interazione cresce comprendendo l'ecosistema tecnologico globale.",

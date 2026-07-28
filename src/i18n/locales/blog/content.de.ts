@@ -12,6 +12,18 @@ export const blogPageContent: BlogPageContent = {
   backToBlog: "← Zurück zum Blog",
   posts: [
     {
+      slug: "veraz-news-platform-case",
+      title: "Informieren ohne Beeinflussung: Veraz",
+      excerpt: "Veraz: Nachrichtenplattform mit Design System, 3D-Globus und bilingualer UX — KI optional.",
+      category: "Projekte",
+      body: body([
+        "Ehrliche Medienprodukte setzen auf Quellenklarheit statt KI-Hype.",
+        "Veraz (veraz.app) kuratiert RSS mit Attribution und Original-Link.",
+        "Token-Design, GSAP-Landing, R3F-Globus, Next.js + Supabase aus Mexico City.",
+        "Fallstudie: /proyectos/veraz — Live: veraz.app.",
+      ]),
+    },
+    {
       slug: "google-ecosystem-visit",
       title: "Inspiration im Ökosystem: Ein Besuch bei Google",
       excerpt: "Interaktionsgestaltung wächst durch das Verständnis des globalen Technologieökosystems.",

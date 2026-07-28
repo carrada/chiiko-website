@@ -31,7 +31,7 @@ describe("SEO schema generators", () => {
 
   it("generateHomeSchemas returns organization, local business and website", () => {
     const schemas = generateHomeSchemas();
-    expect(schemas).toHaveLength(3);
+    expect(schemas).toHaveLength(4);
     expect(schemas[0]["@type"]).toBe("Organization");
     expect(schemas[1]["@type"]).toBe("LocalBusiness");
     expect(schemas[2]["@type"]).toBe("WebSite");

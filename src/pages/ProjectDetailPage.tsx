@@ -17,6 +17,7 @@ import {
   generateCreativeWorkSchema,
   toAbsoluteUrl,
 } from "@/lib/seo";
+import { getStudioSeoMeta } from "@/lib/seo-studio";
 
 export default function ProjectDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -36,12 +37,14 @@ export default function ProjectDetailPage() {
   }
 
   const projectPath = getProjectPath(project.slug, lang);
+  const studioSeo = getStudioSeoMeta(lang);
   const creativeWorkSchema = generateCreativeWorkSchema(
     {
       title: project.title,
       description: project.description,
       image: project.image,
       slug: project.slug,
+      seoDescription: project.seoDescription,
     },
     projectPath,
     lang
@@ -55,8 +58,9 @@ export default function ProjectDetailPage() {
   return (
     <>
       <SEO
-        title={project.title}
-        description={project.description}
+        title={project.seoTitle ?? project.title}
+        description={project.seoDescription ?? project.description}
+        keywords={studioSeo.keywords}
         url={projectPath}
         canonicalUrl={canonicalPath}
         hreflangs={hreflangs}

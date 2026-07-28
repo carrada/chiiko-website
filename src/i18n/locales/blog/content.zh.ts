@@ -12,6 +12,18 @@ export const blogPageContent: BlogPageContent = {
   backToBlog: "← 返回博客",
   posts: [
     {
+      slug: "veraz-news-platform-case",
+      title: "inform 而不影响：Veraz",
+      excerpt: "新闻平台：设计系统、3D 地球仪、双语阅读，AI 可选。",
+      category: "项目",
+      body: body([
+        "诚实的新闻产品优先阅读与来源透明。",
+        "Veraz（veraz.app）聚合 RSS 并链接原文。",
+        "GSAP、R3F、Next.js + Supabase。Chiikö 墨西哥城。",
+        "案例：/proyectos/veraz — veraz.app。",
+      ]),
+    },
+    {
       slug: "google-ecosystem-visit",
       title: "生态中的灵感：走访 Google",
       excerpt: "交互设计并非只在屏幕前诞生，而是源于对技术生态的整体理解。",
