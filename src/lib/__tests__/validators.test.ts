@@ -168,4 +168,39 @@ describe('Validator', () => {
       }).toThrow('testNum must be a valid number');
     });
   });
+
+  describe('requireNonNull', () => {
+    it('should return the value when not null or undefined', () => {
+      expect(Validator.requireNonNull('hello', 'param')).toBe('hello');
+      expect(Validator.requireNonNull(0, 'param')).toBe(0);
+      expect(Validator.requireNonNull(false, 'param')).toBe(false);
+      expect(Validator.requireNonNull('', 'param')).toBe('');
+    });
+
+    it('should throw when value is null', () => {
+      expect(() => {
+        Validator.requireNonNull(null, 'testParam');
+      }).toThrow('testParam cannot be null or undefined');
+    });
+
+    it('should throw when value is undefined', () => {
+      expect(() => {
+        Validator.requireNonNull(undefined, 'testParam');
+      }).toThrow('testParam cannot be null or undefined');
+    });
+  });
+
+  describe('require', () => {
+    it('should not throw when condition is true', () => {
+      expect(() => {
+        Validator.require(true, 'should pass');
+      }).not.toThrow();
+    });
+
+    it('should throw when condition is false', () => {
+      expect(() => {
+        Validator.require(false, 'condition failed');
+      }).toThrow('condition failed');
+    });
+  });
 });
