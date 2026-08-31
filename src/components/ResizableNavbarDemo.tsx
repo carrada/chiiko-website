@@ -20,12 +20,14 @@ export function ResizableNavbarDemo() {
   ];
 
   return (
-    <Navbar>
-      <NavBody>
-        <NavbarLogo />
-        <NavItems items={navItems} />
-        <LanguageSwitcher />
-      </NavBody>
-    </Navbar>
+    <div className="navbar-light [color-scheme:light]">
+      <Navbar>
+        <NavBody>
+          <NavbarLogo />
+          <NavItems items={navItems} />
+          <LanguageSwitcher />
+        </NavBody>
+      </Navbar>
+    </div>
   );
 }

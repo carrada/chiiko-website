@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { ValidationError, useForm } from "@formspree/react";
@@ -76,8 +75,6 @@ export default function Contact() {
           ]),
         ]}
       />
-      <ResizableNavbarDemo />
-      <div className="py-12 tablet:py-16 md:py-24"></div>
 
       {showNotification && (
         <div

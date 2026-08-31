@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
@@ -12,7 +11,6 @@ import {
   generateProjectsListSchema,
 } from "@/lib/seo";
 import { getStudioSeoMeta } from "@/lib/seo-studio";
-import { motion } from "motion/react";
 
 export default function ProjectsPage() {
   const { lang, page, labels, projects } = useProjectTranslations();
@@ -48,14 +46,7 @@ export default function ProjectsPage() {
         schema={[projectsListSchema, breadcrumbSchema]}
       />
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="w-full min-h-screen bg-white flex flex-col"
-      >
-        <ResizableNavbarDemo />
-
+      <div className="w-full min-h-screen bg-white flex flex-col">
         <div className="flex-grow py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-black mb-8">
@@ -95,7 +86,7 @@ export default function ProjectsPage() {
         </div>
 
         <Footer />
-      </motion.div>
+      </div>
     </>
   );
 }

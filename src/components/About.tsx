@@ -1,4 +1,3 @@
-import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { getPageSeo } from "@/lib/seo-meta";
@@ -7,7 +6,7 @@ import { buildBreadcrumbSchema } from "@/lib/seo";
 import { useAppLanguage } from "@/hooks/useAppLanguage";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import HeroParallaxDemo from "@/components/hero-parallax-demo";
+import AboutDriftWallHero from "@/components/AboutDriftWallHero";
 import AboutTimeline from "@/components/AboutTimeline";
 import AboutValues from "@/components/AboutValues";
 
@@ -30,8 +29,7 @@ export default function About() {
           { name: t("nav.about"), path: aboutPath },
         ])}
       />
-      <ResizableNavbarDemo />
-      <HeroParallaxDemo />
+      <AboutDriftWallHero />
       <AboutTimeline />
       <AboutValues />
       <Footer />

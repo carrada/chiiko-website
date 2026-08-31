@@ -1,10 +1,8 @@
 import { useEffect } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
-import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Masonry from "@/components/ui/Masonry";
 import { getBlogListPath, getBlogPostPath } from "@/data/blog";
 import { getBlogMasonryItems } from "@/data/blogGallery";
@@ -70,14 +68,7 @@ export default function BlogPostPage() {
         schema={[blogPostingSchema, breadcrumbSchema]}
       />
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="w-full min-h-screen bg-white flex flex-col"
-      >
-        <ResizableNavbarDemo />
-
+      <div className="w-full min-h-screen bg-white flex flex-col">
         <article className="flex-grow py-20 px-4">
           <div className="max-w-3xl mx-auto">
             <Link
@@ -131,7 +122,7 @@ export default function BlogPostPage() {
         </article>
 
         <Footer />
-      </motion.div>
+      </div>
     </>
   );
 }

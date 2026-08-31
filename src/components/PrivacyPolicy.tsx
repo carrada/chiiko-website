@@ -1,4 +1,3 @@
-import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import LegalDocumentView from "@/components/LegalDocumentView";
@@ -20,8 +19,6 @@ export default function PrivacyPolicy() {
         noindex
         hreflangs={buildHreflangs(location.pathname)}
       />
-      <ResizableNavbarDemo />
-      <div className="py-12 tablet:py-16 md:py-24"></div>
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-24">
         <LegalDocumentView content={content} />
       </div>

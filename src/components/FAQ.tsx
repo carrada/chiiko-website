@@ -1,6 +1,5 @@
 import { useAppLanguage } from "@/hooks/useAppLanguage";
 import { useFaqContent } from "@/hooks/usePageContent";
-import { ResizableNavbarDemo } from "./ResizableNavbarDemo";
 import Footer from "./Footer";
 import SEO from "./SEO";
 import { generateFAQSchema } from "@/lib/seo";
@@ -23,8 +22,6 @@ export default function FAQ() {
         schema={generateFAQSchema(faq.items)}
         hreflangs={buildHreflangs(location.pathname)}
       />
-      <ResizableNavbarDemo />
-      <div className="py-12 tablet:py-16 md:py-24"></div>
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-24">
         <div className="mb-12 md:mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">{faq.title}</h1>

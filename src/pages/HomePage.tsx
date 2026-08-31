@@ -4,11 +4,9 @@ import WorkProcess from "@/components/WorkProcess";
 import CometCardDemo from "@/components/CometCardDemo";
 import ServicesCards from "@/components/ServicesCards";
 import WhoWeWorkWithDemo from "@/components/WhoWeWorkWithDemo";
-import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import { ProjectInitButton } from "@/components/ProjectInitButton";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import { generateHomeSchemas } from "@/lib/seo";
 import { getStudioSeoMeta } from "@/lib/seo-studio";
@@ -54,15 +52,7 @@ export default function HomePage() {
         hreflangs={buildHreflangs(location.pathname)}
       />
       
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="w-full"
-      >
-        <ResizableNavbarDemo />
-        <div className="py-10 tablet:py-16 md:py-24"></div>
-
+      <div className="w-full">
         <section id="home">
           <HeroScrollDemo />
           <ValuePropositions />
@@ -167,7 +157,7 @@ export default function HomePage() {
         </section>
         
         <Footer />
-      </motion.div>
+      </div>
     </>
   );
 }

@@ -1,4 +1,3 @@
-import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { generatePlansSchema } from "@/lib/seo";
@@ -108,8 +107,6 @@ export default function Plans() {
         schema={generatePlansSchema(plansPage, pageUrl)}
         hreflangs={buildHreflangs(location.pathname)}
       />
-      <ResizableNavbarDemo />
-      <div className="py-12 tablet:py-16 md:py-24"></div>
       <div className="max-w-7xl mx-auto px-4 py-16 md:py-24">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">{plansPage.headerTitle}</h1>

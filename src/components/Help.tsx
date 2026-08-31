@@ -1,6 +1,5 @@
 import { useAppLanguage } from "@/hooks/useAppLanguage";
 import { useHelpContent } from "@/hooks/usePageContent";
-import { ResizableNavbarDemo } from "./ResizableNavbarDemo";
 import Footer from "./Footer";
 import SEO from "./SEO";
 import { getPageSeo } from "@/lib/seo-meta";
@@ -21,8 +20,6 @@ export default function Help() {
         url={usesSpanishRoutes ? "/ayuda" : "/help"}
         hreflangs={buildHreflangs(location.pathname)}
       />
-      <ResizableNavbarDemo />
-      <div className="py-12 tablet:py-16 md:py-24"></div>
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-24">
         <div className="mb-12 md:mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">{help.title}</h1>

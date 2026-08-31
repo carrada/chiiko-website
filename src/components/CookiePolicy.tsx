@@ -1,6 +1,5 @@
 import { useAppLanguage } from "@/hooks/useAppLanguage";
 import { useI18nBundle } from "@/hooks/useI18nBundle";
-import { ResizableNavbarDemo } from "./ResizableNavbarDemo";
 import Footer from "./Footer";
 import SEO from "./SEO";
 import LegalDocumentView from "./LegalDocumentView";
@@ -22,8 +21,6 @@ export default function CookiePolicy() {
         noindex
         hreflangs={buildHreflangs(location.pathname)}
       />
-      <ResizableNavbarDemo />
-      <div className="py-12 tablet:py-16 md:py-24"></div>
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-24">
         <LegalDocumentView content={content} />
       </div>

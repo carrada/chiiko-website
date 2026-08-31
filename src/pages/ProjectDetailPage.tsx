@@ -1,12 +1,10 @@
 import { IconArrowUpRight } from "@tabler/icons-react";
 import { useEffect } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
-import { motion } from "motion/react";
 import { useTranslation } from "react-i18next";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import ProjectCaseStudy from "@/components/ProjectCaseStudy";
-import { ResizableNavbarDemo } from "@/components/ResizableNavbarDemo";
 import Masonry from "@/components/ui/Masonry";
 import { getProjectPath, getProjectsListPath } from "@/data/projects";
 import { getProjectMasonryItems } from "@/data/projectGallery";
@@ -69,14 +67,7 @@ export default function ProjectDetailPage() {
         schema={[creativeWorkSchema, breadcrumbSchema]}
       />
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="w-full min-h-screen bg-white flex flex-col"
-      >
-        <ResizableNavbarDemo />
-
+      <div className="w-full min-h-screen bg-white flex flex-col">
         <div className="flex-grow py-20 px-4">
           <div className="max-w-4xl mx-auto">
             <Link
@@ -133,7 +124,7 @@ export default function ProjectDetailPage() {
         </div>
 
         <Footer />
-      </motion.div>
+      </div>
     </>
   );
 }

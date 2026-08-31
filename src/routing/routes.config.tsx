@@ -1,5 +1,5 @@
+import { lazy, type ReactElement } from "react";
 import { Route } from "react-router-dom";
-import { type ReactElement } from "react";
 import PrivacyPolicy from "@/components/PrivacyPolicy";
 import FAQ from "@/components/FAQ";
 import Help from "@/components/Help";
@@ -11,9 +11,11 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import HowWeWork from "@/components/HowWeWork";
 import ProjectsPage from "@/pages/ProjectsPage";
-import ProjectDetailPage from "@/pages/ProjectDetailPage";
-import BlogPage from "@/pages/BlogPage";
-import BlogPostPage from "@/pages/BlogPostPage";
+import HomePage from "@/pages/HomePage";
+
+const ProjectDetailPage = lazy(() => import("@/pages/ProjectDetailPage"));
+const BlogPage = lazy(() => import("@/pages/BlogPage"));
+const BlogPostPage = lazy(() => import("@/pages/BlogPostPage"));
 
 interface RouteConfig {
   path: string;
@@ -54,6 +56,8 @@ export const ENGLISH_ROUTES: RouteConfig[] = [
   { path: "/help", element: <Help /> },
   { path: "/how-we-work", element: <HowWeWork /> },
 ];
+
+export const HOME_ROUTE: RouteConfig = { path: "/", element: <HomePage /> };
 
 // Helper to render routes
 export function renderRoutes(routes: RouteConfig[]) {
