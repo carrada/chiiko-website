@@ -14,23 +14,32 @@ import { getPageSeo } from "@/lib/seo-meta";
 import { buildHreflangs } from "@/lib/seo-i18n";
 import { useAppLanguage } from "@/hooks/useAppLanguage";
 import { useLocation } from "react-router-dom";
-import { LAYOUT_SPACING, COLORS } from "@/constants";
+import { COLORS } from "@/constants";
+import { LandingSectionHeader } from "@/components/landing/LandingSectionHeader";
+import {
+  landingSection,
+  landingBody,
+  landingDisplayAccent,
+  landingDisplaySection,
+  landingDisplayKicker,
+} from "@/components/landing/landingStyles";
 
-function SectionTitle({ children }: { children: React.ReactNode }) {
+function LandingSection({
+  id,
+  children,
+  className = "",
+}: {
+  id: string;
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
-    <div className="w-full flex justify-center items-center px-4" style={{marginTop: LAYOUT_SPACING.SECTION_GAP.marginTop, marginBottom: LAYOUT_SPACING.SECTION_GAP.marginBottom}}>
-      <h2 className="text-6xl tablet:text-[9rem] md:text-[14rem] font-inter font-bold text-black text-center leading-[0.9] md:leading-none">
-        {children}
-      </h2>
-    </div>
-  );
-}
-
-function CallToActionSection({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="w-full flex justify-center items-center px-4" style={{marginTop: LAYOUT_SPACING.SECTION_GAP.marginTop, marginBottom: LAYOUT_SPACING.SECTION_GAP.marginBottom}}>
-      {children}
-    </div>
+    <section
+      id={id}
+      className={`border-t border-neutral-100 bg-white ${landingSection} ${className}`}
+    >
+      <div className="mx-auto max-w-7xl">{children}</div>
+    </section>
   );
 }
 
@@ -51,111 +60,59 @@ export default function HomePage() {
         schema={generateHomeSchemas(language)}
         hreflangs={buildHreflangs(location.pathname)}
       />
-      
-      <div className="w-full">
-        <section id="home">
+
+      <div className="w-full bg-white">
+        <section id="home" className="bg-white">
           <HeroScrollDemo />
           <ValuePropositions />
         </section>
 
-        <section id="method">
-          <SectionTitle>{t('section.method')}</SectionTitle>
+        <LandingSection id="method">
+          <LandingSectionHeader
+            title={t("section.method")}
+            lead={t("section.methodLead")}
+          />
           <WorkProcess />
-        </section>
+        </LandingSection>
 
-        <section id="projects">
-          <SectionTitle>{t('section.projects')}</SectionTitle>
+        <LandingSection id="projects">
+          <LandingSectionHeader
+            title={t("section.projects")}
+            lead={t("section.projectsLead")}
+          />
           <CometCardDemo />
-        </section>
+        </LandingSection>
 
-        <section id="services">
-          <SectionTitle>{t('section.services')}</SectionTitle>
+        <LandingSection id="services">
+          <LandingSectionHeader
+            title={t("section.services")}
+            lead={t("section.servicesLead")}
+          />
           <ServicesCards />
-        </section>
+        </LandingSection>
 
-        <section id="who-we-work">
-          <div className="w-full flex justify-center items-center px-4" style={{marginTop: LAYOUT_SPACING.SECTION_GAP.marginTop, marginBottom: LAYOUT_SPACING.SECTION_GAP_SMALL.marginBottom}}>
-            <h2 className="text-5xl tablet:text-7xl md:text-[14rem] font-inter font-bold text-black text-center leading-[0.9] md:leading-none">
-              {t('section.whoWeWork')}
-            </h2>
-          </div>
-
+        <LandingSection id="who-we-work">
+          <LandingSectionHeader title={t("section.whoWeWork")} />
           <WhoWeWorkWithDemo />
-        </section>
+        </LandingSection>
 
-        <section id="contact">
-        <CallToActionSection>
-          <div className="flex flex-col items-center gap-5 tablet:gap-7 md:gap-8 px-2 md:px-0">
-            <p className="text-5xl tablet:text-6xl md:text-7xl font-inter font-bold text-black text-center max-w-4xl tablet:max-w-5xl md:max-w-6xl leading-[1.08] md:leading-relaxed">
-              <span style={{color: COLORS.PRIMARY}}>No,</span> {t('cta.notForEveryone')}
+        <LandingSection id="contact" className="pb-20 md:pb-28">
+          <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center md:gap-8">
+            <p className={`${landingDisplayAccent} max-w-4xl text-black`}>
+              <span style={{ color: COLORS.PRIMARY }}>No,</span>{" "}
+              {t("cta.notForEveryone")}
             </p>
-            <p className="text-lg tablet:text-xl md:text-3xl font-inter font-bold text-black text-center max-w-3xl tablet:max-w-4xl md:max-w-5xl leading-[1.35] md:leading-relaxed px-2 md:px-0">
-              {t('cta.aligned')}
+            <p className={landingBody}>{t("cta.aligned")}</p>
+            <p className={`${landingDisplayKicker} max-w-3xl font-bold text-black`}>
+              {t("cta.whatWeDo")}
             </p>
-          </div>
-        </CallToActionSection>
-        
-        <CallToActionSection>
-          <div className="flex flex-col items-center gap-7 tablet:gap-10 md:gap-12 px-2 md:px-0">
-            <h2 className="text-6xl tablet:text-[9rem] md:text-[14rem] font-inter font-bold text-black text-center leading-[0.88] md:leading-none">
-              {t('cta.whyChooseUs')}
-            </h2>
-            <p className="text-lg tablet:text-2xl md:text-4xl font-inter font-bold text-black text-center max-w-4xl tablet:max-w-5xl leading-[1.3] md:leading-normal px-2 md:px-0">
-              {t('cta.whatWeDo')}
-            </p>
-          </div>
-        </CallToActionSection>
-        
-        <div className="w-full flex justify-center items-center px-4 py-20 tablet:py-32">
-          <div className="max-w-7xl w-full">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 tablet:gap-16 md:gap-20">
-              <div className="flex flex-col space-y-4 text-center md:text-left items-center md:items-start">
-                <div className="text-[8rem] tablet:text-[10rem] md:text-[12rem] font-bold" style={{color: COLORS.PRIMARY}}>
-                  01
-                </div>
-                <h3 className="text-4xl tablet:text-5xl md:text-5xl font-bold text-black">
-                  {t('benefit1.title')}
-                </h3>
-                <p className="text-xl tablet:text-xl md:text-2xl text-gray-700 leading-relaxed">
-                  {t('benefit1.desc')}
-                </p>
-              </div>
-              <div className="flex flex-col space-y-4 text-center md:text-left items-center md:items-start">
-                <div className="text-[8rem] tablet:text-[10rem] md:text-[12rem] font-bold" style={{color: COLORS.PRIMARY}}>
-                  02
-                </div>
-                <h3 className="text-4xl tablet:text-5xl md:text-5xl font-bold text-black">
-                  {t('benefit2.title')}
-                </h3>
-                <p className="text-xl tablet:text-xl md:text-2xl text-gray-700 leading-relaxed">
-                  {t('benefit2.desc')}
-                </p>
-              </div>
-              <div className="flex flex-col space-y-4 text-center md:text-left items-center md:items-start">
-                <div className="text-[8rem] tablet:text-[10rem] md:text-[12rem] font-bold" style={{color: COLORS.PRIMARY}}>
-                  03
-                </div>
-                <h3 className="text-4xl tablet:text-5xl md:text-5xl font-bold text-black">
-                  {t('benefit3.title')}
-                </h3>
-                <p className="text-xl tablet:text-xl md:text-2xl text-gray-700 leading-relaxed">
-                  {t('benefit3.desc')}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="w-full flex justify-center items-center px-4 py-28" style={{marginTop: LAYOUT_SPACING.SECTION_GAP_LARGE.marginTop, marginBottom: LAYOUT_SPACING.SECTION_GAP_LARGE.marginBottom}}>
-          <div className="flex flex-col items-center gap-12">
-            <h2 className="text-6xl md:text-[14rem] font-inter font-bold text-black text-center leading-[0.9] md:leading-none">
-              {t('cta.ready')}
+            <h2 className={`${landingDisplaySection} mt-2 md:mt-4`}>
+              {t("cta.ready")}
             </h2>
             <ProjectInitButton />
           </div>
-        </div>
-        </section>
-        
+        </LandingSection>
+
         <Footer />
       </div>
     </>

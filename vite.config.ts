@@ -10,5 +10,14 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
+    dedupe: ['react', 'react-dom'],
+  },
+  optimizeDeps: {
+    include: [
+      '@react-three/fiber',
+      '@react-three/drei',
+      'three',
+      'use-sync-external-store/shim/with-selector',
+    ],
   },
 })

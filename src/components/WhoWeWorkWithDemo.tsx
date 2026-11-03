@@ -1,35 +1,34 @@
-import { TypingEffect } from "@/components/ui/typing-effect";
 import { useTranslation } from "react-i18next";
+import { COLORS } from "@/constants";
+import { landingDisplayAccent } from "@/components/landing/landingStyles";
 
 export default function WhoWeWorkWithDemo() {
   const { t } = useTranslation();
-  const words = t('whoWeWork.items').split(',');
+  const words = t("whoWeWork.items")
+    .split(",")
+    .map((w) => w.trim())
+    .filter(Boolean);
+
+  const labelParts = t("whoWeWork.label").split(" ");
+  const labelAccent = labelParts[0] ?? t("whoWeWork.label");
+  const labelRest = labelParts.slice(1).join(" ");
 
   return (
-    <div className="w-full flex flex-col justify-center items-center px-4 py-6 md:py-12 mb-40 mt-24 md:mt-32">
-      <div className="w-full flex flex-col md:flex-row gap-6 md:gap-4 items-center justify-center">
-        {/* Mobile: Stacked layout */}
-        <div className="flex flex-col md:hidden items-center gap-4">
-          <h2 className="text-6xl font-inter font-bold text-center" style={{color: "#ce4676"}}>
-            {t('whoWeWork.label').split(' ')[0]}
-          </h2>
-          <h2 className="text-6xl font-inter font-bold text-black text-center">
-            {t('whoWeWork.label').split(' ')[1]}
-          </h2>
-        </div>
-        
-        {/* Desktop: Inline text */}
-        <h2 className="hidden md:block text-7xl font-inter font-bold whitespace-nowrap">
-          <span style={{color: "#ce4676"}}>{t('whoWeWork.label').split(' ')[0]}</span> <span className="text-black">{t('whoWeWork.label').split(' ')[1]}</span>
-        </h2>
-        
-        <TypingEffect
-          words={words}
-          typingSpeed={100}
-          deletingSpeed={50}
-          pauseDuration={1500}
-        />
-      </div>
+    <div className="mx-auto mt-10 max-w-3xl md:mt-14">
+      <p className={`${landingDisplayAccent} text-center text-black`}>
+        <span style={{ color: COLORS.PRIMARY }}>{labelAccent}</span>
+        {labelRest ? ` ${labelRest}` : ""}
+      </p>
+      <ul className="mt-8 flex flex-wrap justify-center gap-2 md:mt-10 md:gap-3">
+        {words.map((word) => (
+          <li
+            key={word}
+            className="rounded-full border border-neutral-200 px-4 py-2 text-sm font-medium text-black md:text-base"
+          >
+            {word}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

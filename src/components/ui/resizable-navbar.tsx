@@ -313,13 +313,13 @@ export const NavbarButton = ({
       "bg-[#ce4676] hover:bg-[#b93d68] text-white shadow-lg",
   };
 
-  return (
-    <Tag
-      href={href || undefined}
-      className={cn(baseStyles, variantStyles[variant], className)}
-      {...props}
-    >
-      {children}
-    </Tag>
+  return React.createElement(
+    Tag,
+    {
+      href: href || undefined,
+      className: cn(baseStyles, variantStyles[variant], className),
+      ...props,
+    },
+    children,
   );
 };

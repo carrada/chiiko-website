@@ -1,31 +1,40 @@
 import { useTranslation } from "react-i18next";
+import { COLORS } from "@/constants";
+import {
+  landingDisplayAccent,
+  landingDisplayKicker,
+  landingSection,
+} from "@/components/landing/landingStyles";
+
+const VALUE_KEYS = [
+  ["hero.value1", "hero.value1.highlight"],
+  ["hero.value2", "hero.value2.highlight"],
+  ["hero.value3", "hero.value3.highlight"],
+  ["hero.value4", "hero.value4.highlight"],
+] as const;
 
 export default function ValuePropositions() {
   const { t } = useTranslation();
 
   return (
-    <div className="flex justify-center items-center py-16 tablet:py-32 md:py-48 px-4">
-      <div className="text-center max-w-7xl space-y-16 tablet:space-y-32 md:space-y-48">
-        <p className="text-sm tablet:text-xl md:text-2xl font-semibold text-black leading-[1.35] md:leading-normal">
-          {t('hero.value1')} <span className="block text-7xl tablet:text-9xl md:text-[16rem] font-bold leading-[0.9] mt-3 md:mt-3" style={{color: "#ce4676"}}>
-            {t('hero.value1.highlight')}
-          </span>
-        </p>
-        <p className="text-sm tablet:text-xl md:text-2xl font-semibold text-black leading-[1.35] md:leading-normal">
-          {t('hero.value2')} <span className="block text-7xl tablet:text-9xl md:text-[16rem] font-bold leading-[0.9] mt-3 md:mt-3" style={{color: "#ce4676"}}>
-            {t('hero.value2.highlight')}
-          </span>
-        </p>
-        <p className="text-sm tablet:text-xl md:text-2xl font-semibold text-black leading-[1.35] md:leading-normal">
-          {t('hero.value3')} <span className="block text-7xl tablet:text-9xl md:text-[16rem] font-bold leading-[0.9] mt-3 md:mt-3" style={{color: "#ce4676"}}>
-            {t('hero.value3.highlight')}
-          </span>
-        </p>
-        <p className="text-sm tablet:text-xl md:text-2xl font-semibold text-black leading-[1.35] md:leading-normal">
-          {t('hero.value4')} <span className="block text-7xl tablet:text-9xl md:text-[16rem] font-bold leading-[0.9] mt-3 md:mt-3" style={{color: "#ce4676"}}>
-            {t('hero.value4.highlight')}
-          </span>
-        </p>
+    <div
+      className={`${landingSection} border-t border-neutral-100 pt-14 md:pt-20`}
+    >
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-14 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-16 md:gap-y-20">
+        {VALUE_KEYS.map(([lineKey, highlightKey]) => (
+          <div
+            key={lineKey}
+            className="flex flex-col gap-2 text-center sm:gap-3 sm:text-left"
+          >
+            <p className={landingDisplayKicker}>{t(lineKey)}</p>
+            <p
+              className={landingDisplayAccent}
+              style={{ color: COLORS.PRIMARY }}
+            >
+              {t(highlightKey)}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );
