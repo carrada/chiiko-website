@@ -14,14 +14,10 @@ import { getPageSeo } from "@/lib/seo-meta";
 import { buildHreflangs } from "@/lib/seo-i18n";
 import { useAppLanguage } from "@/hooks/useAppLanguage";
 import { useLocation } from "react-router-dom";
-import { COLORS } from "@/constants";
 import { LandingSectionHeader } from "@/components/landing/LandingSectionHeader";
 import {
   landingSection,
-  landingBody,
-  landingDisplayAccent,
   landingDisplaySection,
-  landingDisplayKicker,
 } from "@/components/landing/landingStyles";
 
 function LandingSection({
@@ -97,18 +93,8 @@ export default function HomePage() {
         </LandingSection>
 
         <LandingSection id="contact" className="pb-20 md:pb-28">
-          <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center md:gap-8">
-            <p className={`${landingDisplayAccent} max-w-4xl text-black`}>
-              <span style={{ color: COLORS.PRIMARY }}>No,</span>{" "}
-              {t("cta.notForEveryone")}
-            </p>
-            <p className={landingBody}>{t("cta.aligned")}</p>
-            <p className={`${landingDisplayKicker} max-w-3xl font-bold text-black`}>
-              {t("cta.whatWeDo")}
-            </p>
-            <h2 className={`${landingDisplaySection} mt-2 md:mt-4`}>
-              {t("cta.ready")}
-            </h2>
+          <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center md:gap-10">
+            <h2 className={landingDisplaySection}>{t("cta.ready")}</h2>
             <ProjectInitButton />
           </div>
         </LandingSection>
