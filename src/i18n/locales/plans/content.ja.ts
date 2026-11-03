@@ -8,7 +8,7 @@ export const plansPageContent: PlansPageContent = {
   headerDescription:
     "より良く伝え、コンバージョンし、スケールするために設計されたウェブサイト。各プランは異なる目的のために構築されています。",
   closingStatement:
-    "限られた枠で質の高いプロジェクトを保証しています。単にサイトを納品するのではなく、長期的な関係を築くために、協力相手を慎重に選んでいます。",
+    "限られた枠で質の高いプロジェクトを保証しています。単にサイトを納品するのではなく、長期的な関係を築くために、協力相手を慎重に選んでいます。最初のヒアリング通話は無料です。必要であれば見積書も作成できます。",
   schemaListName: "Chiiko プラン",
   areaServed: "JP",
   availableLanguage: "Japanese",

@@ -36,7 +36,7 @@ const getRouteType = (pathname: string): string | null => {
   return routeMap[pathname] || null;
 };
 
-const isRouteActive = (currentPath: string, itemPath: string): boolean => {
+export const isRouteActive = (currentPath: string, itemPath: string): boolean => {
   if (currentPath === itemPath) return true;
   const currentType = getRouteType(currentPath);
   const itemType = getRouteType(itemPath);

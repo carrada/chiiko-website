@@ -8,7 +8,7 @@ export const plansPageContent: PlansPageContent = {
   headerDescription:
     "Des sites web conçus pour mieux communiquer, convertir et évoluer. Chaque formule répond à un objectif différent.",
   closingStatement:
-    "Nous travaillons avec des places limitées pour garantir la qualité de chaque projet. Nous sélectionnons avec soin nos collaborations parce que nous croyons aux relations durables, pas seulement à la livraison de sites.",
+    "Nous travaillons avec des places limitées pour garantir la qualité de chaque projet. Nous sélectionnons avec soin nos collaborations parce que nous croyons aux relations durables, pas seulement à la livraison de sites. Le premier appel de découverte est gratuit et, si besoin, nous pouvons préparer un document de devis.",
   schemaListName: "Formules Chiiko",
   areaServed: "FR",
   availableLanguage: "French",

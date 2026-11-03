@@ -8,6 +8,8 @@ export const projectContent = {
     title: "Projects",
     description:
       "Here you can explore our latest projects and case studies.",
+    hints:
+      "Drag the front card to browse · Click the front card to open · Hover to pause autoplay",
     seoTitle: projectsPageSeo.en.seoTitle,
     seoDescription: projectsPageSeo.en.seoDescription,
     back: "← Back to projects",

@@ -8,6 +8,8 @@ export const projectContent = {
     title: "プロジェクト",
     description:
       "最新のプロジェクトとケーススタディをご覧ください。",
+    hints:
+      "手前のカードをドラッグして切り替え · 手前のカードをクリックで開く · カーソルを合わせると自動切り替えが一時停止",
     seoTitle: projectsPageSeo.ja.seoTitle,
     seoDescription: projectsPageSeo.ja.seoDescription,
     back: "← プロジェクトに戻る",

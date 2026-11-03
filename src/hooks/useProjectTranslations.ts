@@ -25,6 +25,7 @@ export function useProjectTranslations() {
     () => ({
       title: t("projects.page.title"),
       description: t("projects.page.description"),
+      hints: t("projects.page.hints"),
       seoTitle: t("projects.page.seoTitle"),
       seoDescription: t("projects.page.seoDescription"),
       back: t("projects.page.back"),

@@ -8,7 +8,7 @@ export const plansPageContent: PlansPageContent = {
   headerDescription:
     "为更好沟通、转化和扩展而设计的网站。每个方案对应不同的目标。",
   closingStatement:
-    "我们以有限名额工作，确保每个项目的质量。我们谨慎选择合作伙伴，因为我们相信建立持久关系，而不仅仅是交付网站。",
+    "我们以有限名额工作，确保每个项目的质量。我们谨慎选择合作伙伴，因为我们相信建立持久关系，而不仅仅是交付网站。首次沟通通话免费；如有需要，我们也可提供正式报价文档。",
   schemaListName: "Chiiko 方案",
   areaServed: "CN",
   availableLanguage: "Chinese",

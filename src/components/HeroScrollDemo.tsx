@@ -24,13 +24,14 @@ export default function HeroScrollDemo() {
               intro="none"
               introDuration={2}
               clickKick
-              guides={false}
+              guides
               selection
-              labels={false}
+              labels
               draggable={false}
               color="#000000"
               accentColor="#000000"
               className="leading-none"
+              style={{ color: "#000000" }}
             />
           </span>
         </h1>

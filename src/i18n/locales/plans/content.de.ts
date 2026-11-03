@@ -8,7 +8,7 @@ export const plansPageContent: PlansPageContent = {
   headerDescription:
     "Websites, die besser kommunizieren, konvertieren und skalieren. Jedes Paket ist für ein anderes Ziel konzipiert.",
   closingStatement:
-    "Wir arbeiten mit begrenzten Kapazitäten, um die Qualität jedes Projekts zu garantieren. Wir wählen unsere Partner sorgfältig aus, weil wir an dauerhafte Beziehungen glauben — nicht nur an die Lieferung von Websites.",
+    "Wir arbeiten mit begrenzten Kapazitäten, um die Qualität jedes Projekts zu garantieren. Wir wählen unsere Partner sorgfältig aus, weil wir an dauerhafte Beziehungen glauben — nicht nur an die Lieferung von Websites. Das erste Kennenlerngespräch ist kostenlos; auf Wunsch erstellen wir ein Angebotsdokument.",
   schemaListName: "Chiiko Pakete",
   areaServed: "DE",
   availableLanguage: "German",

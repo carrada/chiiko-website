@@ -183,7 +183,10 @@ const TechText = ({
  const palette = s => {
  const current = getComputedStyle(container).color || '#000000';
  const pick = value => (!value || INHERIT.test(String(value).trim()) ? current : value);
- return { ink: pick(s.color), accent: pick(s.accentColor) };
+ const ink = pick(s.color);
+ let accent = pick(s.accentColor);
+ if (INHERIT.test(String(s.accentColor ?? '').trim())) accent = ink;
+ return { ink, accent };
  };
 
  const setFont = (target, s, size) => {
@@ -505,7 +508,7 @@ const TechText = ({
 
  ctx.beginPath();
  ctx.rect(x1, y1, x2 - x1, y2 - y1);
- ctx.globalAlpha = 0.5 * a;
+ ctx.globalAlpha = 0.85 * a;
  ctx.stroke();
 
  ctx.beginPath();
@@ -528,7 +531,7 @@ const TechText = ({
  ctx.textAlign = 'left';
  ctx.textBaseline = 'bottom';
  ctx.fillStyle = accent;
- ctx.globalAlpha = 0.62 * a;
+ ctx.globalAlpha = 0.92 * a;
  const label =
  moved > 1
  ? `${signed(Math.round(glyph.offset.x))}, ${signed(Math.round(-glyph.offset.y))}`
@@ -554,16 +557,16 @@ const TechText = ({
  if (grow <= 0.001) return;
  const y = crisp(line.y);
  const end = x1 + (x2 - x1) * grow;
- ctx.globalAlpha = alpha * 0.4;
+ ctx.globalAlpha = alpha * 0.55;
  ctx.beginPath();
  ctx.moveTo(x1, y);
  ctx.lineTo(end, y);
  ctx.stroke();
- ctx.globalAlpha = alpha * 0.9;
+ ctx.globalAlpha = alpha * 0.95;
  ctx.fillRect(x1 - 1, Math.round(line.y) - 1, 3, 3);
  ctx.fillRect(Math.round(end) - 1, Math.round(line.y) - 1, 3, 3);
  if (s.labels) {
- ctx.globalAlpha = alpha * 0.62 * smoothstep(0.7, 1, grow);
+ ctx.globalAlpha = alpha * 0.9 * smoothstep(0.7, 1, grow);
  ctx.fillText(line.label, room ? x2 + 8 : x1 - 8, Math.round(line.y));
  }
  });

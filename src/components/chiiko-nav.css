@@ -1,0 +1,113 @@
+/* Chiikö: split bubbles (logo | links | language), compact width */
+.chiiko-nav-cluster {
+  --pn-surface: rgba(255, 255, 255, 0.8);
+  --pn-solid: #ffffff;
+  --pn-edge: rgba(24, 24, 27, 0.07);
+  --pn-rim: rgba(255, 255, 255, 0.95);
+  --pn-shadow: 0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05),
+    0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08),
+    0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+  --pn-blur: blur(10px) saturate(1);
+  --pn-text: rgba(24, 24, 27, 0.6);
+  --pn-strong: #18181b;
+  --pn-pill: linear-gradient(180deg, #2c2c31 0%, #18181b 100%);
+  --pn-pill-ink: #ffffff;
+  --pn-pill-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 6px 14px -6px rgba(24, 24, 27, 0.45);
+  --pn-dot: #18181b;
+  --pn-ring: rgba(24, 24, 27, 0.45);
+  --pn-row-hover: rgba(24, 24, 27, 0.05);
+  --pn-tile: linear-gradient(180deg, #ffffff 0%, #f6f6f8 100%);
+  --pn-tile-rim: inset 0 0 0 1px rgba(24, 24, 27, 0.08), inset 0 1px 0 rgba(255, 255, 255, 1),
+    0 4px 10px -5px rgba(24, 24, 27, 0.25);
+  --pn-h: 44px;
+  --pn-pad: 4px;
+  --pn-inner: 36px;
+  --pn-x: 16px;
+  --pn-font: 14px;
+  --pn-gap: 8px;
+  --pn-mark: 22px;
+}
+
+.chiiko-nav-cluster .pill-nav {
+  width: auto;
+  max-width: none;
+  flex: none;
+}
+
+.chiiko-nav-cluster .pill-nav[data-collapsed] {
+  width: auto;
+  flex: none;
+  justify-content: flex-start;
+}
+
+/* Tabs bar only: no outer capsule (logo + lang keep glass) */
+.chiiko-pill-nav .pill-nav__bar.pill-nav__surface {
+  background: transparent;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+.chiiko-pill-nav .pill-nav__bar > .pill-nav__rim {
+  display: none;
+}
+
+/* Active route in mobile menu + bar (React Router aria-current) */
+.chiiko-pill-nav .pill-nav__row[aria-current='page'] {
+  background: #262626;
+  box-shadow: var(--pn-pill-shadow);
+  color: #ffffff;
+}
+
+.chiiko-nav-bubble {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  height: var(--pn-h);
+  border-radius: 999px;
+  box-sizing: border-box;
+}
+
+.chiiko-nav-bubble .pill-nav__rim {
+  border-radius: inherit;
+}
+
+/* Mobile: favicon in round logo bubble */
+.chiiko-pill-nav .pill-nav__mark .chiiko-logo--icon {
+  display: block;
+  width: var(--pn-mark);
+  height: var(--pn-mark);
+  object-fit: contain;
+}
+
+.chiiko-pill-nav .pill-nav__mark .chiiko-logo--full {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .chiiko-pill-nav .pill-nav__logo {
+    width: auto;
+    min-width: var(--pn-h);
+    padding-inline: 12px;
+  }
+
+  .chiiko-pill-nav .pill-nav__mark {
+    width: auto;
+    height: auto;
+    max-height: var(--pn-inner);
+  }
+
+  .chiiko-pill-nav .pill-nav__mark .chiiko-logo--icon {
+    display: none;
+  }
+
+  .chiiko-pill-nav .pill-nav__mark .chiiko-logo--full {
+    display: block;
+    width: auto;
+    height: 34px;
+    max-width: 112px;
+    object-fit: contain;
+  }
+}

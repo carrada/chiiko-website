@@ -8,7 +8,7 @@ export const plansPageContent: PlansPageContent = {
   headerDescription:
     "Siti web pensati per comunicare meglio, convertire e scalare. Ogni piano è progettato per un obiettivo diverso.",
   closingStatement:
-    "Lavoriamo con posti limitati per garantire qualità in ogni progetto. Selezioniamo con cura con chi collaboriamo perché crediamo in relazioni durature, non solo nella consegna di siti.",
+    "Lavoriamo con posti limitati per garantire qualità in ogni progetto. Selezioniamo con cura con chi collaboriamo perché crediamo in relazioni durature, non solo nella consegna di siti. La prima call conoscitiva è gratuita e, se serve, possiamo preparare un documento di preventivo.",
   schemaListName: "Piani Chiiko",
   areaServed: "IT",
   availableLanguage: "Italian",

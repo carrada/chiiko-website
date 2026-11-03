@@ -12,7 +12,11 @@ import {
 } from "@/lib/i18n";
 import { getLocalizedPath } from "@/lib/localizedRoutes";
 
-export function LanguageSwitcher() {
+type LanguageSwitcherProps = {
+  variant?: "inline" | "bubble";
+};
+
+export function LanguageSwitcher({ variant = "inline" }: LanguageSwitcherProps) {
   const { i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
@@ -64,7 +68,12 @@ export function LanguageSwitcher() {
       <button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
-        className="flex items-center gap-0.5 px-1.5 py-0.5 lg:px-2 lg:py-1 text-xs lg:text-sm font-bold text-black transition-colors hover:text-neutral-700 focus:outline-none"
+        className={cn(
+          "flex items-center gap-0.5 font-bold text-black transition-colors hover:text-neutral-700 focus:outline-none",
+          variant === "bubble"
+            ? "h-full px-0 py-0 text-sm outline-none focus-visible:rounded-full focus-visible:ring-2 focus-visible:ring-neutral-400/45 focus-visible:ring-offset-2"
+            : "px-1.5 py-0.5 text-xs lg:px-2 lg:py-1 lg:text-sm",
+        )}
         aria-label="Select language"
         aria-haspopup="listbox"
         aria-expanded={open}

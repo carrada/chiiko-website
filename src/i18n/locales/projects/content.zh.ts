@@ -7,6 +7,7 @@ export const projectContent = {
   page: {
     title: "项目",
     description: "在此探索我们最新的项目与案例研究。",
+    hints: "拖动最前的卡片浏览 · 点击最前卡片打开 · 悬停可暂停自动切换",
     seoTitle: projectsPageSeo.zh.seoTitle,
     seoDescription: projectsPageSeo.zh.seoDescription,
     back: "← 返回项目",

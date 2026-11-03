@@ -15,6 +15,7 @@ import { buildHreflangs } from "@/lib/seo-i18n";
 import { useAppLanguage } from "@/hooks/useAppLanguage";
 import { useLocation } from "react-router-dom";
 import { LandingSectionHeader } from "@/components/landing/LandingSectionHeader";
+import { LandingAccentText } from "@/components/landing/LandingAccentText";
 import {
   landingSection,
   landingDisplaySection,
@@ -65,7 +66,9 @@ export default function HomePage() {
 
         <LandingSection id="method">
           <LandingSectionHeader
-            title={t("section.method")}
+            titleBefore={t("section.method.titleBefore")}
+            titleAccent={t("section.method.titleAccent")}
+            titleAfter={t("section.method.titleAfter")}
             lead={t("section.methodLead")}
           />
           <WorkProcess />
@@ -73,7 +76,9 @@ export default function HomePage() {
 
         <LandingSection id="projects">
           <LandingSectionHeader
-            title={t("section.projects")}
+            titleBefore={t("section.projects.titleBefore")}
+            titleAccent={t("section.projects.titleAccent")}
+            titleAfter={t("section.projects.titleAfter")}
             lead={t("section.projectsLead")}
           />
           <CometCardDemo />
@@ -81,20 +86,30 @@ export default function HomePage() {
 
         <LandingSection id="services">
           <LandingSectionHeader
-            title={t("section.services")}
+            titleBefore={t("section.services.titleBefore")}
+            titleAccent={t("section.services.titleAccent")}
+            titleAfter={t("section.services.titleAfter")}
             lead={t("section.servicesLead")}
           />
           <ServicesCards />
         </LandingSection>
 
         <LandingSection id="who-we-work">
-          <LandingSectionHeader title={t("section.whoWeWork")} />
+          <LandingSectionHeader
+            titleBefore={t("section.whoWeWork.titleBefore")}
+            titleAccent={t("section.whoWeWork.titleAccent")}
+            titleAfter={t("section.whoWeWork.titleAfter")}
+          />
           <WhoWeWorkWithDemo />
         </LandingSection>
 
         <LandingSection id="contact" className="pb-20 md:pb-28">
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-8 text-center md:gap-10">
-            <h2 className={landingDisplaySection}>{t("cta.ready")}</h2>
+            <h2 className={landingDisplaySection}>
+              {t("cta.ready.before")}
+              <LandingAccentText>{t("cta.ready.accent")}</LandingAccentText>
+              {t("cta.ready.after")}
+            </h2>
             <ProjectInitButton />
           </div>
         </LandingSection>

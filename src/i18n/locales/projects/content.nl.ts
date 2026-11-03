@@ -8,6 +8,8 @@ export const projectContent = {
     title: "Projecten",
     description:
       "Hier kun je onze laatste projecten en case studies ontdekken.",
+    hints:
+      "Sleep de voorste kaart om te bladeren · Klik op de voorste kaart om te openen · Hover om autoplay te pauzeren",
     seoTitle: projectsPageSeo.nl.seoTitle,
     seoDescription: projectsPageSeo.nl.seoDescription,
     back: "← Terug naar projecten",

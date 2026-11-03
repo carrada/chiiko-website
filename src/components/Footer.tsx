@@ -80,9 +80,6 @@ export default function Footer() {
                 className="h-16 tablet:h-20 md:h-40 object-contain object-left mb-1 md:mb-2"
                 style={{ marginLeft: '-8px' }}
               />
-              <p className="text-xs tablet:text-xs md:text-sm text-gray-600 leading-snug font-light max-w-xs">
-                {t('footer.tagline')}
-              </p>
             </div>
           </div>
 

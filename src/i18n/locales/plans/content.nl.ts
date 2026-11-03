@@ -8,7 +8,7 @@ export const plansPageContent: PlansPageContent = {
   headerDescription:
     "Websites ontworpen om beter te communiceren, converteren en schalen. Elk pakket is gebouwd voor een ander doel.",
   closingStatement:
-    "We werken met beperkte plekken om kwaliteit in elk project te garanderen. We selecteren zorgvuldig met wie we samenwerken omdat we geloven in duurzame relaties, niet alleen in het opleveren van sites.",
+    "We werken met beperkte plekken om kwaliteit in elk project te garanderen. We selecteren zorgvuldig met wie we samenwerken omdat we geloven in duurzame relaties, niet alleen in het opleveren van sites. Het eerste kennismakingsgesprek is gratis en we kunnen desgewenst een offertedocument opstellen.",
   schemaListName: "Chiiko Pakketten",
   areaServed: "NL",
   availableLanguage: "Dutch",

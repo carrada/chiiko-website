@@ -1,8 +1,11 @@
-import { Link } from "react-router-dom";
+import { useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { DirectionAwareHover } from "@/components/ui/direction-aware-hover";
+import CardSwap from "@/components/ui/CardSwap";
+import type { CardSwapItem } from "@/components/ui/CardSwap";
+import { EXTERNAL_PROJECT_STACK } from "@/data/projectsPageStack";
 import { getProjectPath, getProjectsListPath } from "@/data/projects";
 import { usePageSeo } from "@/hooks/usePageSeo";
 import { useProjectTranslations } from "@/hooks/useProjectTranslations";
@@ -12,12 +15,38 @@ import {
 } from "@/lib/seo";
 import { getStudioSeoMeta } from "@/lib/seo-studio";
 
+type StackAction =
+  | { type: "detail"; slug: string }
+  | { type: "external"; href: string };
+
 export default function ProjectsPage() {
-  const { lang, page, labels, projects } = useProjectTranslations();
+  const { lang, page, projects } = useProjectTranslations();
   const { hreflangs, canonicalPath } = usePageSeo();
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const listPath = getProjectsListPath(lang);
   const studioSeo = getStudioSeoMeta(lang);
+
+  const { swapItems, stackActions } = useMemo(() => {
+    const items: CardSwapItem[] = [];
+    const actions: StackAction[] = [];
+
+    for (const project of projects) {
+      items.push({ image: project.image, alt: project.title });
+      actions.push({ type: "detail", slug: project.slug });
+    }
+
+    for (const external of EXTERNAL_PROJECT_STACK) {
+      items.push({
+        image: external.image,
+        alt: external.title,
+        backgroundColor: external.backgroundColor,
+      });
+      actions.push({ type: "external", href: external.href });
+    }
+
+    return { swapItems: items, stackActions: actions };
+  }, [projects]);
 
   const projectsListSchema = generateProjectsListSchema(
     projects.map((project) => ({
@@ -27,7 +56,7 @@ export default function ProjectsPage() {
     })),
     listPath,
     page.title,
-    lang
+    lang,
   );
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: t("nav.home"), path: "/" },
@@ -46,41 +75,40 @@ export default function ProjectsPage() {
         schema={[projectsListSchema, breadcrumbSchema]}
       />
 
-      <div className="w-full min-h-screen bg-white flex flex-col">
-        <div className="flex-grow py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold text-black mb-8">
+      <div className="flex min-h-screen w-full flex-col bg-white">
+        <div className="flex-grow px-4 py-20">
+          <div className="mx-auto max-w-6xl">
+            <h1 className="mb-8 text-4xl font-bold text-black md:text-6xl">
               {page.title}
             </h1>
-            <p className="text-lg text-gray-600 mb-16">{page.description}</p>
+            <div className="mb-12 max-w-2xl md:mb-16">
+              <p className="text-lg text-gray-600">{page.description}</p>
+              <p className="mt-3 text-sm leading-relaxed text-neutral-500">
+                {page.hints}
+              </p>
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center">
-              {projects.map((project) => (
-                <Link
-                  key={project.slug}
-                  to={getProjectPath(project.slug, lang)}
-                  className="w-full flex justify-center"
-                >
-                  <DirectionAwareHover
-                    imageUrl={project.image}
-                    className="w-full max-w-md h-72 md:h-96 md:w-full md:max-w-none"
-                    childrenClassName="max-w-sm"
-                  >
-                    <p className="font-bold text-xl">{project.title}</p>
-                    <p className="font-normal text-sm mt-1">
-                      {project.description}
-                    </p>
-                    <p className="font-normal text-xs mt-3 opacity-90">
-                      <span className="font-semibold">{labels.services}:</span>{" "}
-                      {project.services}
-                    </p>
-                    <p className="font-normal text-xs mt-1 opacity-90">
-                      <span className="font-semibold">{labels.client}:</span>{" "}
-                      {project.client}
-                    </p>
-                  </DirectionAwareHover>
-                </Link>
-              ))}
+            <div className="relative mx-auto h-[min(72vh,580px)] w-full max-w-3xl">
+              <CardSwap
+                items={swapItems}
+                theme="light"
+                width={400}
+                height={280}
+                delay={4500}
+                autoplay
+                pauseOnHover
+                draggable
+                cardRadius={20}
+                onCardClick={(index) => {
+                  const action = stackActions[index];
+                  if (!action) return;
+                  if (action.type === "detail") {
+                    navigate(getProjectPath(action.slug, lang));
+                    return;
+                  }
+                  window.open(action.href, "_blank", "noopener,noreferrer");
+                }}
+              />
             </div>
           </div>
         </div>

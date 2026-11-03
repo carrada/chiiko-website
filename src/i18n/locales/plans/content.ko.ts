@@ -8,7 +8,7 @@ export const plansPageContent: PlansPageContent = {
   headerDescription:
     "더 잘 소통하고, 전환하고, 확장하기 위해 설계된 웹사이트. 각 플랜은 다른 목표를 위해 만들어졌습니다.",
   closingStatement:
-    "제한된 슬롯으로 각 프로젝트의 품질을 보장합니다. 단순히 사이트를 전달하는 것이 아니라 지속적인 관계를 믿기 때문에 협업 파트너를 신중하게 선택합니다.",
+    "제한된 슬롯으로 각 프로젝트의 품질을 보장합니다. 단순히 사이트를 전달하는 것이 아니라 지속적인 관계를 믿기 때문에 협업 파트너를 신중하게 선택합니다. 첫 미팅 통화는 무료이며, 필요하시면 견적 문서도 작성해 드립니다.",
   schemaListName: "Chiiko 플랜",
   areaServed: "KR",
   availableLanguage: "Korean",

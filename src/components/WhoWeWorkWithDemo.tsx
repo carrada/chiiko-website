@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { COLORS } from "@/constants";
-import { landingDisplayAccent } from "@/components/landing/landingStyles";
+import { landingCardTitle } from "@/components/landing/landingStyles";
 
 export default function WhoWeWorkWithDemo() {
   const { t } = useTranslation();
@@ -9,23 +8,19 @@ export default function WhoWeWorkWithDemo() {
     .map((w) => w.trim())
     .filter(Boolean);
 
-  const labelParts = t("whoWeWork.label").split(" ");
-  const labelAccent = labelParts[0] ?? t("whoWeWork.label");
-  const labelRest = labelParts.slice(1).join(" ");
-
   return (
-    <div className="mx-auto mt-10 max-w-3xl md:mt-14">
-      <p className={`${landingDisplayAccent} text-center text-black`}>
-        <span style={{ color: COLORS.PRIMARY }}>{labelAccent}</span>
-        {labelRest ? ` ${labelRest}` : ""}
-      </p>
-      <ul className="mt-8 flex flex-wrap justify-center gap-2 md:mt-10 md:gap-3">
+    <div className="mx-auto mt-12 max-w-3xl md:mt-16 lg:max-w-4xl">
+      <ul className="divide-y divide-neutral-100 border-y border-neutral-100">
         {words.map((word) => (
           <li
             key={word}
-            className="rounded-full border border-neutral-200 px-4 py-2 text-sm font-medium text-black md:text-base"
+            className="py-6 md:py-8"
           >
-            {word}
+            <span
+              className={`${landingCardTitle} text-2xl md:text-[1.75rem] lg:text-3xl`}
+            >
+              {word}
+            </span>
           </li>
         ))}
       </ul>

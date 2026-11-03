@@ -8,7 +8,7 @@ export const plansPageContent: PlansPageContent = {
   headerDescription:
     "Websites designed to communicate better, convert, and scale. Each plan is built for a different goal.",
   closingStatement:
-    "We work with limited slots to guarantee quality in every project. We carefully select who we collaborate with because we believe in building lasting relationships, not just delivering websites.",
+    "We work with limited slots to guarantee quality in every project. We carefully select who we collaborate with because we believe in building lasting relationships, not just delivering websites. The first discovery call is free, and we can prepare a formal quote document if you need one.",
   schemaListName: "Chiiko Plans",
   areaServed: "Worldwide",
   availableLanguage: "English",
