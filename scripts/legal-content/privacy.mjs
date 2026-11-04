@@ -9,7 +9,7 @@ export const privacy = {
     intro: [
       {
         type: "p",
-        text: 'En **chiiko.design** (en adelante, "Chiikö", "nosotros" o "nuestro"), respetamos y protegemos la privacidad de las personas que visitan nuestro sitio web y utilizan nuestros servicios. Esta Política de Privacidad explica cómo recopilamos, usamos, almacenamos y protegemos tu información personal.',
+        text: 'En **chiiko.studio** (en adelante, "Chiikö", "nosotros" o "nuestro"), respetamos y protegemos la privacidad de las personas que visitan nuestro sitio web y utilizan nuestros servicios. Esta Política de Privacidad explica cómo recopilamos, usamos, almacenamos y protegemos tu información personal.',
       },
       {
         type: "p",
@@ -29,8 +29,8 @@ export const privacy = {
             items: [
               "**Nombre comercial:** Chiikö",
               "**Responsable:** Cristopher Carrada",
-              "**Sitio web:** https://chiiko.design",
-              "**Correo electrónico:** soporte@chiiko.design",
+              "**Sitio web:** https://chiiko.studio",
+              "**Correo electrónico:** soporte@chiiko.studio",
             ],
           },
         ],
@@ -174,7 +174,7 @@ export const privacy = {
           },
           {
             type: "p",
-            text: "Para ejercer estos derechos, deberás enviar una solicitud al correo: soporte@chiiko.design, indicando tu nombre, el derecho que deseas ejercer y una descripción clara de tu solicitud.",
+            text: "Para ejercer estos derechos, deberás enviar una solicitud al correo: soporte@chiiko.studio, indicando tu nombre, el derecho que deseas ejercer y una descripción clara de tu solicitud.",
           },
         ],
       },
@@ -212,7 +212,7 @@ export const privacy = {
             type: "p",
             text: "Si tienes dudas sobre esta Política de Privacidad o sobre el tratamiento de tus datos personales, puedes contactarnos en:",
           },
-          { type: "p", text: "**Correo electrónico:** soporte@chiiko.design" },
+          { type: "p", text: "**Correo electrónico:** soporte@chiiko.studio" },
         ],
       },
     ],
@@ -231,7 +231,7 @@ export const privacy = {
     intro: [
       {
         type: "p",
-        text: 'At **chiiko.design** (hereinafter, "Chiikö", "we", "us", or "our"), we respect and protect the privacy of individuals who visit our website and use our services. This Privacy Policy explains how we collect, use, store, and protect your personal information.',
+        text: 'At **chiiko.studio** (hereinafter, "Chiikö", "we", "us", or "our"), we respect and protect the privacy of individuals who visit our website and use our services. This Privacy Policy explains how we collect, use, store, and protect your personal information.',
       },
       {
         type: "p",
@@ -250,8 +250,8 @@ export const privacy = {
             type: "ul",
             items: [
               "**Trade name:** Chiikö",
-              "**Website:** https://chiiko.design",
-              "**Contact email:** support@chiiko.design",
+              "**Website:** https://chiiko.studio",
+              "**Contact email:** support@chiiko.studio",
             ],
           },
         ],
@@ -387,7 +387,7 @@ export const privacy = {
           },
           {
             type: "p",
-            text: "To exercise these rights, please send a request to support@chiiko.design, including your name and a clear description of your request.",
+            text: "To exercise these rights, please send a request to support@chiiko.studio, including your name and a clear description of your request.",
           },
         ],
       },
@@ -425,7 +425,7 @@ export const privacy = {
             type: "p",
             text: "If you have any questions about this Privacy Policy or the processing of your personal data, you may contact us at:",
           },
-          { type: "p", text: "**Email:** support@chiiko.design" },
+          { type: "p", text: "**Email:** support@chiiko.studio" },
         ],
       },
     ],

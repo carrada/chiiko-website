@@ -61,7 +61,7 @@ export const notice = {
         title: "Contacto",
         blocks: [
           { type: "p", text: "Para preguntas sobre este Aviso Legal, contáctanos en:" },
-          { type: "p", text: "juridico@chiiko.design" },
+          { type: "p", text: "juridico@chiiko.studio" },
         ],
       },
     ],
@@ -127,7 +127,7 @@ export const notice = {
         title: "Contact",
         blocks: [
           { type: "p", text: "For questions about this Legal Notice, please contact us at:" },
-          { type: "p", text: "councel@chiiko.design" },
+          { type: "p", text: "councel@chiiko.studio" },
         ],
       },
     ],

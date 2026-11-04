@@ -29,5 +29,5 @@ export const contactPageContent: ContactPageContent = {
   contactEmailLabel: "紧急咨询：",
   footerText: "Chiikö. 战略性设计与开发。",
   errorMessage: "发送失败，请重试。",
-  contactEmail: "hello@chiiko.design",
+  contactEmail: "hello@chiiko.studio",
 };

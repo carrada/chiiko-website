@@ -8,7 +8,7 @@ export const terms = {
     intro: [
       {
         type: "p",
-        text: 'Bienvenido a **chiiko.design**. Al acceder y utilizar este sitio web, así como al contratar nuestros servicios, aceptas cumplir con los presentes Términos y Condiciones. Si no estás de acuerdo con ellos, te recomendamos no utilizar este sitio ni nuestros servicios.',
+        text: 'Bienvenido a **chiiko.studio**. Al acceder y utilizar este sitio web, así como al contratar nuestros servicios, aceptas cumplir con los presentes Términos y Condiciones. Si no estás de acuerdo con ellos, te recomendamos no utilizar este sitio ni nuestros servicios.',
       },
     ],
     sections: [
@@ -16,7 +16,7 @@ export const terms = {
         title: "1. Identidad del titular",
         blocks: [
           { type: "p", text: "Este sitio web es operado por **Chiikö**, estudio digital especializado en diseño y desarrollo web." },
-          { type: "ul", items: ["Sitio web: https://chiiko.design", "Correo de contacto general: hola@chiiko.design"] },
+          { type: "ul", items: ["Sitio web: https://chiiko.studio", "Correo de contacto general: hola@chiiko.studio"] },
         ],
       },
       {
@@ -47,7 +47,7 @@ export const terms = {
         blocks: [
           { type: "p", text: "Las condiciones de pago se detallarán en la propuesta correspondiente. Salvo acuerdo distinto:" },
           { type: "ul", items: ["Los pagos no son reembolsables una vez iniciado el proyecto", "Los retrasos en los pagos pueden afectar los tiempos de entrega", "Chiikö podrá suspender el proyecto hasta regularizar la situación de pago"] },
-          { type: "p", text: "Para asuntos relacionados con pagos o facturación, el cliente podrá contactar a finanzas@chiiko.design." },
+          { type: "p", text: "Para asuntos relacionados con pagos o facturación, el cliente podrá contactar a finanzas@chiiko.studio." },
         ],
       },
       {
@@ -82,7 +82,7 @@ export const terms = {
         title: "10. Soporte y mantenimiento",
         blocks: [
           { type: "p", text: "El soporte posterior al lanzamiento no está incluido salvo que se contrate un plan de mantenimiento o se acuerde expresamente por escrito." },
-          { type: "p", text: "Para soporte técnico, el cliente podrá contactar a soporte@chiiko.design." },
+          { type: "p", text: "Para soporte técnico, el cliente podrá contactar a soporte@chiiko.studio." },
         ],
       },
       {
@@ -107,7 +107,7 @@ export const terms = {
         title: "14. Contacto",
         blocks: [
           { type: "p", text: "Para cualquier duda relacionada con estos Términos y Condiciones, puedes escribirnos a:" },
-          { type: "p", text: "hola@chiiko.design" },
+          { type: "p", text: "hola@chiiko.studio" },
         ],
       },
     ],
@@ -123,7 +123,7 @@ export const terms = {
     intro: [
       {
         type: "p",
-        text: 'Welcome to **chiiko.design**. By accessing and using this website, as well as by hiring our services, you agree to be bound by these Terms and Conditions. If you do not agree with them, please refrain from using this website or our services.',
+        text: 'Welcome to **chiiko.studio**. By accessing and using this website, as well as by hiring our services, you agree to be bound by these Terms and Conditions. If you do not agree with them, please refrain from using this website or our services.',
       },
     ],
     sections: [
@@ -131,7 +131,7 @@ export const terms = {
         title: "1. Owner information",
         blocks: [
           { type: "p", text: "This website is operated by **Chiikö**, a digital studio specialized in web design and development." },
-          { type: "ul", items: ["Website: https://chiiko.design", "General contact email: hello@chiiko.design"] },
+          { type: "ul", items: ["Website: https://chiiko.studio", "General contact email: hello@chiiko.studio"] },
         ],
       },
       {
@@ -162,7 +162,7 @@ export const terms = {
         blocks: [
           { type: "p", text: "Payment terms will be specified in the corresponding proposal. Unless otherwise agreed:" },
           { type: "ul", items: ["Payments are non-refundable once the project has started", "Delays in payment may affect delivery timelines", "Chiikö may suspend work until payment obligations are fulfilled"] },
-          { type: "p", text: "For payment or billing inquiries, clients may contact finance@chiiko.design." },
+          { type: "p", text: "For payment or billing inquiries, clients may contact finance@chiiko.studio." },
         ],
       },
       {
@@ -197,7 +197,7 @@ export const terms = {
         title: "10. Support and maintenance",
         blocks: [
           { type: "p", text: "Post-launch support is not included unless a maintenance plan is contracted or otherwise agreed in writing." },
-          { type: "p", text: "For technical support, clients may contact support@chiiko.design." },
+          { type: "p", text: "For technical support, clients may contact support@chiiko.studio." },
         ],
       },
       {
@@ -222,7 +222,7 @@ export const terms = {
         title: "14. Contact",
         blocks: [
           { type: "p", text: "For questions regarding these Terms and Conditions, please contact:" },
-          { type: "p", text: "hello@chiiko.design" },
+          { type: "p", text: "hello@chiiko.studio" },
         ],
       },
     ],

@@ -6,28 +6,28 @@ const englishChannels = [
     description:
       "If you have questions about our services, process, timelines, availability, or you're exploring whether Chiikö is the right fit for your project, this is the best place to start.",
     emailLabel: "Contact email:",
-    email: "hello@chiiko.design",
+    email: "hello@chiiko.studio",
   },
   {
     title: "Payments and billing",
     description:
       "For anything related to payments, invoices, billing questions, or other administrative and financial matters, please contact us through this channel.",
     emailLabel: "Contact email:",
-    email: "finance@chiiko.design",
+    email: "finance@chiiko.studio",
   },
   {
     title: "Contracts and legal matters",
     description:
       "If your inquiry involves contracts, agreements, terms and conditions, or any legal-related topic, this channel allows us to assist you more accurately.",
     emailLabel: "Contact email:",
-    email: "councel@chiiko.design",
+    email: "councel@chiiko.studio",
   },
   {
     title: "Technical support and website issues",
     description:
       "If you experience technical issues, website errors, performance problems, or need support after your project has launched, this is the appropriate channel.",
     emailLabel: "Contact email:",
-    email: "support@chiiko.design",
+    email: "support@chiiko.studio",
   },
 ];
 

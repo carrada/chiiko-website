@@ -12,13 +12,12 @@
   --pn-strong: #18181b;
   --pn-pill: linear-gradient(180deg, #2c2c31 0%, #18181b 100%);
   --pn-pill-ink: #ffffff;
-  --pn-pill-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 6px 14px -6px rgba(24, 24, 27, 0.45);
+  --pn-pill-shadow: none;
   --pn-dot: #18181b;
   --pn-ring: rgba(24, 24, 27, 0.45);
   --pn-row-hover: rgba(24, 24, 27, 0.05);
   --pn-tile: linear-gradient(180deg, #ffffff 0%, #f6f6f8 100%);
-  --pn-tile-rim: inset 0 0 0 1px rgba(24, 24, 27, 0.08), inset 0 1px 0 rgba(255, 255, 255, 1),
-    0 4px 10px -5px rgba(24, 24, 27, 0.25);
+  --pn-tile-rim: none;
   --pn-h: 44px;
   --pn-pad: 4px;
   --pn-inner: 36px;
@@ -34,7 +33,17 @@
   flex: none;
 }
 
-.chiiko-nav-cluster .pill-nav[data-collapsed] {
+/* Chiikö: never hamburger — always show text tabs (see collapse="never") */
+.chiiko-pill-nav[data-force-expanded] .pill-nav__toggle,
+.chiiko-pill-nav[data-force-expanded] .pill-nav__panel {
+  display: none !important;
+}
+
+.chiiko-pill-nav[data-force-expanded] .pill-nav__bar {
+  display: flex !important;
+}
+
+.chiiko-nav-cluster .pill-nav[data-collapsed]:not([data-force-expanded]) {
   width: auto;
   flex: none;
   justify-content: flex-start;
@@ -52,10 +61,20 @@
   display: none;
 }
 
-/* Active route in mobile menu + bar (React Router aria-current) */
+/* Plain tabs: no tile shadow; active/hover use fill animation only */
+.chiiko-pill-nav .pill-nav__item {
+  background: none;
+  box-shadow: none;
+}
+
+.chiiko-pill-nav .pill-nav__item[aria-current='page'] {
+  background: none;
+  box-shadow: none;
+}
+
 .chiiko-pill-nav .pill-nav__row[aria-current='page'] {
   background: #262626;
-  box-shadow: var(--pn-pill-shadow);
+  box-shadow: none;
   color: #ffffff;
 }
 
@@ -112,13 +131,7 @@
     min-width: 0;
   }
 
-  .chiiko-nav-cluster .pill-nav[data-collapsed] {
-    width: 100%;
-    max-width: 100%;
-    justify-content: space-between;
-  }
-
-  .chiiko-nav-cluster .pill-nav:not([data-collapsed]) .pill-nav__bar {
+  .chiiko-nav-cluster .pill-nav .pill-nav__bar {
     width: 100%;
     max-width: 100%;
   }
@@ -146,12 +159,17 @@
     gap: 0.25em;
   }
 
-  .chiiko-pill-nav .pill-nav__panel {
-    left: 0;
-    right: 0;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
+  .chiiko-pill-nav .pill-nav__face,
+  .chiiko-pill-nav .pill-nav__face-alt,
+  .chiiko-pill-nav .pill-nav__fill {
+    transition-duration: 0.28s;
+  }
+
+  .chiiko-pill-nav .pill-nav__slot[data-on] .pill-nav__face,
+  .chiiko-pill-nav .pill-nav__slot[data-hover] .pill-nav__face,
+  .chiiko-pill-nav .pill-nav__slot[data-on] .pill-nav__face-alt,
+  .chiiko-pill-nav .pill-nav__slot[data-hover] .pill-nav__face-alt {
+    transition-duration: 0.35s;
   }
 }
 

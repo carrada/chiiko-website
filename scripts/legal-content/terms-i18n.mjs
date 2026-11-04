@@ -8,7 +8,7 @@ export const termsI18n = {
     intro: [
       {
         type: "p",
-        text: "Bienvenue sur **chiiko.design**. En accedant a ce site web, en l'utilisant et en faisant appel a nos services, vous acceptez d'etre lie par les presentes Conditions générales. Si vous n'etes pas d'accord, nous vous invitons a ne pas utiliser ce site ni nos services.",
+        text: "Bienvenue sur **chiiko.studio**. En accedant a ce site web, en l'utilisant et en faisant appel a nos services, vous acceptez d'etre lie par les presentes Conditions générales. Si vous n'etes pas d'accord, nous vous invitons a ne pas utiliser ce site ni nos services.",
       },
     ],
     sections: [
@@ -16,7 +16,7 @@ export const termsI18n = {
         title: "1. Informations sur le titulaire",
         blocks: [
           { type: "p", text: "Ce site web est exploite par **Chiikö**, studio numerique specialise dans la conception et le developpement web." },
-          { type: "ul", items: ["Site web : https://chiiko.design", "Email de contact general : hello@chiiko.design"] },
+          { type: "ul", items: ["Site web : https://chiiko.studio", "Email de contact general : hello@chiiko.studio"] },
         ],
       },
       {
@@ -47,7 +47,7 @@ export const termsI18n = {
         blocks: [
           { type: "p", text: "Les modalites de paiement seront precisees dans la proposition correspondante. Sauf accord contraire :" },
           { type: "ul", items: ["Les paiements ne sont pas remboursables une fois le projet commence", "Les retards de paiement peuvent affecter les delais de livraison", "Chiikö peut suspendre le projet jusqu'a regularisation du paiement"] },
-          { type: "p", text: "Pour toute question relative aux paiements ou a la facturation, veuillez contacter finance@chiiko.design." },
+          { type: "p", text: "Pour toute question relative aux paiements ou a la facturation, veuillez contacter finance@chiiko.studio." },
         ],
       },
       {
@@ -82,7 +82,7 @@ export const termsI18n = {
         title: "10. Support et maintenance",
         blocks: [
           { type: "p", text: "Le support apres mise en ligne n'est pas inclus, sauf souscription a un plan de maintenance ou accord ecrit explicite." },
-          { type: "p", text: "Pour le support technique, veuillez contacter support@chiiko.design." },
+          { type: "p", text: "Pour le support technique, veuillez contacter support@chiiko.studio." },
         ],
       },
       {
@@ -107,7 +107,7 @@ export const termsI18n = {
         title: "14. Contact",
         blocks: [
           { type: "p", text: "Pour toute question relative a ces Conditions générales, veuillez nous contacter a :" },
-          { type: "p", text: "hello@chiiko.design" },
+          { type: "p", text: "hello@chiiko.studio" },
         ],
       },
     ],
@@ -121,7 +121,7 @@ export const termsI18n = {
     intro: [
       {
         type: "p",
-        text: "Willkommen bei **chiiko.design**. Durch den Zugriff auf diese Website, deren Nutzung sowie die Beauftragung unserer Leistungen erklaren Sie sich mit diesen Allgemeinen Geschaftsbedingungen einverstanden. Wenn Sie damit nicht einverstanden sind, nutzen Sie bitte weder diese Website noch unsere Leistungen.",
+        text: "Willkommen bei **chiiko.studio**. Durch den Zugriff auf diese Website, deren Nutzung sowie die Beauftragung unserer Leistungen erklaren Sie sich mit diesen Allgemeinen Geschaftsbedingungen einverstanden. Wenn Sie damit nicht einverstanden sind, nutzen Sie bitte weder diese Website noch unsere Leistungen.",
       },
     ],
     sections: [
@@ -129,7 +129,7 @@ export const termsI18n = {
         title: "1. Angaben zum Betreiber",
         blocks: [
           { type: "p", text: "Diese Website wird von **Chiikö** betrieben, einem digitalen Studio mit Spezialisierung auf Webdesign und Webentwicklung." },
-          { type: "ul", items: ["Website: https://chiiko.design", "Allgemeine Kontakt-E-Mail: hello@chiiko.design"] },
+          { type: "ul", items: ["Website: https://chiiko.studio", "Allgemeine Kontakt-E-Mail: hello@chiiko.studio"] },
         ],
       },
       {
@@ -160,7 +160,7 @@ export const termsI18n = {
         blocks: [
           { type: "p", text: "Die Zahlungsbedingungen werden im jeweiligen Angebot festgelegt. Sofern nicht anders vereinbart:" },
           { type: "ul", items: ["Zahlungen sind nach Projektbeginn nicht erstattungsfahig", "Zahlungsverzogerungen konnen Lieferfristen beeinflussen", "Chiikö kann die Arbeit aussetzen, bis die Zahlungsbedingungen erfullt sind"] },
-          { type: "p", text: "Bei Fragen zu Zahlung oder Rechnungsstellung kontaktieren Sie bitte finance@chiiko.design." },
+          { type: "p", text: "Bei Fragen zu Zahlung oder Rechnungsstellung kontaktieren Sie bitte finance@chiiko.studio." },
         ],
       },
       {
@@ -195,7 +195,7 @@ export const termsI18n = {
         title: "10. Support und Wartung",
         blocks: [
           { type: "p", text: "Support nach dem Launch ist nicht enthalten, sofern nicht ein Wartungsplan abgeschlossen oder schriftlich etwas anderes vereinbart wurde." },
-          { type: "p", text: "Fur technischen Support kontaktieren Sie bitte support@chiiko.design." },
+          { type: "p", text: "Fur technischen Support kontaktieren Sie bitte support@chiiko.studio." },
         ],
       },
       {
@@ -220,7 +220,7 @@ export const termsI18n = {
         title: "14. Kontakt",
         blocks: [
           { type: "p", text: "Bei Fragen zu diesen Allgemeinen Geschaftsbedingungen erreichen Sie uns unter:" },
-          { type: "p", text: "hello@chiiko.design" },
+          { type: "p", text: "hello@chiiko.studio" },
         ],
       },
     ],
@@ -234,7 +234,7 @@ export const termsI18n = {
     intro: [
       {
         type: "p",
-        text: "Bem-vindo ao **chiiko.design**. Ao acessar e utilizar este site, bem como ao contratar nossos servicos, voce concorda em cumprir estes Termos e Condicoes. Caso nao concorde, recomendamos que nao utilize este site nem nossos servicos.",
+        text: "Bem-vindo ao **chiiko.studio**. Ao acessar e utilizar este site, bem como ao contratar nossos servicos, voce concorda em cumprir estes Termos e Condicoes. Caso nao concorde, recomendamos que nao utilize este site nem nossos servicos.",
       },
     ],
     sections: [
@@ -242,7 +242,7 @@ export const termsI18n = {
         title: "1. Identificacao do titular",
         blocks: [
           { type: "p", text: "Este site e operado pela **Chiikö**, estudio digital especializado em design e desenvolvimento web." },
-          { type: "ul", items: ["Site: https://chiiko.design", "E-mail geral de contato: hello@chiiko.design"] },
+          { type: "ul", items: ["Site: https://chiiko.studio", "E-mail geral de contato: hello@chiiko.studio"] },
         ],
       },
       {
@@ -273,7 +273,7 @@ export const termsI18n = {
         blocks: [
           { type: "p", text: "As condicoes de pagamento serao detalhadas na proposta correspondente. Salvo acordo em contrario:" },
           { type: "ul", items: ["Os pagamentos nao sao reembolsaveis apos o inicio do projeto", "Atrasos no pagamento podem impactar os prazos de entrega", "A Chiikö podera suspender o projeto ate a regularizacao dos pagamentos"] },
-          { type: "p", text: "Para assuntos de pagamento ou faturamento, entre em contato com finance@chiiko.design." },
+          { type: "p", text: "Para assuntos de pagamento ou faturamento, entre em contato com finance@chiiko.studio." },
         ],
       },
       {
@@ -308,7 +308,7 @@ export const termsI18n = {
         title: "10. Suporte e manutencao",
         blocks: [
           { type: "p", text: "O suporte apos o lancamento nao esta incluido, salvo contratacao de plano de manutencao ou acordo expresso por escrito." },
-          { type: "p", text: "Para suporte tecnico, entre em contato com support@chiiko.design." },
+          { type: "p", text: "Para suporte tecnico, entre em contato com support@chiiko.studio." },
         ],
       },
       {
@@ -333,7 +333,7 @@ export const termsI18n = {
         title: "14. Contato",
         blocks: [
           { type: "p", text: "Para duvidas sobre estes Termos e Condicoes, escreva para:" },
-          { type: "p", text: "hello@chiiko.design" },
+          { type: "p", text: "hello@chiiko.studio" },
         ],
       },
     ],
@@ -347,7 +347,7 @@ export const termsI18n = {
     intro: [
       {
         type: "p",
-        text: "Benvenuto su **chiiko.design**. Accedendo e utilizzando questo sito web, nonche affidandoti ai nostri servizi, accetti di essere vincolato dai presenti Termini e Condizioni. Se non li accetti, ti invitiamo a non utilizzare questo sito o i nostri servizi.",
+        text: "Benvenuto su **chiiko.studio**. Accedendo e utilizzando questo sito web, nonche affidandoti ai nostri servizi, accetti di essere vincolato dai presenti Termini e Condizioni. Se non li accetti, ti invitiamo a non utilizzare questo sito o i nostri servizi.",
       },
     ],
     sections: [
@@ -355,7 +355,7 @@ export const termsI18n = {
         title: "1. Dati del titolare",
         blocks: [
           { type: "p", text: "Questo sito web e gestito da **Chiikö**, studio digitale specializzato in design e sviluppo web." },
-          { type: "ul", items: ["Sito web: https://chiiko.design", "Email di contatto generale: hello@chiiko.design"] },
+          { type: "ul", items: ["Sito web: https://chiiko.studio", "Email di contatto generale: hello@chiiko.studio"] },
         ],
       },
       {
@@ -386,7 +386,7 @@ export const termsI18n = {
         blocks: [
           { type: "p", text: "Le condizioni di pagamento saranno specificate nella relativa proposta. Salvo diverso accordo:" },
           { type: "ul", items: ["I pagamenti non sono rimborsabili una volta avviato il progetto", "Ritardi nei pagamenti possono incidere sui tempi di consegna", "Chiikö puo sospendere le attivita fino alla regolarizzazione dei pagamenti"] },
-          { type: "p", text: "Per questioni relative a pagamenti o fatturazione, contattare finance@chiiko.design." },
+          { type: "p", text: "Per questioni relative a pagamenti o fatturazione, contattare finance@chiiko.studio." },
         ],
       },
       {
@@ -421,7 +421,7 @@ export const termsI18n = {
         title: "10. Supporto e manutenzione",
         blocks: [
           { type: "p", text: "Il supporto post-lancio non e incluso, salvo sottoscrizione di un piano di manutenzione o accordo scritto espresso." },
-          { type: "p", text: "Per supporto tecnico, contattare support@chiiko.design." },
+          { type: "p", text: "Per supporto tecnico, contattare support@chiiko.studio." },
         ],
       },
       {
@@ -446,7 +446,7 @@ export const termsI18n = {
         title: "14. Contatti",
         blocks: [
           { type: "p", text: "Per domande relative ai presenti Termini e Condizioni, puoi contattarci a:" },
-          { type: "p", text: "hello@chiiko.design" },
+          { type: "p", text: "hello@chiiko.studio" },
         ],
       },
     ],
@@ -460,7 +460,7 @@ export const termsI18n = {
     intro: [
       {
         type: "p",
-        text: "**chiiko.design**へようこそ。本ウェブサイトへのアクセスおよび利用、ならびに当社サービスのご依頼により、あなたは本利用規約に拘束されることに同意したものとみなされます。同意いただけない場合は、本ウェブサイトおよび当社サービスの利用をお控えください。",
+        text: "**chiiko.studio**へようこそ。本ウェブサイトへのアクセスおよび利用、ならびに当社サービスのご依頼により、あなたは本利用規約に拘束されることに同意したものとみなされます。同意いただけない場合は、本ウェブサイトおよび当社サービスの利用をお控えください。",
       },
     ],
     sections: [
@@ -468,7 +468,7 @@ export const termsI18n = {
         title: "1. 運営者情報",
         blocks: [
           { type: "p", text: "本ウェブサイトは、WebデザインおよびWeb開発を専門とするデジタルスタジオ **Chiikö** が運営しています。" },
-          { type: "ul", items: ["ウェブサイト: https://chiiko.design", "一般お問い合わせメール: hello@chiiko.design"] },
+          { type: "ul", items: ["ウェブサイト: https://chiiko.studio", "一般お問い合わせメール: hello@chiiko.studio"] },
         ],
       },
       {
@@ -499,7 +499,7 @@ export const termsI18n = {
         blocks: [
           { type: "p", text: "支払い条件は各提案書に定めます。別段の合意がない限り、以下が適用されます。" },
           { type: "ul", items: ["プロジェクト開始後の支払いは返金不可です", "支払い遅延は納期に影響する場合があります", "Chiiköは支払い義務が履行されるまで業務を停止することがあります"] },
-          { type: "p", text: "支払いまたは請求に関するお問い合わせは、finance@chiiko.design までご連絡ください。" },
+          { type: "p", text: "支払いまたは請求に関するお問い合わせは、finance@chiiko.studio までご連絡ください。" },
         ],
       },
       {
@@ -534,7 +534,7 @@ export const termsI18n = {
         title: "10. サポートおよび保守",
         blocks: [
           { type: "p", text: "公開後のサポートは、保守プランを契約した場合または書面で明示的に合意した場合を除き、含まれません。" },
-          { type: "p", text: "技術サポートについては、support@chiiko.design までご連絡ください。" },
+          { type: "p", text: "技術サポートについては、support@chiiko.studio までご連絡ください。" },
         ],
       },
       {
@@ -559,7 +559,7 @@ export const termsI18n = {
         title: "14. お問い合わせ",
         blocks: [
           { type: "p", text: "本利用規約に関するご質問は、以下までご連絡ください。" },
-          { type: "p", text: "hello@chiiko.design" },
+          { type: "p", text: "hello@chiiko.studio" },
         ],
       },
     ],
@@ -573,7 +573,7 @@ export const termsI18n = {
     intro: [
       {
         type: "p",
-        text: "**chiiko.design**에 오신 것을 환영합니다. 본 웹사이트에 접근하거나 이용하고, 당사의 서비스를 의뢰함으로써 귀하는 본 이용약관에 구속되는 데 동의합니다. 동의하지 않는 경우 본 웹사이트 및 서비스를 이용하지 마시기 바랍니다.",
+        text: "**chiiko.studio**에 오신 것을 환영합니다. 본 웹사이트에 접근하거나 이용하고, 당사의 서비스를 의뢰함으로써 귀하는 본 이용약관에 구속되는 데 동의합니다. 동의하지 않는 경우 본 웹사이트 및 서비스를 이용하지 마시기 바랍니다.",
       },
     ],
     sections: [
@@ -581,7 +581,7 @@ export const termsI18n = {
         title: "1. 운영자 정보",
         blocks: [
           { type: "p", text: "본 웹사이트는 웹디자인 및 웹개발을 전문으로 하는 디지털 스튜디오 **Chiikö**가 운영합니다." },
-          { type: "ul", items: ["웹사이트: https://chiiko.design", "일반 문의 이메일: hello@chiiko.design"] },
+          { type: "ul", items: ["웹사이트: https://chiiko.studio", "일반 문의 이메일: hello@chiiko.studio"] },
         ],
       },
       {
@@ -612,7 +612,7 @@ export const termsI18n = {
         blocks: [
           { type: "p", text: "결제 조건은 해당 제안서에 명시됩니다. 별도 합의가 없는 한 다음이 적용됩니다." },
           { type: "ul", items: ["프로젝트 시작 후 결제금은 환불되지 않습니다", "결제 지연은 납기 일정에 영향을 줄 수 있습니다", "Chiikö는 결제 의무 이행 전까지 작업을 중단할 수 있습니다"] },
-          { type: "p", text: "결제 또는 청구 관련 문의는 finance@chiiko.design 으로 연락해 주시기 바랍니다." },
+          { type: "p", text: "결제 또는 청구 관련 문의는 finance@chiiko.studio 으로 연락해 주시기 바랍니다." },
         ],
       },
       {
@@ -647,7 +647,7 @@ export const termsI18n = {
         title: "10. 지원 및 유지보수",
         blocks: [
           { type: "p", text: "출시 이후 지원은 유지보수 플랜을 계약했거나 서면으로 명시적 합의가 있는 경우를 제외하고 포함되지 않습니다." },
-          { type: "p", text: "기술 지원은 support@chiiko.design 으로 문의해 주시기 바랍니다." },
+          { type: "p", text: "기술 지원은 support@chiiko.studio 으로 문의해 주시기 바랍니다." },
         ],
       },
       {
@@ -672,7 +672,7 @@ export const termsI18n = {
         title: "14. 문의",
         blocks: [
           { type: "p", text: "본 이용약관과 관련한 문의는 아래로 연락해 주시기 바랍니다." },
-          { type: "p", text: "hello@chiiko.design" },
+          { type: "p", text: "hello@chiiko.studio" },
         ],
       },
     ],
@@ -686,7 +686,7 @@ export const termsI18n = {
     intro: [
       {
         type: "p",
-        text: "Welkom bij **chiiko.design**. Door deze website te bezoeken en te gebruiken, en door onze diensten af te nemen, gaat u akkoord met deze Algemene Voorwaarden. Als u hiermee niet akkoord gaat, verzoeken wij u deze website en onze diensten niet te gebruiken.",
+        text: "Welkom bij **chiiko.studio**. Door deze website te bezoeken en te gebruiken, en door onze diensten af te nemen, gaat u akkoord met deze Algemene Voorwaarden. Als u hiermee niet akkoord gaat, verzoeken wij u deze website en onze diensten niet te gebruiken.",
       },
     ],
     sections: [
@@ -694,7 +694,7 @@ export const termsI18n = {
         title: "1. Gegevens van de eigenaar",
         blocks: [
           { type: "p", text: "Deze website wordt beheerd door **Chiikö**, een digitale studio gespecialiseerd in webdesign en webontwikkeling." },
-          { type: "ul", items: ["Website: https://chiiko.design", "Algemeen contact-e-mailadres: hello@chiiko.design"] },
+          { type: "ul", items: ["Website: https://chiiko.studio", "Algemeen contact-e-mailadres: hello@chiiko.studio"] },
         ],
       },
       {
@@ -725,7 +725,7 @@ export const termsI18n = {
         blocks: [
           { type: "p", text: "Betalingsvoorwaarden worden opgenomen in de betreffende offerte. Tenzij anders overeengekomen:" },
           { type: "ul", items: ["Betalingen zijn niet restitueerbaar nadat het project is gestart", "Betalingsvertragingen kunnen de oplevertermijnen beinvloeden", "Chiikö kan werkzaamheden opschorten totdat aan de betalingsverplichtingen is voldaan"] },
-          { type: "p", text: "Voor vragen over betaling of facturatie kunt u contact opnemen via finance@chiiko.design." },
+          { type: "p", text: "Voor vragen over betaling of facturatie kunt u contact opnemen via finance@chiiko.studio." },
         ],
       },
       {
@@ -760,7 +760,7 @@ export const termsI18n = {
         title: "10. Ondersteuning en onderhoud",
         blocks: [
           { type: "p", text: "Ondersteuning na livegang is niet inbegrepen, tenzij een onderhoudsplan is afgesloten of schriftelijk anders is overeengekomen." },
-          { type: "p", text: "Voor technische ondersteuning kunt u contact opnemen via support@chiiko.design." },
+          { type: "p", text: "Voor technische ondersteuning kunt u contact opnemen via support@chiiko.studio." },
         ],
       },
       {
@@ -785,7 +785,7 @@ export const termsI18n = {
         title: "14. Contact",
         blocks: [
           { type: "p", text: "Voor vragen over deze Algemene Voorwaarden kunt u contact opnemen via:" },
-          { type: "p", text: "hello@chiiko.design" },
+          { type: "p", text: "hello@chiiko.studio" },
         ],
       },
     ],
@@ -799,7 +799,7 @@ export const termsI18n = {
     intro: [
       {
         type: "p",
-        text: "欢迎访问 **chiiko.design**。当你访问并使用本网站，以及委托我们提供服务时，即表示你同意受本《服务条款与条件》约束。如你不同意，请不要使用本网站或我们的服务。",
+        text: "欢迎访问 **chiiko.studio**。当你访问并使用本网站，以及委托我们提供服务时，即表示你同意受本《服务条款与条件》约束。如你不同意，请不要使用本网站或我们的服务。",
       },
     ],
     sections: [
@@ -807,7 +807,7 @@ export const termsI18n = {
         title: "1. 运营主体信息",
         blocks: [
           { type: "p", text: "本网站由 **Chiikö** 运营。Chiikö 是一家专注于网页设计与网页开发的数字工作室。" },
-          { type: "ul", items: ["网站：https://chiiko.design", "一般联系邮箱：hello@chiiko.design"] },
+          { type: "ul", items: ["网站：https://chiiko.studio", "一般联系邮箱：hello@chiiko.studio"] },
         ],
       },
       {
@@ -838,7 +838,7 @@ export const termsI18n = {
         blocks: [
           { type: "p", text: "付款条款以对应方案为准。除非另有约定，否则：" },
           { type: "ul", items: ["项目启动后已支付款项不予退还", "付款延迟可能影响交付时间", "在付款义务履行前，Chiikö 可暂停项目执行"] },
-          { type: "p", text: "如需咨询付款或开票事宜，请联系 finance@chiiko.design。" },
+          { type: "p", text: "如需咨询付款或开票事宜，请联系 finance@chiiko.studio。" },
         ],
       },
       {
@@ -873,7 +873,7 @@ export const termsI18n = {
         title: "10. 支持与维护",
         blocks: [
           { type: "p", text: "除非已签订维护计划或另有书面明确约定，项目上线后的支持服务不包含在内。" },
-          { type: "p", text: "技术支持请联系 support@chiiko.design。" },
+          { type: "p", text: "技术支持请联系 support@chiiko.studio。" },
         ],
       },
       {
@@ -898,7 +898,7 @@ export const termsI18n = {
         title: "14. 联系方式",
         blocks: [
           { type: "p", text: "如你对本《服务条款与条件》有任何疑问，请联系：" },
-          { type: "p", text: "hello@chiiko.design" },
+          { type: "p", text: "hello@chiiko.studio" },
         ],
       },
     ],

@@ -15,28 +15,28 @@ export const helpPageContent: HelpPageContent = {
       description:
         "如果您对我们的服务、流程、时间、可用性有疑问，或正在探索 Chiikö 是否适合您的项目，这是最好的起点。",
       emailLabel: "联系邮箱：",
-      email: "hello@chiiko.design",
+      email: "hello@chiiko.studio",
     },
     {
       title: "付款与账单",
       description:
         "有关付款、发票、账单问题或其他行政和财务事宜，请通过此渠道联系我们。",
       emailLabel: "联系邮箱：",
-      email: "finance@chiiko.design",
+      email: "finance@chiiko.studio",
     },
     {
       title: "合同与法律事务",
       description:
         "如果您的咨询涉及合同、协议、条款和条件或任何法律相关话题，此渠道能让我们更准确地为您提供协助。",
       emailLabel: "联系邮箱：",
-      email: "councel@chiiko.design",
+      email: "councel@chiiko.studio",
     },
     {
       title: "技术支持与网站问题",
       description:
         "如果您遇到技术问题、网站错误、性能问题，或项目上线后需要支持，这是合适的渠道。",
       emailLabel: "联系邮箱：",
-      email: "support@chiiko.design",
+      email: "support@chiiko.studio",
     },
   ],
   responseTitle: "响应时间",

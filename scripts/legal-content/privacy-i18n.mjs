@@ -9,7 +9,7 @@ export const privacyI18n = {
     intro: [
       {
         type: "p",
-        text: 'Sur **chiiko.design** (ci-après "Chiikö", "nous", "notre" ou "nos"), nous respectons et protégeons la vie privée des personnes qui visitent notre site web et utilisent nos services. La présente Politique de confidentialité explique comment nous collectons, utilisons, conservons et protégeons vos informations personnelles.',
+        text: 'Sur **chiiko.studio** (ci-après "Chiikö", "nous", "notre" ou "nos"), nous respectons et protégeons la vie privée des personnes qui visitent notre site web et utilisent nos services. La présente Politique de confidentialité explique comment nous collectons, utilisons, conservons et protégeons vos informations personnelles.',
       },
       {
         type: "p",
@@ -28,8 +28,8 @@ export const privacyI18n = {
             type: "ul",
             items: [
               "**Nom commercial :** Chiikö",
-              "**Site web :** https://chiiko.design",
-              "**E-mail de contact :** support@chiiko.design",
+              "**Site web :** https://chiiko.studio",
+              "**E-mail de contact :** support@chiiko.studio",
             ],
           },
         ],
@@ -192,7 +192,7 @@ export const privacyI18n = {
           },
           {
             type: "p",
-            text: "Pour exercer ces droits, veuillez envoyer une demande à support@chiiko.design en indiquant votre nom et une description claire de votre demande.",
+            text: "Pour exercer ces droits, veuillez envoyer une demande à support@chiiko.studio en indiquant votre nom et une description claire de votre demande.",
           },
         ],
       },
@@ -232,7 +232,7 @@ export const privacyI18n = {
           },
           {
             type: "p",
-            text: "**E-mail :** support@chiiko.design",
+            text: "**E-mail :** support@chiiko.studio",
           },
         ],
       },
@@ -253,7 +253,7 @@ export const privacyI18n = {
     intro: [
       {
         type: "p",
-        text: 'Auf **chiiko.design** (nachfolgend "Chiikö", "wir", "uns" oder "unser") respektieren und schützen wir die Privatsphäre der Personen, die unsere Website besuchen und unsere Dienstleistungen nutzen. Diese Datenschutzerklärung erläutert, wie wir Ihre personenbezogenen Daten erheben, verwenden, speichern und schützen.',
+        text: 'Auf **chiiko.studio** (nachfolgend "Chiikö", "wir", "uns" oder "unser") respektieren und schützen wir die Privatsphäre der Personen, die unsere Website besuchen und unsere Dienstleistungen nutzen. Diese Datenschutzerklärung erläutert, wie wir Ihre personenbezogenen Daten erheben, verwenden, speichern und schützen.',
       },
       {
         type: "p",
@@ -272,8 +272,8 @@ export const privacyI18n = {
             type: "ul",
             items: [
               "**Handelsname:** Chiikö",
-              "**Website:** https://chiiko.design",
-              "**Kontakt-E-Mail:** support@chiiko.design",
+              "**Website:** https://chiiko.studio",
+              "**Kontakt-E-Mail:** support@chiiko.studio",
             ],
           },
         ],
@@ -436,7 +436,7 @@ export const privacyI18n = {
           },
           {
             type: "p",
-            text: "Zur Ausübung dieser Rechte senden Sie bitte eine Anfrage an support@chiiko.design und geben Sie Ihren Namen sowie eine klare Beschreibung Ihres Anliegens an.",
+            text: "Zur Ausübung dieser Rechte senden Sie bitte eine Anfrage an support@chiiko.studio und geben Sie Ihren Namen sowie eine klare Beschreibung Ihres Anliegens an.",
           },
         ],
       },
@@ -476,7 +476,7 @@ export const privacyI18n = {
           },
           {
             type: "p",
-            text: "**E-Mail:** support@chiiko.design",
+            text: "**E-Mail:** support@chiiko.studio",
           },
         ],
       },
@@ -497,7 +497,7 @@ export const privacyI18n = {
     intro: [
       {
         type: "p",
-        text: 'Em **chiiko.design** (doravante "Chiikö", "nós", "nos" ou "nosso"), respeitamos e protegemos a privacidade das pessoas que visitam o nosso website e utilizam os nossos serviços. Esta Política de Privacidade explica como recolhemos, utilizamos, armazenamos e protegemos as suas informações pessoais.',
+        text: 'Em **chiiko.studio** (doravante "Chiikö", "nós", "nos" ou "nosso"), respeitamos e protegemos a privacidade das pessoas que visitam o nosso website e utilizam os nossos serviços. Esta Política de Privacidade explica como recolhemos, utilizamos, armazenamos e protegemos as suas informações pessoais.',
       },
       {
         type: "p",
@@ -516,8 +516,8 @@ export const privacyI18n = {
             type: "ul",
             items: [
               "**Nome comercial:** Chiikö",
-              "**Website:** https://chiiko.design",
-              "**E-mail de contacto:** support@chiiko.design",
+              "**Website:** https://chiiko.studio",
+              "**E-mail de contacto:** support@chiiko.studio",
             ],
           },
         ],
@@ -680,7 +680,7 @@ export const privacyI18n = {
           },
           {
             type: "p",
-            text: "Para exercer estes direitos, envie um pedido para support@chiiko.design, incluindo o seu nome e uma descrição clara do pedido.",
+            text: "Para exercer estes direitos, envie um pedido para support@chiiko.studio, incluindo o seu nome e uma descrição clara do pedido.",
           },
         ],
       },
@@ -720,7 +720,7 @@ export const privacyI18n = {
           },
           {
             type: "p",
-            text: "**E-mail:** support@chiiko.design",
+            text: "**E-mail:** support@chiiko.studio",
           },
         ],
       },
@@ -741,7 +741,7 @@ export const privacyI18n = {
     intro: [
       {
         type: "p",
-        text: 'Su **chiiko.design** (di seguito "Chiikö", "noi", "ci" o "nostro"), rispettiamo e proteggiamo la privacy delle persone che visitano il nostro sito web e utilizzano i nostri servizi. La presente Informativa sulla privacy spiega come raccogliamo, utilizziamo, conserviamo e proteggiamo le tue informazioni personali.',
+        text: 'Su **chiiko.studio** (di seguito "Chiikö", "noi", "ci" o "nostro"), rispettiamo e proteggiamo la privacy delle persone che visitano il nostro sito web e utilizzano i nostri servizi. La presente Informativa sulla privacy spiega come raccogliamo, utilizziamo, conserviamo e proteggiamo le tue informazioni personali.',
       },
       {
         type: "p",
@@ -760,8 +760,8 @@ export const privacyI18n = {
             type: "ul",
             items: [
               "**Nome commerciale:** Chiikö",
-              "**Sito web:** https://chiiko.design",
-              "**E-mail di contatto:** support@chiiko.design",
+              "**Sito web:** https://chiiko.studio",
+              "**E-mail di contatto:** support@chiiko.studio",
             ],
           },
         ],
@@ -924,7 +924,7 @@ export const privacyI18n = {
           },
           {
             type: "p",
-            text: "Per esercitare tali diritti, invia una richiesta a support@chiiko.design includendo il tuo nome e una descrizione chiara della richiesta.",
+            text: "Per esercitare tali diritti, invia una richiesta a support@chiiko.studio includendo il tuo nome e una descrizione chiara della richiesta.",
           },
         ],
       },
@@ -964,7 +964,7 @@ export const privacyI18n = {
           },
           {
             type: "p",
-            text: "**E-mail:** support@chiiko.design",
+            text: "**E-mail:** support@chiiko.studio",
           },
         ],
       },
@@ -985,7 +985,7 @@ export const privacyI18n = {
     intro: [
       {
         type: "p",
-        text: '**chiiko.design**（以下、「Chiikö」「当社」「当方」または「当社ら」）では、当社のウェブサイトを訪問し、サービスをご利用になる方々のプライバシーを尊重し、保護します。本プライバシーポリシーは、当社がお客様の個人情報をどのように収集、利用、保管および保護するかを説明するものです。',
+        text: '**chiiko.studio**（以下、「Chiikö」「当社」「当方」または「当社ら」）では、当社のウェブサイトを訪問し、サービスをご利用になる方々のプライバシーを尊重し、保護します。本プライバシーポリシーは、当社がお客様の個人情報をどのように収集、利用、保管および保護するかを説明するものです。',
       },
       {
         type: "p",
@@ -1004,8 +1004,8 @@ export const privacyI18n = {
             type: "ul",
             items: [
               "**商号:** Chiikö",
-              "**ウェブサイト:** https://chiiko.design",
-              "**連絡先メール:** support@chiiko.design",
+              "**ウェブサイト:** https://chiiko.studio",
+              "**連絡先メール:** support@chiiko.studio",
             ],
           },
         ],
@@ -1168,7 +1168,7 @@ export const privacyI18n = {
           },
           {
             type: "p",
-            text: "これらの権利を行使するには、氏名および請求内容を明確に記載のうえ、support@chiiko.designまでご連絡ください。",
+            text: "これらの権利を行使するには、氏名および請求内容を明確に記載のうえ、support@chiiko.studioまでご連絡ください。",
           },
         ],
       },
@@ -1208,7 +1208,7 @@ export const privacyI18n = {
           },
           {
             type: "p",
-            text: "**メール:** support@chiiko.design",
+            text: "**メール:** support@chiiko.studio",
           },
         ],
       },
@@ -1229,7 +1229,7 @@ export const privacyI18n = {
     intro: [
       {
         type: "p",
-        text: '**chiiko.design**(이하 "Chiikö", "당사", "우리" 또는 "당사의")에서는 웹사이트 방문자 및 서비스 이용자의 개인정보를 존중하고 보호합니다. 본 개인정보 처리방침은 당사가 개인정보를 수집, 이용, 보관 및 보호하는 방법을 설명합니다.',
+        text: '**chiiko.studio**(이하 "Chiikö", "당사", "우리" 또는 "당사의")에서는 웹사이트 방문자 및 서비스 이용자의 개인정보를 존중하고 보호합니다. 본 개인정보 처리방침은 당사가 개인정보를 수집, 이용, 보관 및 보호하는 방법을 설명합니다.',
       },
       {
         type: "p",
@@ -1248,8 +1248,8 @@ export const privacyI18n = {
             type: "ul",
             items: [
               "**상호명:** Chiikö",
-              "**웹사이트:** https://chiiko.design",
-              "**연락 이메일:** support@chiiko.design",
+              "**웹사이트:** https://chiiko.studio",
+              "**연락 이메일:** support@chiiko.studio",
             ],
           },
         ],
@@ -1412,7 +1412,7 @@ export const privacyI18n = {
           },
           {
             type: "p",
-            text: "이 권리를 행사하려면 이름과 요청 내용을 명확히 기재하여 support@chiiko.design으로 요청해 주시기 바랍니다.",
+            text: "이 권리를 행사하려면 이름과 요청 내용을 명확히 기재하여 support@chiiko.studio으로 요청해 주시기 바랍니다.",
           },
         ],
       },
@@ -1452,7 +1452,7 @@ export const privacyI18n = {
           },
           {
             type: "p",
-            text: "**이메일:** support@chiiko.design",
+            text: "**이메일:** support@chiiko.studio",
           },
         ],
       },
@@ -1473,7 +1473,7 @@ export const privacyI18n = {
     intro: [
       {
         type: "p",
-        text: 'Bij **chiiko.design** (hierna "Chiikö", "wij", "ons" of "onze") respecteren en beschermen wij de privacy van personen die onze website bezoeken en gebruikmaken van onze diensten. Dit Privacybeleid legt uit hoe wij je persoonsgegevens verzamelen, gebruiken, opslaan en beschermen.',
+        text: 'Bij **chiiko.studio** (hierna "Chiikö", "wij", "ons" of "onze") respecteren en beschermen wij de privacy van personen die onze website bezoeken en gebruikmaken van onze diensten. Dit Privacybeleid legt uit hoe wij je persoonsgegevens verzamelen, gebruiken, opslaan en beschermen.',
       },
       {
         type: "p",
@@ -1492,8 +1492,8 @@ export const privacyI18n = {
             type: "ul",
             items: [
               "**Handelsnaam:** Chiikö",
-              "**Website:** https://chiiko.design",
-              "**Contact-e-mail:** support@chiiko.design",
+              "**Website:** https://chiiko.studio",
+              "**Contact-e-mail:** support@chiiko.studio",
             ],
           },
         ],
@@ -1656,7 +1656,7 @@ export const privacyI18n = {
           },
           {
             type: "p",
-            text: "Om deze rechten uit te oefenen, stuur je een verzoek naar support@chiiko.design met vermelding van je naam en een duidelijke beschrijving van je verzoek.",
+            text: "Om deze rechten uit te oefenen, stuur je een verzoek naar support@chiiko.studio met vermelding van je naam en een duidelijke beschrijving van je verzoek.",
           },
         ],
       },
@@ -1696,7 +1696,7 @@ export const privacyI18n = {
           },
           {
             type: "p",
-            text: "**E-mail:** support@chiiko.design",
+            text: "**E-mail:** support@chiiko.studio",
           },
         ],
       },
@@ -1716,7 +1716,7 @@ export const privacyI18n = {
     intro: [
       {
         type: "p",
-        text: '在 **chiiko.design**（以下简称 "Chiikö"、"我们"、"我方" 或 "我们的"）中，我们尊重并保护访问我们网站及使用我们服务的个人隐私。本隐私政策说明我们如何收集、使用、存储并保护您的个人信息。',
+        text: '在 **chiiko.studio**（以下简称 "Chiikö"、"我们"、"我方" 或 "我们的"）中，我们尊重并保护访问我们网站及使用我们服务的个人隐私。本隐私政策说明我们如何收集、使用、存储并保护您的个人信息。',
       },
       {
         type: "p",
@@ -1735,8 +1735,8 @@ export const privacyI18n = {
             type: "ul",
             items: [
               "**商号：** Chiikö",
-              "**网站：** https://chiiko.design",
-              "**联系邮箱：** support@chiiko.design",
+              "**网站：** https://chiiko.studio",
+              "**联系邮箱：** support@chiiko.studio",
             ],
           },
         ],
@@ -1899,7 +1899,7 @@ export const privacyI18n = {
           },
           {
             type: "p",
-            text: "如需行使上述权利，请发送邮件至 support@chiiko.design，并附上您的姓名及明确的请求说明。",
+            text: "如需行使上述权利，请发送邮件至 support@chiiko.studio，并附上您的姓名及明确的请求说明。",
           },
         ],
       },
@@ -1939,7 +1939,7 @@ export const privacyI18n = {
           },
           {
             type: "p",
-            text: "**电子邮箱：** support@chiiko.design",
+            text: "**电子邮箱：** support@chiiko.studio",
           },
         ],
       },

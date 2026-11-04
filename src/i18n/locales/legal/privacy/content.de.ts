@@ -8,7 +8,7 @@ export const privacyPageContent: LegalPageContent = {
   "intro": [
     {
       "type": "p",
-      "text": "Auf **chiiko.design** (nachfolgend \"Chiikö\", \"wir\", \"uns\" oder \"unser\") respektieren und schützen wir die Privatsphäre der Personen, die unsere Website besuchen und unsere Dienstleistungen nutzen. Diese Datenschutzerklärung erläutert, wie wir Ihre personenbezogenen Daten erheben, verwenden, speichern und schützen."
+      "text": "Auf **chiiko.studio** (nachfolgend \"Chiikö\", \"wir\", \"uns\" oder \"unser\") respektieren und schützen wir die Privatsphäre der Personen, die unsere Website besuchen und unsere Dienstleistungen nutzen. Diese Datenschutzerklärung erläutert, wie wir Ihre personenbezogenen Daten erheben, verwenden, speichern und schützen."
     },
     {
       "type": "p",
@@ -27,8 +27,8 @@ export const privacyPageContent: LegalPageContent = {
           "type": "ul",
           "items": [
             "**Handelsname:** Chiikö",
-            "**Website:** https://chiiko.design",
-            "**Kontakt-E-Mail:** support@chiiko.design"
+            "**Website:** https://chiiko.studio",
+            "**Kontakt-E-Mail:** support@chiiko.studio"
           ]
         }
       ]
@@ -191,7 +191,7 @@ export const privacyPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "Zur Ausübung dieser Rechte senden Sie bitte eine Anfrage an support@chiiko.design und geben Sie Ihren Namen sowie eine klare Beschreibung Ihres Anliegens an."
+          "text": "Zur Ausübung dieser Rechte senden Sie bitte eine Anfrage an support@chiiko.studio und geben Sie Ihren Namen sowie eine klare Beschreibung Ihres Anliegens an."
         }
       ]
     },
@@ -231,7 +231,7 @@ export const privacyPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "**E-Mail:** support@chiiko.design"
+          "text": "**E-Mail:** support@chiiko.studio"
         }
       ]
     }

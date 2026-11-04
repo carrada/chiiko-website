@@ -54,7 +54,7 @@ export const cookies = {
         title: "Contacto",
         blocks: [
           { type: "p", text: "Si tienes preguntas sobre nuestra Política de Cookies, contáctanos en:" },
-          { type: "p", text: "hola@chiiko.design" },
+          { type: "p", text: "hola@chiiko.studio" },
         ],
       },
     ],
@@ -113,7 +113,7 @@ export const cookies = {
         title: "Contact",
         blocks: [
           { type: "p", text: "If you have questions about our Cookie Policy, please contact us at:" },
-          { type: "p", text: "hello@chiiko.design" },
+          { type: "p", text: "hello@chiiko.studio" },
         ],
       },
     ],

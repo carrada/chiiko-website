@@ -61,8 +61,8 @@ export const FONT_SIZES = {
 
 // === CONTACT EMAIL CONSTANTS ===
 export const CONTACT_EMAIL = {
-  SPANISH: 'hola@chiiko.design',
-  ENGLISH: 'hello@chiiko.design',
+  SPANISH: 'hola@chiiko.studio',
+  ENGLISH: 'hello@chiiko.studio',
 } as const;
 
 // === FORM IDENTIFIERS ===

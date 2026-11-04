@@ -8,7 +8,7 @@ export const privacyPageContent: LegalPageContent = {
   "intro": [
     {
       "type": "p",
-      "text": "En **chiiko.design** (en adelante, \"Chiikö\", \"nosotros\" o \"nuestro\"), respetamos y protegemos la privacidad de las personas que visitan nuestro sitio web y utilizan nuestros servicios. Esta Política de Privacidad explica cómo recopilamos, usamos, almacenamos y protegemos tu información personal."
+      "text": "En **chiiko.studio** (en adelante, \"Chiikö\", \"nosotros\" o \"nuestro\"), respetamos y protegemos la privacidad de las personas que visitan nuestro sitio web y utilizan nuestros servicios. Esta Política de Privacidad explica cómo recopilamos, usamos, almacenamos y protegemos tu información personal."
     },
     {
       "type": "p",
@@ -28,8 +28,8 @@ export const privacyPageContent: LegalPageContent = {
           "items": [
             "**Nombre comercial:** Chiikö",
             "**Responsable:** Cristopher Carrada",
-            "**Sitio web:** https://chiiko.design",
-            "**Correo electrónico:** soporte@chiiko.design"
+            "**Sitio web:** https://chiiko.studio",
+            "**Correo electrónico:** soporte@chiiko.studio"
           ]
         }
       ]
@@ -194,7 +194,7 @@ export const privacyPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "Para ejercer estos derechos, deberás enviar una solicitud al correo: soporte@chiiko.design, indicando tu nombre, el derecho que deseas ejercer y una descripción clara de tu solicitud."
+          "text": "Para ejercer estos derechos, deberás enviar una solicitud al correo: soporte@chiiko.studio, indicando tu nombre, el derecho que deseas ejercer y una descripción clara de tu solicitud."
         }
       ]
     },
@@ -234,7 +234,7 @@ export const privacyPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "**Correo electrónico:** soporte@chiiko.design"
+          "text": "**Correo electrónico:** soporte@chiiko.studio"
         }
       ]
     }

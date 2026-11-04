@@ -19,7 +19,7 @@ export const noticeI18n = {
       { title: "Indemnisation", blocks: [{ type: "p", text: "Vous acceptez d'indemniser, de défendre et de dégager de toute responsabilité Chiikö, ses propriétaires, employés et représentants contre toute réclamation, action, dommage, perte ou dépense (y compris les honoraires d'avocat) découlant de votre utilisation du site web ou de la violation des présentes conditions." }] },
       { title: "Modifications des mentions légales", blocks: [{ type: "p", text: "Chiikö se réserve le droit de modifier ces Mentions légales à tout moment. Les modifications entreront en vigueur immédiatement après leur publication sur le site web." }] },
       { title: "Résolution des litiges", blocks: [{ type: "p", text: "Tout litige découlant des présentes Mentions légales sera résolu conformément aux lois de la juridiction dans laquelle Chiikö est constituée." }] },
-      { title: "Contact", blocks: [{ type: "p", text: "Pour toute question concernant ces Mentions légales, contactez-nous à :" }, { type: "p", text: "councel@chiiko.design" }] },
+      { title: "Contact", blocks: [{ type: "p", text: "Pour toute question concernant ces Mentions légales, contactez-nous à :" }, { type: "p", text: "councel@chiiko.studio" }] },
     ],
   },
   de: {
@@ -41,7 +41,7 @@ export const noticeI18n = {
       { title: "Freistellung", blocks: [{ type: "p", text: "Sie erklären sich damit einverstanden, Chiikö, seine Eigentümer, Mitarbeiter und Vertreter von jeglichen Ansprüchen, Klagen, Schäden, Verlusten oder Kosten (einschließlich Anwaltsgebühren) freizustellen, die aus Ihrer Nutzung der Website oder der Verletzung dieser Bedingungen entstehen." }] },
       { title: "Änderungen des Impressums", blocks: [{ type: "p", text: "Chiikö behält sich das Recht vor, dieses Impressum jederzeit zu ändern. Änderungen treten unmittelbar nach Veröffentlichung auf der Website in Kraft." }] },
       { title: "Streitbeilegung", blocks: [{ type: "p", text: "Jede Streitigkeit, die sich aus diesem Impressum ergibt, wird gemäß den Gesetzen der Gerichtsbarkeit beigelegt, in der Chiikö eingetragen ist." }] },
-      { title: "Kontakt", blocks: [{ type: "p", text: "Bei Fragen zu diesem Impressum kontaktieren Sie uns unter:" }, { type: "p", text: "councel@chiiko.design" }] },
+      { title: "Kontakt", blocks: [{ type: "p", text: "Bei Fragen zu diesem Impressum kontaktieren Sie uns unter:" }, { type: "p", text: "councel@chiiko.studio" }] },
     ],
   },
   pt: {
@@ -63,7 +63,7 @@ export const noticeI18n = {
       { title: "Indemnização", blocks: [{ type: "p", text: "Compromete-se a indemnizar, defender e isentar a Chiikö, os seus proprietários, colaboradores e representantes de qualquer reclamação, ação, dano, perda ou despesa (incluindo honorários de advogados) decorrentes da sua utilização do site ou violação destes termos." }] },
       { title: "Alterações ao aviso legal", blocks: [{ type: "p", text: "A Chiikö reserva-se o direito de modificar este Aviso Legal a qualquer momento. As alterações entrarão em vigor imediatamente após a sua publicação no site." }] },
       { title: "Resolução de conflitos", blocks: [{ type: "p", text: "Qualquer disputa decorrente deste Aviso Legal será resolvida de acordo com as leis da jurisdição em que a Chiikö está constituída." }] },
-      { title: "Contacto", blocks: [{ type: "p", text: "Para questões sobre este Aviso Legal, contacte-nos em:" }, { type: "p", text: "councel@chiiko.design" }] },
+      { title: "Contacto", blocks: [{ type: "p", text: "Para questões sobre este Aviso Legal, contacte-nos em:" }, { type: "p", text: "councel@chiiko.studio" }] },
     ],
   },
   it: {
@@ -85,7 +85,7 @@ export const noticeI18n = {
       { title: "Indennizzo", blocks: [{ type: "p", text: "Accetti di indennizzare, difendere e manlevare Chiikö, i suoi proprietari, dipendenti e rappresentanti da qualsiasi reclamo, azione legale, danno, perdita o spesa (inclusi gli onorari legali) derivanti dal tuo utilizzo del sito web o dalla violazione di questi termini." }] },
       { title: "Modifiche alle note legali", blocks: [{ type: "p", text: "Chiikö si riserva il diritto di modificare queste Note legali in qualsiasi momento. Le modifiche entreranno in vigore immediatamente dopo la pubblicazione sul sito web." }] },
       { title: "Risoluzione delle controversie", blocks: [{ type: "p", text: "Qualsiasi controversia derivante da queste Note legali sarà risolta in conformità con le leggi della giurisdizione in cui Chiikö è costituita." }] },
-      { title: "Contatto", blocks: [{ type: "p", text: "Per domande su queste Note legali, contattaci a:" }, { type: "p", text: "councel@chiiko.design" }] },
+      { title: "Contatto", blocks: [{ type: "p", text: "Per domande su queste Note legali, contattaci a:" }, { type: "p", text: "councel@chiiko.studio" }] },
     ],
   },
   ja: {
@@ -107,7 +107,7 @@ export const noticeI18n = {
       { title: "補償", blocks: [{ type: "p", text: "ウェブサイトの使用または本規約の違反に起因するいかなる請求、訴訟、損害、損失、費用（弁護士費用を含む）についても、Chiikö、その所有者、従業員、代表者を補償し、防御し、免責することに同意します。" }] },
       { title: "法的通知の変更", blocks: [{ type: "p", text: "Chiiköは、本法的通知をいつでも変更する権利を留保します。変更はウェブサイトへの掲載後、直ちに効力を生じます。" }] },
       { title: "紛争解決", blocks: [{ type: "p", text: "本法的通知に起因する紛争は、Chiiköが設立されている管轄区域の法律に従って解決されます。" }] },
-      { title: "お問い合わせ", blocks: [{ type: "p", text: "本法的通知に関するご質問は、以下までお問い合わせください：" }, { type: "p", text: "councel@chiiko.design" }] },
+      { title: "お問い合わせ", blocks: [{ type: "p", text: "本法的通知に関するご質問は、以下までお問い合わせください：" }, { type: "p", text: "councel@chiiko.studio" }] },
     ],
   },
   ko: {
@@ -129,7 +129,7 @@ export const noticeI18n = {
       { title: "면책 및 보상", blocks: [{ type: "p", text: "웹사이트 사용 또는 본 약관 위반으로 인해 발생하는 모든 청구, 소송, 손해, 손실 또는 비용(변호사 비용 포함)에 대해 Chiikö, 그 소유자, 직원 및 대리인을 면책하고 방어하며 보상할 것에 동의합니다." }] },
       { title: "법적 고지 변경", blocks: [{ type: "p", text: "Chiikö는 본 법적 고지를 언제든지 수정할 권리를 보유합니다. 변경 사항은 웹사이트에 게시되는 즉시 효력이 발생합니다." }] },
       { title: "분쟁 해결", blocks: [{ type: "p", text: "본 법적 고지에서 발생하는 모든 분쟁은 Chiikö가 설립된 관할 지역의 법률에 따라 해결됩니다." }] },
-      { title: "문의", blocks: [{ type: "p", text: "본 법적 고지에 관한 문의는 다음으로 연락해 주세요:" }, { type: "p", text: "councel@chiiko.design" }] },
+      { title: "문의", blocks: [{ type: "p", text: "본 법적 고지에 관한 문의는 다음으로 연락해 주세요:" }, { type: "p", text: "councel@chiiko.studio" }] },
     ],
   },
   nl: {
@@ -151,7 +151,7 @@ export const noticeI18n = {
       { title: "Vrijwaring", blocks: [{ type: "p", text: "U stemt ermee in Chiikö, haar eigenaren, medewerkers en vertegenwoordigers te vrijwaren, te verdedigen en schadeloos te stellen tegen elke claim, rechtszaak, schade, verlies of kosten (inclusief advocaatkosten) die voortvloeien uit uw gebruik van de website of schending van deze voorwaarden." }] },
       { title: "Wijzigingen in de juridische kennisgeving", blocks: [{ type: "p", text: "Chiikö behoudt zich het recht voor deze Juridische kennisgeving te allen tijde te wijzigen. Wijzigingen treden onmiddellijk in werking na publicatie op de website." }] },
       { title: "Geschillenbeslechting", blocks: [{ type: "p", text: "Elk geschil voortvloeiend uit deze Juridische kennisgeving wordt opgelost in overeenstemming met de wetten van het rechtsgebied waarin Chiikö is gevestigd." }] },
-      { title: "Contact", blocks: [{ type: "p", text: "Voor vragen over deze Juridische kennisgeving kunt u contact met ons opnemen via:" }, { type: "p", text: "councel@chiiko.design" }] },
+      { title: "Contact", blocks: [{ type: "p", text: "Voor vragen over deze Juridische kennisgeving kunt u contact met ons opnemen via:" }, { type: "p", text: "councel@chiiko.studio" }] },
     ],
   },
   zh: {
@@ -173,7 +173,7 @@ export const noticeI18n = {
       { title: "赔偿", blocks: [{ type: "p", text: "您同意就因使用本网站或违反本条款而产生的任何索赔、诉讼、损害、损失或费用（包括律师费），向 Chiikö 及其所有者、员工和代表提供赔偿、辩护并使其免受损害。" }] },
       { title: "法律声明的变更", blocks: [{ type: "p", text: "Chiikö 保留随时修改本法律声明的权利。变更自在网站上发布后立即生效。" }] },
       { title: "争议解决", blocks: [{ type: "p", text: "因本法律声明产生的任何争议，应根据 Chiikö 注册成立所在司法管辖区的法律予以解决。" }] },
-      { title: "联系方式", blocks: [{ type: "p", text: "如对本法律声明有疑问，请通过以下方式联系我们：" }, { type: "p", text: "councel@chiiko.design" }] },
+      { title: "联系方式", blocks: [{ type: "p", text: "如对本法律声明有疑问，请通过以下方式联系我们：" }, { type: "p", text: "councel@chiiko.studio" }] },
     ],
   },
 };

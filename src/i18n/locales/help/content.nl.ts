@@ -16,28 +16,28 @@ export const helpPageContent: HelpPageContent = {
       description:
         "Als je vragen hebt over onze diensten, proces, tijdlijnen, beschikbaarheid, of je verkent of Chiikö de juiste match is voor je project, is dit het beste startpunt.",
       emailLabel: "Contact-e-mail:",
-      email: "hello@chiiko.design",
+      email: "hello@chiiko.studio",
     },
     {
       title: "Betalingen en facturering",
       description:
         "Voor alles gerelateerd aan betalingen, facturen, billing-vragen of andere administratieve en financiële zaken, neem contact op via dit kanaal.",
       emailLabel: "Contact-e-mail:",
-      email: "finance@chiiko.design",
+      email: "finance@chiiko.studio",
     },
     {
       title: "Contracten en juridische zaken",
       description:
         "Als je vraag betrekking heeft op contracten, overeenkomsten, voorwaarden of juridische onderwerpen, kunnen we je via dit kanaal nauwkeuriger helpen.",
       emailLabel: "Contact-e-mail:",
-      email: "councel@chiiko.design",
+      email: "councel@chiiko.studio",
     },
     {
       title: "Technische support en websiteproblemen",
       description:
         "Bij technische problemen, websitefouten, prestatieproblemen of support na de launch van je project is dit het juiste kanaal.",
       emailLabel: "Contact-e-mail:",
-      email: "support@chiiko.design",
+      email: "support@chiiko.studio",
     },
   ],
   responseTitle: "Reactietijden",

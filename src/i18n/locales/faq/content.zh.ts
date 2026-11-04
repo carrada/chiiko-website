@@ -5,7 +5,7 @@ export const faqPageContent: FaqPageContent = {
   subtitle: "关于我们服务和工作流程的最常见问题解答",
   intro:
     "在本节中，我们回答有关 Chiikö 服务、流程和工作方式的最常见问题。如果您找不到想要的答案，可以直接写信至",
-  introEmailLabel: "hello@chiiko.design",
+  introEmailLabel: "hello@chiiko.studio",
   items: [
     {
       question: "Chiikö 是什么？",
@@ -85,7 +85,7 @@ export const faqPageContent: FaqPageContent = {
     {
       question: "如何联系你们？",
       answer:
-        "您可以通过 hello@chiiko.design 联系我们，或使用网站上的联系表单。",
+        "您可以通过 hello@chiiko.studio 联系我们，或使用网站上的联系表单。",
     },
   ],
 };

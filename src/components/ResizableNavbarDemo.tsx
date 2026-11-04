@@ -24,6 +24,8 @@ const CHIIKO_NAV_VARS: CSSProperties = {
   ["--pn-blur" as string]: "blur(10px) saturate(1)",
   ["--pn-shadow" as string]:
     "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset",
+  ["--pn-pill-shadow" as string]: "none",
+  ["--pn-tile-rim" as string]: "none",
 };
 
 export function ResizableNavbarDemo() {
@@ -74,9 +76,12 @@ export function ResizableNavbarDemo() {
           linkComponent={NavRouterLink}
           theme="light"
           layout="split"
-          itemStyle="pill"
+          itemStyle="plain"
           hoverEffect="fill"
-          indicator="dot"
+          indicator="none"
+          collapse="never"
+          intro={false}
+          bounce={0.15}
           surface="glass"
           size="md"
           highlightColor="#262626"

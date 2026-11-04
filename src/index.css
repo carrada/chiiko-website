@@ -33,3 +33,18 @@ body {
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
 }
+
+/* Hero 3D (mobile): bottom band passes vertical scroll to the page */
+@media (max-width: 639px) {
+  .hero-skull-scroll-pass {
+    touch-action: pan-y;
+    pointer-events: auto;
+    /* Optional: subtle hint at the fold — remove if too noisy */
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(255, 255, 255, 0.12) 35%,
+      rgba(255, 255, 255, 0.35) 100%
+    );
+  }
+}

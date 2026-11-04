@@ -15,28 +15,28 @@ export const helpPageContent: HelpPageContent = {
       description:
         "서비스, 프로세스, 일정, 가용성에 대한 질문이 있거나 Chiikö가 프로젝트에 적합한지 탐색 중이라면, 여기가 가장 좋은 시작점입니다.",
       emailLabel: "연락 이메일:",
-      email: "hello@chiiko.design",
+      email: "hello@chiiko.studio",
     },
     {
       title: "결제 및 청구",
       description:
         "결제, 청구서, 청구 관련 질문 또는 기타 관리 및 재무 사항은 이 채널로 문의해 주세요.",
       emailLabel: "연락 이메일:",
-      email: "finance@chiiko.design",
+      email: "finance@chiiko.studio",
     },
     {
       title: "계약 및 법적 사항",
       description:
         "계약, 합의, 이용약관 또는 법적 주제에 관한 문의는 이 채널을 통해 더 정확하게 지원할 수 있습니다.",
       emailLabel: "연락 이메일:",
-      email: "councel@chiiko.design",
+      email: "councel@chiiko.studio",
     },
     {
       title: "기술 지원 및 웹사이트 문제",
       description:
         "기술적 문제, 웹사이트 오류, 성능 문제 또는 프로젝트 출시 후 지원이 필요하면 이 채널이 적절합니다.",
       emailLabel: "연락 이메일:",
-      email: "support@chiiko.design",
+      email: "support@chiiko.studio",
     },
   ],
   responseTitle: "응답 시간",

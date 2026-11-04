@@ -104,7 +104,7 @@ export const cookiePageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "hola@chiiko.design"
+          "text": "hola@chiiko.studio"
         }
       ]
     }

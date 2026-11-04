@@ -1,5 +1,13 @@
 /// <reference types="@react-three/fiber" />
-import { Suspense, memo, useEffect, useMemo, useRef, useState } from "react";
+import {
+  Suspense,
+  memo,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type CSSProperties,
+} from "react";
 import { Canvas } from "@react-three/fiber";
 import { Center, OrbitControls, useGLTF } from "@react-three/drei";
 import { motion } from "framer-motion";
@@ -8,6 +16,15 @@ import * as THREE from "three";
 /** Huichol skull GLB — CC-BY-NC-SA-4.0, SBCVL_UCSF (Sketchfab) */
 
 const MODEL_URL = "/models/huichol-skull.glb";
+
+/** Viewport width below this uses mobile scroll-pass zone (see CSS var). */
+const MOBILE_MAX_WIDTH = 639;
+
+/**
+ * Bottom fraction of the canvas (mobile only) where touch scrolls the page
+ * instead of rotating the model. Tune `--hero-mobile-scroll-pass` in CSS (e.g. 38%–48%).
+ */
+const MOBILE_SCROLL_PASS_DEFAULT = "42%";
 
 function scaleForViewport(width: number): [number, number, number] {
   if (width < 640) return [0.007, 0.007, 0.007];
@@ -109,6 +126,9 @@ export default function HeroSkullCanvas() {
       560,
     ),
   );
+  const [isMobileViewport, setIsMobileViewport] = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth <= MOBILE_MAX_WIDTH : false,
+  );
   const [loaded, setLoaded] = useState(false);
   const controlsRef = useRef(null);
 
@@ -117,7 +137,9 @@ export default function HeroSkullCanvas() {
     if (!el) return;
 
     const update = () => {
-      setLayout(layoutForContainer(window.innerWidth, el.clientHeight));
+      const width = window.innerWidth;
+      setIsMobileViewport(width <= MOBILE_MAX_WIDTH);
+      setLayout(layoutForContainer(width, el.clientHeight));
     };
 
     update();
@@ -136,7 +158,12 @@ export default function HeroSkullCanvas() {
       initial={{ opacity: 0 }}
       animate={{ opacity: loaded ? 1 : 0 }}
       transition={{ duration: 1 }}
-      className="relative flex h-full min-h-0 w-full max-sm:translate-y-1 max-sm:items-center max-sm:justify-center sm:-translate-y-5 sm:items-center lg:-translate-y-12 lg:bg-white"
+      className="hero-skull-canvas relative flex h-full min-h-0 w-full max-sm:translate-y-1 max-sm:items-center max-sm:justify-center sm:-translate-y-5 sm:items-center lg:-translate-y-12 lg:bg-white"
+      style={
+        {
+          ["--hero-mobile-scroll-pass" as string]: MOBILE_SCROLL_PASS_DEFAULT,
+        } as CSSProperties
+      }
     >
       {!loaded && (
         <div className="pointer-events-none absolute inset-0 z-10">
@@ -176,6 +203,13 @@ export default function HeroSkullCanvas() {
           />
         </Canvas>
       </Suspense>
+      {isMobileViewport && (
+        <div
+          className="hero-skull-scroll-pass absolute inset-x-0 bottom-0 z-20 touch-pan-y"
+          style={{ height: "var(--hero-mobile-scroll-pass, 42%)" }}
+          aria-hidden
+        />
+      )}
     </motion.div>
   );
 }

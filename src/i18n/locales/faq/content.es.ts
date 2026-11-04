@@ -6,7 +6,7 @@ export const faqPageContent: FaqPageContent = {
     "Respuestas a las dudas más comunes sobre nuestros servicios y proceso de trabajo",
   intro:
     "En esta sección respondemos las dudas más comunes sobre nuestros servicios, procesos y forma de trabajo en Chiikö. Si no encuentras la respuesta que buscas, puedes escribirnos directamente a",
-  introEmailLabel: "hola@chiiko.design",
+  introEmailLabel: "hola@chiiko.studio",
   items: [
     {
       question: "¿Qué es Chiikö?",
@@ -86,7 +86,7 @@ export const faqPageContent: FaqPageContent = {
     {
       question: "¿Cómo puedo contactarlos?",
       answer:
-        "Puedes escribirnos a hola@chiiko.design o utilizar el formulario de contacto disponible en el sitio web.",
+        "Puedes escribirnos a hola@chiiko.studio o utilizar el formulario de contacto disponible en el sitio web.",
     },
   ],
 };

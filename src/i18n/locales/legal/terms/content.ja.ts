@@ -8,7 +8,7 @@ export const termsPageContent: LegalPageContent = {
   "intro": [
     {
       "type": "p",
-      "text": "**chiiko.design**へようこそ。本ウェブサイトへのアクセスおよび利用、ならびに当社サービスのご依頼により、あなたは本利用規約に拘束されることに同意したものとみなされます。同意いただけない場合は、本ウェブサイトおよび当社サービスの利用をお控えください。"
+      "text": "**chiiko.studio**へようこそ。本ウェブサイトへのアクセスおよび利用、ならびに当社サービスのご依頼により、あなたは本利用規約に拘束されることに同意したものとみなされます。同意いただけない場合は、本ウェブサイトおよび当社サービスの利用をお控えください。"
     }
   ],
   "sections": [
@@ -22,8 +22,8 @@ export const termsPageContent: LegalPageContent = {
         {
           "type": "ul",
           "items": [
-            "ウェブサイト: https://chiiko.design",
-            "一般お問い合わせメール: hello@chiiko.design"
+            "ウェブサイト: https://chiiko.studio",
+            "一般お問い合わせメール: hello@chiiko.studio"
           ]
         }
       ]
@@ -99,7 +99,7 @@ export const termsPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "支払いまたは請求に関するお問い合わせは、finance@chiiko.design までご連絡ください。"
+          "text": "支払いまたは請求に関するお問い合わせは、finance@chiiko.studio までご連絡ください。"
         }
       ]
     },
@@ -171,7 +171,7 @@ export const termsPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "技術サポートについては、support@chiiko.design までご連絡ください。"
+          "text": "技術サポートについては、support@chiiko.studio までご連絡ください。"
         }
       ]
     },
@@ -211,7 +211,7 @@ export const termsPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "hello@chiiko.design"
+          "text": "hello@chiiko.studio"
         }
       ]
     }

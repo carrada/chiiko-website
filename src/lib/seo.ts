@@ -186,7 +186,7 @@ export const generateOrganizationSchema = (lang: AppLanguage = "es") => {
     .addSocialProfile("https://www.linkedin.com/company/chiiko/")
     .addSocialProfile("https://www.behance.net/chiiko")
     .addSocialProfile("https://instagram.com/chiiko.design")
-    .setContactPoint("hola@chiiko.design", "+52-MX", [
+    .setContactPoint("hola@chiiko.studio", "+52-MX", [
       "es",
       "en",
       "fr",

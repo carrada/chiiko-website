@@ -187,8 +187,8 @@ LAYOUT_SPACING = {
 }
 
 CONTACT_EMAIL = {
-  SPANISH: 'hola@chiiko.design',
-  ENGLISH: 'hello@chiiko.design',
+  SPANISH: 'hola@chiiko.studio',
+  ENGLISH: 'hello@chiiko.studio',
 }
 
 FORM_IDS = { CONTACT_FORM: 'xpqqneqg' }

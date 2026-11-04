@@ -8,7 +8,7 @@ export const termsPageContent: LegalPageContent = {
   "intro": [
     {
       "type": "p",
-      "text": "Willkommen bei **chiiko.design**. Durch den Zugriff auf diese Website, deren Nutzung sowie die Beauftragung unserer Leistungen erklaren Sie sich mit diesen Allgemeinen Geschaftsbedingungen einverstanden. Wenn Sie damit nicht einverstanden sind, nutzen Sie bitte weder diese Website noch unsere Leistungen."
+      "text": "Willkommen bei **chiiko.studio**. Durch den Zugriff auf diese Website, deren Nutzung sowie die Beauftragung unserer Leistungen erklaren Sie sich mit diesen Allgemeinen Geschaftsbedingungen einverstanden. Wenn Sie damit nicht einverstanden sind, nutzen Sie bitte weder diese Website noch unsere Leistungen."
     }
   ],
   "sections": [
@@ -22,8 +22,8 @@ export const termsPageContent: LegalPageContent = {
         {
           "type": "ul",
           "items": [
-            "Website: https://chiiko.design",
-            "Allgemeine Kontakt-E-Mail: hello@chiiko.design"
+            "Website: https://chiiko.studio",
+            "Allgemeine Kontakt-E-Mail: hello@chiiko.studio"
           ]
         }
       ]
@@ -99,7 +99,7 @@ export const termsPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "Bei Fragen zu Zahlung oder Rechnungsstellung kontaktieren Sie bitte finance@chiiko.design."
+          "text": "Bei Fragen zu Zahlung oder Rechnungsstellung kontaktieren Sie bitte finance@chiiko.studio."
         }
       ]
     },
@@ -171,7 +171,7 @@ export const termsPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "Fur technischen Support kontaktieren Sie bitte support@chiiko.design."
+          "text": "Fur technischen Support kontaktieren Sie bitte support@chiiko.studio."
         }
       ]
     },
@@ -211,7 +211,7 @@ export const termsPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "hello@chiiko.design"
+          "text": "hello@chiiko.studio"
         }
       ]
     }

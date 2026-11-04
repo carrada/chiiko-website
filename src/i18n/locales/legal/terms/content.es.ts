@@ -8,7 +8,7 @@ export const termsPageContent: LegalPageContent = {
   "intro": [
     {
       "type": "p",
-      "text": "Bienvenido a **chiiko.design**. Al acceder y utilizar este sitio web, así como al contratar nuestros servicios, aceptas cumplir con los presentes Términos y Condiciones. Si no estás de acuerdo con ellos, te recomendamos no utilizar este sitio ni nuestros servicios."
+      "text": "Bienvenido a **chiiko.studio**. Al acceder y utilizar este sitio web, así como al contratar nuestros servicios, aceptas cumplir con los presentes Términos y Condiciones. Si no estás de acuerdo con ellos, te recomendamos no utilizar este sitio ni nuestros servicios."
     }
   ],
   "sections": [
@@ -22,8 +22,8 @@ export const termsPageContent: LegalPageContent = {
         {
           "type": "ul",
           "items": [
-            "Sitio web: https://chiiko.design",
-            "Correo de contacto general: hola@chiiko.design"
+            "Sitio web: https://chiiko.studio",
+            "Correo de contacto general: hola@chiiko.studio"
           ]
         }
       ]
@@ -99,7 +99,7 @@ export const termsPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "Para asuntos relacionados con pagos o facturación, el cliente podrá contactar a finanzas@chiiko.design."
+          "text": "Para asuntos relacionados con pagos o facturación, el cliente podrá contactar a finanzas@chiiko.studio."
         }
       ]
     },
@@ -171,7 +171,7 @@ export const termsPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "Para soporte técnico, el cliente podrá contactar a soporte@chiiko.design."
+          "text": "Para soporte técnico, el cliente podrá contactar a soporte@chiiko.studio."
         }
       ]
     },
@@ -211,7 +211,7 @@ export const termsPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "hola@chiiko.design"
+          "text": "hola@chiiko.studio"
         }
       ]
     }

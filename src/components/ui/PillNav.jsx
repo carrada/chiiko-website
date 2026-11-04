@@ -194,6 +194,9 @@ const PillNav = ({
   const controlled = routeControlled;
   const joined = layout === 'joined';
   const hasLogo = Boolean(logo);
+  const forceExpanded = collapse === 'never';
+  const showNavBar = forceExpanded || !collapsed;
+  const showMobileMenu = !forceExpanded && collapsed;
   const fill = hoverEffect === 'fill';
   const glide = !fill && (hoverEffect === 'glide' || indicator === 'pill');
 
@@ -232,7 +235,12 @@ const PillNav = ({
   if (highlightColor) {
     vars['--pn-pill'] = highlightColor;
     vars['--pn-dot'] = highlightColor;
-    vars['--pn-pill-shadow'] = 'inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 6px 16px -6px rgba(0, 0, 0, 0.45)';
+    const pillShadowOverride = style?.['--pn-pill-shadow'];
+    if (pillShadowOverride !== 'none' && pillShadowOverride !== 'unset') {
+      vars['--pn-pill-shadow'] =
+        pillShadowOverride ??
+        'inset 0 1px 0 rgba(255, 255, 255, 0.22), 0 6px 16px -6px rgba(0, 0, 0, 0.45)';
+    }
     vars['--pn-pill-ink'] = highlightTextColor || contrastInk(highlightColor) || palette['--pn-pill-ink'];
   } else if (highlightTextColor) {
     vars['--pn-pill-ink'] = highlightTextColor;
@@ -525,17 +533,22 @@ const PillNav = ({
 
   useEffect(() => {
     engineRef.current?.refresh();
-  });
+  }, [activeIndex, items.length, collapsed]);
 
   useLayoutEffect(() => {
+    if (collapse === 'never') {
+      setCollapsed(false);
+      return undefined;
+    }
+    if (collapse === 'always') {
+      setCollapsed(true);
+      return undefined;
+    }
+
     const root = rootRef.current;
     const measureEl = measureRef.current;
     if (!root || !measureEl) return undefined;
     const evaluate = () => {
-      if (collapse === 'always' || collapse === 'never') {
-        setCollapsed(collapse === 'always');
-        return;
-      }
       const parent = root.parentElement;
       if (!parent) return;
       const styles = getComputedStyle(parent);
@@ -558,7 +571,7 @@ const PillNav = ({
     if (root.parentElement) observer.observe(root.parentElement);
     observer.observe(measureEl);
     return () => observer.disconnect();
-  }, [collapse, collapsed, joined, hasLogo, size]);
+  }, [collapse, joined, hasLogo, size, items.length]);
 
   useLayoutEffect(() => {
     const root = rootRef.current;
@@ -721,7 +734,8 @@ const PillNav = ({
       className={[ROOT, joined ? SURFACE : '', className].filter(Boolean).join(' ')}
       data-layout={layout}
       data-items={itemStyle}
-      data-collapsed={collapsed ? '' : undefined}
+      data-collapsed={showMobileMenu ? '' : undefined}
+      data-force-expanded={forceExpanded ? '' : undefined}
       data-open={open ? '' : undefined}
       data-panel={panelShown ? '' : undefined}
       style={{ ...vars, ...style }}
@@ -738,7 +752,7 @@ const PillNav = ({
         </span>
       )}
 
-      {!collapsed && (
+      {showNavBar && (
         <div ref={barRef} className={[BAR, joined ? '' : SURFACE].filter(Boolean).join(' ')}>
           <div ref={trackRef} className={TRACK} onPointerLeave={() => engineRef.current?.leave()}>
             <ul className={LIST}>
@@ -792,7 +806,7 @@ const PillNav = ({
         </div>
       )}
 
-      {collapsed && (
+      {showMobileMenu && (
         <button
           ref={toggleRef}
           type="button"
@@ -810,7 +824,7 @@ const PillNav = ({
         </button>
       )}
 
-      {collapsed && panelShown && (
+      {showMobileMenu && panelShown && (
         <div ref={panelRef} id={panelId} className={[PANEL, SURFACE].join(' ')}>
           <ul className={MENU}>
             {items.map((item, index) => (

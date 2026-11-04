@@ -6,7 +6,7 @@ export const faqPageContent: FaqPageContent = {
     "サービスとワークプロセスに関する最も一般的な質問への回答",
   intro:
     "このセクションでは、Chiiköのサービス、プロセス、働き方に関する最も一般的な質問にお答えします。お探しの回答が見つからない場合は、直接お問い合わせください：",
-  introEmailLabel: "hello@chiiko.design",
+  introEmailLabel: "hello@chiiko.studio",
   items: [
     {
       question: "Chiiköとは何ですか？",
@@ -86,7 +86,7 @@ export const faqPageContent: FaqPageContent = {
     {
       question: "どうやって連絡できますか？",
       answer:
-        "hello@chiiko.design にご連絡いただくか、ウェブサイトのお問い合わせフォームをご利用ください。",
+        "hello@chiiko.studio にご連絡いただくか、ウェブサイトのお問い合わせフォームをご利用ください。",
     },
   ],
 };

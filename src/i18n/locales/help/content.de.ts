@@ -16,28 +16,28 @@ export const helpPageContent: HelpPageContent = {
       description:
         "Wenn Sie Fragen zu unseren Services, Prozessen, Zeitplänen, Verfügbarkeit haben oder erkunden, ob Chiikö die richtige Wahl für Ihr Projekt ist, ist dies der beste Ausgangspunkt.",
       emailLabel: "Kontakt-E-Mail:",
-      email: "hello@chiiko.design",
+      email: "hello@chiiko.studio",
     },
     {
       title: "Zahlungen und Abrechnung",
       description:
         "Für alles rund um Zahlungen, Rechnungen, Abrechnungsfragen oder andere administrative und finanzielle Angelegenheiten kontaktieren Sie uns über diesen Kanal.",
       emailLabel: "Kontakt-E-Mail:",
-      email: "finance@chiiko.design",
+      email: "finance@chiiko.studio",
     },
     {
       title: "Verträge und rechtliche Angelegenheiten",
       description:
         "Wenn Ihre Anfrage Verträge, Vereinbarungen, Nutzungsbedingungen oder rechtliche Themen betrifft, können wir Sie über diesen Kanal genauer unterstützen.",
       emailLabel: "Kontakt-E-Mail:",
-      email: "councel@chiiko.design",
+      email: "councel@chiiko.studio",
     },
     {
       title: "Technischer Support und Website-Probleme",
       description:
         "Bei technischen Problemen, Website-Fehlern, Leistungsproblemen oder Support nach dem Launch Ihres Projekts ist dies der richtige Kanal.",
       emailLabel: "Kontakt-E-Mail:",
-      email: "support@chiiko.design",
+      email: "support@chiiko.studio",
     },
   ],
   responseTitle: "Antwortzeiten",

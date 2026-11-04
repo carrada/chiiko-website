@@ -24,7 +24,7 @@ export const cookiesI18n = {
       { title: "Gestion des cookies", blocks: [{ type: "p", text: "Vous pouvez contrôler les cookies via les paramètres de votre navigateur. Bien que la plupart des navigateurs acceptent les cookies par défaut, vous pouvez ajuster ces paramètres pour les refuser ou recevoir une notification lors de leur installation." }] },
       { title: "Cookies tiers", blocks: [{ type: "p", text: "Notre site web peut contenir des cookies tiers, tels que ceux de Google Analytics. Ces cookies sont soumis aux politiques de confidentialité de ces entreprises. Nous vous recommandons de consulter directement leurs politiques de cookies." }] },
       { title: "Modifications de cette politique", blocks: [{ type: "p", text: "Chiikö se réserve le droit de mettre à jour cette Politique de cookies à tout moment. Nous vous recommandons de consulter cette page périodiquement pour rester informé de tout changement." }] },
-      { title: "Contact", blocks: [{ type: "p", text: "Si vous avez des questions concernant notre Politique de cookies, contactez-nous à :" }, { type: "p", text: "hello@chiiko.design" }] },
+      { title: "Contact", blocks: [{ type: "p", text: "Si vous avez des questions concernant notre Politique de cookies, contactez-nous à :" }, { type: "p", text: "hello@chiiko.studio" }] },
     ],
   },
   de: {
@@ -51,7 +51,7 @@ export const cookiesI18n = {
       { title: "Cookie-Verwaltung", blocks: [{ type: "p", text: "Sie können Cookies über die Einstellungen Ihres Browsers steuern. Obwohl die meisten Browser Cookies standardmäßig akzeptieren, können Sie diese Einstellungen anpassen, um sie abzulehnen oder Benachrichtigungen bei deren Installation zu erhalten." }] },
       { title: "Cookies von Drittanbietern", blocks: [{ type: "p", text: "Unsere Website kann Cookies von Drittanbietern enthalten, wie z. B. von Google Analytics. Diese Cookies unterliegen den Datenschutzrichtlinien dieser Unternehmen. Wir empfehlen, deren Cookie-Richtlinien direkt zu prüfen." }] },
       { title: "Änderungen dieser Richtlinie", blocks: [{ type: "p", text: "Chiikö behält sich das Recht vor, diese Cookie-Richtlinie jederzeit zu aktualisieren. Wir empfehlen, diese Seite regelmäßig zu überprüfen, um über Änderungen informiert zu bleiben." }] },
-      { title: "Kontakt", blocks: [{ type: "p", text: "Bei Fragen zu unserer Cookie-Richtlinie kontaktieren Sie uns unter:" }, { type: "p", text: "hello@chiiko.design" }] },
+      { title: "Kontakt", blocks: [{ type: "p", text: "Bei Fragen zu unserer Cookie-Richtlinie kontaktieren Sie uns unter:" }, { type: "p", text: "hello@chiiko.studio" }] },
     ],
   },
   pt: {
@@ -78,7 +78,7 @@ export const cookiesI18n = {
       { title: "Controlo de cookies", blocks: [{ type: "p", text: "Pode controlar os cookies através das definições do seu navegador. Embora a maioria dos navegadores aceite cookies por defeito, pode ajustar estas definições para os rejeitar ou receber notificações quando forem instalados." }] },
       { title: "Cookies de terceiros", blocks: [{ type: "p", text: "O nosso site pode conter cookies de terceiros, como os do Google Analytics. Estes cookies estão sujeitos às políticas de privacidade dessas empresas. Recomendamos que consulte diretamente as respetivas políticas de cookies." }] },
       { title: "Alterações a esta política", blocks: [{ type: "p", text: "A Chiikö reserva-se o direito de atualizar esta Política de Cookies a qualquer momento. Recomendamos que reveja esta página periodicamente para se manter informado sobre quaisquer alterações." }] },
-      { title: "Contacto", blocks: [{ type: "p", text: "Se tiver questões sobre a nossa Política de Cookies, contacte-nos em:" }, { type: "p", text: "hello@chiiko.design" }] },
+      { title: "Contacto", blocks: [{ type: "p", text: "Se tiver questões sobre a nossa Política de Cookies, contacte-nos em:" }, { type: "p", text: "hello@chiiko.studio" }] },
     ],
   },
   it: {
@@ -105,7 +105,7 @@ export const cookiesI18n = {
       { title: "Gestione dei cookie", blocks: [{ type: "p", text: "Puoi controllare i cookie tramite le impostazioni del tuo browser. Sebbene la maggior parte dei browser accetti i cookie per impostazione predefinita, puoi modificare queste impostazioni per rifiutarli o ricevere notifiche quando vengono installati." }] },
       { title: "Cookie di terze parti", blocks: [{ type: "p", text: "Il nostro sito web può contenere cookie di terze parti, come quelli di Google Analytics. Questi cookie sono soggetti alle politiche sulla privacy di tali aziende. Ti consigliamo di consultare direttamente le loro informative sui cookie." }] },
       { title: "Modifiche a questa informativa", blocks: [{ type: "p", text: "Chiikö si riserva il diritto di aggiornare questa Informativa sui cookie in qualsiasi momento. Ti consigliamo di consultare periodicamente questa pagina per rimanere informato su eventuali modifiche." }] },
-      { title: "Contatto", blocks: [{ type: "p", text: "Per domande sulla nostra Informativa sui cookie, contattaci a:" }, { type: "p", text: "hello@chiiko.design" }] },
+      { title: "Contatto", blocks: [{ type: "p", text: "Per domande sulla nostra Informativa sui cookie, contattaci a:" }, { type: "p", text: "hello@chiiko.studio" }] },
     ],
   },
   ja: {
@@ -132,7 +132,7 @@ export const cookiesI18n = {
       { title: "クッキーの管理", blocks: [{ type: "p", text: "ブラウザの設定からクッキーを管理できます。ほとんどのブラウザはデフォルトでクッキーを受け入れますが、拒否したり、インストール時に通知を受け取ったりするよう設定を変更できます。" }] },
       { title: "第三者のクッキー", blocks: [{ type: "p", text: "当社のウェブサイトには、Google Analyticsなどの第三者のクッキーが含まれる場合があります。これらのクッキーは各企業のプライバシーポリシーの対象となります。各社のクッキーポリシーを直接ご確認ください。" }] },
       { title: "本ポリシーの変更", blocks: [{ type: "p", text: "Chiiköは、本クッキーポリシーをいつでも更新する権利を留保します。変更について常に把握できるよう、定期的に本ページをご確認ください。" }] },
-      { title: "お問い合わせ", blocks: [{ type: "p", text: "クッキーポリシーに関するご質問は、以下までお問い合わせください：" }, { type: "p", text: "hello@chiiko.design" }] },
+      { title: "お問い合わせ", blocks: [{ type: "p", text: "クッキーポリシーに関するご質問は、以下までお問い合わせください：" }, { type: "p", text: "hello@chiiko.studio" }] },
     ],
   },
   ko: {
@@ -159,7 +159,7 @@ export const cookiesI18n = {
       { title: "쿠키 관리", blocks: [{ type: "p", text: "브라우저 설정을 통해 쿠키를 관리할 수 있습니다. 대부분의 브라우저는 기본적으로 쿠키를 허용하지만, 거부하거나 설치 시 알림을 받도록 설정을 조정할 수 있습니다." }] },
       { title: "제3자 쿠키", blocks: [{ type: "p", text: "당사 웹사이트에는 Google Analytics와 같은 제3자 쿠키가 포함될 수 있습니다. 이러한 쿠키는 해당 기업의 개인정보 처리방침의 적용을 받습니다. 각 기업의 쿠키 정책을 직접 확인하시기 바랍니다." }] },
       { title: "본 정책의 변경", blocks: [{ type: "p", text: "Chiikö는 본 쿠키 정책을 언제든지 업데이트할 권리를 보유합니다. 변경 사항을 확인하려면 이 페이지를 정기적으로 검토하시기 바랍니다." }] },
-      { title: "문의", blocks: [{ type: "p", text: "쿠키 정책에 관한 문의는 다음으로 연락해 주세요:" }, { type: "p", text: "hello@chiiko.design" }] },
+      { title: "문의", blocks: [{ type: "p", text: "쿠키 정책에 관한 문의는 다음으로 연락해 주세요:" }, { type: "p", text: "hello@chiiko.studio" }] },
     ],
   },
   nl: {
@@ -186,7 +186,7 @@ export const cookiesI18n = {
       { title: "Cookiebeheer", blocks: [{ type: "p", text: "U kunt cookies beheren via de instellingen van uw browser. Hoewel de meeste browsers cookies standaard accepteren, kunt u deze instellingen aanpassen om ze te weigeren of meldingen te ontvangen wanneer ze worden geïnstalleerd." }] },
       { title: "Cookies van derden", blocks: [{ type: "p", text: "Onze website kan cookies van derden bevatten, zoals die van Google Analytics. Deze cookies vallen onder het privacybeleid van die bedrijven. Wij raden aan hun cookiebeleid rechtstreeks te raadplegen." }] },
       { title: "Wijzigingen in dit beleid", blocks: [{ type: "p", text: "Chiikö behoudt zich het recht voor dit Cookiebeleid te allen tijde bij te werken. Wij raden aan deze pagina periodiek te controleren om op de hoogte te blijven van wijzigingen." }] },
-      { title: "Contact", blocks: [{ type: "p", text: "Voor vragen over ons Cookiebeleid kunt u contact met ons opnemen via:" }, { type: "p", text: "hello@chiiko.design" }] },
+      { title: "Contact", blocks: [{ type: "p", text: "Voor vragen over ons Cookiebeleid kunt u contact met ons opnemen via:" }, { type: "p", text: "hello@chiiko.studio" }] },
     ],
   },
   zh: {
@@ -213,7 +213,7 @@ export const cookiesI18n = {
       { title: "Cookie 管理", blocks: [{ type: "p", text: "您可以通过浏览器设置管理 Cookie。虽然大多数浏览器默认接受 Cookie，但您可以调整这些设置以拒绝 Cookie，或在安装时接收通知。" }] },
       { title: "第三方 Cookie", blocks: [{ type: "p", text: "我们的网站可能包含第三方 Cookie，例如 Google Analytics 的 Cookie。这些 Cookie 受相关公司隐私政策的约束。建议您直接查阅其 Cookie 政策。" }] },
       { title: "本政策的变更", blocks: [{ type: "p", text: "Chiikö 保留随时更新本 Cookie 政策的权利。建议您定期查阅本页面以了解任何变更。" }] },
-      { title: "联系方式", blocks: [{ type: "p", text: "如对本 Cookie 政策有疑问，请通过以下方式联系我们：" }, { type: "p", text: "hello@chiiko.design" }] },
+      { title: "联系方式", blocks: [{ type: "p", text: "如对本 Cookie 政策有疑问，请通过以下方式联系我们：" }, { type: "p", text: "hello@chiiko.studio" }] },
     ],
   },
 };

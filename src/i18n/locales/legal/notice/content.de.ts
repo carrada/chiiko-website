@@ -102,7 +102,7 @@ export const legalNoticePageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "councel@chiiko.design"
+          "text": "councel@chiiko.studio"
         }
       ]
     }

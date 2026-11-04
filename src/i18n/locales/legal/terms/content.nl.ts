@@ -8,7 +8,7 @@ export const termsPageContent: LegalPageContent = {
   "intro": [
     {
       "type": "p",
-      "text": "Welkom bij **chiiko.design**. Door deze website te bezoeken en te gebruiken, en door onze diensten af te nemen, gaat u akkoord met deze Algemene Voorwaarden. Als u hiermee niet akkoord gaat, verzoeken wij u deze website en onze diensten niet te gebruiken."
+      "text": "Welkom bij **chiiko.studio**. Door deze website te bezoeken en te gebruiken, en door onze diensten af te nemen, gaat u akkoord met deze Algemene Voorwaarden. Als u hiermee niet akkoord gaat, verzoeken wij u deze website en onze diensten niet te gebruiken."
     }
   ],
   "sections": [
@@ -22,8 +22,8 @@ export const termsPageContent: LegalPageContent = {
         {
           "type": "ul",
           "items": [
-            "Website: https://chiiko.design",
-            "Algemeen contact-e-mailadres: hello@chiiko.design"
+            "Website: https://chiiko.studio",
+            "Algemeen contact-e-mailadres: hello@chiiko.studio"
           ]
         }
       ]
@@ -99,7 +99,7 @@ export const termsPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "Voor vragen over betaling of facturatie kunt u contact opnemen via finance@chiiko.design."
+          "text": "Voor vragen over betaling of facturatie kunt u contact opnemen via finance@chiiko.studio."
         }
       ]
     },
@@ -171,7 +171,7 @@ export const termsPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "Voor technische ondersteuning kunt u contact opnemen via support@chiiko.design."
+          "text": "Voor technische ondersteuning kunt u contact opnemen via support@chiiko.studio."
         }
       ]
     },
@@ -211,7 +211,7 @@ export const termsPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "hello@chiiko.design"
+          "text": "hello@chiiko.studio"
         }
       ]
     }

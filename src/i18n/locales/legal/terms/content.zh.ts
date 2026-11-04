@@ -8,7 +8,7 @@ export const termsPageContent: LegalPageContent = {
   "intro": [
     {
       "type": "p",
-      "text": "欢迎访问 **chiiko.design**。当你访问并使用本网站，以及委托我们提供服务时，即表示你同意受本《服务条款与条件》约束。如你不同意，请不要使用本网站或我们的服务。"
+      "text": "欢迎访问 **chiiko.studio**。当你访问并使用本网站，以及委托我们提供服务时，即表示你同意受本《服务条款与条件》约束。如你不同意，请不要使用本网站或我们的服务。"
     }
   ],
   "sections": [
@@ -22,8 +22,8 @@ export const termsPageContent: LegalPageContent = {
         {
           "type": "ul",
           "items": [
-            "网站：https://chiiko.design",
-            "一般联系邮箱：hello@chiiko.design"
+            "网站：https://chiiko.studio",
+            "一般联系邮箱：hello@chiiko.studio"
           ]
         }
       ]
@@ -99,7 +99,7 @@ export const termsPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "如需咨询付款或开票事宜，请联系 finance@chiiko.design。"
+          "text": "如需咨询付款或开票事宜，请联系 finance@chiiko.studio。"
         }
       ]
     },
@@ -171,7 +171,7 @@ export const termsPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "技术支持请联系 support@chiiko.design。"
+          "text": "技术支持请联系 support@chiiko.studio。"
         }
       ]
     },
@@ -211,7 +211,7 @@ export const termsPageContent: LegalPageContent = {
         },
         {
           "type": "p",
-          "text": "hello@chiiko.design"
+          "text": "hello@chiiko.studio"
         }
       ]
     }
