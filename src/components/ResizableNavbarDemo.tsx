@@ -47,8 +47,9 @@ export function ResizableNavbarDemo() {
   );
 
   return (
-    <div className="navbar-light fixed inset-x-0 top-0 z-50 flex w-full justify-center px-4 pt-2 [color-scheme:light] lg:pt-3">
-      <div className="chiiko-nav-cluster inline-flex max-w-full items-center gap-2">
+    <div className="navbar-light fixed inset-x-0 top-0 z-50 flex w-full max-w-[100vw] justify-center overflow-x-clip px-3 pt-2 [color-scheme:light] md:px-4 lg:pt-3">
+      <div className="chiiko-nav-cluster flex w-full min-w-0 max-w-full items-center gap-1.5 md:inline-flex md:w-auto md:gap-2">
+        <div className="chiiko-pill-nav-wrap min-w-0 flex-1 md:flex-none">
         <PillNav
           logo={
             <>
@@ -84,9 +85,10 @@ export function ResizableNavbarDemo() {
           className="chiiko-pill-nav"
           style={CHIIKO_NAV_VARS}
         />
+        </div>
 
         <div
-          className="chiiko-nav-bubble pill-nav__surface px-3 md:px-4"
+          className="chiiko-nav-bubble shrink-0 pill-nav__surface px-2.5 md:px-4"
           style={CHIIKO_NAV_VARS}
         >
           <LanguageSwitcher variant="bubble" />

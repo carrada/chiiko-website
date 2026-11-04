@@ -86,6 +86,75 @@
   display: none;
 }
 
+/* Mobile: fit row within viewport; collapse measures wrap width (excludes lang bubble) */
+@media (max-width: 767px) {
+  .chiiko-nav-cluster {
+    --pn-h: 40px;
+    --pn-pad: 3px;
+    --pn-inner: 32px;
+    --pn-x: 11px;
+    --pn-font: 13px;
+    --pn-gap: 6px;
+    --pn-mark: 20px;
+    box-sizing: border-box;
+  }
+
+  .chiiko-pill-nav-wrap {
+    display: flex;
+    min-width: 0;
+    flex: 1 1 auto;
+    align-items: center;
+  }
+
+  .chiiko-pill-nav-wrap .chiiko-pill-nav {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .chiiko-nav-cluster .pill-nav[data-collapsed] {
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-between;
+  }
+
+  .chiiko-nav-cluster .pill-nav:not([data-collapsed]) .pill-nav__bar {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .chiiko-nav-cluster .pill-nav__track {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .chiiko-nav-cluster .pill-nav__list {
+    width: 100%;
+    min-width: 0;
+    justify-content: space-between;
+  }
+
+  .chiiko-nav-cluster .pill-nav__item {
+    flex: 1 1 0;
+    min-width: 0;
+    padding-inline: clamp(6px, 2.5vw, var(--pn-x));
+    font-size: clamp(11px, 3.1vw, var(--pn-font));
+  }
+
+  .chiiko-nav-cluster .pill-nav__face,
+  .chiiko-nav-cluster .pill-nav__face-alt {
+    gap: 0.25em;
+  }
+
+  .chiiko-pill-nav .pill-nav__panel {
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 @media (min-width: 768px) {
   .chiiko-pill-nav .pill-nav__logo {
     width: auto;
